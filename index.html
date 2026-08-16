@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Πώς κατανοώ τον κόσμο σήμερα — ένα ημερήσιο briefing που εξηγεί όχι μόνο τι έγινε, αλλά γιατί έχει σημασία και πώς συνδέεται με την καθημερινότητά μας.">
+<title>Πώς κατανοώ τον κόσμο σήμερα</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ink:#1B2A4A;
+  --ink-soft:#3E4E6E;
+  --paper:#FFFFFF;
+  --page-bg:#F1ECDF;
+  --beige:#ECE3CE;
+  --beige-line:#DCD2B8;
+  --blue:#2C5D8F;
+  --blue-light:#8FB3D9;
+  --green:#2E7D5B;
+  --orange:#B96E28;
+  --muted:#746A57;
+  --navy:#15223B;
+  --shadow:0 18px 40px -22px rgba(30,30,20,.24);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--page-bg);
+  color:var(--ink);
+  font-family:'Inter',system-ui,sans-serif;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+.wrap{width:min(1120px,calc(100% - 36px));margin:auto}
+.mono{font-family:'Space Mono',monospace}
+.serif{font-family:'Fraunces',serif}
+
+header{
+  position:sticky;top:0;z-index:20;
+  background:rgba(241,236,223,.91);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(220,210,184,.75);
+}
+.nav{
+  min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:24px;
+}
+.brand{
+  font-family:'Space Mono',monospace;font-size:12px;font-weight:700;
+  letter-spacing:.07em;text-transform:uppercase;text-decoration:none;
+}
+.navlinks{display:flex;gap:22px;align-items:center}
+.navlinks a{
+  font-size:13px;color:var(--ink-soft);text-decoration:none;font-weight:700;
+}
+.navlinks a:hover{color:var(--blue)}
+@media(max-width:760px){.navlinks a:not(.cta-small){display:none}}
+
+.cta-small{
+  background:var(--ink);color:#fff!important;padding:9px 13px;border-radius:9px;
+}
+
+.hero{padding:86px 0 64px;position:relative;overflow:hidden}
+.hero:before,.hero:after{
+  content:"";position:absolute;border-radius:50%;filter:blur(2px);pointer-events:none
+}
+.hero:before{width:420px;height:420px;right:-180px;top:-160px;background:rgba(143,179,217,.24)}
+.hero:after{width:320px;height:320px;left:-150px;bottom:-160px;background:rgba(224,152,42,.12)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:34px}.hero{padding-top:58px}}
+
+.kicker{
+  font-family:'Space Mono',monospace;font-size:12px;font-weight:700;
+  letter-spacing:.11em;text-transform:uppercase;color:var(--blue);margin-bottom:17px;
+}
+h1,h2,h3{font-family:'Fraunces',serif;margin:0;letter-spacing:-.02em}
+h1{font-size:clamp(44px,7.5vw,78px);line-height:.98;max-width:760px}
+.hero-lead{
+  font-family:'Fraunces',serif;font-size:clamp(20px,2.6vw,28px);
+  color:var(--ink-soft);max-width:750px;line-height:1.35;margin:25px 0 16px;
+}
+.hero-sub{font-size:16px;color:var(--muted);max-width:690px;margin:0}
+.actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:30px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  text-decoration:none;font-weight:800;border-radius:12px;padding:14px 18px;
+  border:1.5px solid var(--ink);font-size:14px;
+}
+.btn.primary{background:var(--ink);color:#fff}
+.btn.secondary{background:transparent}
+.btn:hover{transform:translateY(-1px)}
+
+.today-card{
+  background:var(--paper);border-radius:26px;padding:28px;
+  box-shadow:var(--shadow);position:relative;overflow:hidden;
+}
+.today-card:before{
+  content:"16";position:absolute;right:10px;top:-28px;
+  font-family:'Fraunces',serif;font-size:170px;font-weight:900;
+  color:var(--blue);opacity:.06;line-height:1;
+}
+.today-card>*{position:relative}
+.date-line{
+  font-family:'Space Mono',monospace;color:var(--blue);font-size:12px;font-weight:700;
+  letter-spacing:.06em;text-transform:uppercase
+}
+.today-card h2{font-size:31px;line-height:1.05;margin:12px 0 15px}
+.topic-list{display:flex;flex-wrap:wrap;gap:7px;margin:18px 0 4px}
+.pill{
+  font-size:12px;font-weight:700;padding:6px 9px;border-radius:8px;
+  background:var(--beige);color:var(--ink-soft)
+}
+.today-card .read{
+  display:block;margin-top:22px;padding-top:18px;border-top:1px solid var(--beige-line);
+  font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:var(--blue);
+  text-decoration:none;
+}
+
+section{padding:72px 0}
+.section-head{max-width:760px;margin-bottom:32px}
+.eyebrow{
+  font-family:'Space Mono',monospace;font-size:11px;font-weight:700;
+  letter-spacing:.09em;color:var(--blue);text-transform:uppercase;margin-bottom:10px
+}
+.section-head h2{font-size:clamp(34px,5vw,50px);line-height:1.05}
+.section-head p{color:var(--ink-soft);font-size:17px;margin:14px 0 0}
+
+.archive-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px}
+@media(max-width:900px){.archive-grid{grid-template-columns:1fr}}
+
+.calendar{
+  background:var(--paper);border-radius:22px;padding:24px;box-shadow:var(--shadow)
+}
+.cal-top{display:flex;justify-content:space-between;align-items:end;margin-bottom:20px}
+.cal-top h3{font-size:26px}
+.cal-top span{font-size:11px;color:var(--muted);font-family:'Space Mono',monospace}
+.week,.days{display:grid;grid-template-columns:repeat(7,1fr);gap:7px}
+.week div{
+  text-align:center;font-family:'Space Mono',monospace;font-size:10px;
+  font-weight:700;color:var(--muted);padding-bottom:3px
+}
+.day{
+  aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;
+  border-radius:10px;font-size:13px;text-decoration:none;color:var(--ink-soft)
+}
+.day.muted{opacity:.25}
+.day.has{background:var(--beige);font-weight:800}
+.day.today{background:var(--blue);color:#fff;font-weight:800}
+.day.has:hover{outline:2px solid var(--blue-light)}
+
+.archive-list{
+  background:var(--paper);border-radius:22px;padding:10px 24px;box-shadow:var(--shadow)
+}
+.archive-item{
+  display:grid;grid-template-columns:110px 1fr auto;gap:18px;align-items:center;
+  padding:20px 0;border-bottom:1px solid var(--beige-line);text-decoration:none
+}
+.archive-item:last-child{border-bottom:none}
+.archive-date{
+  font-family:'Space Mono',monospace;font-size:11px;font-weight:700;color:var(--blue)
+}
+.archive-title{font-family:'Fraunces',serif;font-size:20px;font-weight:700}
+.archive-meta{font-size:12px;color:var(--muted);margin-top:4px}
+.archive-arrow{font-size:22px;color:var(--blue)}
+@media(max-width:620px){
+  .archive-item{grid-template-columns:1fr auto}.archive-date{grid-column:1/-1}
+}
+
+.dark-section{background:var(--navy);color:#fff}
+.dark-section .eyebrow{color:#8FB8F0}
+.dark-section .section-head p{color:#DCE3EE}
+.values{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:800px){.values{grid-template-columns:1fr}}
+.value{
+  border:1px solid #2A3B58;border-radius:18px;padding:24px;background:rgba(255,255,255,.025)
+}
+.value .num{
+  font-family:'Space Mono',monospace;color:#F0B94E;font-size:11px;font-weight:700
+}
+.value h3{font-size:24px;margin:8px 0 10px}
+.value p{color:#DCE3EE;margin:0;font-size:15px}
+.signature{
+  margin-top:34px;padding-top:28px;border-top:1px solid #2A3B58;
+  font-family:'Fraunces',serif;font-size:clamp(25px,4vw,36px);font-weight:800
+}
+
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:800px){.info-grid{grid-template-columns:1fr}}
+.info-card{
+  background:var(--paper);border-radius:22px;padding:28px;box-shadow:var(--shadow)
+}
+.info-card h3{font-size:28px;margin-bottom:12px}
+.info-card p{color:var(--ink-soft);margin:0 0 13px}
+.info-card p:last-child{margin-bottom:0}
+
+.method{
+  border-left:4px solid var(--blue);background:rgba(255,255,255,.48);
+  border-radius:0 16px 16px 0;padding:22px 24px;margin-top:28px;
+}
+.method b{color:var(--ink)}
+
+footer{
+  padding:44px 0;border-top:1px solid var(--beige-line);color:var(--muted);font-size:13px
+}
+.footer-grid{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.footer-title{font-family:'Space Mono',monospace;font-weight:700;color:var(--ink)}
+.small-note{max-width:720px;margin-top:14px;font-size:12px}
+</style>
+</head>
+
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html">Πώς κατανοώ τον κόσμο σήμερα</a>
+    <nav class="navlinks">
+      <a href="#archive">Αρχείο</a>
+      <a href="#purpose">Σκοπός</a>
+      <a href="#about">Πίσω από το project</a>
+      <a class="cta-small" href="briefings/2026-08-16.html">Σημερινό briefing →</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="kicker">Ημερήσιο briefing · 10 απλές κάρτες</div>
+        <h1>Πώς κατανοώ<br>τον κόσμο σήμερα</h1>
+        <p class="hero-lead">Οι σημαντικότερες εξελίξεις της ημέρας — όχι μόνο ως ειδήσεις, αλλά ως συνδέσεις.</p>
+        <p class="hero-sub">Τι έγινε; Γιατί έχει σημασία; Πώς συνδέεται με την οικονομία, την τεχνολογία, την ενέργεια και την καθημερινή μας ζωή; Και κυρίως: τι ξέρουμε, τι παρακολουθούμε και τι απλώς εκτιμούμε;</p>
+        <div class="actions">
+          <a class="btn primary" href="briefings/2026-08-16.html">Δες το σημερινό briefing →</a>
+          <a class="btn secondary" href="#archive">Άνοιξε το αρχείο</a>
+        </div>
+      </div>
+
+      <aside class="today-card">
+        <div class="date-line">Κυριακή · 16 Αυγούστου 2026</div>
+        <h2>Ο κόσμος σήμερα σε 10 κάρτες</h2>
+        <p>Από την Ουκρανία και το Ορμούζ μέχρι τα μικροτσίπ, την AI, την κυβερνοασφάλεια, το κλίμα και την Ελλάδα.</p>
+        <div class="topic-list">
+          <span class="pill">Ουκρανία</span>
+          <span class="pill">Ορμούζ</span>
+          <span class="pill">Chips</span>
+          <span class="pill">AI</span>
+          <span class="pill">Cybersecurity</span>
+          <span class="pill">Κλίμα</span>
+          <span class="pill">Ελλάδα</span>
+        </div>
+        <a class="read" href="briefings/2026-08-16.html">ΑΝΟΙΓΜΑ ΤΗΣ ΣΗΜΕΡΙΝΗΣ ΕΚΔΟΣΗΣ →</a>
+      </aside>
+    </div>
+  </section>
+
+  
+  <section id="today-preview" style="padding-top:20px;">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Σημερινή έκδοση</div>
+        <h2>Μπες κατευθείαν στο briefing.</h2>
+        <p>Η εμπειρία των 10 καρτών ανοίγει σε ξεχωριστή σελίδα, σχεδιασμένη για κινητό και γρήγορη ανάγνωση.</p>
+      </div>
+      <a href="briefings/2026-08-16.html" style="display:block;text-decoration:none;">
+        <div style="background:#FFFFFF;border-radius:26px;padding:30px;box-shadow:0 18px 40px -22px rgba(30,30,20,.24);border:1px solid rgba(220,210,184,.7);">
+          <div style="font-family:'Space Mono',monospace;font-size:11px;font-weight:700;color:#2C5D8F;letter-spacing:.06em;text-transform:uppercase;">16 · 08 · 2026 · 10 κάρτες</div>
+          <div style="font-family:'Fraunces',serif;font-weight:700;font-size:clamp(28px,5vw,42px);line-height:1.06;margin:10px 0 14px;color:#1B2A4A;">Ουκρανία, Ορμούζ, chips, AI, κλίμα και Ελλάδα</div>
+          <div style="color:#3E4E6E;font-size:16px;">Όχι μόνο τι έγινε — αλλά γιατί έχει σημασία και πώς συνδέεται με την καθημερινότητά μας.</div>
+          <div style="margin-top:20px;font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:#2C5D8F;">ΑΝΟΙΓΜΑ BRIEFING →</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+<section id="archive">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Αρχείο briefings</div>
+        <h2>Κάθε μέρα, ένα κομμάτι της εικόνας.</h2>
+        <p>Χρησιμοποίησε το ημερολόγιο για να επιστρέψεις σε προηγούμενες εκδόσεις και να δεις πώς άλλαζαν οι εξελίξεις μέσα στον χρόνο.</p>
+      </div>
+
+      <div class="archive-grid">
+        <div class="calendar">
+          <div class="cal-top">
+            <h3>Αύγουστος 2026</h3>
+            <span>● διαθέσιμο briefing</span>
+          </div>
+          <div class="week">
+            <div>ΔΕ</div><div>ΤΡ</div><div>ΤΕ</div><div>ΠΕ</div><div>ΠΑ</div><div>ΣΑ</div><div>ΚΥ</div>
+          </div>
+          <div class="days">
+            <span class="day muted">27</span><span class="day muted">28</span><span class="day muted">29</span><span class="day muted">30</span><span class="day muted">31</span>
+            <span class="day">1</span><span class="day">2</span>
+            <span class="day">3</span><span class="day">4</span><span class="day">5</span><span class="day">6</span><span class="day">7</span><span class="day">8</span><span class="day">9</span>
+            <span class="day">10</span><span class="day">11</span><span class="day">12</span><span class="day">13</span><span class="day">14</span><span class="day">15</span>
+            <a class="day today has" href="briefings/2026-08-16.html" title="Briefing 16 Αυγούστου">16</a>
+            <span class="day">17</span><span class="day">18</span><span class="day">19</span><span class="day">20</span><span class="day">21</span><span class="day">22</span><span class="day">23</span>
+            <span class="day">24</span><span class="day">25</span><span class="day">26</span><span class="day">27</span><span class="day">28</span><span class="day">29</span><span class="day">30</span>
+            <span class="day">31</span>
+          </div>
+        </div>
+
+        <div class="archive-list">
+          <a class="archive-item" href="briefings/2026-08-16.html">
+            <div class="archive-date">16 · 08 · 2026</div>
+            <div>
+              <div class="archive-title">Ουκρανία, Ορμούζ, chips, AI και κλίμα</div>
+              <div class="archive-meta">10 κάρτες · Ημερήσιο briefing</div>
+            </div>
+            <div class="archive-arrow">→</div>
+          </a>
+          <div class="archive-item" style="opacity:.48">
+            <div class="archive-date">ΕΠΟΜΕΝΕΣ ΗΜΕΡΕΣ</div>
+            <div>
+              <div class="archive-title">Το αρχείο θα μεγαλώνει καθημερινά.</div>
+              <div class="archive-meta">Κάθε νέα έκδοση θα εμφανίζεται εδώ και στο ημερολόγιο.</div>
+            </div>
+            <div class="archive-arrow">+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark-section" id="purpose">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Γιατί υπάρχει αυτή η σελίδα</div>
+        <h2>Λιγότερος θόρυβος.<br>Περισσότερη κατανόηση.</h2>
+        <p>Η ενημέρωση συχνά μάς δίνει πολλά γεγονότα αλλά λίγο χρόνο για να καταλάβουμε πώς συνδέονται. Ο στόχος αυτού του project είναι να μετατρέπει την καθημερινή επικαιρότητα σε μια σύντομη, καθαρή και ελέγξιμη εικόνα.</p>
+      </div>
+
+      <div class="values">
+        <div class="value">
+          <div class="num">01</div>
+          <h3>Κατανόηση</h3>
+          <p>Δεν αρκεί να ξέρουμε τι συνέβη. Προσπαθούμε να εξηγούμε γιατί έχει σημασία και ποια αλυσίδα συνεπειών μπορεί να δημιουργεί.</p>
+        </div>
+        <div class="value">
+          <div class="num">02</div>
+          <h3>Σύνδεση</h3>
+          <p>Γεωπολιτική, οικονομία, ενέργεια, τεχνολογία, περιβάλλον και καθημερινή ζωή δεν εξελίσσονται σε ξεχωριστούς κόσμους.</p>
+        </div>
+        <div class="value">
+          <div class="num">03</div>
+          <h3>Διαφάνεια</h3>
+          <p>Ξεχωρίζουμε όσο γίνεται καθαρότερα τα επιβεβαιωμένα γεγονότα από την ανάλυση, την αβεβαιότητα και την πρόβλεψη.</p>
+        </div>
+      </div>
+
+      <div class="signature">ΓΕΓΟΝΟΣ &nbsp;→&nbsp; ΑΝΑΛΥΣΗ &nbsp;→&nbsp; ΕΚΤΙΜΗΣΗ</div><p style="color:#DCE3EE;margin:10px 0 0;font-size:15px;">Ξεχωρίζουμε τι γνωρίζουμε, τι συμπεραίνουμε και τι θεωρούμε πιθανό.</p>
+      <p style="color:#DCE3EE;margin:12px 0 0;font-size:15px;">Ξεχωρίζουμε τι γνωρίζουμε, τι συμπεραίνουμε και τι θεωρούμε πιθανό.</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Πίσω από το project</div>
+        <h2>Τι είναι — και τι δεν είναι.</h2>
+      </div>
+
+      <div class="info-grid">
+        <article class="info-card">
+          <h3>Ποιοι είμαστε</h3>
+          <p><strong>«Πώς κατανοώ τον κόσμο σήμερα»</strong> είναι ένα ανεξάρτητο προσωπικό editorial και research project με στόχο να κάνει σύνθετες εξελίξεις πιο κατανοητές χωρίς να τις απλοποιεί μέχρι να χάνουν το νόημά τους.</p>
+          <p>Δεν φιλοδοξεί να αντικαταστήσει τη δημοσιογραφία ή τις πρωτογενείς πηγές. Φιλοδοξεί να λειτουργεί ως ένας σύντομος οδηγός κατανόησης: από το γεγονός, στη σύνδεση και από τη σύνδεση στη σημασία του.</p>
+        </article>
+
+        <article class="info-card">
+          <h3>Σε ποιον απευθύνεται</h3>
+          <p>Σε ανθρώπους που θέλουν να παρακολουθούν τον κόσμο αλλά δεν έχουν χρόνο να διαβάζουν δεκάδες άρθρα κάθε μέρα.</p>
+          <p>Και σε όσους συχνά βλέπουν μια διεθνή είδηση και αναρωτιούνται: <em>«Ωραία — αλλά τι σημαίνει πραγματικά και γιατί με αφορά;»</em></p>
+        </article>
+
+        <article class="info-card">
+          <h3>Πώς δουλεύουμε</h3>
+          <p>Επιλέγουμε λίγες εξελίξεις που έχουν ουσιαστική σημασία, αναζητούμε αξιόπιστες πηγές, διασταυρώνουμε βασικά στοιχεία και οργανώνουμε την πληροφορία σε σύντομες κάρτες.</p>
+          <p>Όπου υπάρχει αβεβαιότητα, τη δηλώνουμε. Όπου υπάρχει εκτίμηση, δεν την παρουσιάζουμε ως γεγονός.</p>
+        </article>
+
+        <article class="info-card">
+          <h3>Οι πηγές μας</h3>
+          <p>Οι εκδόσεις βασίζονται σε δημόσια διαθέσιμες, αξιόπιστες πηγές — ειδησεογραφικά πρακτορεία, θεσμούς, οργανισμούς, επίσημα δεδομένα και άλλες τεκμηριωμένες δημοσιεύσεις.</p>
+          <p>Στόχος είναι κάθε briefing να επιτρέπει στον αναγνώστη να ελέγξει από πού προέρχονται τα βασικά στοιχεία και να διαβάσει περισσότερο αν το επιθυμεί.</p>
+        </article>
+      </div>
+
+      <div class="method">
+        <b>Μια σημαντική σημείωση:</b> Το project βρίσκεται σε εξέλιξη. Η μορφή, οι θεματικές και ο τρόπος παρουσίασης βελτιώνονται καθώς δοκιμάζουμε τι βοηθά πραγματικά τον αναγνώστη να κατανοεί — όχι απλώς να καταναλώνει — περισσότερη πληροφορία.
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-title">Πώς κατανοώ τον κόσμο σήμερα</div>
+        <div>Ημερήσιο briefing · Ελλάδα & κόσμος</div>
+      </div>
+      <div class="mono">ΓΕΓΟΝΟΣ → ΑΝΑΛΥΣΗ → ΕΚΤΙΜΗΣΗ</div>
+    </div>
+    <div class="small-note">Οι πληροφορίες παρέχονται για ενημερωτικούς και εκπαιδευτικούς σκοπούς. Οι αναλύσεις και εκτιμήσεις δεν αποτελούν βεβαιότητες ούτε οικονομικές, επενδυτικές ή άλλες επαγγελματικές συμβουλές.</div>
+  </div>
+</footer>
+</body>
+</html>
