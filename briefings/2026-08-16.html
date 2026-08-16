@@ -431,13 +431,381 @@
  .analysis-hero{padding-top:44px}.analysis-body{padding:28px 16px 55px}
 }
 
+
+/* =========================================================
+   FINAL CREATIVE-DIRECTION PASS — UNIFIED HOMEPAGE SYSTEM
+   ========================================================= */
+:root{
+  --ui-navy:#06172A;
+  --ui-navy-2:#0A2946;
+  --ui-navy-3:#103A61;
+  --ui-blue:#5EA9DE;
+  --ui-blue-2:#2E7AB4;
+  --ui-orange:#FF7A00;
+  --ui-orange-soft:#FF9A32;
+  --ui-white:#F7FBFF;
+  --ui-ice:#D9E7F3;
+  --ui-muted:#9DB3C7;
+  --ui-line:rgba(143,179,217,.18);
+}
+
+/* Entire slideshow now belongs to the same visual family */
+body{
+  background:var(--ui-navy)!important;
+}
+#stage{
+  background:
+    radial-gradient(circle at 82% 18%,rgba(46,122,180,.18),transparent 28%),
+    linear-gradient(180deg,var(--ui-navy),#081E34)!important;
+}
+.slide,
+.slide.hero,
+.slide.dark{
+  position:relative;
+  background:
+    radial-gradient(circle at 88% 12%,rgba(46,122,180,.14),transparent 28%),
+    linear-gradient(145deg,#07182B 0%,#0B2945 58%,#07182B 100%)!important;
+}
+.slide::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);
+  background-size:54px 54px;
+  mask-image:linear-gradient(to bottom,rgba(0,0,0,.35),transparent 78%);
+}
+.slide > *{position:relative;z-index:2;}
+
+/* Top shell */
+#topbar{
+  background:rgba(6,23,42,.92)!important;
+  backdrop-filter:blur(18px)!important;
+  border-bottom:1px solid var(--ui-line)!important;
+  box-shadow:0 10px 34px rgba(0,0,0,.20)!important;
+}
+#brand{
+  color:var(--ui-white)!important;
+  display:flex!important;
+  align-items:center!important;
+  gap:10px!important;
+}
+#curlabel{color:var(--ui-ice)!important;}
+#curlabel .n{color:var(--ui-orange)!important;}
+#segments button{background:rgba(143,179,217,.17)!important;}
+#segments button.done,#segments button.current{
+  background:linear-gradient(90deg,var(--ui-orange),var(--ui-orange-soft))!important;
+  opacity:1!important;
+}
+
+/* Bright AZ logo — no white box */
+.brief-logo,
+.analysis-logo-mark{
+  position:relative;
+  display:inline-flex;
+  align-items:flex-end;
+  font-family:'Fraunces',Georgia,serif;
+  font-weight:900;
+  font-size:25px;
+  line-height:.9;
+  letter-spacing:-.12em;
+  color:#FFFFFF;
+  text-shadow:
+    0 0 10px rgba(255,255,255,.30),
+    0 0 24px rgba(94,169,222,.22);
+  min-width:39px;
+}
+.brief-logo span,
+.analysis-logo-mark span{
+  color:#BBDDF5;
+}
+.brief-logo i,
+.analysis-logo-mark i{
+  position:absolute;
+  width:6px;height:6px;border-radius:50%;
+  background:var(--ui-orange);
+  right:-3px;top:-3px;
+  box-shadow:0 0 12px rgba(255,122,0,.85);
+}
+.analysis-logo-mark{
+  font-size:30px;
+  min-width:46px;
+}
+
+/* Navigation controls */
+.home-btn{
+  color:var(--ui-ice)!important;
+  border:1px solid rgba(143,179,217,.25)!important;
+  background:rgba(255,255,255,.045)!important;
+}
+.test-btn,.deep-btn{
+  color:#fff!important;
+  background:linear-gradient(135deg,var(--ui-orange),var(--ui-orange-soft))!important;
+  border:none!important;
+  box-shadow:0 9px 24px rgba(255,122,0,.22)!important;
+}
+.navbtn{
+  background:rgba(7,24,43,.84)!important;
+  color:#fff!important;
+  border:1px solid rgba(143,179,217,.20)!important;
+  box-shadow:0 10px 30px rgba(0,0,0,.22)!important;
+}
+
+/* Cover */
+.hero .hero-bg{display:none!important;}
+.hero .kicker{
+  color:var(--ui-orange-soft)!important;
+  margin-bottom:24px!important;
+}
+.hero .kicker .dot{
+  background:var(--ui-orange)!important;
+  box-shadow:0 0 13px rgba(255,122,0,.65);
+}
+.hero h1{
+  color:#fff!important;
+  text-shadow:0 8px 28px rgba(0,0,0,.24);
+}
+.hero .date{
+  color:var(--ui-blue)!important;
+}
+.hero .rule{
+  background:linear-gradient(90deg,var(--ui-orange),var(--ui-blue))!important;
+  width:74px!important;
+}
+.hero .hook{
+  color:#DDE9F4!important;
+}
+.hero .tagline,
+.hero .swipehint{
+  color:var(--ui-muted)!important;
+}
+.hero .tagline b{color:#fff!important;}
+
+/* Every content card is now one glass/navy system */
+.card{
+  background:
+    linear-gradient(160deg,rgba(18,51,82,.97),rgba(8,30,52,.98))!important;
+  color:var(--ui-white)!important;
+  border:1px solid rgba(143,179,217,.19)!important;
+  border-radius:22px!important;
+  box-shadow:
+    0 28px 70px -36px rgba(0,0,0,.80),
+    inset 0 1px 0 rgba(255,255,255,.035)!important;
+}
+.card::before{
+  color:var(--ui-blue)!important;
+  opacity:.065!important;
+}
+.eyebrow{
+  color:var(--ui-muted)!important;
+}
+.eyebrow .num{
+  color:var(--ui-orange)!important;
+}
+h2.headline,
+.card h2.headline{
+  color:#fff!important;
+}
+p.body-text,
+.row-item .txt span,
+.chip-list li{
+  color:#D3E0EC!important;
+}
+.row-item{
+  border-bottom:1px solid rgba(143,179,217,.13)!important;
+}
+.row-item .txt b{
+  color:#fff!important;
+}
+.row-item .emoji{
+  filter:saturate(.85);
+}
+
+/* Accent labels: restrained and consistent */
+.label{
+  border:1px solid rgba(143,179,217,.16)!important;
+  background:rgba(255,255,255,.045)!important;
+  color:var(--ui-blue)!important;
+}
+.label.orange{
+  color:var(--ui-orange-soft)!important;
+  background:rgba(255,122,0,.08)!important;
+  border-color:rgba(255,122,0,.18)!important;
+}
+.label.green,.label.blue,.label.navy,.label.accentlbl{
+  color:var(--ui-blue)!important;
+  background:rgba(94,169,222,.07)!important;
+}
+
+/* Chains become homepage-like data flow */
+.chain-step{
+  background:rgba(94,169,222,.08)!important;
+  color:#F4F9FD!important;
+  border:1px solid rgba(94,169,222,.16)!important;
+  border-radius:10px!important;
+}
+.chain-arrow{
+  color:var(--ui-orange)!important;
+  text-shadow:0 0 10px rgba(255,122,0,.25);
+}
+
+/* Callouts */
+.punchline{
+  background:
+    linear-gradient(90deg,rgba(255,122,0,.12),rgba(94,169,222,.06))!important;
+  color:#F7FBFF!important;
+  border-left:4px solid var(--ui-orange)!important;
+  border-radius:0 13px 13px 0!important;
+  font-style:normal!important;
+}
+.punchline.orange{
+  color:#FFE2C3!important;
+}
+.big-word{
+  color:var(--ui-orange-soft)!important;
+  text-shadow:0 0 24px rgba(255,122,0,.12);
+}
+
+/* Sources become a subtle technical footer */
+.sources{
+  background:rgba(2,15,27,.34)!important;
+  border:1px solid rgba(143,179,217,.11)!important;
+  border-top:1px solid rgba(143,179,217,.16)!important;
+  color:#8FA9BE!important;
+  border-radius:10px!important;
+  padding:12px 14px!important;
+}
+.sources a{
+  color:#89C6EF!important;
+}
+.analysis-tag{
+  color:#A8C3D8!important;
+  background:rgba(94,169,222,.075)!important;
+  border:1px solid rgba(94,169,222,.12)!important;
+}
+
+/* Map integrated in same language */
+.map-box{
+  border:1px solid rgba(143,179,217,.18)!important;
+  box-shadow:0 16px 36px rgba(0,0,0,.22);
+}
+.map-caption{color:#8EA7BA!important;}
+
+/* Final card */
+.status-row .stitle{
+  color:#fff;
+}
+.est{
+  color:#D6E3EE!important;
+}
+.est b{
+  color:var(--ui-orange-soft)!important;
+}
+.closing-line{
+  color:#fff!important;
+  border-top:1px solid rgba(143,179,217,.17)!important;
+}
+
+/* Full analysis is brought into same identity */
+.deep-analysis{
+  background:#07182B!important;
+  color:#DCE7F1!important;
+}
+.analysis-top{
+  background:rgba(6,23,42,.96)!important;
+}
+.analysis-hero{
+  background:
+    radial-gradient(circle at 82% 20%,rgba(46,122,180,.26),transparent 28%),
+    linear-gradient(145deg,#06172A,#0B2B49)!important;
+}
+.analysis-body{
+  background:
+    radial-gradient(circle at 88% 6%,rgba(46,122,180,.08),transparent 20%),
+    #081D32!important;
+}
+.analysis-card{
+  background:linear-gradient(160deg,#123552,#0B2843)!important;
+  color:#E2EDF5!important;
+  border:1px solid rgba(143,179,217,.15)!important;
+  box-shadow:0 20px 48px -34px rgba(0,0,0,.8)!important;
+}
+.analysis-card h2{
+  color:#fff!important;
+}
+.analysis-card h3{
+  color:var(--ui-blue)!important;
+}
+.analysis-card p,
+.analysis-card li{
+  color:#CDDBE7!important;
+}
+.analysis-card .signal{
+  background:rgba(255,122,0,.08)!important;
+  color:#F8E4CF!important;
+}
+.analysis-card .uncertainty{
+  background:rgba(94,169,222,.075)!important;
+  color:#C5DBEB!important;
+}
+.analysis-sources{
+  border-top-color:rgba(143,179,217,.12)!important;
+}
+.analysis-sources a{
+  color:#8AC8F1!important;
+}
+.analysis-note{
+  background:#0D3151!important;
+  border:1px solid rgba(143,179,217,.13)!important;
+}
+
+/* Mobile polish */
+@media(max-width:600px){
+  .slide{padding-top:86px!important;}
+  .card{
+    border-radius:18px!important;
+    padding:28px 19px 26px!important;
+  }
+  #brand span:last-child{
+    max-width:150px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+  }
+}
+
+
+/* ===== REAL BRIGHT AZ LOGO ===== */
+.brief-logo-img{
+  width:52px;
+  height:34px;
+  object-fit:contain;
+  display:block;
+  filter:drop-shadow(0 0 10px rgba(94,169,222,.32))
+         drop-shadow(0 0 4px rgba(255,255,255,.16));
+}
+.analysis-logo-img{
+  width:58px;
+  height:40px;
+  object-fit:contain;
+  display:block;
+  filter:drop-shadow(0 0 12px rgba(94,169,222,.30))
+         drop-shadow(0 0 5px rgba(255,255,255,.14));
+}
+@media(max-width:600px){
+  .brief-logo-img{width:44px;height:30px;}
+  .analysis-logo-img{width:50px;height:34px;}
+}
+
 </style>
 </head>
 <body>
 
 <div id="topbar">
   <div class="row">
-    <a id="brand" href="../index.html" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:8px;"><span class="logo-shell"><img src="../assets/az-logo-transparent.png" alt="AZ"></span><span>Πώς κατανοώ τον κόσμο σήμερα</span></a>
+    <a id="brand" href="../index.html" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:8px;"><img class="brief-logo-img" src="../assets/az-logo-bright.png" alt="AZ"><span>Πώς κατανοώ τον κόσμο σήμερα</span></a>
     <div class="site-actions"><a class="home-btn" href="../index.html">⌂ <span class="txt">ΑΡΧΙΚΗ</span></a><a class="test-btn" href="../feedback/test.html">✓ <span class="txt">ΤΕΣΤ</span></a><span id="curlabel"><span class="n" id="curnum">01</span>/10 · <span id="curtitle">ΕΞΩΦΥΛΛΟ</span></span></div>
   </div>
   <div id="segments"></div>
@@ -869,7 +1237,7 @@
   <div class="analysis-top">
     <div class="analysis-top-inner">
       <div class="analysis-brand">
-        <img class="analysis-logo" src="../assets/az-logo-transparent.png" alt="AZ">
+        <img class="analysis-logo-img" src="../assets/az-logo-bright.png" alt="AZ">
         <span>Πώς κατανοώ τον κόσμο σήμερα</span>
       </div>
       <button class="analysis-close" id="closeAnalysis" type="button">← ΠΙΣΩ ΣΤΙΣ 10 ΚΑΡΤΕΣ</button>
