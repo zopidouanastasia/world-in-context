@@ -128,39 +128,35 @@
   .sitebar a:hover{color:var(--blue);}
 
 
-/* ===== PREMIUM TEST REDESIGN ===== */
-body{
-  background:
-    radial-gradient(circle at 90% 0%,rgba(44,93,143,.13),transparent 25%),
-    linear-gradient(180deg,#f3efe5,#edf3f8)!important;
+/* ===== MOBILE-FIRST QA PASS ===== */
+html,body{max-width:100%;overflow-x:hidden;-webkit-text-size-adjust:100%;}
+button,.opt,a{touch-action:manipulation;}
+@media(max-width:640px){
+  .wrap{max-width:none!important;padding:0 12px!important;}
+  .sitebar{margin:0 -12px!important;padding:10px 12px!important;}
+  .sitebar a{min-height:40px!important;display:flex!important;align-items:center!important;font-size:10.5px!important;}
+  #progress{padding:10px 0 8px!important;}
+  header.intro{margin:14px 0 18px!important;padding:22px 18px!important;border-radius:16px!important;}
+  header.intro img{width:115px!important;}
+  header.intro h1{font-size:clamp(29px,9vw,38px)!important;}
+  header.intro .note{padding:15px!important;font-size:14.5px!important;}
+  .card-outer{padding:7px 0!important;}
+  .card{padding:20px 16px!important;border-radius:16px!important;}
+  .qtext{font-size:18px!important;line-height:1.35!important;margin-bottom:14px!important;}
+  .opt-row{gap:7px!important;}
+  .opt-grid10{grid-template-columns:repeat(2,1fr)!important;gap:7px!important;}
+  .opt{min-height:46px!important;padding:11px 10px!important;font-size:14px!important;min-width:0!important;}
+  .emoji-opt{font-size:24px!important;}
+  .emoji-opt .n{font-size:10px!important;}
+  .dot4{display:grid!important;grid-template-columns:1fr 1fr!important;gap:7px!important;}
+  .opt-list .opt{padding:12px 13px!important;line-height:1.45!important;}
+  textarea{font-size:16px!important;min-height:86px!important;}
+  #submitBtn{min-height:50px!important;font-size:13px!important;}
+  #thankyou{padding:55px 0!important;}
 }
-.sitebar{
-  position:sticky;top:0;z-index:60;
-  margin:0 -20px;padding:10px 20px!important;
-  background:rgba(7,24,44,.95);
-  box-shadow:0 8px 22px rgba(7,24,44,.16);
-}
-.sitebar a{color:#e9f2fa!important;}
-header.intro{
-  background:linear-gradient(135deg,#07182c,#0e3355);
-  color:#fff;margin:18px -6px 22px;padding:28px 24px!important;border-radius:20px;
-  box-shadow:0 24px 52px -30px rgba(7,24,44,.55);
-}
-header.intro .kicker{color:#ff962c!important;}
-header.intro h1{color:#fff;}
-header.intro .note{
-  background:rgba(255,255,255,.08)!important;color:#dbe7f2!important;
-  border:1px solid rgba(143,179,217,.18);
-}
-.card{
-  border:1px solid rgba(44,93,143,.12);
-  box-shadow:0 18px 42px -30px rgba(7,24,44,.35)!important;
-}
-.qnum{color:#ff7a00!important;}
-.opt.selected{background:#0e5487!important;border-color:#0e5487!important;}
-#submitBtn{
-  background:linear-gradient(135deg,#ff7a00,#ff9a2e)!important;
-  box-shadow:0 12px 26px rgba(255,122,0,.22);
+@media(max-width:390px){
+  .dot4{grid-template-columns:1fr!important;}
+  .qtext{font-size:17px!important;}
 }
 
 </style>
@@ -175,7 +171,7 @@ header.intro .note{
   </div>
 
   <div id="formArea">
-    <header class="intro"><div style="display:flex;justify-content:center;margin-bottom:14px;"><img src="../assets/az-logo-transparent.png" alt="AZ" style="width:150px;height:auto;filter:drop-shadow(0 8px 16px rgba(0,0,0,.25));"></div>
+    <header class="intro">
       <div class="kicker">Σύντομο τεστ · 2–3 λεπτά</div>
       <h1>Τεστ «Πώς κατανοώ<br>τον κόσμο σήμερα»</h1>
       <div class="note">

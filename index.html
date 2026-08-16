@@ -492,6 +492,60 @@ footer .mono{color:var(--orange-soft);}
  .hero-grid{display:block!important}.hero h1{font-size:clamp(42px,13vw,64px)!important}.today-card{margin-top:28px!important}
 }
 
+
+/* ===== MOBILE-FIRST QA PASS ===== */
+html{overflow-x:hidden;}
+body{overflow-x:hidden;-webkit-text-size-adjust:100%;}
+a,button{touch-action:manipulation;}
+@media(max-width:768px){
+  .wrap{width:min(100% - 24px,1120px)!important;}
+  .nav{min-height:60px!important;gap:10px!important;}
+  .brand{font-size:10px!important;max-width:62%;line-height:1.15;}
+  .brand img{width:48px!important;height:32px!important;}
+  .navlinks{gap:8px!important;}
+  .cta-small{padding:9px 11px!important;font-size:11px!important;}
+  .hero{padding:52px 0 44px!important;min-height:auto!important;}
+  .hero-grid{grid-template-columns:1fr!important;gap:22px!important;}
+  .hero-grid>div:first-child{max-width:none!important;}
+  h1{font-size:clamp(40px,13vw,60px)!important;line-height:.98!important;}
+  .hero-lead{font-size:20px!important;line-height:1.35!important;margin:18px 0 12px!important;}
+  .hero-sub{font-size:15px!important;line-height:1.6!important;}
+  .actions{gap:10px!important;margin-top:22px!important;}
+  .btn{min-height:48px;padding:13px 15px!important;font-size:13px!important;}
+  .today-card{margin-top:20px!important;padding:22px!important;border-radius:20px!important;}
+  .today-card h2{font-size:27px!important;}
+  .topic-list{gap:6px!important;}
+  .pill{font-size:11px!important;padding:6px 8px!important;}
+  section{padding:50px 0!important;}
+  .section-head{margin-bottom:24px!important;}
+  .section-head h2{font-size:clamp(30px,9vw,42px)!important;}
+  .section-head p{font-size:15px!important;}
+  .archive-grid{grid-template-columns:1fr!important;gap:18px!important;}
+  .calendar,.archive-list,.info-card{padding:20px!important;border-radius:18px!important;}
+  .archive-item{grid-template-columns:1fr auto!important;gap:10px!important;}
+  .archive-date{grid-column:1/-1!important;}
+  .archive-title{font-size:18px!important;}
+  .values,.info-grid{grid-template-columns:1fr!important;gap:14px!important;}
+  .value,.info-card{padding:20px!important;}
+  .signature{font-size:24px!important;line-height:1.3!important;padding:18px!important;}
+  .footer-grid{display:block!important;}
+  .footer-grid>div+div{margin-top:12px!important;}
+}
+@media(max-width:430px){
+  .hero{
+    padding-top:230px!important;
+    background:
+      linear-gradient(180deg,rgba(6,23,42,.22) 0%,rgba(6,23,42,.78) 31%,rgba(6,23,42,1) 56%),
+      url("hero-earth-clean.jpg") 68% top / auto 44% no-repeat,
+      #06172a!important;
+  }
+  .kicker{font-size:10.5px!important;}
+  .actions{display:grid!important;grid-template-columns:1fr!important;}
+  .btn{width:100%!important;}
+  .week,.days{gap:4px!important;}
+  .day{font-size:12px!important;border-radius:8px!important;}
+}
+
 </style>
 </head>
 
