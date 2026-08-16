@@ -1,11 +1,12 @@
-# Πώς κατανοώ τον κόσμο σήμερα — Redesigned package
+# Πώς κατανοώ τον κόσμο σήμερα — έκδοση με Earth hero
 
-Περιλαμβάνει:
-- `index.html` — νέα premium αρχική
-- `briefings/2026-08-16.html` — briefing με πηγές, ΑΡΧΙΚΗ και ΤΕΣΤ
-- `feedback/test.html` — Firebase-ready τεστ
-- `assets/az-logo-transparent.png` — transparent AZ logo
-- `assets/az-logo-256.png` — μικρή έκδοση logo
-- `assets/logo-concept.png` — concept image
+Η αρχική χρησιμοποιεί τη γη από το εγκεκριμένο visual mockup ως πραγματικό HTML hero asset.
 
-Ανέβασε όλα τα αρχεία/φακέλους στο root του GitHub repository, διατηρώντας ακριβώς τη δομή.
+Αρχεία:
+- `index.html`
+- `assets/hero-earth.png`
+- `assets/az-logo-transparent.png`
+- `briefings/2026-08-16.html`
+- `feedback/test.html`
+
+Ανέβασε όλο το περιεχόμενο στο root του GitHub repository, διατηρώντας τη δομή φακέλων.
