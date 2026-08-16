@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Τεστ «Πώς κατανοώ τον κόσμο σήμερα»</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1B2A4A; --ink-soft:#3E4E6E; --paper:#FFFFFF; --page-bg:#F1ECDF;
+    --beige:#ECE3CE; --beige-line:#DCD2B8; --blue:#2C5D8F; --blue-light:#8FB3D9;
+    --green:#2E7D5B; --orange:#B96E28; --muted:#746A57; --red:#B23A32;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--page-bg); color:var(--ink);
+    font-family:'Inter',system-ui,sans-serif; font-size:17px; line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .mono{font-family:'Space Mono',monospace;}
+  h1,h2{font-family:'Fraunces',serif; font-weight:700; margin:0; letter-spacing:-0.01em;}
+  .wrap{max-width:620px; margin:0 auto; padding:0 20px;}
+
+  #progress{position:sticky; top:0; z-index:50; background:var(--page-bg); padding:14px 0 10px; }
+  #progress .bar{height:6px; border-radius:4px; background:var(--beige-line); overflow:hidden;}
+  #progress .fill{height:100%; width:0%; background:var(--blue); transition:width 0.3s ease;}
+  #progress .lbl{font-family:'Space Mono',monospace; font-size:11.5px; color:var(--muted); margin-top:6px; text-align:right;}
+
+  header.intro{padding:28px 0 8px;}
+  header.intro .kicker{font-family:'Space Mono',monospace; font-size:12px; font-weight:700; letter-spacing:0.08em; color:var(--muted); text-transform:uppercase; margin-bottom:14px;}
+  header.intro h1{font-size:clamp(28px,7vw,36px); line-height:1.08; margin-bottom:18px;}
+  header.intro .note{
+    background:var(--beige); border-radius:14px; padding:18px 20px; font-size:15.5px; color:var(--ink-soft); margin-top:18px;
+  }
+  header.intro .note p{margin:0 0 8px;}
+  header.intro .note p:last-child{margin-bottom:0;}
+
+  .card-outer{padding:10px 0;}
+  .card{
+    background:var(--paper); border-radius:20px; padding:26px 24px;
+    box-shadow:0 2px 4px rgba(30,30,20,0.03), 0 14px 32px -16px rgba(30,30,20,0.14);
+  }
+  .qnum{font-family:'Space Mono',monospace; font-size:12px; font-weight:700; color:var(--blue); letter-spacing:0.05em; margin-bottom:8px;}
+  .qtext{font-family:'Fraunces',serif; font-weight:600; font-size:19px; line-height:1.35; color:var(--ink); margin-bottom:18px;}
+
+  .opt-row{display:flex; flex-wrap:wrap; gap:8px;}
+  .opt-grid10{display:grid; grid-template-columns:repeat(5,1fr); gap:8px;}
+  @media (max-width:420px){ .opt-grid10{grid-template-columns:repeat(5,1fr);} }
+
+  .opt{
+    border:1.5px solid var(--beige-line); background:var(--page-bg); border-radius:12px;
+    padding:10px 14px; cursor:pointer; font-size:15px; color:var(--ink-soft);
+    text-align:center; transition:all 0.15s ease; user-select:none; flex:1; min-width:60px;
+  }
+  .opt:hover{border-color:var(--blue-light);}
+  .opt.emoji-opt{font-size:26px; padding:12px 8px; line-height:1.2;}
+  .opt.emoji-opt .n{display:block; font-family:'Space Mono',monospace; font-size:11px; margin-top:4px; color:var(--muted);}
+  .opt.selected{border-color:var(--blue); background:var(--blue); color:#fff; font-weight:700;}
+  .opt.selected .n{color:rgba(255,255,255,0.85);}
+  .opt.card-opt{ padding:12px 6px; font-family:'Space Mono',monospace; font-weight:700; font-size:15px; }
+  .opt.card-opt .cn{display:block; font-family:'Inter',sans-serif; font-weight:400; font-size:10px; margin-top:3px; line-height:1.15;}
+  .opt.wide{flex-basis:100%; text-align:left;}
+
+  .opt-list{display:flex; flex-direction:column; gap:8px;}
+  .opt-list .opt{text-align:left; padding:13px 16px;}
+
+  .dot4{display:flex; gap:10px;}
+  .dot4 .opt{flex:1; display:flex; align-items:center; justify-content:center; gap:8px; padding:12px 8px;}
+  .dot4 .dotc{width:12px;height:12px;border-radius:50%;flex-shrink:0;}
+
+  textarea{
+    width:100%; border:1.5px solid var(--beige-line); border-radius:12px; padding:12px 14px;
+    font-family:'Inter',sans-serif; font-size:15.5px; color:var(--ink); resize:vertical; min-height:70px;
+    background:var(--page-bg);
+  }
+  textarea:focus{outline:none; border-color:var(--blue);}
+
+  .subq{margin-top:16px; padding-top:16px; border-top:1px dashed var(--beige-line); display:none;}
+  .subq.show{display:block;}
+  .subq .qtext{font-size:15.5px; margin-bottom:12px;}
+
+  #submitBtn{
+    width:100%; padding:16px; margin:18px 0 8px; border:none; border-radius:14px;
+    background:var(--ink); color:#fff; font-family:'Space Mono',monospace; font-weight:700;
+    font-size:15px; letter-spacing:0.04em; cursor:pointer; transition:opacity 0.2s ease;
+  }
+  #submitBtn:hover{opacity:0.9;}
+  #submitBtn:disabled{opacity:0.5; cursor:not-allowed;}
+  #err{color:var(--red); font-size:14px; text-align:center; margin-top:8px; display:none;}
+
+  #thankyou{ display:none; text-align:center; padding:70px 0; }
+  #thankyou .big{font-size:52px; margin-bottom:14px;}
+  #thankyou h2{font-size:28px; margin-bottom:10px;}
+  #thankyou p{color:var(--muted); font-size:16px;}
+
+  #formArea{display:block;}
+
+  footer{text-align:center; padding:36px 20px 50px; color:var(--muted); font-size:12.5px; font-family:'Space Mono',monospace;}
+  footer a{color:var(--muted);}
+
+  /* results panel */
+  #resultsToggle{
+    display:block; margin:26px auto 0; background:none; border:none; color:var(--muted);
+    font-family:'Space Mono',monospace; font-size:11.5px; text-decoration:underline; cursor:pointer;
+  }
+  #resultsPanel{display:none; margin-top:18px;}
+  #resultsPanel .card{margin-bottom:14px;}
+  #resultsPanel h3{font-family:'Space Mono',monospace; font-size:13px; color:var(--blue); margin:0 0 10px;}
+  #resultsPanel .tally{font-size:14.5px; margin:4px 0; color:var(--ink-soft);}
+  #resultsPanel .tally b{color:var(--ink);}
+  #resultsPanel .freetext{font-size:14.5px; color:var(--ink-soft); padding:8px 0; border-bottom:1px solid var(--beige-line);}
+  #resultsPanel .freetext:last-child{border-bottom:none;}
+  #resultsPanel .count{font-family:'Fraunces',serif; font-weight:900; font-size:34px; color:var(--ink);}
+  #csvBtn{
+    display:inline-block; margin-top:10px; padding:10px 18px; border:1.5px solid var(--ink);
+    background:none; border-radius:10px; font-family:'Space Mono',monospace; font-weight:700;
+    font-size:12.5px; color:var(--ink); cursor:pointer;
+  }
+  #csvBtn:hover{ background:var(--ink); color:#fff; }
+
+  .sitebar{
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+    padding:14px 0 0;font-family:'Space Mono',monospace;font-size:11px;font-weight:700;
+  }
+  .sitebar a{color:var(--muted);text-decoration:none;}
+  .sitebar a:hover{color:var(--blue);}
+
+
+/* ===== PREMIUM TEST REDESIGN ===== */
+body{
+  background:
+    radial-gradient(circle at 90% 0%,rgba(44,93,143,.13),transparent 25%),
+    linear-gradient(180deg,#f3efe5,#edf3f8)!important;
+}
+.sitebar{
+  position:sticky;top:0;z-index:60;
+  margin:0 -20px;padding:10px 20px!important;
+  background:rgba(7,24,44,.95);
+  box-shadow:0 8px 22px rgba(7,24,44,.16);
+}
+.sitebar a{color:#e9f2fa!important;}
+header.intro{
+  background:linear-gradient(135deg,#07182c,#0e3355);
+  color:#fff;margin:18px -6px 22px;padding:28px 24px!important;border-radius:20px;
+  box-shadow:0 24px 52px -30px rgba(7,24,44,.55);
+}
+header.intro .kicker{color:#ff962c!important;}
+header.intro h1{color:#fff;}
+header.intro .note{
+  background:rgba(255,255,255,.08)!important;color:#dbe7f2!important;
+  border:1px solid rgba(143,179,217,.18);
+}
+.card{
+  border:1px solid rgba(44,93,143,.12);
+  box-shadow:0 18px 42px -30px rgba(7,24,44,.35)!important;
+}
+.qnum{color:#ff7a00!important;}
+.opt.selected{background:#0e5487!important;border-color:#0e5487!important;}
+#submitBtn{
+  background:linear-gradient(135deg,#ff7a00,#ff9a2e)!important;
+  box-shadow:0 12px 26px rgba(255,122,0,.22);
+}
+
+</style>
+</head>
+<body>
+
+<div class="wrap"><div class="sitebar"><a href="../index.html">← Αρχική</a><a href="../briefings/2026-08-16.html">Briefing 16/08 →</a></div>
+
+  <div id="progress">
+    <div class="bar"><div class="fill" id="progFill"></div></div>
+    <div class="lbl" id="progLbl">0 / 12 ερωτήσεις</div>
+  </div>
+
+  <div id="formArea">
+    <header class="intro"><div style="display:flex;justify-content:center;margin-bottom:14px;"><img src="../assets/az-logo-transparent.png" alt="AZ" style="width:150px;height:auto;filter:drop-shadow(0 8px 16px rgba(0,0,0,.25));"></div>
+      <div class="kicker">Σύντομο τεστ · 2–3 λεπτά</div>
+      <h1>Τεστ «Πώς κατανοώ<br>τον κόσμο σήμερα»</h1>
+      <div class="note">
+        <p><b>Πριν ξεκινήσεις:</b> Δες τις 10 κάρτες όπως θα τις έβλεπες αν εμφανίζονταν στο κινητό σου.</p>
+        <p>Δεν είναι τεστ γνώσεων. Δεν χρειάζεται να προσπαθήσεις να θυμάσαι πληροφορίες.</p>
+        <p>Απλώς διάβασέ τες φυσιολογικά.</p>
+      </div>
+    </header>
+
+    <!-- Q1 -->
+    <div class="card-outer"><div class="card" data-q="1">
+      <div class="qnum">ΕΡΩΤΗΣΗ 1</div>
+      <div class="qtext">Πόσο εύκολο ήταν να καταλάβεις τις πληροφορίες;</div>
+      <div class="opt-row" data-group="q1">
+        <div class="opt emoji-opt" data-val="1">😣<span class="n">Πολύ δύσκολο</span></div>
+        <div class="opt emoji-opt" data-val="2">😕<span class="n">Δύσκολο</span></div>
+        <div class="opt emoji-opt" data-val="3">😐<span class="n">Μέτριο</span></div>
+        <div class="opt emoji-opt" data-val="4">🙂<span class="n">Εύκολο</span></div>
+        <div class="opt emoji-opt" data-val="5">😄<span class="n">Πολύ εύκολο</span></div>
+      </div>
+    </div></div>
+
+    <!-- Q2 -->
+    <div class="card-outer"><div class="card" data-q="2">
+      <div class="qnum">ΕΡΩΤΗΣΗ 2</div>
+      <div class="qtext">Πόσο κουραστικό ήταν να διαβάσεις τις 10 κάρτες;</div>
+      <div class="dot4" data-group="q2">
+        <div class="opt" data-val="Καθόλου"><span class="dotc" style="background:#2E7D5B;"></span>Καθόλου</div>
+        <div class="opt" data-val="Λίγο"><span class="dotc" style="background:#D4B106;"></span>Λίγο</div>
+        <div class="opt" data-val="Αρκετά"><span class="dotc" style="background:#B96E28;"></span>Αρκετά</div>
+        <div class="opt" data-val="Πολύ"><span class="dotc" style="background:#B23A32;"></span>Πολύ</div>
+      </div>
+    </div></div>
+
+    <!-- Q3 -->
+    <div class="card-outer"><div class="card" data-q="3">
+      <div class="qnum">ΕΡΩΤΗΣΗ 3</div>
+      <div class="qtext">Υπήρξε κάτι που δεν κατάλαβες;</div>
+      <div class="opt-row" data-group="q3">
+        <div class="opt" data-val="Όχι">Όχι</div>
+        <div class="opt" data-val="Ναι">Ναι</div>
+      </div>
+      <div class="subq" id="q3sub">
+        <div class="qtext">Αν απάντησες ΝΑΙ, σε ποια κάρτα;</div>
+        <div class="opt-grid10" data-group="q3card"></div>
+      </div>
+    </div></div>
+
+    <!-- Q4 -->
+    <div class="card-outer"><div class="card" data-q="4">
+      <div class="qnum">ΕΡΩΤΗΣΗ 4</div>
+      <div class="qtext">Υπήρχε κάποια λέξη ή φράση που δεν κατάλαβες;</div>
+      <div class="opt-row" data-group="q4">
+        <div class="opt" data-val="Όχι">Όχι</div>
+        <div class="opt" data-val="Ναι">Ναι</div>
+      </div>
+      <div class="subq" id="q4sub">
+        <div class="qtext">Αν ναι, ποια;</div>
+        <textarea id="q4text" placeholder="Γράψε τη λέξη ή φράση…"></textarea>
+      </div>
+    </div></div>
+
+    <!-- Q5 -->
+    <div class="card-outer"><div class="card" data-q="5">
+      <div class="qnum">ΕΡΩΤΗΣΗ 5</div>
+      <div class="qtext">Ποια κάρτα σου τράβηξε περισσότερο το ενδιαφέρον;</div>
+      <div class="opt-grid10" data-group="q5"></div>
+    </div></div>
+
+    <!-- Q6 -->
+    <div class="card-outer"><div class="card" data-q="6">
+      <div class="qnum">ΕΡΩΤΗΣΗ 6</div>
+      <div class="qtext">Ποια κάρτα θα αφαιρούσες πρώτη;</div>
+      <div class="opt-grid10" data-group="q6" id="q6grid"></div>
+    </div></div>
+
+    <!-- Q7 -->
+    <div class="card-outer"><div class="card" data-q="7">
+      <div class="qnum">ΕΡΩΤΗΣΗ 7</div>
+      <div class="qtext">Χωρίς να ξανακοιτάξεις τις κάρτες: πες με δικά σου λόγια ΕΝΑ πράγμα που έμαθες και δεν ήξερες πριν.</div>
+      <textarea id="q7" placeholder="Γράψε εδώ…"></textarea>
+    </div></div>
+
+    <!-- Q8 -->
+    <div class="card-outer"><div class="card" data-q="8">
+      <div class="qnum">ΕΡΩΤΗΣΗ 8</div>
+      <div class="qtext">Αν υπάρξει σοβαρό πρόβλημα στο Στενό του Ορμούζ, ποιο από τα παρακάτω είναι πιο πιθανό;</div>
+      <div class="opt-list" data-group="q8">
+        <div class="opt" data-val="A">Α. Το πετρέλαιο γίνεται φθηνότερο → οι μεταφορές γίνονται φθηνότερες → πέφτουν οι τιμές</div>
+        <div class="opt" data-val="B">Β. Το πετρέλαιο μπορεί να ακριβύνει → οι μεταφορές μπορεί να ακριβύνουν → μπορεί να υπάρξει πίεση στις τιμές προϊόντων</div>
+        <div class="opt" data-val="G">Γ. Αυξάνεται η παραγωγή μικροτσίπ → αναπτύσσεται περισσότερο η τεχνητή νοημοσύνη</div>
+        <div class="opt" data-val="D">Δ. Δεν ξέρω</div>
+      </div>
+    </div></div>
+
+    <!-- Q9 -->
+    <div class="card-outer"><div class="card" data-q="9">
+      <div class="qnum">ΕΡΩΤΗΣΗ 9</div>
+      <div class="qtext">Μετά από αυτές τις κάρτες, αισθάνεσαι ότι καταλαβαίνεις λίγο καλύτερα ΠΩΣ συνδέονται οι διεθνείς ειδήσεις με την καθημερινή μας ζωή;</div>
+      <div class="opt-list" data-group="q9">
+        <div class="opt" data-val="Ναι, αρκετά καλύτερα">Ναι, αρκετά καλύτερα</div>
+        <div class="opt" data-val="Ναι, λίγο καλύτερα">Ναι, λίγο καλύτερα</div>
+        <div class="opt" data-val="Περίπου το ίδιο">Περίπου το ίδιο</div>
+        <div class="opt" data-val="Όχι">Όχι</div>
+      </div>
+    </div></div>
+
+    <!-- Q10 -->
+    <div class="card-outer"><div class="card" data-q="10">
+      <div class="qnum">ΕΡΩΤΗΣΗ 10</div>
+      <div class="qtext">Αν κάτι τέτοιο εμφανιζόταν αύριο στο κινητό σου, τι πιστεύεις ότι θα έκανες;</div>
+      <div class="opt-list" data-group="q10">
+        <div class="opt" data-val="Θα διάβαζα και τις 10 κάρτες">Θα διάβαζα και τις 10 κάρτες</div>
+        <div class="opt" data-val="Θα ξεκινούσα και θα συνέχιζα αν με ενδιέφερε">Θα ξεκινούσα και θα συνέχιζα αν με ενδιέφερε</div>
+        <div class="opt" data-val="Θα διάβαζα μόνο 2–3 κάρτες">Θα διάβαζα μόνο 2–3 κάρτες</div>
+        <div class="opt" data-val="Μάλλον θα το προσπερνούσα">Μάλλον θα το προσπερνούσα</div>
+      </div>
+    </div></div>
+
+    <!-- Q11 -->
+    <div class="card-outer"><div class="card" data-q="11">
+      <div class="qnum">ΕΡΩΤΗΣΗ 11</div>
+      <div class="qtext">Θα ήθελες να βλέπεις ένα τέτοιο briefing συχνά;</div>
+      <div class="opt-row" data-group="q11">
+        <div class="opt emoji-opt" data-val="Ναι">😍<span class="n">Ναι</span></div>
+        <div class="opt emoji-opt" data-val="Ίσως">🙂<span class="n">Ίσως</span></div>
+        <div class="opt emoji-opt" data-val="Μάλλον όχι">😐<span class="n">Μάλλον όχι</span></div>
+        <div class="opt emoji-opt" data-val="Όχι">🙅<span class="n">Όχι</span></div>
+      </div>
+    </div></div>
+
+    <!-- Q12 -->
+    <div class="card-outer"><div class="card" data-q="12">
+      <div class="qnum">ΕΡΩΤΗΣΗ 12 · ΤΕΛΕΥΤΑΙΑ</div>
+      <div class="qtext">Αν μπορούσες να αλλάξεις ΕΝΑ πράγμα στις κάρτες, τι θα άλλαζες;</div>
+      <textarea id="q12" placeholder="Γράψε εδώ…"></textarea>
+    </div></div>
+
+    <button id="submitBtn">ΑΠΟΣΤΟΛΗ ΑΠΑΝΤΗΣΕΩΝ</button>
+    <div id="err">Απάντησε σε όλες τις ερωτήσεις με κύκλους πριν στείλεις (7 &amp; 12 είναι προαιρετικές).</div>
+  </div>
+
+  <div id="thankyou">
+    <div class="big">🙏</div>
+    <h2>Τέλος — ευχαριστώ!</h2>
+    <p>Η απάντησή σου καταγράφηκε με επιτυχία. Ευχαριστώ για τη βοήθεια.</p>
+  </div>
+
+  <footer>Πώς κατανοώ τον κόσμο σήμερα · τεστ αναγνωσιμότητας</footer>
+</div>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-app.js";
+  import {
+    getFirestore,
+    collection,
+    addDoc,
+    serverTimestamp
+  } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyBm1CYMhOXuYfgN5GGUuKlSjOK5PqF0KII",
+    authDomain: "world-in-context-feedback.firebaseapp.com",
+    projectId: "world-in-context-feedback",
+    storageBucket: "world-in-context-feedback.firebasestorage.app",
+    messagingSenderId: "540778326609",
+    appId: "1:540778326609:web:fbe76b45ae73fb98e76670"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  const CARD_NAMES = {
+    1:'Εξώφυλλο', 2:'Η μέρα σε 60″', 3:'Ουκρανία', 4:'Ορμούζ', 5:'Κίνα & chips',
+    6:'AI & ρεύμα', 7:'AI & hackers', 8:'Κλίμα', 9:'Η Ελλάδα', 10:'Τι κρατάμε'
+  };
+
+  // build the 1-10 (+ "Καμία" for q6) card pickers
+  function buildCardGrid(container, includeNone){
+    container.innerHTML = '';
+    for(let i=1;i<=10;i++){
+      const d = document.createElement('div');
+      d.className = 'opt card-opt';
+      d.setAttribute('data-val', i);
+      d.innerHTML = i + '<span class="cn">' + CARD_NAMES[i] + '</span>';
+      container.appendChild(d);
+    }
+    if(includeNone){
+      const d = document.createElement('div');
+      d.className = 'opt wide card-opt';
+      d.setAttribute('data-val', 'Καμία');
+      d.innerHTML = 'Καμία';
+      container.appendChild(d);
+    }
+  }
+  buildCardGrid(document.querySelector('[data-group="q3card"]'), false);
+  buildCardGrid(document.querySelector('[data-group="q5"]'), false);
+  buildCardGrid(document.querySelector('[data-group="q6"]'), true);
+
+  const answers = {};
+
+  function attachGroup(groupEl){
+    const name = groupEl.getAttribute('data-group');
+    groupEl.querySelectorAll('.opt').forEach(opt => {
+      opt.addEventListener('click', () => {
+        groupEl.querySelectorAll('.opt').forEach(o => o.classList.remove('selected'));
+        opt.classList.add('selected');
+        answers[name] = opt.getAttribute('data-val');
+        if(name === 'q3'){
+          document.getElementById('q3sub').classList.toggle('show', answers.q3 === 'Ναι');
+        }
+        if(name === 'q4'){
+          document.getElementById('q4sub').classList.toggle('show', answers.q4 === 'Ναι');
+        }
+        updateProgress();
+      });
+    });
+  }
+  document.querySelectorAll('[data-group]').forEach(attachGroup);
+
+  ['q7','q12','q4text'].forEach(id => {
+    document.getElementById(id).addEventListener('input', (e) => {
+      answers[id] = e.target.value;
+      updateProgress();
+    });
+  });
+
+  const REQUIRED = ['q1','q2','q3','q4','q5','q6','q8','q9','q10','q11'];
+  function updateProgress(){
+    const done = REQUIRED.filter(k => answers[k] !== undefined && answers[k] !== '').length;
+    const pct = Math.round(done / REQUIRED.length * 100);
+    document.getElementById('progFill').style.width = pct + '%';
+    document.getElementById('progLbl').textContent = done + ' / ' + REQUIRED.length + ' ερωτήσεις';
+  }
+
+  document.getElementById('submitBtn').addEventListener('click', async () => {
+    const missing = REQUIRED.filter(k => answers[k] === undefined || answers[k] === '');
+    const err = document.getElementById('err');
+    if(missing.length){
+      err.style.display = 'block';
+      return;
+    }
+    err.style.display = 'none';
+    const btn = document.getElementById('submitBtn');
+    btn.disabled = true;
+    btn.textContent = 'ΑΠΟΣΤΟΛΗ…';
+
+    const payload = {
+      submittedAt: serverTimestamp(),
+      briefingDate: "2026-08-16",
+      answers: {
+        q1: answers.q1,
+        q2: answers.q2,
+        q3: answers.q3,
+        q3card: answers.q3card || null,
+        q4: answers.q4,
+        q4text: answers.q4text || '',
+        q5: answers.q5,
+        q6: answers.q6,
+        q7: answers.q7 || '',
+        q8: answers.q8,
+        q9: answers.q9,
+        q10: answers.q10,
+        q11: answers.q11,
+        q12: answers.q12 || ''
+      }
+    };
+
+    try{
+      await addDoc(collection(db, "responses"), payload);
+      document.getElementById('formArea').style.display = 'none';
+      document.getElementById('thankyou').style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }catch(e){
+      console.error("Firestore submit error:", e);
+      btn.disabled = false;
+      btn.textContent = 'ΑΠΟΣΤΟΛΗ ΑΠΑΝΤΗΣΕΩΝ';
+      err.textContent = 'Κάτι πήγε στραβά κατά την αποστολή. Δοκίμασε ξανά σε λίγο.';
+      err.style.display = 'block';
+    }
+  });
+
+  updateProgress();
+</script>
+
+</body>
+</html>

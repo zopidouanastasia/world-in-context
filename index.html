@@ -211,15 +211,145 @@ footer{
 .footer-grid{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 .footer-title{font-family:'Space Mono',monospace;font-weight:700;color:var(--ink)}
 .small-note{max-width:720px;margin-top:14px;font-size:12px}
+
+/* ===== PREMIUM VISUAL REDESIGN ===== */
+:root{
+  --navy:#07182c;
+  --navy-2:#0d2743;
+  --navy-3:#12395f;
+  --orange:#ff7a00;
+  --orange-soft:#ff9c3a;
+  --ice:#dbe9f7;
+}
+body{
+  background:
+    radial-gradient(circle at 15% 10%, rgba(44,93,143,.10), transparent 30%),
+    linear-gradient(180deg,#f4f0e6 0%,#f1ecdf 100%);
+}
+header{
+  background:rgba(7,24,44,.94)!important;
+  border-bottom:1px solid rgba(143,179,217,.22)!important;
+  box-shadow:0 10px 28px rgba(3,13,25,.18);
+}
+.brand{color:#fff!important;}
+.brand img{
+  width:68px!important;height:44px!important;border-radius:0!important;
+  filter:drop-shadow(0 2px 8px rgba(255,255,255,.15));
+}
+.navlinks a{color:#dce7f2!important;}
+.navlinks a:hover{color:var(--orange-soft)!important;}
+.cta-small{
+  background:linear-gradient(135deg,var(--orange),#ff9b32)!important;
+  color:#fff!important;border-radius:999px!important;
+  box-shadow:0 8px 20px rgba(255,122,0,.25);
+}
+.hero{
+  color:#fff;
+  background:
+    radial-gradient(circle at 75% 35%, rgba(25,105,166,.35), transparent 24%),
+    radial-gradient(circle at 85% 35%, rgba(255,122,0,.08), transparent 18%),
+    linear-gradient(135deg,#06182a 0%,#0b2c4b 52%,#07182c 100%);
+  min-height:650px;
+}
+.hero:before{
+  width:560px!important;height:560px!important;right:-80px!important;top:30px!important;
+  background:
+    radial-gradient(circle at center, rgba(15,74,119,.12) 0 38%, transparent 39%),
+    repeating-radial-gradient(circle at center, rgba(143,179,217,.16) 0 1px, transparent 1px 34px)!important;
+  border:1px solid rgba(143,179,217,.10);
+  box-shadow:0 0 80px rgba(44,93,143,.16);
+}
+.hero:after{
+  width:700px!important;height:260px!important;left:48%!important;bottom:-120px!important;
+  background:transparent!important;border:1px solid rgba(255,122,0,.22);
+  border-radius:50%!important;transform:rotate(-10deg);
+}
+.hero-grid{grid-template-columns:1.02fr .98fr!important;gap:34px!important;}
+.hero .kicker,.hero .hero-sub{color:#c8d6e6!important;}
+.hero h1{color:#fff;text-shadow:0 3px 20px rgba(0,0,0,.16);}
+.hero-lead{color:#e7eef6!important;}
+.hero .btn.primary{
+  border-color:var(--orange)!important;background:linear-gradient(135deg,var(--orange),#ff9a2d)!important;
+  color:#fff!important;box-shadow:0 10px 26px rgba(255,122,0,.24);
+}
+.hero .btn.secondary{
+  border-color:rgba(220,233,247,.7)!important;color:#eef6ff!important;background:rgba(255,255,255,.04)!important;
+}
+.today-card{
+  background:linear-gradient(160deg,rgba(255,255,255,.98),rgba(239,246,253,.96))!important;
+  border:1px solid rgba(143,179,217,.38);
+  box-shadow:0 32px 70px -28px rgba(0,0,0,.55)!important;
+  transform:translateY(8px);
+}
+.today-card:after{
+  content:"";
+  position:absolute;inset:auto -70px -80px auto;width:230px;height:230px;border-radius:50%;
+  border:1px solid rgba(44,93,143,.18);
+  box-shadow:0 0 0 28px rgba(44,93,143,.05),0 0 0 56px rgba(44,93,143,.035);
+}
+.today-card .date-line{color:var(--orange)!important;}
+.today-card .read{color:var(--orange)!important;}
+.today-card .pill{
+  background:#edf4fa!important;border:1px solid #d7e5f2;color:#274968!important;
+}
+section:not(.hero):not(.dark-section){
+  position:relative;
+}
+.section-head .eyebrow{color:var(--orange)!important;}
+.section-head h2{color:#0a2744;}
+.calendar,.archive-list,.info-card{
+  border:1px solid rgba(44,93,143,.12);
+  box-shadow:0 18px 45px -28px rgba(7,24,44,.35)!important;
+}
+.calendar{background:linear-gradient(180deg,#fff,#fbfdff)!important;}
+.day.today{background:linear-gradient(135deg,#0c3a61,#17669d)!important;}
+.day.has{box-shadow:inset 0 0 0 1px rgba(44,93,143,.15);}
+.archive-item:hover{
+  background:#f7fbff;
+  margin:0 -12px;padding-left:12px;padding-right:12px;border-radius:12px;
+}
+.archive-arrow{color:var(--orange)!important;}
+.dark-section{
+  background:
+    radial-gradient(circle at 80% 20%,rgba(44,93,143,.30),transparent 30%),
+    linear-gradient(135deg,#06172a,#0d2c4a)!important;
+}
+.value{background:rgba(255,255,255,.035)!important;border-color:rgba(143,179,217,.20)!important;}
+.value .num{color:var(--orange-soft)!important;}
+.signature{
+  color:#fff;
+  background:linear-gradient(90deg,rgba(255,122,0,.10),transparent);
+  padding:22px 24px!important;border-radius:16px;border-top:none!important;
+  border-left:4px solid var(--orange)!important;
+}
+#feedback{
+  background:linear-gradient(180deg,#f1ecdf,#eaf2f8);
+}
+#feedback .btn.primary{
+  background:linear-gradient(135deg,#0a3152,#155f93)!important;color:#fff!important;
+  border:none!important;box-shadow:0 10px 24px rgba(15,64,103,.18);
+}
+footer{
+  background:#06172a;color:#9fb5ca!important;border-top:none!important;
+}
+footer .footer-title{color:#fff!important;}
+footer .mono{color:var(--orange-soft);}
+@media(max-width:860px){
+  .hero{min-height:auto;}
+  .hero-grid{grid-template-columns:1fr!important;}
+  .today-card{transform:none;}
+}
+
 </style>
 </head>
 
 <body>
 <header>
   <div class="wrap nav">
-    <a class="brand" href="index.html">Πώς κατανοώ τον κόσμο σήμερα</a>
+    <a class="brand" href="index.html" style="display:flex;align-items:center;gap:10px;"><img src="assets/az-logo-transparent.png" alt="AZ" style="width:54px;height:36px;object-fit:contain;border-radius:8px;"><span>Πώς κατανοώ τον κόσμο σήμερα</span></a>
     <nav class="navlinks">
       <a href="#archive">Αρχείο</a>
+      <a href="feedback/test.html">Τεστ</a>
       <a href="#purpose">Σκοπός</a>
       <a href="#about">Πίσω από το project</a>
       <a class="cta-small" href="briefings/2026-08-16.html">Σημερινό briefing →</a>
@@ -241,7 +371,10 @@ footer{
         </div>
       </div>
 
-      <aside class="today-card">
+      <div class="hero-logo-wrap" style="display:flex;justify-content:center;margin:0 0 -20px;">
+      <img src="assets/az-logo-transparent.png" alt="AZ" style="width:min(430px,88%);height:auto;filter:drop-shadow(0 18px 28px rgba(0,0,0,.38));">
+    </div>
+    <aside class="today-card">
         <div class="date-line">Κυριακή · 16 Αυγούστου 2026</div>
         <h2>Ο κόσμος σήμερα σε 10 κάρτες</h2>
         <p>Από την Ουκρανία και το Ορμούζ μέχρι τα μικροτσίπ, την AI, την κυβερνοασφάλεια, το κλίμα και την Ελλάδα.</p>
@@ -329,7 +462,19 @@ footer{
     </div>
   </section>
 
-  <section class="dark-section" id="purpose">
+  
+  <section id="feedback">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Δοκιμή του format</div>
+        <h2>Βοήθησέ μας να το κάνουμε πιο κατανοητό.</h2>
+        <p>Διάβασες το briefing; Το σύντομο τεστ χρειάζεται περίπου 2–3 λεπτά και βοηθά να δούμε τι λειτουργεί και τι πρέπει να βελτιωθεί.</p>
+      </div>
+      <a class="btn primary" href="feedback/test.html">Κάνε το σύντομο τεστ →</a>
+    </div>
+  </section>
+
+<section class="dark-section" id="purpose">
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow">Γιατί υπάρχει αυτή η σελίδα</div>

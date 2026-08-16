@@ -1,12 +1,11 @@
-# Πώς κατανοώ τον κόσμο σήμερα
+# Πώς κατανοώ τον κόσμο σήμερα — Redesigned package
 
-Δομή site:
+Περιλαμβάνει:
+- `index.html` — νέα premium αρχική
+- `briefings/2026-08-16.html` — briefing με πηγές, ΑΡΧΙΚΗ και ΤΕΣΤ
+- `feedback/test.html` — Firebase-ready τεστ
+- `assets/az-logo-transparent.png` — transparent AZ logo
+- `assets/az-logo-256.png` — μικρή έκδοση logo
+- `assets/logo-concept.png` — concept image
 
-- `index.html` — κεντρική σελίδα
-- `briefings/2026-08-16.html` — briefing 16 Αυγούστου 2026
-
-Για κάθε νέα ημέρα:
-1. Αντιγράφεις το προηγούμενο briefing.
-2. Το μετονομάζεις σε `YYYY-MM-DD.html`.
-3. Ενημερώνεις ημερομηνία, περιεχόμενο και πηγές.
-4. Προσθέτεις τη νέα ημέρα στο ημερολόγιο και στο αρχείο της `index.html`.
+Ανέβασε όλα τα αρχεία/φακέλους στο root του GitHub repository, διατηρώντας ακριβώς τη δομή.

@@ -253,14 +253,77 @@
   .eyebrow .num{ color:var(--accent); font-weight:700; }
 
   ::selection{ background:var(--blue-light); color:var(--ink); }
+
+  .site-actions{display:flex;align-items:center;gap:8px;}
+  .home-btn,.test-btn{
+    display:inline-flex;align-items:center;gap:5px;
+    font-family:'Space Mono',monospace;font-size:10px;font-weight:700;
+    text-decoration:none;padding:5px 8px;border-radius:8px;white-space:nowrap;
+  }
+  .home-btn{color:var(--blue);border:1px solid var(--beige-line);background:rgba(255,255,255,.62);}
+  .test-btn{color:#fff;background:var(--ink);}
+  #topbar.dark .home-btn{color:#DCE3EE;border-color:#2A3B58;background:rgba(255,255,255,.04);}
+  #topbar.dark .test-btn{background:#F0B94E;color:#15223B;}
+  @media(max-width:540px){.home-btn .txt,.test-btn .txt{display:none;}}
+
+
+/* ===== PREMIUM BRIEFING SHELL ===== */
+#topbar{
+  background:rgba(6,23,42,.94)!important;
+  border-bottom:1px solid rgba(143,179,217,.18);
+  box-shadow:0 10px 24px rgba(3,13,25,.18);
+}
+#brand{color:#fff!important;}
+#curlabel{color:#dce8f4!important;}
+#segments button{background:#27425d!important;}
+#segments button.done,#segments button.current{background:#ff7a00!important;}
+.home-btn{
+  background:rgba(255,255,255,.06)!important;
+  color:#e7f0f9!important;border-color:#34516c!important;
+}
+.test-btn{background:linear-gradient(135deg,#ff7a00,#ff9b32)!important;color:#fff!important;}
+.slide:not(.dark):not(.hero){
+  background:
+    radial-gradient(circle at 90% 10%,rgba(44,93,143,.10),transparent 28%),
+    #f1ecdf;
+}
+.hero{
+  background:
+    radial-gradient(circle at 85% 30%,rgba(31,112,170,.24),transparent 25%),
+    linear-gradient(135deg,#07182c,#0d2e4e)!important;
+}
+.hero h1{color:#fff!important;}
+.hero .hook{color:#dce8f4!important;}
+.hero .tagline,.hero .kicker{color:#b7cada!important;}
+.hero .date{color:#ff8a16!important;}
+.hero .rule{background:#ff8a16!important;}
+.card{
+  border:1px solid rgba(44,93,143,.12);
+  box-shadow:0 22px 55px -30px rgba(7,24,44,.38)!important;
+}
+.card::before{opacity:.075!important;}
+.punchline{
+  border-left:3px solid var(--accent);
+}
+.sources{
+  background:#f7fafc;border:1px solid #e3edf5!important;
+  border-radius:10px;padding:12px!important;
+}
+.dark{
+  background:
+    radial-gradient(circle at 85% 20%,rgba(44,93,143,.35),transparent 30%),
+    linear-gradient(135deg,#06172a,#0c2945)!important;
+}
+.closing-line{color:#fff!important;}
+
 </style>
 </head>
 <body>
 
 <div id="topbar">
   <div class="row">
-    <span id="brand">Πώς κατανοώ τον κόσμο σήμερα</span>
-    <span id="curlabel"><span class="n" id="curnum">01</span>/10 · <span id="curtitle">ΕΞΩΦΥΛΛΟ</span></span>
+    <a id="brand" href="../index.html" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:8px;"><img src="../assets/az-logo-transparent.png" alt="AZ" style="width:42px;height:28px;object-fit:contain;"><span>Πώς κατανοώ τον κόσμο σήμερα</span></a>
+    <div class="site-actions"><a class="home-btn" href="../index.html">⌂ <span class="txt">ΑΡΧΙΚΗ</span></a><a class="test-btn" href="../feedback/test.html">✓ <span class="txt">ΤΕΣΤ</span></a><span id="curlabel"><span class="n" id="curnum">01</span>/10 · <span id="curtitle">ΕΞΩΦΥΛΛΟ</span></span></div>
   </div>
   <div id="segments"></div>
 </div>
@@ -564,7 +627,11 @@
       <p class="est"><b>Πολύ πιθανό:</b> Θα συνεχιστούν οι τεράστιες επενδύσεις σε AI και μικροτσίπ.</p>
       <p class="est"><b>Αρκετά πιθανό:</b> Οι αγορές θα συνεχίσουν να έχουν έντονες αυξομειώσεις όσο υπάρχει μεγάλη γεωπολιτική αβεβαιότητα.</p>
       <p class="est"><b>Αρκετά πιθανό:</b> Μέχρι το 2027 η AI θα αναλαμβάνει περισσότερες καθημερινές εργασίες, αλλά ο άνθρωπος θα παραμένει απαραίτητος στις σημαντικές αποφάσεις.</p>
-      <div class="closing-line">ΓΕΓΟΝΟΣ &nbsp;≠&nbsp; ΑΝΑΛΥΣΗ &nbsp;≠&nbsp; ΠΡΟΒΛΕΨΗ</div>
+      <div class="closing-line">ΓΕΓΟΝΟΣ &nbsp;→&nbsp; ΑΝΑΛΥΣΗ &nbsp;→&nbsp; ΕΚΤΙΜΗΣΗ</div>
+        <div style="margin-top:18px;padding:16px 18px;border-radius:14px;background:rgba(240,185,78,.12);border:1px solid rgba(240,185,78,.35);">
+          <p style="margin:0 0 10px;color:var(--cream-text);font-size:14px;">Διάβασες τις 10 κάρτες; Το σύντομο τεστ βοηθά να βελτιώσουμε το briefing.</p>
+          <a href="../feedback/test.html" style="display:inline-block;text-decoration:none;background:#F0B94E;color:#15223B;font-family:'Space Mono',monospace;font-size:11px;font-weight:700;padding:9px 12px;border-radius:8px;">ΚΑΝΕ ΤΟ ΤΕΣΤ →</a>
+        </div>
       <div class="sources">
         <div class="src-line">Για τα γεγονότα → βλ. πηγές στις κάρτες 3–9</div>
         <div class="src-line">🟠 Εκτίμηση του briefing — βασισμένη στις τάσεις του <a href="https://www.iea.org/reports/key-questions-on-energy-and-ai" target="_blank" rel="noopener">IEA, Key Questions on Energy and AI, 2026</a></div>
