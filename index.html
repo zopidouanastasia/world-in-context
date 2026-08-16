@@ -341,74 +341,6 @@ footer .mono{color:var(--orange-soft);}
 }
 
 
-/* ===== EXACT EARTH HERO VISUAL ===== */
-.hero{
-  position:relative;
-  overflow:hidden;
-  background:
-    radial-gradient(circle at 72% 38%, rgba(20,92,148,.28), transparent 30%),
-    linear-gradient(135deg,#06172a 0%,#0a2947 56%,#06172a 100%)!important;
-}
-.hero-grid{
-  position:relative;
-  z-index:2;
-  grid-template-columns:1.02fr .98fr!important;
-  align-items:center!important;
-}
-.hero-grid > div:first-child{
-  position:relative;
-  z-index:4;
-}
-.earth-visual{
-  position:absolute;
-  z-index:1;
-  right:-9%;
-  top:3%;
-  width:63%;
-  height:94%;
-  pointer-events:none;
-  overflow:hidden;
-  opacity:.98;
-}
-.earth-visual img{
-  position:absolute;
-  right:0;
-  top:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center;
-  filter:saturate(1.05) contrast(1.04);
-  -webkit-mask-image:linear-gradient(to left,black 70%,rgba(0,0,0,.75) 83%,transparent 100%);
-  mask-image:linear-gradient(to left,black 70%,rgba(0,0,0,.75) 83%,transparent 100%);
-}
-.today-card{
-  position:relative;
-  z-index:3;
-  margin-top:300px;
-  backdrop-filter:blur(8px);
-  background:rgba(255,255,255,.94)!important;
-}
-.hero:before,
-.hero:after{
-  display:none!important;
-}
-@media(max-width:900px){
-  .hero-grid{grid-template-columns:1fr!important;}
-  .earth-visual{
-    position:relative;
-    right:auto;top:auto;width:calc(100% + 36px);height:330px;
-    margin:18px -18px -40px;
-    opacity:.9;
-  }
-  .earth-visual img{
-    -webkit-mask-image:linear-gradient(to bottom,black 60%,transparent 100%);
-    mask-image:linear-gradient(to bottom,black 60%,transparent 100%);
-  }
-  .today-card{margin-top:0;}
-}
-
-
 /* ===== FINAL VISIBILITY FIXES ===== */
 
 /* 1) Today's briefing card: force readable dark text on white card */
@@ -460,16 +392,6 @@ footer .mono{color:var(--orange-soft);}
 .dark-section .section-head *{
   opacity:1 !important;
 }
-
-/* Hero: remove any accidental text/pseudo overlays */
-.hero .hero-grid::before,
-.hero .hero-grid::after,
-.hero .earth-visual::before,
-.hero .earth-visual::after{
-  content:none !important;
-  display:none !important;
-}
-
 
 /* FINAL RESPONSIVE EARTH HERO */
 .hero{
@@ -607,30 +529,10 @@ a,button{touch-action:manipulation;}
           <span class="pill">Κλίμα</span>
           <span class="pill">Ελλάδα</span>
         </div>
-        <a class="read" href="briefings/2026-08-16.html">ΑΝΟΙΓΜΑ ΤΗΣ ΣΗΜΕΡΙΝΗΣ ΕΚΔΟΣΗΣ →</a>
+        <div style="margin-top:16px;font-family:'Space Mono',monospace;font-size:10px;color:#6b7f91;">Τελευταία ενημέρωση: 16/08/2026</div><a class="read" href="briefings/2026-08-16.html">ΑΝΟΙΓΜΑ ΤΗΣ ΣΗΜΕΡΙΝΗΣ ΕΚΔΟΣΗΣ →</a>
       </aside>
     </div>
   </section>
-
-  
-  <section id="today-preview" style="padding-top:20px;">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="eyebrow">Σημερινή έκδοση</div>
-        <h2>Μπες κατευθείαν στο briefing.</h2>
-        <p>Η εμπειρία των 10 καρτών ανοίγει σε ξεχωριστή σελίδα, σχεδιασμένη για κινητό και γρήγορη ανάγνωση.</p>
-      </div>
-      <a href="briefings/2026-08-16.html" style="display:block;text-decoration:none;">
-        <div style="background:#FFFFFF;border-radius:26px;padding:30px;box-shadow:0 18px 40px -22px rgba(30,30,20,.24);border:1px solid rgba(220,210,184,.7);">
-          <div style="font-family:'Space Mono',monospace;font-size:11px;font-weight:700;color:#2C5D8F;letter-spacing:.06em;text-transform:uppercase;">16 · 08 · 2026 · 10 κάρτες</div>
-          <div style="font-family:'Fraunces',serif;font-weight:700;font-size:clamp(28px,5vw,42px);line-height:1.06;margin:10px 0 14px;color:#1B2A4A;">Ουκρανία, Ορμούζ, chips, AI, κλίμα και Ελλάδα</div>
-          <div style="color:#3E4E6E;font-size:16px;">Όχι μόνο τι έγινε — αλλά γιατί έχει σημασία και πώς συνδέεται με την καθημερινότητά μας.</div>
-          <div style="margin-top:20px;font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:#2C5D8F;">ΑΝΟΙΓΜΑ BRIEFING →</div>
-        </div>
-      </a>
-    </div>
-  </section>
-
 <section id="archive">
     <div class="wrap">
       <div class="section-head">
@@ -721,7 +623,7 @@ a,button{touch-action:manipulation;}
       </div>
 
       <div class="signature">ΓΕΓΟΝΟΣ &nbsp;→&nbsp; ΑΝΑΛΥΣΗ &nbsp;→&nbsp; ΕΚΤΙΜΗΣΗ</div><p style="color:#DCE3EE;margin:10px 0 0;font-size:15px;">Ξεχωρίζουμε τι γνωρίζουμε, τι συμπεραίνουμε και τι θεωρούμε πιθανό.</p>
-      <p style="color:#DCE3EE;margin:12px 0 0;font-size:15px;">Ξεχωρίζουμε τι γνωρίζουμε, τι συμπεραίνουμε και τι θεωρούμε πιθανό.</p>
+      
     </div>
   </section>
 
@@ -734,7 +636,7 @@ a,button{touch-action:manipulation;}
 
       <div class="info-grid">
         <article class="info-card">
-          <h3>Ποιοι είμαστε</h3>
+          <h3>Τι είναι το project</h3>
           <p><strong>«Πώς κατανοώ τον κόσμο σήμερα»</strong> είναι ένα ανεξάρτητο προσωπικό editorial και research project με στόχο να κάνει σύνθετες εξελίξεις πιο κατανοητές χωρίς να τις απλοποιεί μέχρι να χάνουν το νόημά τους.</p>
           <p>Δεν φιλοδοξεί να αντικαταστήσει τη δημοσιογραφία ή τις πρωτογενείς πηγές. Φιλοδοξεί να λειτουργεί ως ένας σύντομος οδηγός κατανόησης: από το γεγονός, στη σύνδεση και από τη σύνδεση στη σημασία του.</p>
         </article>
@@ -749,6 +651,7 @@ a,button{touch-action:manipulation;}
           <h3>Πώς δουλεύουμε</h3>
           <p>Επιλέγουμε λίγες εξελίξεις που έχουν ουσιαστική σημασία, αναζητούμε αξιόπιστες πηγές, διασταυρώνουμε βασικά στοιχεία και οργανώνουμε την πληροφορία σε σύντομες κάρτες.</p>
           <p>Όπου υπάρχει αβεβαιότητα, τη δηλώνουμε. Όπου υπάρχει εκτίμηση, δεν την παρουσιάζουμε ως γεγονός.</p>
+          <p><strong>Χρήση τεχνητής νοημοσύνης:</strong> χρησιμοποιούνται εργαλεία AI για υποβοήθηση έρευνας, οργάνωσης, σύγκρισης πηγών και παρουσίασης. Οι βασικές πηγές, τα κρίσιμα στοιχεία και οι τελικές διατυπώσεις ελέγχονται πριν από τη δημοσίευση.</p>
         </article>
 
         <article class="info-card">
