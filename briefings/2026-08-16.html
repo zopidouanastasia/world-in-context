@@ -316,13 +316,128 @@
 }
 .closing-line{color:#fff!important;}
 
+
+/* ===== 10-CARD VISUAL ALIGNMENT WITH HOMEPAGE ===== */
+:root{
+  --home-navy:#06172a;
+  --home-navy2:#0c2c4a;
+  --home-blue:#2b78b7;
+  --home-orange:#ff7a00;
+  --home-ice:#dce9f5;
+}
+#topbar{
+  background:rgba(6,23,42,.97)!important;
+  border-bottom:1px solid rgba(143,179,217,.18)!important;
+}
+#brand .logo-shell{
+  width:46px;height:32px;display:inline-flex;align-items:center;justify-content:center;
+  background:#fff;border-radius:9px;padding:3px 5px;
+  box-shadow:0 5px 14px rgba(0,0,0,.22);
+}
+#brand .logo-shell img{width:100%!important;height:100%!important;object-fit:contain!important;}
+.slide{
+  background:
+    radial-gradient(circle at 88% 10%,rgba(43,120,183,.13),transparent 28%),
+    linear-gradient(180deg,#f7f4ec,#eef4f8)!important;
+}
+.slide.hero,.slide.dark{
+  background:
+    radial-gradient(circle at 82% 22%,rgba(43,120,183,.30),transparent 28%),
+    linear-gradient(135deg,#06172a,#0c2c4a)!important;
+}
+.slide.hero:after{
+  content:"";position:absolute;right:-140px;top:80px;width:520px;height:520px;
+  border:1px solid rgba(94,170,225,.15);border-radius:50%;
+  box-shadow:0 0 0 38px rgba(94,170,225,.035),0 0 0 78px rgba(94,170,225,.025);
+  pointer-events:none;
+}
+.card{
+  border-radius:18px!important;
+  border:1px solid rgba(43,120,183,.15)!important;
+  box-shadow:0 22px 55px -32px rgba(6,23,42,.45)!important;
+}
+.card .eyebrow,.slide .kicker{color:var(--home-orange)!important;}
+.punchline{border-left:4px solid var(--home-orange)!important;}
+.sources a{color:#23669a!important;}
+.test-btn{
+  background:linear-gradient(135deg,#ff7200,#ff9a2e)!important;
+  box-shadow:0 7px 18px rgba(255,122,0,.20);
+}
+.home-btn{border-color:#385873!important;}
+#segments button.done,#segments button.current{background:var(--home-orange)!important;}
+
+/* ===== DEEP ANALYSIS ===== */
+.deep-analysis{
+  display:none;position:fixed;inset:0;z-index:120;background:#eef3f7;
+  overflow-y:auto;color:#13283d;
+}
+.deep-analysis.open{display:block;}
+.analysis-top{
+  position:sticky;top:0;z-index:5;background:rgba(6,23,42,.97);
+  border-bottom:1px solid rgba(143,179,217,.18);padding:12px 20px;
+}
+.analysis-top-inner{
+  max-width:1040px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:14px;
+}
+.analysis-brand{display:flex;align-items:center;gap:10px;color:#fff;font-family:'Space Mono',monospace;font-size:11px;font-weight:700;}
+.analysis-logo{
+  width:48px;height:34px;background:#fff;border-radius:9px;padding:4px;object-fit:contain;
+}
+.analysis-close{
+  border:1px solid #49677f;background:transparent;color:#fff;border-radius:9px;
+  padding:8px 11px;font-family:'Space Mono',monospace;font-weight:700;cursor:pointer;
+}
+.analysis-hero{
+  background:
+    radial-gradient(circle at 80% 25%,rgba(43,120,183,.32),transparent 30%),
+    linear-gradient(135deg,#06172a,#0d3152);
+  color:#fff;padding:64px 24px 58px;
+}
+.analysis-wrap{max-width:1040px;margin:auto;}
+.analysis-hero .overline{color:#ff8a16;font:700 11px 'Space Mono',monospace;letter-spacing:.08em;}
+.analysis-hero h1{font:700 clamp(38px,5vw,66px) Georgia,serif;margin:12px 0 16px;max-width:850px;}
+.analysis-hero p{max-width:760px;color:#d6e3ee;font-size:18px;line-height:1.65;}
+.analysis-body{max-width:1040px;margin:auto;padding:42px 24px 70px;}
+.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;}
+.analysis-card{
+  background:#fff;border:1px solid #dce7ef;border-radius:18px;padding:26px;
+  box-shadow:0 18px 45px -34px rgba(6,23,42,.45);
+}
+.analysis-card.wide{grid-column:1/-1;}
+.analysis-card .num{color:#ff7a00;font:700 11px 'Space Mono',monospace;}
+.analysis-card h2{font:700 27px Georgia,serif;color:#0b2945;margin:8px 0 13px;}
+.analysis-card h3{font:700 13px 'Space Mono',monospace;color:#2a608d;margin:18px 0 7px;text-transform:uppercase;}
+.analysis-card p,.analysis-card li{font-size:15.5px;line-height:1.7;color:#33495d;}
+.analysis-card ul{padding-left:20px;}
+.analysis-card .signal{
+  margin-top:17px;padding:13px 15px;border-left:4px solid #ff7a00;background:#fff5e9;border-radius:0 10px 10px 0;
+}
+.analysis-card .uncertainty{
+  margin-top:13px;padding:13px 15px;background:#edf5fb;border-radius:10px;color:#294b68;
+}
+.analysis-sources{margin-top:18px;padding-top:14px;border-top:1px solid #e2eaf0;font-size:12px;line-height:1.7;}
+.analysis-sources a{color:#23669a;text-decoration:none;}
+.analysis-note{
+  margin-top:26px;padding:18px 20px;background:#0b2945;color:#dbe8f3;border-radius:14px;line-height:1.65;
+}
+.analysis-note strong{color:#ff9a32;}
+.deep-btn{
+  display:inline-block;margin-top:18px;background:linear-gradient(135deg,#ff7200,#ff9a2e);
+  color:#fff!important;text-decoration:none;border:0;border-radius:9px;padding:11px 15px;
+  font:700 11px 'Space Mono',monospace;cursor:pointer;
+}
+@media(max-width:760px){
+ .analysis-grid{grid-template-columns:1fr}.analysis-card.wide{grid-column:auto}
+ .analysis-hero{padding-top:44px}.analysis-body{padding:28px 16px 55px}
+}
+
 </style>
 </head>
 <body>
 
 <div id="topbar">
   <div class="row">
-    <a id="brand" href="../index.html" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:8px;"><img src="../assets/az-logo-transparent.png" alt="AZ" style="width:42px;height:28px;object-fit:contain;"><span>Πώς κατανοώ τον κόσμο σήμερα</span></a>
+    <a id="brand" href="../index.html" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:8px;"><span class="logo-shell"><img src="../assets/az-logo-transparent.png" alt="AZ"></span><span>Πώς κατανοώ τον κόσμο σήμερα</span></a>
     <div class="site-actions"><a class="home-btn" href="../index.html">⌂ <span class="txt">ΑΡΧΙΚΗ</span></a><a class="test-btn" href="../feedback/test.html">✓ <span class="txt">ΤΕΣΤ</span></a><span id="curlabel"><span class="n" id="curnum">01</span>/10 · <span id="curtitle">ΕΞΩΦΥΛΛΟ</span></span></div>
   </div>
   <div id="segments"></div>
@@ -628,6 +743,7 @@
       <p class="est"><b>Αρκετά πιθανό:</b> Οι αγορές θα συνεχίσουν να έχουν έντονες αυξομειώσεις όσο υπάρχει μεγάλη γεωπολιτική αβεβαιότητα.</p>
       <p class="est"><b>Αρκετά πιθανό:</b> Μέχρι το 2027 η AI θα αναλαμβάνει περισσότερες καθημερινές εργασίες, αλλά ο άνθρωπος θα παραμένει απαραίτητος στις σημαντικές αποφάσεις.</p>
       <div class="closing-line">ΓΕΓΟΝΟΣ &nbsp;→&nbsp; ΑΝΑΛΥΣΗ &nbsp;→&nbsp; ΕΚΤΙΜΗΣΗ</div>
+        <button class="deep-btn" id="openAnalysis" type="button">ΔΙΑΒΑΣΕ ΤΗΝ ΠΛΗΡΗ ΑΝΑΛΥΣΗ →</button>
         <div style="margin-top:18px;padding:16px 18px;border-radius:14px;background:rgba(240,185,78,.12);border:1px solid rgba(240,185,78,.35);">
           <p style="margin:0 0 10px;color:var(--cream-text);font-size:14px;">Διάβασες τις 10 κάρτες; Το σύντομο τεστ βοηθά να βελτιώσουμε το briefing.</p>
           <a href="../feedback/test.html" style="display:inline-block;text-decoration:none;background:#F0B94E;color:#15223B;font-family:'Space Mono',monospace;font-size:11px;font-weight:700;padding:9px 12px;border-radius:8px;">ΚΑΝΕ ΤΟ ΤΕΣΤ →</a>
@@ -748,5 +864,128 @@
   goTo(0);
 </script>
 
+
+<div class="deep-analysis" id="deepAnalysis" aria-hidden="true">
+  <div class="analysis-top">
+    <div class="analysis-top-inner">
+      <div class="analysis-brand">
+        <img class="analysis-logo" src="../assets/az-logo-transparent.png" alt="AZ">
+        <span>Πώς κατανοώ τον κόσμο σήμερα</span>
+      </div>
+      <button class="analysis-close" id="closeAnalysis" type="button">← ΠΙΣΩ ΣΤΙΣ 10 ΚΑΡΤΕΣ</button>
+    </div>
+  </div>
+
+  <section class="analysis-hero">
+    <div class="analysis-wrap">
+      <div class="overline">16 ΑΥΓΟΥΣΤΟΥ 2026 · ΠΙΟ ΑΝΑΛΥΤΙΚΑ</div>
+      <h1>Οι συνδέσεις πίσω από τις σημερινές ειδήσεις</h1>
+      <p>Οι 10 κάρτες δίνουν τη γρήγορη εικόνα. Εδώ πηγαίνουμε ένα επίπεδο βαθύτερα: τι αλλάζει, μέσω ποιου μηχανισμού, τι μπορεί να σημαίνει για την Ελλάδα και — εξίσου σημαντικό — τι ακόμη δεν γνωρίζουμε.</p>
+    </div>
+  </section>
+
+  <main class="analysis-body">
+    <div class="analysis-grid">
+
+      <article class="analysis-card">
+        <div class="num">01 · ΜΑΥΡΗ ΘΑΛΑΣΣΑ</div>
+        <h2>Ο πόλεμος χτυπά ξανά την οικονομική υποδομή</h2>
+        <p>Οι επιθέσεις δεν περιορίζονται στο μέτωπο. Λιμάνια, εμπορικά πλοία, εγκαταστάσεις καυσίμων και βιομηχανικές μονάδες έχουν γίνει μέρος της σύγκρουσης. Στις 16 Αυγούστου ρωσικά πλήγματα έπληξαν, μεταξύ άλλων, χαλυβουργική μονάδα στο Kryvyi Rih, ενώ η Ουκρανία συνέχισε επιθέσεις σε ρωσικές υποδομές.</p>
+        <h3>Γιατί μας αφορά</h3>
+        <p>Όταν αυξάνεται ο κίνδυνος στη Μαύρη Θάλασσα, δεν επηρεάζεται μόνο η Ουκρανία. Η περιοχή είναι κρίσιμη για σιτηρά και άλλες εμπορευματικές ροές. Η αβεβαιότητα περνά σε ναύλους, ασφάλιση, τιμές και τελικά στην επισιτιστική ασφάλεια χωρών που εξαρτώνται από εισαγωγές.</p>
+        <div class="signal"><strong>Σύνδεση:</strong> στρατιωτική κλιμάκωση → κίνδυνος στη ναυσιπλοΐα → δυσκολότερες εξαγωγές → πίεση στις αγορές τροφίμων.</div>
+        <div class="uncertainty"><strong>Τι δεν ξέρουμε:</strong> η Ουκρανία έχει προτείνει αμοιβαία παύση επιθέσεων σε πολιτικούς στόχους στη Μαύρη Θάλασσα, αλλά δεν είναι σαφές αν μπορεί να προκύψει σταθερός μηχανισμός αποκλιμάκωσης.</div>
+        <div class="analysis-sources">Πηγές:
+          <a href="https://www.reuters.com/world/europe/russian-missile-attack-kyiv-sparks-fires-injures-one-ukraine-officials-say-2026-08-16/" target="_blank" rel="noopener">Reuters, 16/8</a> ·
+          <a href="https://www.reuters.com/world/europe/ukraine-offers-russia-truce-black-sea-food-supply-fears-mount-source-says-2026-08-13/" target="_blank" rel="noopener">Reuters, 13/8</a>
+        </div>
+      </article>
+
+      <article class="analysis-card">
+        <div class="num">02 · ΟΡΜΟΥΖ</div>
+        <h2>Το πραγματικό ρίσκο δεν είναι μόνο η τιμή του πετρελαίου</h2>
+        <p>Η κίνηση στο Στενό του Ορμούζ έχει περιοριστεί έντονα μετά από νέες επιθέσεις σε πλοία και την αντιπαράθεση ΗΠΑ–Ιράν. Το Brent βρισκόταν στις 16 Αυγούστου γύρω στα 88,5 δολάρια, αλλά η μεγαλύτερη ιστορία είναι η αξιοπιστία της ίδιας της θαλάσσιας οδού.</p>
+        <h3>Ο μηχανισμός μετάδοσης</h3>
+        <p>Ακόμη και χωρίς ακραία άνοδο του αργού, η διαταραχή μπορεί να αυξήσει ασφάλιστρα, ναύλους και κόστος διύλισης ή μεταφοράς. Άρα η επίδραση στον καταναλωτή δεν χρειάζεται να εμφανιστεί μόνο μέσω της διεθνούς τιμής του βαρελιού.</p>
+        <div class="signal"><strong>Για την Ελλάδα:</strong> η ενεργειακή κρίση της Μέσης Ανατολής έχει ήδη επηρεάσει τις ελληνικές προοπτικές μέσω υψηλότερων τιμών ενέργειας, μεταφορών και ασθενέστερης εξωτερικής ζήτησης.</div>
+        <div class="uncertainty"><strong>Παρακολούθησε:</strong> όχι μόνο Brent, αλλά πραγματική κίνηση δεξαμενόπλοιων, ασφάλιστρα, τιμές καυσίμων και διάρκεια της διαταραχής.</div>
+        <div class="analysis-sources">Πηγές:
+          <a href="https://www.reuters.com/world/middle-east/us-warns-iran-it-will-step-up-economic-pressure-two-more-ships-attacked-hormuz-2026-08-14/" target="_blank" rel="noopener">Reuters, 14/8</a> ·
+          <a href="https://www.reuters.com/business/energy/most-gulf-bourses-gain-despite-stalled-iran-talks-hormuz-disruption-2026-08-16/" target="_blank" rel="noopener">Reuters, 16/8</a>
+        </div>
+      </article>
+
+      <article class="analysis-card">
+        <div class="num">03 · CHIPS & ΚΙΝΑ</div>
+        <h2>Τα chips είναι πλέον εργαλείο γεωπολιτικής ισχύος</h2>
+        <p>Η αντιπαράθεση γύρω από προηγμένα chips δεν αφορά απλώς ποια εταιρεία θα πουλήσει περισσότερους επεξεργαστές. Αφορά ποιος έχει πρόσβαση στην υπολογιστική ισχύ που χρειάζεται για προηγμένη AI, στρατιωτικές εφαρμογές και τεχνολογική αυτονομία.</p>
+        <h3>Τι άλλαξε στη συζήτηση</h3>
+        <p>Στις ΗΠΑ υπάρχει πίεση για αυστηρότερη εφαρμογή των περιορισμών ώστε προηγμένα chips να μη φτάνουν έμμεσα σε κινεζικές εταιρείες υπό κυρώσεις. Αυτό δείχνει το βασικό πρόβλημα: οι έλεγχοι εξαγωγών λειτουργούν μόνο όσο λειτουργεί και η ιχνηλασιμότητα της αλυσίδας.</p>
+        <div class="signal"><strong>Μεγάλη εικόνα:</strong> semiconductor supply chain → AI capability → οικονομική ανταγωνιστικότητα → εθνική ασφάλεια.</div>
+        <div class="uncertainty"><strong>Τι δεν πρέπει να υπεραπλουστεύουμε:</strong> αυστηρότεροι περιορισμοί μπορεί να καθυστερούν την πρόσβαση, αλλά ταυτόχρονα ενισχύουν το κίνητρο της Κίνας για εγχώρια τεχνολογική υποκατάσταση.</div>
+        <div class="analysis-sources">Πηγή:
+          <a href="https://www.reuters.com/legal/litigation/key-republican-urges-us-stop-any-advanced-chips-reaching-sanctioned-chinese-2026-08-10/" target="_blank" rel="noopener">Reuters, 10/8</a>
+        </div>
+      </article>
+
+      <article class="analysis-card">
+        <div class="num">04 · AI & ΕΝΕΡΓΕΙΑ</div>
+        <h2>Η AI γίνεται και πρόβλημα ηλεκτρικού δικτύου</h2>
+        <p>Η ανάπτυξη της AI αυξάνει τη ζήτηση για data centers, αλλά τα data centers δεν είναι άυλα: χρειάζονται τεράστιες ποσότητες ηλεκτρικής ισχύος, υποσταθμούς, γεννήτριες, αποθήκευση και δίκτυα. Η ενεργειακή υποδομή αρχίζει να γίνεται περιοριστικός παράγοντας για την ίδια την ψηφιακή ανάπτυξη.</p>
+        <h3>Η παράδοξη σύνδεση</h3>
+        <p>Οι εταιρείες τεχνολογίας επενδύουν σε καθαρή ενέργεια, αλλά η ταχύτητα αύξησης της ζήτησης μπορεί να οδηγήσει παράλληλα σε νέα ή παρατεινόμενη χρήση φυσικού αερίου και άλλων συμβατικών μονάδων, εάν τα δίκτυα και οι ΑΠΕ δεν αναπτυχθούν αρκετά γρήγορα.</p>
+        <div class="signal"><strong>Άρα:</strong> AI boom → data centers → ηλεκτρική ζήτηση → επενδύσεις σε δίκτυα/παραγωγή → νέες οικονομικές και κλιματικές επιπτώσεις.</div>
+        <div class="uncertainty"><strong>Κρίσιμο ερώτημα:</strong> μπορεί η καθαρή παραγωγή, η αποθήκευση και το δίκτυο να αναπτυχθούν με τον ίδιο ρυθμό που αυξάνεται η υπολογιστική ζήτηση;</div>
+        <div class="analysis-sources">Πηγή:
+          <a href="https://www.ft.com/content/8158cb5a-4bbd-43fd-b329-15a54e8422c8" target="_blank" rel="noopener">Financial Times, 16/8</a>
+        </div>
+      </article>
+
+      <article class="analysis-card wide">
+        <div class="num">05 · ΕΛΛΑΔΑ</div>
+        <h2>Πώς ενώνονται όλα αυτά για την ελληνική οικονομία</h2>
+        <p>Η Ελλάδα δεν βρίσκεται στο κέντρο καθεμιάς από αυτές τις κρίσεις, αλλά είναι εκτεθειμένη στους μηχανισμούς μετάδοσής τους: ενέργεια, ναυτιλία, τουρισμός, εισαγόμενες τιμές και ευρωπαϊκή ανάπτυξη. Το IMF εκτιμά ανάπτυξη 1,8% για το 2026, με το ενεργειακό σοκ και την ασθενέστερη εξωτερική ζήτηση να επιβαρύνουν κατανάλωση και τουρισμό, ενώ οι επενδύσεις και τα έργα του NGEU λειτουργούν ως στήριγμα.</p>
+        <h3>Τι έχει μεγαλύτερη σημασία από έναν ημερήσιο τίτλο</h3>
+        <ul>
+          <li><strong>Διάρκεια ενεργειακού σοκ:</strong> άλλο μια προσωρινή διαταραχή, άλλο μήνες υψηλού κόστους.</li>
+          <li><strong>Τουρισμός και μεταφορές:</strong> καύσιμα και γεωπολιτική αβεβαιότητα μπορούν να επηρεάσουν κόστος και ζήτηση.</li>
+          <li><strong>Επενδύσεις:</strong> η εκτέλεση των έργων του NGEU είναι βασικό αντίβαρο στην εξωτερική αβεβαιότητα.</li>
+          <li><strong>Παραγωγικότητα:</strong> μεσοπρόθεσμα παραμένει πιο σημαντική από τις καθημερινές διακυμάνσεις των αγορών.</li>
+        </ul>
+        <div class="signal"><strong>Η ουσία:</strong> δεν χρειάζεται να προβλέψουμε αν «η Ελλάδα θα πάει καλά ή άσχημα». Χρειάζεται να παρακολουθούμε τους μηχανισμούς που μπορούν να αλλάξουν την τροχιά της.</div>
+        <div class="analysis-sources">Πηγές:
+          <a href="https://www.imf.org/en/news/articles/2026/05/27/pr26169-greece-imf-executive-board-concludes-2026-article-iv-consultation" target="_blank" rel="noopener">IMF, Article IV 2026</a> ·
+          <a href="https://economy-finance.ec.europa.eu/economic-surveillance-eu-member-states/country-pages-including-country-reports/country-report-greece_en" target="_blank" rel="noopener">European Commission, Greece Country Report 2026</a>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="analysis-note">
+      <strong>Πώς να διαβάζεται αυτή η ενότητα:</strong> τα γεγονότα παρουσιάζονται χωριστά από την ερμηνεία. Οι «συνδέσεις» είναι ανάλυση αιτίας–αποτελέσματος και όχι βεβαιότητες για το μέλλον. Όπου υπάρχει ουσιαστική αβεβαιότητα, αναφέρεται ρητά.
+    </div>
+  </main>
+</div>
+
+<script>
+  const deepAnalysis = document.getElementById('deepAnalysis');
+  const openAnalysis = document.getElementById('openAnalysis');
+  const closeAnalysis = document.getElementById('closeAnalysis');
+  if(openAnalysis && deepAnalysis){
+    openAnalysis.addEventListener('click', () => {
+      deepAnalysis.classList.add('open');
+      deepAnalysis.setAttribute('aria-hidden','false');
+      document.body.style.overflow='hidden';
+      deepAnalysis.scrollTop=0;
+    });
+  }
+  if(closeAnalysis && deepAnalysis){
+    closeAnalysis.addEventListener('click', () => {
+      deepAnalysis.classList.remove('open');
+      deepAnalysis.setAttribute('aria-hidden','true');
+      document.body.style.overflow='';
+    });
+  }
+</script>
 </body>
 </html>
