@@ -546,6 +546,21 @@ a,button{touch-action:manipulation;}
   .day{font-size:12px!important;border-radius:8px!important;}
 }
 
+
+/* ===== CONTACT SECTION ===== */
+#contact .info-card a{word-break:break-word;}
+@media(max-width:760px){
+  #contact{padding:48px 0!important;}
+  #contact .wrap>div[style*="grid-template-columns"]{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+  }
+  #contact .btn{
+    width:100%!important;
+    min-height:48px!important;
+  }
+}
+
 </style>
 </head>
 
@@ -558,6 +573,7 @@ a,button{touch-action:manipulation;}
       <a href="feedback/test.html">Τεστ</a>
       <a href="#purpose">Σκοπός</a>
       <a href="#about">Πίσω από το project</a>
+      <a href="#contact">Επικοινωνία</a>
       <a class="cta-small" href="briefings/2026-08-16.html">Σημερινό briefing →</a>
     </nav>
   </div>
@@ -747,6 +763,34 @@ a,button{touch-action:manipulation;}
       </div>
     </div>
   </section>
+
+  <section id="contact" style="padding:64px 0;background:linear-gradient(180deg,#eef4f8,#f7f3ea);">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Επικοινωνία</div>
+        <h2>Μίλα μαζί μου.</h2>
+        <p>Για σχόλια, προτάσεις, συνεργασίες ή παρατηρήσεις σχετικά με το project.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1.05fr .95fr;gap:22px;align-items:stretch;">
+        <div class="info-card" style="margin:0;">
+          <div style="font-family:'Space Mono',monospace;font-size:11px;font-weight:700;color:#ff7a00;letter-spacing:.07em;text-transform:uppercase;margin-bottom:8px;">Δημιουργία & επιμέλεια</div>
+          <h3 style="margin-bottom:8px;">Αναστασία Ζωπίδου</h3>
+          <p style="margin-bottom:16px;">Δημιουργός του «Πώς κατανοώ τον κόσμο σήμερα» — ενός ανεξάρτητου project ενημέρωσης, σύνδεσης και κατανόησης της επικαιρότητας.</p>
+          <a href="mailto:zopidou.anastasia@gmail.com" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:800;color:#0b3558;">✉ zopidou.anastasia@gmail.com</a>
+        </div>
+
+        <div class="info-card" style="margin:0;display:flex;flex-direction:column;justify-content:center;">
+          <div style="font-family:'Space Mono',monospace;font-size:11px;font-weight:700;color:#2C5D8F;letter-spacing:.06em;text-transform:uppercase;margin-bottom:14px;">Βρες το project</div>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;">
+            <a href="https://www.facebook.com/worldincontextgr" target="_blank" rel="noopener" class="btn secondary" style="min-width:150px;">Facebook →</a>
+            <a href="https://www.linkedin.com/in/zopidou/" target="_blank" rel="noopener" class="btn secondary" style="min-width:150px;">LinkedIn →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer>
