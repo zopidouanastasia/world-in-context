@@ -180,6 +180,24 @@ header.intro .note{
 .privacy-note strong{color:#163954;}
 
 </style>
+<!-- LAUNCH META START -->
+<link rel="icon" type="image/png" href="https://zopidouanastasia.github.io/world-in-context/assets/favicon.png">
+<link rel="apple-touch-icon" href="https://zopidouanastasia.github.io/world-in-context/assets/favicon.png">
+<link rel="canonical" href="https://zopidouanastasia.github.io/world-in-context/feedback/test.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="el_GR">
+<meta property="og:site_name" content="World in Context">
+<meta property="og:title" content="Feedback | World in Context">
+<meta property="og:description" content="Σύντομο feedback για το καθημερινό briefing «Πώς κατανοώ τον κόσμο σήμερα».">
+<meta property="og:url" content="https://zopidouanastasia.github.io/world-in-context/feedback/test.html">
+<meta property="og:image" content="https://zopidouanastasia.github.io/world-in-context/assets/social-preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Feedback | World in Context">
+<meta name="twitter:description" content="Σύντομο feedback για το καθημερινό briefing «Πώς κατανοώ τον κόσμο σήμερα».">
+<meta name="twitter:image" content="https://zopidouanastasia.github.io/world-in-context/assets/social-preview.png">
+<!-- LAUNCH META END -->
 </head>
 <body>
 
@@ -187,7 +205,7 @@ header.intro .note{
 
   <div id="progress">
     <div class="bar"><div class="fill" id="progFill"></div></div>
-    <div class="lbl" id="progLbl">0 / 10 υποχρεωτικές · 12 συνολικά</div>
+    <div class="lbl" id="progLbl">0 / 10 υποχρεωτικές · 13 συνολικά</div>
   </div>
 
   <div id="formArea">
@@ -331,7 +349,25 @@ header.intro .note{
     </div></div>
 
     
-    <div class="privacy-note">
+    
+  <div class="card-outer" data-optional="age">
+    <section class="card">
+      <div class="qnum">ΠΡΟΑΙΡΕΤΙΚΑ</div>
+      <div class="qtext">Σε ποια ηλικιακή ομάδα ανήκεις;</div>
+      <div class="opt-list" data-q="age">
+        <button class="opt" type="button" data-val="Κάτω των 18">Κάτω των 18</button>
+        <button class="opt" type="button" data-val="18–24">18–24</button>
+        <button class="opt" type="button" data-val="25–34">25–34</button>
+        <button class="opt" type="button" data-val="35–44">35–44</button>
+        <button class="opt" type="button" data-val="45–54">45–54</button>
+        <button class="opt" type="button" data-val="55–64">55–64</button>
+        <button class="opt" type="button" data-val="65+">65+</button>
+        <button class="opt" type="button" data-val="Προτιμώ να μην απαντήσω">Προτιμώ να μην απαντήσω</button>
+      </div>
+    </section>
+  </div>
+
+<div class="privacy-note">
       <strong>Ιδιωτικότητα:</strong> οι απαντήσεις στο τεστ δεν ζητούν όνομα ή email και χρησιμοποιούνται μόνο για την αξιολόγηση και βελτίωση του briefing. <a href="../privacy.html">Δες την Πολιτική Απορρήτου.</a>
     </div>
 
@@ -429,7 +465,7 @@ header.intro .note{
     const done = REQUIRED.filter(k => answers[k] !== undefined && answers[k] !== '').length;
     const pct = Math.round(done / REQUIRED.length * 100);
     document.getElementById('progFill').style.width = pct + '%';
-    document.getElementById('progLbl').textContent = done + ' / ' + REQUIRED.length + ' υποχρεωτικές · 12 συνολικά';
+    document.getElementById('progLbl').textContent = done + ' / ' + REQUIRED.length + ' υποχρεωτικές · 13 συνολικά';
   }
 
   document.getElementById('submitBtn').addEventListener('click', async () => {
