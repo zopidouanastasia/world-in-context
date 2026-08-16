@@ -453,6 +453,15 @@ header.intro .note{
   }
   document.querySelectorAll('[data-group]').forEach(attachGroup);
 
+  document.querySelectorAll('[data-q="age"] .opt').forEach(opt => {
+    opt.addEventListener('click', () => {
+      document.querySelectorAll('[data-q="age"] .opt').forEach(o => o.classList.remove('selected'));
+      opt.classList.add('selected');
+      answers.age = opt.getAttribute('data-val');
+    });
+  });
+
+
   ['q7','q12','q4text'].forEach(id => {
     document.getElementById(id).addEventListener('input', (e) => {
       answers[id] = e.target.value;
@@ -497,7 +506,8 @@ header.intro .note{
         q9: answers.q9,
         q10: answers.q10,
         q11: answers.q11,
-        q12: answers.q12 || ''
+        q12: answers.q12 || '',
+        age: answers.age || ''
       }
     };
 
