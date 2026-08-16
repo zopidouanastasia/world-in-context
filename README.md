@@ -1,20 +1,13 @@
-# World in Context — refactored pilot package
+# World in Context — privacy-ready pilot
 
-Safe code cleanup, without redesigning the current interface.
-
-## What was cleaned
-- Removed the obsolete first Earth-hero implementation from `index.html`.
-- Kept only the current responsive Earth background implementation.
-- Removed intermediate briefing visual layers that were superseded by the final unified card system.
-- Removed unused CSS-only logo styling from the briefing.
-- Removed dead creator-results CSS from the public test.
-- Preserved mobile rules, navigation, deep analysis, Firebase submission, contact section and current content.
-
-## Files
-- `index.html`
+Περιλαμβάνει:
+- `index.html` — με floating κουμπί ↑ επιστροφής στην κορυφή
+- `privacy.html` — σύντομη Πολιτική Απορρήτου
+- `briefings/2026-08-16.html`
+- `feedback/test.html` — Firebase test + privacy link
 - `hero-earth-clean.jpg`
 - `assets/az-logo-transparent.png`
-- `briefings/2026-08-16.html`
-- `feedback/test.html`
 
-Upload the package preserving the folder structure.
+Σημαντικό:
+- Δεν έχουν προστεθεί Analytics/Meta Pixel/cookie tracking.
+- Η πολιτική είναι πρακτικό κείμενο για το σημερινό pilot setup και δεν αποτελεί εξατομικευμένη νομική γνωμοδότηση.

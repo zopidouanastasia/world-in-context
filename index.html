@@ -483,6 +483,26 @@ a,button{touch-action:manipulation;}
   }
 }
 
+
+/* ===== FLOATING BACK TO TOP ===== */
+#backToTop{
+  position:fixed;right:18px;bottom:18px;z-index:90;
+  width:48px;height:48px;border-radius:50%;
+  border:1px solid rgba(143,179,217,.28);
+  background:rgba(6,23,42,.92);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;font-weight:800;cursor:pointer;
+  box-shadow:0 12px 30px rgba(6,23,42,.28);
+  backdrop-filter:blur(8px);
+  opacity:0;transform:translateY(12px);pointer-events:none;
+  transition:opacity .2s ease,transform .2s ease,background .2s ease;
+}
+#backToTop.show{opacity:1;transform:translateY(0);pointer-events:auto;}
+#backToTop:hover{background:#0e4773;}
+@media(max-width:600px){
+  #backToTop{width:46px;height:46px;right:14px;bottom:14px;}
+}
+
 </style>
 </head>
 
@@ -705,8 +725,19 @@ a,button{touch-action:manipulation;}
       </div>
       <div class="mono">ΓΕΓΟΝΟΣ → ΑΝΑΛΥΣΗ → ΕΚΤΙΜΗΣΗ</div>
     </div>
-    <div class="small-note">Οι πληροφορίες παρέχονται για ενημερωτικούς και εκπαιδευτικούς σκοπούς. Οι αναλύσεις και εκτιμήσεις δεν αποτελούν βεβαιότητες ούτε οικονομικές, επενδυτικές ή άλλες επαγγελματικές συμβουλές.</div>
+    <div style="margin-top:10px;font-size:12px;"><a href="privacy.html">Πολιτική Απορρήτου</a></div>
+<div class="small-note">Οι πληροφορίες παρέχονται για ενημερωτικούς και εκπαιδευτικούς σκοπούς. Οι αναλύσεις και εκτιμήσεις δεν αποτελούν βεβαιότητες ούτε οικονομικές, επενδυτικές ή άλλες επαγγελματικές συμβουλές.</div>
   </div>
 </footer>
+<button id="backToTop" type="button" aria-label="Επιστροφή στην κορυφή" title="Πάνω">↑</button>
+<script>
+(function(){
+  const btn = document.getElementById('backToTop');
+  const toggle = () => btn.classList.toggle('show', window.scrollY > 500);
+  window.addEventListener('scroll', toggle, {passive:true});
+  btn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+  toggle();
+})();
+</script>
 </body>
 </html>
