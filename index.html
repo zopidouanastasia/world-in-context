@@ -408,6 +408,68 @@ footer .mono{color:var(--orange-soft);}
   .today-card{margin-top:0;}
 }
 
+
+/* ===== FINAL VISIBILITY FIXES ===== */
+
+/* 1) Today's briefing card: force readable dark text on white card */
+.today-card,
+.today-card *{
+  opacity:1 !important;
+}
+.today-card{
+  color:#1B2A4A !important;
+  background:#FFFFFF !important;
+}
+.today-card h2,
+.today-card p,
+.today-card strong,
+.today-card b{
+  color:#1B2A4A !important;
+}
+.today-card .date-line,
+.today-card .read{
+  color:#ff7a00 !important;
+}
+.today-card .pill{
+  color:#244666 !important;
+  background:#eef5fb !important;
+  border-color:#cfe0ee !important;
+}
+
+/* Remove decorative giant/ghost numerals or pseudo-elements behind hero/card */
+.hero::before,
+.hero::after,
+.today-card::before,
+.today-card::after{
+  content:none !important;
+  display:none !important;
+}
+
+/* 2) Purpose section: headline and supporting text white */
+.dark-section .section-head h2,
+.dark-section .section-head p,
+.dark-section h2{
+  color:#FFFFFF !important;
+}
+.dark-section .section-head .eyebrow{
+  color:#ff8a16 !important;
+}
+
+/* Extra safeguard against inherited low-opacity headings/text */
+.dark-section .section-head,
+.dark-section .section-head *{
+  opacity:1 !important;
+}
+
+/* Hero: remove any accidental text/pseudo overlays */
+.hero .hero-grid::before,
+.hero .hero-grid::after,
+.hero .earth-visual::before,
+.hero .earth-visual::after{
+  content:none !important;
+  display:none !important;
+}
+
 </style>
 </head>
 
