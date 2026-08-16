@@ -187,12 +187,12 @@ header.intro .note{
 
   <div id="progress">
     <div class="bar"><div class="fill" id="progFill"></div></div>
-    <div class="lbl" id="progLbl">0 / 12 ερωτήσεις</div>
+    <div class="lbl" id="progLbl">0 / 10 υποχρεωτικές · 12 συνολικά</div>
   </div>
 
   <div id="formArea">
     <header class="intro">
-      <div class="kicker">Feedback για το World in Context · 2–3 λεπτά</div>
+      <div class="kicker">Feedback για το World in Context · «Πώς κατανοώ τον κόσμο σήμερα» · 2–3 λεπτά</div>
       <h1>Τεστ «Πώς κατανοώ<br>τον κόσμο σήμερα»</h1>
       <div class="note">
         <p><b>Πριν ξεκινήσεις:</b> Δες τις 10 κάρτες όπως θα τις έβλεπες αν εμφανίζονταν στο κινητό σου.</p>
@@ -429,7 +429,7 @@ header.intro .note{
     const done = REQUIRED.filter(k => answers[k] !== undefined && answers[k] !== '').length;
     const pct = Math.round(done / REQUIRED.length * 100);
     document.getElementById('progFill').style.width = pct + '%';
-    document.getElementById('progLbl').textContent = done + ' / ' + REQUIRED.length + ' ερωτήσεις';
+    document.getElementById('progLbl').textContent = done + ' / ' + REQUIRED.length + ' υποχρεωτικές · 12 συνολικά';
   }
 
   document.getElementById('submitBtn').addEventListener('click', async () => {
