@@ -205,6 +205,22 @@
   }
   .punchline.orange{ color:var(--orange); }
 
+  .sources{
+    margin-top:18px; padding-top:13px; border-top:1px dashed var(--beige-line);
+    font-family:'Space Mono',monospace; font-size:10.5px; color:var(--muted); line-height:1.6;
+  }
+  .sources .src-line{ margin:2px 0; }
+  .sources .src-line i{ font-style:italic; }
+  .sources a{ color:var(--blue); text-decoration:underline; text-underline-offset:2px; }
+  .dark .sources a{ color:#8FB8F0; }
+  .dark .sources{ border-top-color:#2A3B58; color:#7E93A3; }
+
+  .analysis-tag{
+    display:inline-block; font-family:'Space Mono',monospace; font-size:10px; font-weight:700;
+    color:var(--muted); background:var(--beige); padding:3px 8px; border-radius:5px;
+    margin:8px 0 0; letter-spacing:0.02em;
+  }
+
   .map-box{ border-radius:14px; position:relative; height:200px; margin:20px 0 4px; overflow:hidden; background:#0d2338; }
   .map-box img{ width:100%; height:100%; object-fit:cover; display:block; }
   .map-box .tag{
@@ -237,68 +253,14 @@
   .eyebrow .num{ color:var(--accent); font-weight:700; }
 
   ::selection{ background:var(--blue-light); color:var(--ink); }
-
-  /* ===== SITE HARMONIZATION ===== */
-  #brand{
-    text-decoration:none;
-    color:var(--muted);
-  }
-  #topbar.dark #brand{ color:#8CA0BC; }
-  .top-actions{
-    display:flex;
-    align-items:center;
-    gap:12px;
-  }
-  .home-link{
-    font-family:'Space Mono',monospace;
-    font-size:10.5px;
-    font-weight:700;
-    letter-spacing:.05em;
-    text-transform:uppercase;
-    color:var(--blue);
-    text-decoration:none;
-    padding:6px 9px;
-    border:1px solid var(--beige-line);
-    border-radius:8px;
-    background:rgba(255,255,255,.55);
-  }
-  #topbar.dark .home-link{
-    color:#DCE3EE;
-    border-color:#2A3B58;
-    background:rgba(255,255,255,.04);
-  }
-  .briefing-home-cta{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    margin-top:20px;
-    font-family:'Space Mono',monospace;
-    font-size:11px;
-    font-weight:700;
-    letter-spacing:.04em;
-    color:var(--muted);
-    text-decoration:none;
-  }
-  .dark .briefing-home-cta{ color:#DCE3EE; }
-  .closing-sub{
-    color:#DCE3EE;
-    margin:10px 0 0;
-    font-size:14px;
-    line-height:1.45;
-  }
-  @media (max-width:520px){
-    .home-link{display:none;}
-    #brand{max-width:52%; line-height:1.25;}
-  }
-
 </style>
 </head>
 <body>
 
 <div id="topbar">
   <div class="row">
-    <a id="brand" href="../index.html" aria-label="Επιστροφή στην αρχική">Πώς κατανοώ τον κόσμο σήμερα</a>
-    <div class="top-actions"><a class="home-link" href="../index.html">Αρχική</a><span id="curlabel"><span class="n" id="curnum">01</span>/10 · <span id="curtitle">ΕΞΩΦΥΛΛΟ</span></span></div>
+    <span id="brand">Πώς κατανοώ τον κόσμο σήμερα</span>
+    <span id="curlabel"><span class="n" id="curnum">01</span>/10 · <span id="curtitle">ΕΞΩΦΥΛΛΟ</span></span>
   </div>
   <div id="segments"></div>
 </div>
@@ -323,7 +285,6 @@
       <div class="rule"></div>
       <p class="hook">Πώς μπορούν ένας πόλεμος,<br>ένα στενό θαλάσσιο πέρασμα<br>και τα μικροτσίπ<br>να επηρεάσουν την τσέπη μας;</p>
       <p class="tagline">🌍 Ο κόσμος σήμερα <b>σε 10 απλές κάρτες.</b></p>
-      <a class="briefing-home-cta" href="../index.html">← ΑΡΧΙΚΗ & ΑΡΧΕΙΟ</a>
       <div class="swipehint">
         ΣΥΡΕ Ή ΠΑΤΑ ΤΟ ΒΕΛΑΚΙ
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 6l6 6-6 6"/></svg>
@@ -345,6 +306,9 @@
           <div class="row-item"><div class="emoji">🔥</div><div class="txt"><b>ΚΛΙΜΑ</b><span>Καύσωνες και πυρκαγιές έχουν πλέον μεγάλο οικονομικό κόστος.</span></div></div>
         </div>
         <p class="punchline" style="background:var(--beige);">Και όλα αυτά συνδέονται περισσότερο απ' όσο φαίνεται.</p>
+        <div class="sources">
+          <div class="src-line">Πηγές: <a href="https://www.reuters.com" target="_blank" rel="noopener">Reuters</a> • <a href="https://www.eia.gov" target="_blank" rel="noopener">EIA</a> • <a href="https://www.iea.org" target="_blank" rel="noopener">IEA</a> • <a href="https://climate.copernicus.eu" target="_blank" rel="noopener">Copernicus</a></div>
+        </div>
       </div>
     </div>
   </div>
@@ -370,6 +334,11 @@
           <div class="chain-step">πίεση στις τιμές</div>
         </div>
         <p class="punchline">Ένας μακρινός πόλεμος μπορεί τελικά να φτάσει μέχρι το δικό μας καλάθι.</p>
+        <div class="sources">
+          <div class="src-line">Πηγή 1 — <a href="https://www.reuters.com/world/europe/ukraine-offers-russia-truce-black-sea-food-supply-fears-mount-source-says-2026-08-13/" target="_blank" rel="noopener">Reuters, 13/08/2026</a> — τι έγινε</div>
+          <div class="src-line">Πηγή 2 — <a href="https://www.fao.org/members-gateway/news/detail/en/c/1476505" target="_blank" rel="noopener">FAO</a> — γιατί έχει σημασία</div>
+          <div class="src-line">Πηγή 3 — <a href="https://blogs.worldbank.org/en/trade/global-wheat-shipments-withstood-shock-russias-invasion-ukraine" target="_blank" rel="noopener">World Bank</a> — διεθνείς επιπτώσεις</div>
+        </div>
       </div>
     </div>
   </div>
@@ -398,7 +367,13 @@
           <div class="chain-arrow">↓</div>
           <div class="chain-step">πίεση στις τιμές προϊόντων</div>
         </div>
+        <span class="analysis-tag">↳ ΑΝΑΛΥΣΗ — δική μας ερμηνεία, όχι αυτούσιο εύρημα</span>
         <p class="punchline orange">⚠️ Δεν σημαίνει ότι οι τιμές θα ανέβουν σίγουρα.<br>Σημαίνει ότι αυξάνεται ο κίνδυνος.</p>
+        <div class="sources">
+          <div class="src-line">Πηγή 1 — <a href="https://www.koreatimes.co.kr/world/20260814/hormuz-shipping-traffic-capped-amid-competing-claims-from-us-iran" target="_blank" rel="noopener">Reuters, 14/08/2026</a> — σημερινή κατάσταση ναυσιπλοΐας</div>
+          <div class="src-line">Πηγή 2 — <a href="https://www.eia.gov/international/content/analysis/special_topics/World_Oil_Transit_Chokepoints/wotc.pdf" target="_blank" rel="noopener">EIA, World Oil Transit Chokepoints</a> — γιατί έχει σημασία (~20,9 εκατ. βαρέλια/ημέρα, ~20% της παγκόσμιας κατανάλωσης)</div>
+          <div class="src-line">Πηγή 3 — <a href="https://www.eia.gov/pressroom/releases/press588.php" target="_blank" rel="noopener">EIA, Short-Term Energy Outlook</a> — ενημέρωση 2026</div>
+        </div>
       </div>
     </div>
   </div>
@@ -429,7 +404,12 @@
           <div class="chain-arrow">→</div>
           <div class="chain-step">γεωπολιτική δύναμη</div>
         </div>
+        <span class="analysis-tag">↳ ΑΝΑΛΥΣΗ — δική μας ερμηνεία, όχι αυτούσιο εύρημα</span>
         <p class="punchline">Τα chips είναι πλέον κάτι περισσότερο από τεχνολογία. Είναι ισχύς.</p>
+        <div class="sources">
+          <div class="src-line">Πηγή 1 — <a href="https://www.thestandard.com.hk/finance/article/339857/SMIC-profit-more-than-triples-on-AI-driven-chip-demand" target="_blank" rel="noopener">Reuters, 13/08/2026</a> — κέρδη</div>
+          <div class="src-line">Πηγή 2 — <a href="https://www.investing.com/news/stock-market-news/chinese-chipmaker-smic-increases-prices-on-strong-ai-demand-4859658" target="_blank" rel="noopener">Reuters, 14/08/2026</a> — αύξηση τιμών</div>
+        </div>
       </div>
     </div>
   </div>
@@ -455,6 +435,11 @@
         <p class="body-text">Είναι και:</p>
         <p class="body-text" style="font-family:'Fraunces',serif;font-weight:700;color:var(--ink);font-size:20px;">Ποιος έχει<br>chips + ενέργεια + υποδομές + χρήματα;</p>
         <p class="punchline">👉 Η AI γίνεται πλέον και ενεργειακό και οικονομικό ζήτημα.</p>
+        <div class="sources">
+          <div class="src-line">Πηγή 1 — <a href="https://www.iea.org/news/data-centre-electricity-use-surged-in-2025-even-with-tightening-bottlenecks-driving-a-scramble-for-solutions" target="_blank" rel="noopener">IEA, 2026</a> — δεδομένα κατανάλωσης (+17% το 2025)</div>
+          <div class="src-line">Πηγή 2 — <a href="https://www.iea.org/reports/energy-and-ai" target="_blank" rel="noopener">IEA, Energy and AI</a> — τι είναι ένα data center</div>
+          <div class="src-line">Πηγή 3 — <a href="https://lufkindailynews.com/news_reuters/business/nvidia-eyes-investing-3-billion-in-sb-energy-under-openai-data-center-deal-information-says/article_392364b5-cb12-5883-ae56-ca570de7cf56.html" target="_blank" rel="noopener">Reuters, 15/08/2026</a> — σημερινή είδηση (Nvidia/OpenAI)</div>
+        </div>
       </div>
     </div>
   </div>
@@ -477,7 +462,12 @@
           <div class="chain-arrow">↓</div>
           <div class="chain-step">περισσότερες επιθέσεις σε μικρότερο χρόνο</div>
         </div>
+        <span class="analysis-tag">↳ ΔΙΚΗ ΜΑΣ ΕΠΕΞΗΓΗΣΗ — όχι απόδειξη αυτόνομων AI hackers</span>
         <p class="punchline">🔐 Γι' αυτό όσο αναπτύσσεται η AI, τόσο σημαντικότερη γίνεται και η κυβερνοασφάλεια.</p>
+        <div class="sources">
+          <div class="src-line">Πηγή 1 — <a href="https://www.taipeitimes.com/News/front/archives/2026/08/14/2003862463" target="_blank" rel="noopener">Reuters, 13/08/2026</a> — Ταϊβάν</div>
+          <div class="src-line">Πηγή 2 — <a href="https://www.enisa.europa.eu/publications/artificial-intelligence-cybersecurity-challenges" target="_blank" rel="noopener">ENISA</a> — γενικό πλαίσιο AI &amp; cybersecurity</div>
+        </div>
       </div>
     </div>
   </div>
@@ -509,6 +499,11 @@
           <div class="chain-step">πίεση σε επιχειρήσεις, κράτος και πολίτες</div>
         </div>
         <p class="punchline">Το κλίμα είναι πλέον και οικονομικό ζήτημα.</p>
+        <div class="sources">
+          <div class="src-line">Πηγή 1 — <a href="https://climate.copernicus.eu/exceptionally-hot-and-dry-conditions-fuel-wildfires-europe-ocean-surface-temperatures-reach-record" target="_blank" rel="noopener">Copernicus C3S, 13/08/2026</a> — καύσωνας &amp; πυρκαγιές</div>
+          <div class="src-line">Πηγή 2 — <a href="https://www.brecorder.com/news/40435048/europes-heatwaves-expose-insurance-gap-as-business-losses-mount" target="_blank" rel="noopener">Reuters, 16/08/2026</a> — οικονομικό σκέλος &amp; ασφαλιστικό κενό</div>
+          <div class="src-line">Πηγή 3 — <a href="https://climate.copernicus.eu/exceptionally-hot-and-dry-conditions-fuel-wildfires-europe-ocean-surface-temperatures-reach-record" target="_blank" rel="noopener">Copernicus Climate Bulletin</a> — ευρύτερο κλιματικό πλαίσιο</div>
+        </div>
       </div>
     </div>
   </div>
@@ -534,7 +529,13 @@
           <div class="chain-arrow">↓</div>
           <div class="chain-step">καλύτερες δουλειές &amp; εισοδήματα</div>
         </div>
+        <span class="analysis-tag">↳ ΑΝΑΛΥΣΗ — δική μας σύνθεση του μηχανισμού, όχι αυτούσιο εύρημα</span>
         <p class="punchline orange">⚠️ Αν δεν συμβεί αυτό, η σημερινή επενδυτική ώθηση δεν αρκεί από μόνη της.</p>
+        <div class="sources">
+          <div class="src-line">Ναυτιλία → <a href="https://ugs.gr/media/14186/ugs_annualreport_2526_eng.pdf" target="_blank" rel="noopener">Union of Greek Shipowners, Annual Report 2025/26</a></div>
+          <div class="src-line">Ενέργεια → <a href="https://www.desfa.gr/en/regional-tsos-sign-joint-address-for-the-extension-of-the-route1-capacity-product/" target="_blank" rel="noopener">ΔΕΣΦΑ, Vertical Corridor</a></div>
+          <div class="src-line">Οικονομία/RRF → <a href="https://economy-finance.ec.europa.eu/economic-surveillance-eu-member-states/country-pages/greece/economic-forecast-greece_en" target="_blank" rel="noopener">European Commission, 21/05/2026</a></div>
+        </div>
       </div>
     </div>
   </div>
@@ -563,7 +564,11 @@
       <p class="est"><b>Πολύ πιθανό:</b> Θα συνεχιστούν οι τεράστιες επενδύσεις σε AI και μικροτσίπ.</p>
       <p class="est"><b>Αρκετά πιθανό:</b> Οι αγορές θα συνεχίσουν να έχουν έντονες αυξομειώσεις όσο υπάρχει μεγάλη γεωπολιτική αβεβαιότητα.</p>
       <p class="est"><b>Αρκετά πιθανό:</b> Μέχρι το 2027 η AI θα αναλαμβάνει περισσότερες καθημερινές εργασίες, αλλά ο άνθρωπος θα παραμένει απαραίτητος στις σημαντικές αποφάσεις.</p>
-      <div class="closing-line">ΓΕΓΟΝΟΣ &nbsp;→&nbsp; ΑΝΑΛΥΣΗ &nbsp;→&nbsp; ΕΚΤΙΜΗΣΗ</div><p class="closing-sub">Ξεχωρίζουμε τι γνωρίζουμε, τι συμπεραίνουμε και τι θεωρούμε πιθανό.</p><a class="briefing-home-cta" href="../index.html">← ΕΠΙΣΤΡΟΦΗ ΣΤΗΝ ΑΡΧΙΚΗ</a>
+      <div class="closing-line">ΓΕΓΟΝΟΣ &nbsp;≠&nbsp; ΑΝΑΛΥΣΗ &nbsp;≠&nbsp; ΠΡΟΒΛΕΨΗ</div>
+      <div class="sources">
+        <div class="src-line">Για τα γεγονότα → βλ. πηγές στις κάρτες 3–9</div>
+        <div class="src-line">🟠 Εκτίμηση του briefing — βασισμένη στις τάσεις του <a href="https://www.iea.org/reports/key-questions-on-energy-and-ai" target="_blank" rel="noopener">IEA, Key Questions on Energy and AI, 2026</a></div>
+      </div>
     </div>
   </div>
 
