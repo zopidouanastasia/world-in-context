@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Πώς κατανοώ τον κόσμο σήμερα — 17.08.2026</title>
+<meta name="description" content="World in Context — ημερήσιο briefing 17 Αυγούστου 2026 με 10 κάρτες, βαθύτερη ανάλυση και πηγές.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1B2A4A; --ink-soft:#3E4E6E; --paper:#fff; --page-bg:#F1ECDF;
+  --beige:#ECE3CE; --beige-line:#DCD2B8; --blue:#2C5D8F; --blue-light:#8FB3D9;
+  --green:#2E7D5B; --orange:#B96E28; --muted:#746A57;
+  --navy:#15223B; --navy2:#0F1930; --cream:#DCE3EE; --accent:var(--blue); --tint:#E4EEF7;
+}
+*{box-sizing:border-box} html,body{height:100%;margin:0}
+body{background:var(--page-bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;overflow:hidden}
+h1,h2,h3{font-family:Fraunces,serif;margin:0}
+a{color:var(--blue)}
+#stage{position:fixed;inset:0;overflow:hidden}
+#track{display:flex;height:100%;width:1000%;transition:transform .55s cubic-bezier(.65,0,.35,1)}
+.slide{width:10%;height:100%;flex-shrink:0;overflow-y:auto;padding:82px 0 50px}
+.slide.dark{background:var(--navy)}
+.wrap{max-width:640px;margin:auto;padding:0 28px}
+#topbar{position:fixed;z-index:20;top:0;left:0;right:0;padding:13px 20px 10px;background:rgba(241,236,223,.91);backdrop-filter:blur(10px)}
+#topbar.dark{background:rgba(21,34,59,.91);color:white}
+.row{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+#brand,#curlabel{font:700 11px 'Space Mono',monospace;letter-spacing:.06em;text-transform:uppercase}
+#brand{color:var(--muted)} #topbar.dark #brand{color:#9fb0c6}
+#segments{display:flex;gap:4px}
+#segments button{flex:1;height:4px;border:0;border-radius:3px;background:var(--beige-line);padding:0;cursor:pointer}
+#topbar.dark #segments button{background:#2A3B58}
+#segments button.current,#segments button.done{background:var(--accent)}
+#segments button.done{opacity:.55}
+.navbtn{position:fixed;z-index:25;top:50%;transform:translateY(-50%);width:44px;height:44px;border:0;border-radius:50%;background:rgba(255,255,255,.88);box-shadow:0 6px 18px rgba(20,30,60,.16);cursor:pointer}
+.navbtn.dark{background:rgba(30,45,75,.9);color:white}.navbtn.disabled{opacity:0;pointer-events:none}
+#prevBtn{left:12px}#nextBtn{right:12px}
+.hero h1{font-size:clamp(40px,8.5vw,60px);line-height:1.02;margin:26px 0 20px}
+.kicker,.eyebrow{font:700 11px 'Space Mono',monospace;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.hero .date{font:700 14px 'Space Mono',monospace;color:var(--blue);margin:20px 0 28px}
+.hero .hook{font:600 italic clamp(20px,4vw,27px) Fraunces,serif;line-height:1.35;color:var(--ink-soft);margin:24px 0 28px}
+.hero .tag{font-size:16px;color:var(--muted)}
+.card-outer{padding:8px 14px;width:100%}
+.card{max-width:640px;margin:auto;background:#fff;border-radius:24px;padding:36px 30px;box-shadow:0 18px 40px -22px rgba(30,30,20,.2)}
+.eyebrow{display:flex;justify-content:space-between;margin-bottom:18px}.eyebrow .num{color:var(--accent)}
+.headline{font-size:clamp(25px,5.4vw,34px);line-height:1.08;margin-bottom:20px}
+.body-text{font-size:16.5px;line-height:1.62;color:var(--ink-soft)}
+.label{display:inline-block;font:700 11px 'Space Mono',monospace;margin:18px 0 8px;padding:5px 9px;border-radius:6px;background:var(--tint);color:var(--blue);text-transform:uppercase}
+.punch{margin-top:18px;padding:18px 20px;background:var(--tint);border-radius:14px;font:600 italic 17px/1.45 Fraunces,serif}
+.sources{margin-top:18px;padding-top:13px;border-top:1px dashed var(--beige-line);font:400 10.5px/1.65 'Space Mono',monospace;color:var(--muted)}
+.sources a{text-underline-offset:2px}
+.chain{display:flex;flex-direction:column;gap:5px;align-items:center;margin:20px 0}
+.chain-step{width:100%;background:var(--tint);border-radius:10px;padding:8px 12px;text-align:center;font:700 17px Fraunces,serif}
+.chain-arrow{font-weight:800;color:var(--accent)}
+.dark .wrap{color:white}.dark .body-text{color:var(--cream)}.dark .eyebrow{color:#9fb0c6}.dark .headline{color:white}
+.dark .punch{background:#233655;color:white}.dark .sources{border-color:#2A3B58;color:#8fa1b6}.dark .sources a{color:#9fc6ff}
+.deep-btn{margin-top:18px;border:0;border-radius:9px;background:linear-gradient(135deg,#ff7200,#ff9a2e);color:white;padding:11px 15px;font:700 11px 'Space Mono',monospace;cursor:pointer}
+.deep-analysis{position:fixed;inset:0;z-index:60;background:#f3f6f8;overflow:auto;display:none}
+.deep-analysis.open{display:block}
+.analysis-top{position:sticky;top:0;z-index:2;background:#071d33;color:white;padding:12px 18px;border-bottom:1px solid #173751}
+.analysis-top-inner{max-width:1040px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:15px}
+.analysis-brand{font:700 12px 'Space Mono',monospace}.analysis-close{border:0;background:#ff7a00;color:white;padding:9px 12px;border-radius:8px;font:700 10px 'Space Mono',monospace;cursor:pointer}
+.analysis-hero{background:linear-gradient(135deg,#071d33,#123b61);color:white;padding:55px 24px}
+.analysis-wrap{max-width:1040px;margin:auto}.analysis-hero h1{font-size:clamp(36px,6vw,62px);line-height:1.04;margin:10px 0 16px}
+.analysis-hero p{max-width:800px;color:#d7e6f2;font-size:18px;line-height:1.65}
+.analysis-body{max-width:1040px;margin:auto;padding:36px 24px 70px}
+.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.analysis-card{background:white;border:1px solid #dce7ef;border-radius:18px;padding:26px;box-shadow:0 18px 45px -34px rgba(6,23,42,.45)}
+.analysis-card.wide{grid-column:1/-1}.analysis-card .num{color:#ff7a00;font:700 11px 'Space Mono',monospace}
+.analysis-card h2{font-size:28px;color:#0b2945;margin:8px 0 12px}.analysis-card h3{font:700 12px 'Space Mono',monospace;color:#2a608d;margin:18px 0 7px;text-transform:uppercase}
+.analysis-card p,.analysis-card li{font-size:15.5px;line-height:1.72;color:#33495d}.analysis-card ul{padding-left:20px}
+.signal{margin-top:16px;padding:13px 15px;border-left:4px solid #ff7a00;background:#fff5e9;border-radius:0 10px 10px 0}
+.uncertainty{margin-top:12px;padding:13px 15px;background:#edf5fb;border-radius:10px;color:#294b68}
+.analysis-sources{margin-top:16px;padding-top:13px;border-top:1px solid #e2eaf0;font-size:12px;line-height:1.7}
+.footer-note{margin-top:25px;padding:17px 19px;background:#0b2945;color:#dbe8f3;border-radius:14px;line-height:1.6}
+@media(max-width:760px){.analysis-grid{grid-template-columns:1fr}.analysis-card.wide{grid-column:auto}.navbtn{width:38px;height:38px}.card{padding:30px 20px}.card-outer{padding:8px}}
+
+/* ===== 17/08 CONSISTENCY PASS — MATCH 16/08 VISUAL SYSTEM ===== */
+:root{
+  --ui-navy:#06172A;
+  --ui-navy-2:#0A2946;
+  --ui-navy-3:#103A61;
+  --ui-blue:#5EA9DE;
+  --ui-blue-2:#2E7AB4;
+  --ui-orange:#FF7A00;
+  --ui-orange-soft:#FF9A32;
+  --ui-white:#F7FBFF;
+  --ui-ice:#D9E7F3;
+  --ui-muted:#9DB3C7;
+  --ui-line:rgba(143,179,217,.18);
+}
+body{background:var(--ui-navy)!important;color:var(--ui-white);}
+#stage{
+  background:
+    radial-gradient(circle at 82% 18%,rgba(46,122,180,.18),transparent 28%),
+    linear-gradient(180deg,var(--ui-navy),#081E34)!important;
+}
+.slide,.slide.hero,.slide.dark{
+  position:relative;
+  background:
+    radial-gradient(circle at 88% 12%,rgba(46,122,180,.14),transparent 28%),
+    linear-gradient(145deg,#07182B 0%,#0B2945 58%,#07182B 100%)!important;
+}
+.slide::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);
+  background-size:54px 54px;
+  mask-image:linear-gradient(to bottom,rgba(0,0,0,.35),transparent 78%);
+}
+.slide>*{position:relative;z-index:2}
+#topbar{
+  background:rgba(6,23,42,.94)!important;
+  backdrop-filter:blur(18px)!important;
+  border-bottom:1px solid var(--ui-line)!important;
+  box-shadow:0 10px 34px rgba(0,0,0,.20)!important;
+}
+#topbar .row{gap:12px}
+#brand{
+  display:flex;align-items:center;gap:9px;text-decoration:none;
+  color:var(--ui-white)!important;min-width:0;
+}
+.brief-logo-img{
+  width:42px;height:30px;object-fit:contain;flex:0 0 auto;
+  filter:drop-shadow(0 0 9px rgba(94,169,222,.22));
+}
+.site-actions{display:flex;align-items:center;gap:8px}
+.home-btn,.test-btn{
+  display:inline-flex;align-items:center;gap:5px;
+  font:700 10px 'Space Mono',monospace;text-decoration:none;
+  padding:5px 8px;border-radius:8px;white-space:nowrap;
+}
+.home-btn{color:var(--ui-ice)!important;border:1px solid rgba(143,179,217,.25);background:rgba(255,255,255,.045)}
+.test-btn{color:#fff!important;background:linear-gradient(135deg,var(--ui-orange),var(--ui-orange-soft));box-shadow:0 7px 18px rgba(255,122,0,.20)}
+#curlabel{color:var(--ui-ice)!important}
+#curlabel .n{color:var(--ui-orange)!important}
+#segments button{background:rgba(143,179,217,.17)!important}
+#segments button.done,#segments button.current{background:linear-gradient(90deg,var(--ui-orange),var(--ui-orange-soft))!important;opacity:1!important}
+.navbtn{background:rgba(7,24,43,.84)!important;color:#fff!important;border:1px solid rgba(143,179,217,.20)!important;box-shadow:0 10px 30px rgba(0,0,0,.22)!important}
+.hero .kicker{color:var(--ui-orange-soft)!important}
+.hero h1{color:#fff!important;text-shadow:0 8px 28px rgba(0,0,0,.24)}
+.hero .date{color:var(--ui-blue)!important}
+.hero .hook{color:#DDE9F4!important}
+.hero .tag{color:var(--ui-muted)!important}
+.hero .tag b{color:#fff!important}
+.card{
+  position:relative;overflow:hidden;
+  background:linear-gradient(160deg,rgba(18,51,82,.97),rgba(8,30,52,.98))!important;
+  color:var(--ui-white)!important;
+  border:1px solid rgba(143,179,217,.19)!important;
+  border-radius:22px!important;
+  box-shadow:0 28px 70px -36px rgba(0,0,0,.80),inset 0 1px 0 rgba(255,255,255,.035)!important;
+}
+.card::before{
+  content:attr(data-num);position:absolute;top:-.07em;right:12px;
+  font:900 155px/1 Fraunces,serif;color:var(--ui-blue);opacity:.055;pointer-events:none
+}
+.card>*{position:relative;z-index:1}
+.eyebrow{color:var(--ui-muted)!important}
+.eyebrow .num{color:var(--ui-orange)!important}
+.headline{color:#fff!important}
+.body-text{color:#D3E0EC!important}
+.label{
+  color:var(--ui-blue)!important;
+  background:rgba(94,169,222,.07)!important;
+  border:1px solid rgba(94,169,222,.16)!important;
+}
+.punch{
+  background:linear-gradient(90deg,rgba(255,122,0,.12),rgba(94,169,222,.06))!important;
+  color:#F7FBFF!important;border-left:4px solid var(--ui-orange);
+}
+.sources{
+  color:#AFC2D2!important;
+  background:rgba(255,255,255,.035)!important;
+  border:1px solid rgba(143,179,217,.13)!important;
+  border-radius:10px!important;padding:12px!important;
+  line-height:1.72!important;
+}
+.sources strong{color:#fff}
+.sources a{color:#8CCAF5!important}
+.src-note{display:inline-block;margin-top:6px;color:#91A9BC;font-style:italic}
+.chain-step{background:rgba(94,169,222,.08)!important;color:#F4F9FD!important;border:1px solid rgba(94,169,222,.16)!important}
+.chain-arrow{color:var(--ui-orange)!important}
+.deep-btn{background:linear-gradient(135deg,var(--ui-orange),var(--ui-orange-soft))!important;box-shadow:0 9px 24px rgba(255,122,0,.22)}
+.analysis-top{background:rgba(6,23,42,.97)!important}
+.analysis-hero{
+  background:
+    radial-gradient(circle at 80% 25%,rgba(43,120,183,.32),transparent 30%),
+    linear-gradient(135deg,#06172a,#0d3152)!important;
+}
+.analysis-close{background:transparent!important;border:1px solid #49677f!important}
+.analysis-card{border-radius:18px!important}
+@media(max-width:650px){
+  #brand span{display:none}
+  .home-btn .txt,.test-btn .txt{display:none}
+  #topbar{padding-left:12px;padding-right:12px}
+  .brief-logo-img{width:38px;height:27px}
+  .card::before{font-size:105px}
+}
+
+</style>
+</head>
+<body>
+
+<div id="topbar">
+  <div class="row">
+    <a id="brand" href="../index.html" aria-label="Αρχική">
+      <img class="brief-logo-img" src="../assets/az-logo-transparent.png" alt="AZ">
+      <span>Πώς κατανοώ τον κόσμο σήμερα</span>
+    </a>
+    <div class="site-actions">
+      <a class="home-btn" href="../index.html">⌂ <span class="txt">ΑΡΧΙΚΗ</span></a>
+      <a class="test-btn" href="../feedback/test.html">✓ <span class="txt">ΤΕΣΤ</span></a>
+      <span id="curlabel"><span class="n" id="curnum">01</span>/10 · <span id="curtitle">ΕΞΩΦΥΛΛΟ</span></span>
+    </div>
+  </div>
+  <div id="segments"></div>
+</div>
+<button class="navbtn" id="prevBtn" aria-label="Προηγούμενη">‹</button>
+<button class="navbtn" id="nextBtn" aria-label="Επόμενη">›</button>
+
+<div id="stage"><div id="track">
+
+<section class="slide hero" data-title="Εξώφυλλο">
+  <div class="wrap">
+    <div class="kicker">Ημερήσιο briefing</div>
+    <h1>ΠΩΣ ΚΑΤΑΝΟΩ<br>ΤΟΝ ΚΟΣΜΟ ΣΗΜΕΡΑ</h1>
+    <div class="date">17 · 08 · 2026</div>
+    <p class="hook">Ορμούζ, Κίνα, AI, πυρκαγιές και δημόσιο χρέος: διαφορετικές ειδήσεις που συνδέονται περισσότερο απ’ όσο φαίνεται.</p>
+    <p class="tag">🌍 Ο κόσμος σήμερα <b>σε 10 απλές κάρτες.</b></p>
+  </div>
+</section>
+
+<section class="slide" data-title="Ορμούζ">
+<div class="card-outer"><article class="card" data-num="02">
+<div class="eyebrow"><span>Μέση Ανατολή</span><span class="num">02</span></div>
+<h2 class="headline">Ορμούζ: η ένταση ανεβαίνει και η ναυσιπλοΐα σχεδόν παγώνει</h2>
+<p class="body-text">Η Τεχεράνη προειδοποίησε ότι μπορεί να περάσει σε πιο επιθετική στάση στα Στενά του Ορμούζ εάν αποτύχει η διπλωματία με τις ΗΠΑ. Παράλληλα, η εμπορική κίνηση έχει μειωθεί απότομα: δεδομένα της Kpler κατέγραψαν 5 διελεύσεις εμπορευματικών πλοίων το Σάββατο και καμία την Κυριακή, έναντι 31 το προηγούμενο Σαββατοκύριακο.</p>
+<div class="label">Γιατί έχει σημασία</div>
+<p class="body-text">Πριν από τον πόλεμο, από το Ορμούζ περνούσε περίπου το ένα πέμπτο των παγκόσμιων αποστολών αργού πετρελαίου και LNG. Η αναταραχή επηρεάζει ενέργεια, ασφάλιση πλοίων, μεταφορές και τελικά τιμές.</p>
+<div class="punch">Δεν είναι μόνο «τιμή πετρελαίου». Είναι μια πιθανή αλυσίδα κόστους που μπορεί να φτάσει μέχρι επιχειρήσεις και νοικοκυριά.</div>
+<div class="sources"><strong>Cross-check · 3 ανεξάρτητες πηγές</strong><br>
+<a href="https://www.reuters.com/world/middle-east/shipping-via-hormuz-strait-slows-after-tanker-attacks-data-shows-2026-08-16/" target="_blank" rel="noopener">Reuters — στοιχεία ναυσιπλοΐας/Kpler</a> ·
+<a href="https://apnews.com/article/258e9c556fc861c05ccf6ed2b38515d6" target="_blank" rel="noopener">AP — πορεία ΗΠΑ–Ιράν & Ορμούζ</a> ·
+<a href="https://www.theguardian.com/world/live/2026/aug/17/trump-kushner-netanyahu-hamas-gaza-israel-blair-us-iran-hormuz-oil-latest-news-updates" target="_blank" rel="noopener">The Guardian — σημερινές εξελίξεις</a>
+</div>
+</article></div></section>
+
+<section class="slide" data-title="Ρωσία–Ουκρανία">
+<div class="card-outer"><article class="card" data-num="03">
+<div class="eyebrow"><span>Ευρώπη</span><span class="num">03</span></div>
+<h2 class="headline">Η ΕΕ ετοιμάζει μεγάλη διεύρυνση των κυρώσεων κατά της Ρωσίας</h2>
+<p class="body-text">Η ευρωπαϊκή διπλωματική υπηρεσία σχεδιάζει να προτείνει περίπου 1.600 νέες καταχωρίσεις προσώπων και οργανισμών, με έμφαση στη ρωσική στρατιωτική βιομηχανία. Η λίστα αναμένεται τον Σεπτέμβριο, με στόχο υιοθέτηση τον Οκτώβριο.</p>
+<div class="label">Τι παρακολουθούμε</div>
+<p class="body-text">Οι κυρώσεις χρειάζονται ομοφωνία στην ΕΕ. Άρα το ζήτημα δεν είναι μόνο το εύρος τους, αλλά και αν τα κράτη-μέλη θα συμφωνήσουν γρήγορα.</p>
+<div class="sources"><strong>Cross-check · 3 διαφορετικές πηγές</strong><br>
+<a href="https://www.reuters.com/world/europe/eu-plans-most-far-reaching-sanctions-package-against-russia-autumn-foreign-chief-2026-08-17/" target="_blank" rel="noopener">Reuters — ~1.600 προτεινόμενες καταχωρίσεις</a> ·
+<a href="https://www.welt.de/article6a81df78a87e8142c31d2014" target="_blank" rel="noopener">WELT — συνέντευξη Kaja Kallas</a> ·
+<a href="https://www.eeas.europa.eu/eeas/foreign-affairs-council%C2%A0press%C2%A0remarks-high-representative-kaja-kallas-upon-arrival_en" target="_blank" rel="noopener">EEAS — επίσημο πλαίσιο κυρώσεων</a><br>
+<span class="src-note">Σημείωση: ο αριθμός ~1.600 προέρχεται από διπλωματικές πηγές του Reuters· η κατεύθυνση για μεγάλη διεύρυνση επιβεβαιώνεται από την ίδια την Kallas.</span>
+</div>
+</article></div></section>
+
+<section class="slide" data-title="Γάζα">
+<div class="card-outer"><article class="card" data-num="04">
+<div class="eyebrow"><span>Μέση Ανατολή</span><span class="num">04</span></div>
+<h2 class="headline">Γάζα: νέα διπλωματική κινητικότητα, αλλά όχι ακόμη συμφωνία</h2>
+<p class="body-text">Ο Jared Kushner συναντήθηκε με τον Benjamin Netanyahu στην Ιερουσαλήμ, μετά από σπάνια συνάντηση με τον ηγέτη της Hamas Khalil Al-Hayya στο Κάιρο. Το αμερικανικό σχέδιο συνδέει αφοπλισμό της Hamas, ισραηλινή αποχώρηση, διεθνή δύναμη ασφαλείας και νέα παλαιστινιακή διοίκηση.</p>
+<div class="label">Η ουσία</div>
+<p class="body-text">Οι βασικές διαφωνίες παραμένουν, ιδιαίτερα ως προς το ποιος κάνει πρώτος τις δεσμευτικές κινήσεις. Η σωστή διατύπωση είναι «νέα προσπάθεια», όχι «η ειρήνη πλησιάζει».</p>
+<div class="sources"><strong>Cross-check · 3 ανεξάρτητες πηγές</strong><br>
+<a href="https://www.reuters.com/world/middle-east/kushner-hold-talks-with-netanyahu-after-rare-meeting-with-hamas-2026-08-17/" target="_blank" rel="noopener">Reuters — συνάντηση & σχέδιο</a> ·
+<a href="https://apnews.com/article/18252d84c29658ca13ac3380743953be" target="_blank" rel="noopener">AP — διαφωνίες Ισραήλ/Hamas</a> ·
+<a href="https://www.thetimes.com/world/middle-east/israel-hamas-war/article/tony-blair-and-jared-kushner-in-israel-for-talks-on-stalled-gaza-plan-p08mjrq3d" target="_blank" rel="noopener">The Times — διπλωματικές επαφές</a>
+</div>
+</article></div></section>
+
+<section class="slide" data-title="Κίνα">
+<div class="card-outer"><article class="card" data-num="05">
+<div class="eyebrow"><span>Ασία · Οικονομία</span><span class="num">05</span></div>
+<h2 class="headline">Η κινεζική οικονομία χάνει ταχύτητα</h2>
+<p class="body-text">Τον Ιούλιο η βιομηχανική παραγωγή αυξήθηκε 4,5% σε ετήσια βάση, χαμηλότερα από τις προσδοκίες, ενώ οι λιανικές πωλήσεις αυξήθηκαν μόλις 0,6%. Οι επενδύσεις παγίου κεφαλαίου μειώθηκαν 6,7% στο πρώτο επτάμηνο.</p>
+<div class="label">Γιατί έχει σημασία</div>
+<p class="body-text">Η αδυναμία της εσωτερικής ζήτησης στην Κίνα επηρεάζει εισαγωγές, διεθνές εμπόριο και επιχειρήσεις σε Ευρώπη και Ασία. Οι ισχυρές εξαγωγές δεν λύνουν από μόνες τους το πρόβλημα της κατανάλωσης.</p>
+<div class="sources"><strong>Cross-check · πρωτογενής + 2 ανεξάρτητες πηγές</strong><br>
+<a href="https://www.stats.gov.cn/english/PressRelease/" target="_blank" rel="noopener">National Bureau of Statistics of China — επίσημα στοιχεία</a> ·
+<a href="https://www.reuters.com/world/china/chinas-industrial-output-slows-july-retail-sales-miss-forecasts-2026-08-17/" target="_blank" rel="noopener">Reuters — ανάλυση</a> ·
+<a href="https://www.ft.com/content/09a8a200-e572-486e-9bff-1f57933aebfc" target="_blank" rel="noopener">Financial Times — ανεξάρτητη κάλυψη</a>
+</div>
+</article></div></section>
+
+<section class="slide" data-title="AI">
+<div class="card-outer"><article class="card" data-num="06">
+<div class="eyebrow"><span>Τεχνολογία · Αγορές</span><span class="num">06</span></div>
+<h2 class="headline">AI: πραγματική επανάσταση, αλλά ίσως υπερβολικές αποτιμήσεις</h2>
+<p class="body-text">Νέα ανάλυση στο ECB Blog υποστηρίζει ότι μια διόρθωση στις υψηλές αποτιμήσεις αμερικανικών τεχνολογικών μετοχών είναι πιθανή. Το βασικό επιχείρημα δεν είναι ότι η AI «δεν αξίζει», αλλά ότι οι αγορές μπορεί να έχουν προεξοφλήσει υπερβολικά υψηλή μελλοντική κερδοφορία.</p>
+<div class="label">Σημαντική διευκρίνιση</div>
+<p class="body-text">Το ίδιο το άρθρο επισημαίνει ότι οι απόψεις του blog δεν εκφράζουν κατ’ ανάγκη την επίσημη θέση της ΕΚΤ. Το timing μιας πιθανής διόρθωσης επίσης δεν μπορεί να προβλεφθεί.</p>
+<div class="sources"><strong>Cross-check · πρωτογενής + ανεξάρτητη κάλυψη + market context</strong><br>
+<a href="https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260817~754a8a4418.en.html" target="_blank" rel="noopener">ECB Blog — πρωτογενές κείμενο</a> ·
+<a href="https://www.reuters.com/business/autos-transportation/ai-market-correction-is-coming-ecb-blog-predicts-2026-08-17/" target="_blank" rel="noopener">Reuters — ανεξάρτητη κάλυψη</a> ·
+<a href="https://www.ft.com/content/d4897d94-0d69-445a-9466-5150840c801e" target="_blank" rel="noopener">Financial Times — τρέχον market context</a><br>
+<span class="src-note">Η FT πηγή διασταυρώνει το ευρύτερο πλαίσιο υψηλών αποτιμήσεων/αισιοδοξίας· δεν αποτελεί δεύτερη αναφορά του ίδιου ECB Blog.</span>
+</div>
+</article></div></section>
+
+<section class="slide" data-title="Καθαρή ενέργεια">
+<div class="card-outer"><article class="card" data-num="07">
+<div class="eyebrow"><span>Ενέργεια · Κίνα</span><span class="num">07</span></div>
+<h2 class="headline">Η Κίνα παράγει καθαρή ενέργεια που το δίκτυο δεν μπορεί πάντα να απορροφήσει</h2>
+<p class="body-text">Έκθεση των Global Energy Monitor και CREA εκτιμά ότι η Κίνα περιόρισε 360 TWh καθαρής παραγωγής στο πρώτο εξάμηνο. Η επίσημη κινεζική εκτίμηση είναι πολύ χαμηλότερη, άρα υπάρχει σημαντική διαφορά μεθοδολογίας και μέτρησης.</p>
+<div class="label">Το μάθημα</div>
+<p class="body-text">Η ενεργειακή μετάβαση δεν τελειώνει στα φωτοβολταϊκά και τις ανεμογεννήτριες. Χρειάζονται δίκτυα, διασυνδέσεις, αποθήκευση και ευέλικτη ζήτηση.</p>
+<div class="sources"><strong>Cross-check · 3 διαφορετικές πηγές</strong><br>
+<a href="https://globalenergymonitor.org/article/china-wasted-enough-wind-and-solar-cover-all-new-power-demand-h1-2026" target="_blank" rel="noopener">Global Energy Monitor — πρωτογενής έκθεση</a> ·
+<a href="https://www.reuters.com/business/energy/china-leads-wave-clean-power-wastage-grids-globally-hit-limits-2026-08-17/" target="_blank" rel="noopener">Reuters — διεθνής κάλυψη</a> ·
+<a href="https://www.scmp.com/economy/china-economy/article/3363147/china-wasting-large-amounts-power-captured-clean-energy-hits-bottlenecks-report-says" target="_blank" rel="noopener">SCMP — ανεξάρτητη κάλυψη</a><br>
+<span class="src-note">Το 360 TWh είναι εκτίμηση GEM/CREA και είναι σημαντικά υψηλότερο από τα επίσημα κινεζικά στοιχεία· γι’ αυτό παρουσιάζεται ως εκτίμηση, όχι ως αδιαμφισβήτητο μέγεθος.</span>
+</div>
+</article></div></section>
+
+<section class="slide" data-title="Πυρκαγιές">
+<div class="card-outer"><article class="card" data-num="08">
+<div class="eyebrow"><span>Ελλάδα · Κλίμα</span><span class="num">08</span></div>
+<h2 class="headline">Σαλαμίνα και Ευρώπη: οι πυρκαγιές γίνονται συστημικό κόστος</h2>
+<p class="body-text">Δύο άνθρωποι έχασαν τη ζωή τους στη Σαλαμίνα και πάνω από 500 απομακρύνθηκαν. Σε ευρωπαϊκό επίπεδο, περισσότερα από 576.000 εκτάρια έχουν καεί φέτος, ενώ το Βέλγιο αντιμετωπίζει τη μεγαλύτερη καταγεγραμμένη πυρκαγιά στην ιστορία του.</p>
+<div class="label">Γιατί έχει σημασία</div>
+<p class="body-text">Οι πυρκαγιές δεν είναι μόνο περιβαλλοντική απώλεια: σημαίνουν κόστος πολιτικής προστασίας, ζημιές σε σπίτια και υποδομές, τουρισμό, γεωργία και ασφαλίσεις.</p>
+<div class="sources"><strong>Cross-check · 3 ανεξάρτητες πηγές</strong><br>
+<a href="https://www.reuters.com/business/environment/two-die-wildfires-sweep-greek-island-salamina-2026-08-16/" target="_blank" rel="noopener">Reuters — Σαλαμίνα</a> ·
+<a href="https://apnews.com/article/66c6fb6801f5574fde2dfc07a610a4cb" target="_blank" rel="noopener">AP — Ελλάδα & Βέλγιο</a> ·
+<a href="https://www.independent.co.uk/bulletin/news/greece-wildfires-salamina-island-athens-b3033926.html" target="_blank" rel="noopener">The Independent — Σαλαμίνα</a>
+</div>
+</article></div></section>
+
+<section class="slide" data-title="Ελλάδα">
+<div class="card-outer"><article class="card" data-num="09">
+<div class="eyebrow"><span>Ελλάδα · Δημόσιο χρέος</span><span class="num">09</span></div>
+<h2 class="headline">Η Ελλάδα επιταχύνει τις πρόωρες αποπληρωμές χρέους</h2>
+<p class="body-text">Νεότερη ενημέρωση της «Καθημερινής» αναφέρει ότι οι φετινές πρόωρες αποπληρωμές αναμένεται να φτάσουν τα €12,84 δισ., αντί για €8,79 δισ. που είχε αρχικά προβλεφθεί.</p>
+<div class="label">Τι σημαίνει — και τι δεν σημαίνει</div>
+<p class="body-text">Η ταχύτερη αποπληρωμή μειώνει μελλοντικές χρηματοδοτικές ανάγκες και ενισχύει την εικόνα του Δημοσίου. Δεν μεταφράζεται αυτόματα σε υψηλότερο διαθέσιμο εισόδημα για τα νοικοκυριά.</p>
+<div class="sources"><strong>Cross-check · 3 πηγές με σαφή διάκριση</strong><br>
+<a href="https://www.kathimerini.gr/economy/564402454/tachyteri-meiosi-chreoys-kai-maxilari-32-dis/" target="_blank" rel="noopener">Καθημερινή 17/8 — νεότερη εκτίμηση €12,84 δισ.</a> ·
+<a href="https://www.ekathimerini.com/economy/1291018/plans-for-faster-debt-payment/" target="_blank" rel="noopener">eKathimerini / αρχικό σχέδιο PDMA — €8,79 δισ.</a> ·
+<a href="https://www.reuters.com/business/greece-repays-earlier-than-planned-69-bln-first-bailout-loans-sources-say-2026-06-15/" target="_blank" rel="noopener">Reuters 15/6 — €6,9 δισ. είχαν ήδη αποπληρωθεί</a><br>
+<span class="src-note">Εδώ δεν υπάρχουν τρεις ανεξάρτητες σημερινές δημοσιεύσεις για το €12,84 δισ. Το ακριβές νέο ποσό αποδίδεται ρητά στην Καθημερινή και διασταυρώνεται με το αρχικό σχέδιο και την ήδη πραγματοποιηθείσα αποπληρωμή.</span>
+</div>
+</article></div></section>
+
+<section class="slide dark" data-title="Η μεγάλη εικόνα">
+<div class="wrap">
+<div class="eyebrow"><span>WORLD IN CONTEXT</span><span class="num">10</span></div>
+<h2 class="headline">Η μεγάλη εικόνα της ημέρας</h2>
+<p class="body-text">Οι σημερινές ειδήσεις μοιάζουν διαφορετικές. Στην πραγματικότητα συνδέονται μέσα από λίγους βασικούς μηχανισμούς.</p>
+<div class="chain">
+  <div class="chain-step">Ιράν → Ορμούζ → ενέργεια & μεταφορές</div>
+  <div class="chain-arrow">↓</div>
+  <div class="chain-step">Κίνα → ζήτηση & παγκόσμια ανάπτυξη</div>
+  <div class="chain-arrow">↓</div>
+  <div class="chain-step">AI → επενδύσεις & χρηματοπιστωτικός κίνδυνος</div>
+  <div class="chain-arrow">↓</div>
+  <div class="chain-step">Κλίμα → υποδομές & πραγματικό οικονομικό κόστος</div>
+</div>
+<div class="punch">Το κοινό νήμα: γεωπολιτική, ενέργεια, τεχνολογία, κλίμα και οικονομία λειτουργούν όλο και περισσότερο ως ένα αλληλοσυνδεδεμένο σύστημα.</div>
+<button class="deep-btn" id="openAnalysis">ΔΙΑΒΑΣΕ ΤΗΝ ΠΛΗΡΗ ΑΝΑΛΥΣΗ →</button>
+<div class="sources">Η κάρτα αυτή είναι σύνθεση/ανάλυση του World in Context, βασισμένη στις πηγές των προηγούμενων καρτών.</div>
+</div></section>
+
+</div></div>
+
+<div class="deep-analysis" id="deepAnalysis" aria-hidden="true">
+<div class="analysis-top"><div class="analysis-top-inner">
+<div class="analysis-brand">WORLD IN CONTEXT · ΠΩΣ ΚΑΤΑΝΟΩ ΤΟΝ ΚΟΣΜΟ ΣΗΜΕΡΑ</div>
+<button class="analysis-close" id="closeAnalysis">← ΠΙΣΩ ΣΤΙΣ 10 ΚΑΡΤΕΣ</button>
+</div></div>
+
+<section class="analysis-hero"><div class="analysis-wrap">
+<div class="kicker" style="color:#ff9a32">17 ΑΥΓΟΥΣΤΟΥ 2026 · DEEP ANALYSIS</div>
+<h1>Οι συνδέσεις πίσω από τις σημερινές ειδήσεις</h1>
+<p>Οι κάρτες δίνουν τη γρήγορη εικόνα. Εδώ εξετάζουμε τον μηχανισμό: τι αλλάζει, πώς μπορεί να μεταδοθεί στην οικονομία, τι σημαίνει για την Ελλάδα και πού παραμένει η αβεβαιότητα.</p>
+</div></section>
+
+<main class="analysis-body"><div class="analysis-grid">
+
+<article class="analysis-card wide">
+<div class="num">01 · ΟΡΜΟΥΖ</div>
+<h2>Γιατί ένα στενό στη Μέση Ανατολή μπορεί να επηρεάσει την Ελλάδα</h2>
+<p>Η σημασία του Ορμούζ δεν περιορίζεται στο αργό πετρέλαιο. Η απότομη μείωση της ναυσιπλοΐας επηρεάζει τις προσδοκίες για την προσφορά, τα ασφάλιστρα των πλοίων, το κόστος μεταφοράς και την ασφάλεια των εφοδιαστικών αλυσίδων.</p>
+<h3>Ο μηχανισμός</h3>
+<ul>
+<li><strong>Λιγότερες διελεύσεις</strong> → αυξημένος γεωπολιτικός κίνδυνος.</li>
+<li><strong>Αυξημένος κίνδυνος</strong> → ακριβότερη ασφάλιση και μεταφορά.</li>
+<li><strong>Περιορισμένη διύλιση</strong> → οι τιμές diesel/jet fuel μπορεί να παραμένουν υψηλές ακόμη και αν πέσει το αργό.</li>
+<li><strong>Υψηλότερα καύσιμα</strong> → μεγαλύτερο κόστος σε μεταφορές, τουρισμό, παραγωγή και διανομή.</li>
+</ul>
+<div class="signal"><strong>Για την Ελλάδα:</strong> η οικονομία είναι εκτεθειμένη μέσω καυσίμων, ακτοπλοΐας, οδικών μεταφορών, αεροπορίας και τουρισμού.</div>
+<div class="uncertainty"><strong>Αβεβαιότητα:</strong> η διάρκεια της διαταραχής είναι καθοριστική. Μια γρήγορη αποκλιμάκωση έχει πολύ διαφορετικό αποτέλεσμα από μήνες περιορισμένης ναυσιπλοΐας.</div>
+<div class="analysis-sources">Πηγές:
+<a href="https://www.reuters.com/world/middle-east/shipping-via-hormuz-strait-slows-after-tanker-attacks-data-shows-2026-08-16/" target="_blank">Reuters — shipping</a> ·
+<a href="https://www.reuters.com/commentary/breakingviews/oil-shocks-bigger-problem-is-refinery-2026-08-17/" target="_blank">Reuters Breakingviews — refining</a>
+</div>
+</article>
+
+<article class="analysis-card">
+<div class="num">02 · AI</div>
+<h2>Μπορεί η AI να είναι επανάσταση και «φούσκα» ταυτόχρονα;</h2>
+<p>Ναι. Η τεχνολογία μπορεί να δημιουργεί πραγματικές παραγωγικές αλλαγές και ταυτόχρονα οι επενδυτές να πληρώνουν υπερβολικά για τις εταιρείες που θεωρούν ότι θα κερδίσουν περισσότερο.</p>
+<p>Το ECB Blog συγκρίνει τη σημερινή ευφορία με παλαιότερα τεχνολογικά κύματα και επισημαίνει ότι οι αποτιμήσεις μπορούν να διορθωθούν ακόμη κι αν η AI τελικά αποδειχθεί μετασχηματιστική.</p>
+<div class="signal"><strong>Κρίσιμη διάκριση:</strong> «υπερτιμημένες μετοχές AI» δεν σημαίνει «άχρηστη AI».</div>
+<div class="uncertainty"><strong>Τι δεν ξέρουμε:</strong> κανείς δεν γνωρίζει πότε ή αν θα γίνει απότομη διόρθωση. Το ίδιο το άρθρο μιλά για κίνδυνο, όχι για πρόβλεψη ημερομηνίας.</div>
+<div class="analysis-sources">Πηγές:
+<a href="https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260817~754a8a4418.en.html" target="_blank">ECB Blog</a> ·
+<a href="https://www.reuters.com/business/autos-transportation/ai-market-correction-is-coming-ecb-blog-predicts-2026-08-17/" target="_blank">Reuters</a>
+</div>
+</article>
+
+<article class="analysis-card">
+<div class="num">03 · ΚΙΝΑ</div>
+<h2>Το ερώτημα δεν είναι μόνο «πόσο αναπτύσσεται η Κίνα;»</h2>
+<p>Η σημερινή εικόνα δείχνει αδύναμη εσωτερική ζήτηση, ασθενείς λιανικές πωλήσεις και πτώση επενδύσεων. Την ίδια στιγμή, οι εξαγωγές παραμένουν σημαντικό στήριγμα.</p>
+<p>Άρα έχει μεγαλύτερη σημασία να ρωτήσουμε <strong>από πού</strong> προέρχεται η ανάπτυξη. Μια οικονομία που στηρίζεται υπερβολικά στις εξαγωγές είναι πιο ευάλωτη σε εμπορικές εντάσεις και εξωτερική ζήτηση.</p>
+<div class="signal"><strong>Σύνδεση με Ευρώπη:</strong> ασθενέστερη κινεζική ζήτηση πιέζει ευρωπαϊκές εταιρείες, αλλά ταυτόχρονα ισχυρές κινεζικές εξαγωγές αυξάνουν τον ανταγωνισμό.</div>
+<div class="analysis-sources">Πηγή:
+<a href="https://www.reuters.com/world/china/chinas-industrial-output-slows-july-retail-sales-miss-forecasts-2026-08-17/" target="_blank">Reuters 17/8</a>
+</div>
+</article>
+
+<article class="analysis-card">
+<div class="num">04 · ΚΛΙΜΑ</div>
+<h2>Οι πυρκαγιές από «περιβαλλοντικό θέμα» γίνονται οικονομικό θέμα</h2>
+<p>Η άμεση εικόνα είναι η φωτιά και οι εκκενώσεις. Το οικονομικό αποτύπωμα όμως συνεχίζεται μετά την κατάσβεση.</p>
+<ul>
+<li>κατεστραμμένες κατοικίες και υποδομές,</li>
+<li>δαπάνες πυρόσβεσης και αποκατάστασης,</li>
+<li>ασφαλιστικές ζημιές,</li>
+<li>απώλειες σε γεωργία και τουρισμό,</li>
+<li>μεγαλύτερες ανάγκες πολιτικής προστασίας.</li>
+</ul>
+<div class="signal"><strong>Η μεγάλη αλλαγή:</strong> η προσαρμογή στην κλιματική αλλαγή γίνεται πλέον ζήτημα δημόσιων οικονομικών και ανθεκτικότητας υποδομών.</div>
+<div class="analysis-sources">Πηγές:
+<a href="https://www.reuters.com/business/environment/two-die-wildfires-sweep-greek-island-salamina-2026-08-16/" target="_blank">Reuters — Σαλαμίνα</a> ·
+<a href="https://www.reuters.com/business/environment/rainfall-offers-new-hope-fight-against-belgiums-biggest-wildfire-2026-08-17/" target="_blank">Reuters — Ευρώπη</a>
+</div>
+</article>
+
+<article class="analysis-card">
+<div class="num">05 · ΕΛΛΑΔΑ</div>
+<h2>Δημόσιο χρέος και καθημερινή οικονομία δεν είναι το ίδιο πράγμα</h2>
+<p>Η ταχύτερη αποπληρωμή χρέους μπορεί να μειώσει μελλοντικές πληρωμές τόκων, να βελτιώσει τη διαχείριση λήξεων και να ενισχύσει την αξιοπιστία του Δημοσίου στις αγορές.</p>
+<p>Αυτό όμως δεν συνεπάγεται ότι ένα νοικοκυριό θα δει άμεσα υψηλότερο μισθό ή χαμηλότερες τιμές. Η καθημερινή ευημερία εξαρτάται από παραγωγικότητα, πραγματικούς μισθούς, φορολογία, επενδύσεις και κόστος ζωής.</p>
+<div class="signal"><strong>Το σωστό συμπέρασμα:</strong> η μείωση χρέους είναι θετικό μακροοικονομικό σήμα, αλλά δεν είναι από μόνη της μέτρο βιοτικού επιπέδου.</div>
+<div class="analysis-sources">Πηγή:
+<a href="https://www.kathimerini.gr/economy/564402454/tachyteri-meiosi-chreoys-kai-maxilari-32-dis/" target="_blank">Καθημερινή 17/8</a>
+</div>
+</article>
+
+<article class="analysis-card wide">
+<div class="num">06 · Η ΜΕΓΑΛΗ ΕΙΚΟΝΑ</div>
+<h2>Τι συνδέει πραγματικά τη σημερινή ημέρα</h2>
+<p>Το κοινό μοτίβο είναι η <strong>ανθεκτικότητα συστημάτων</strong>: ενεργειακά δίκτυα που δεν προλαβαίνουν την παραγωγή, θαλάσσιες οδοί που γίνονται γεωπολιτικά σημεία συμφόρησης, χρηματοπιστωτικές αγορές που συγκεντρώνουν προσδοκίες γύρω από μία τεχνολογία και δημόσιες υποδομές που δοκιμάζονται από ακραίες συνθήκες.</p>
+<div class="signal"><strong>World in Context:</strong> το κρίσιμο ερώτημα δεν είναι μόνο «τι συνέβη;», αλλά «ποιος μηχανισμός μεταφέρει το γεγονός από ένα σημείο του συστήματος σε ένα άλλο;».</div>
+</article>
+
+</div>
+<div class="footer-note"><strong>Μεθοδολογία:</strong> οι ειδήσεις ελέγχθηκαν ξανά στις 17/08/2026 με στόχο τουλάχιστον τρεις διαφορετικές πηγές ανά θέμα, με προτεραιότητα σε πρωτογενείς/θεσμικές πηγές. Όπου υπάρχουν εκτιμήσεις ή αποκλίσεις μεταξύ πηγών, αυτό επισημαίνεται ρητά.</div>
+</main>
+</div>
+
+<script>
+const slides=[...document.querySelectorAll('.slide')], track=document.getElementById('track');
+const segWrap=document.getElementById('segments'), topbar=document.getElementById('topbar');
+const prev=document.getElementById('prevBtn'), next=document.getElementById('nextBtn');
+const curnum=document.getElementById('curnum'), curtitle=document.getElementById('curtitle');
+let current=0;
+slides.forEach((s,i)=>{const b=document.createElement('button');b.onclick=()=>go(i);segWrap.appendChild(b)});
+const segs=[...segWrap.children];
+function go(i){
+ i=Math.max(0,Math.min(slides.length-1,i)); current=i;
+ track.style.transform=`translateX(-${i*10}%)`;
+ const dark=slides[i].classList.contains('dark');
+ topbar.classList.toggle('dark',dark);prev.classList.toggle('dark',dark);next.classList.toggle('dark',dark);
+ curnum.textContent=String(i+1).padStart(2,'0');curtitle.textContent=slides[i].dataset.title.toUpperCase();
+ segs.forEach((b,j)=>{b.classList.toggle('current',j===i);b.classList.toggle('done',j<i)});
+ prev.classList.toggle('disabled',i===0);next.classList.toggle('disabled',i===slides.length-1);
+ slides[i].scrollTop=0;
+}
+prev.onclick=()=>go(current-1);next.onclick=()=>go(current+1);
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')go(current+1);if(e.key==='ArrowLeft')go(current-1)});
+let sx=0,sy=0;
+document.getElementById('stage').addEventListener('touchstart',e=>{sx=e.touches[0].clientX;sy=e.touches[0].clientY},{passive:true});
+document.getElementById('stage').addEventListener('touchend',e=>{let dx=e.changedTouches[0].clientX-sx,dy=e.changedTouches[0].clientY-sy;if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)){go(current+(dx<0?1:-1))}},{passive:true});
+const deep=document.getElementById('deepAnalysis');
+document.getElementById('openAnalysis').onclick=()=>{deep.classList.add('open');deep.setAttribute('aria-hidden','false')};
+document.getElementById('closeAnalysis').onclick=()=>{deep.classList.remove('open');deep.setAttribute('aria-hidden','true')};
+go(0);
+</script>
+</body>
+</html>
