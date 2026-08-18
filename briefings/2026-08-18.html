@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Πώς κατανοώ τον κόσμο σήμερα — 18.08.2026</title>
+<meta name="description" content="World in Context — ημερήσιο briefing 18 Αυγούστου 2026: Ορμούζ, Ουκρανία, Ελλάδα και Βαλκάνια, AI, κλίμα, Αρκτική και Ευρώπη.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#06172A;--navy2:#0A2946;--navy3:#103A61;--blue:#5EA9DE;
+  --orange:#FF7A00;--orange2:#FF9A32;--white:#F7FBFF;--ice:#D9E7F3;
+  --muted:#9DB3C7;--line:rgba(143,179,217,.18);
+}
+*{box-sizing:border-box}html,body{height:100%;margin:0}
+body{font-family:Inter,system-ui,sans-serif;background:var(--navy);color:var(--white);overflow:hidden}
+h1,h2,h3{font-family:Fraunces,serif;margin:0}
+a{color:#8CCAF5}
+#stage{position:fixed;inset:0;overflow:hidden;background:linear-gradient(180deg,var(--navy),#081E34)}
+#track{display:flex;width:1000%;height:100%;transition:transform .5s cubic-bezier(.65,0,.35,1)}
+.slide{position:relative;width:10%;height:100%;flex:0 0 10%;overflow-y:auto;padding:88px 0 54px;
+ background:radial-gradient(circle at 88% 12%,rgba(46,122,180,.14),transparent 28%),linear-gradient(145deg,#07182B,#0B2945 58%,#07182B)}
+.slide:after{content:"";position:absolute;inset:0;pointer-events:none;background:
+ linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),
+ linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);
+ background-size:54px 54px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.35),transparent 78%)}
+.slide>*{position:relative;z-index:2}
+.wrap{max-width:660px;margin:auto;padding:0 28px}
+#topbar{position:fixed;z-index:30;top:0;left:0;right:0;padding:12px 18px 9px;background:rgba(6,23,42,.95);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px}
+#brand{display:flex;align-items:center;gap:9px;text-decoration:none;color:#fff;font:700 11px 'Space Mono',monospace;letter-spacing:.05em;text-transform:uppercase;min-width:0}
+#brand img{width:42px;height:30px;object-fit:contain}
+.site-actions{display:flex;align-items:center;gap:8px}
+.home-btn,.test-btn{font:700 10px 'Space Mono',monospace;text-decoration:none;padding:6px 9px;border-radius:8px;white-space:nowrap}
+.home-btn{color:var(--ice);border:1px solid rgba(143,179,217,.25);background:rgba(255,255,255,.045)}
+.test-btn{color:#fff;background:linear-gradient(135deg,var(--orange),var(--orange2))}
+#curlabel{font:700 10px 'Space Mono',monospace;color:var(--ice);white-space:nowrap}
+#curlabel .n{color:var(--orange)}
+#segments{display:flex;gap:4px}
+#segments button{flex:1;height:4px;border:0;border-radius:3px;background:rgba(143,179,217,.17);padding:0;cursor:pointer}
+#segments button.done,#segments button.current{background:linear-gradient(90deg,var(--orange),var(--orange2))}
+.navbtn{position:fixed;z-index:35;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:1px solid rgba(143,179,217,.2);background:rgba(7,24,43,.86);color:#fff;font-size:28px;cursor:pointer}
+.navbtn.disabled{opacity:0;pointer-events:none}#prevBtn{left:10px}#nextBtn{right:10px}
+.hero h1{font-size:clamp(42px,8vw,62px);line-height:1.01;margin:24px 0 18px;text-shadow:0 8px 28px rgba(0,0,0,.24)}
+.kicker,.eyebrow{font:700 11px 'Space Mono',monospace;letter-spacing:.07em;text-transform:uppercase}
+.kicker{color:var(--orange2)}.date{font:700 14px 'Space Mono',monospace;color:var(--blue);margin:18px 0 24px}
+.hook{font:600 italic clamp(20px,4vw,27px) Fraunces,serif;line-height:1.4;color:#DDE9F4;margin:20px 0 26px}
+.tag{color:var(--muted);font-size:16px}.tag b{color:#fff}
+.card{position:relative;overflow:hidden;max-width:650px;margin:auto;padding:34px 29px;border-radius:22px;
+ background:linear-gradient(160deg,rgba(18,51,82,.97),rgba(8,30,52,.98));border:1px solid rgba(143,179,217,.19);
+ box-shadow:0 28px 70px -36px rgba(0,0,0,.8),inset 0 1px 0 rgba(255,255,255,.035)}
+.card:before{content:attr(data-num);position:absolute;top:-.08em;right:10px;font:900 150px/1 Fraunces,serif;color:var(--blue);opacity:.055}
+.card>*{position:relative;z-index:2}
+.eyebrow{display:flex;justify-content:space-between;color:var(--muted);margin-bottom:17px}.eyebrow .num{color:var(--orange)}
+.headline{font-size:clamp(26px,5.3vw,35px);line-height:1.08;margin-bottom:18px}
+.body-text{font-size:16.2px;line-height:1.64;color:#D3E0EC}
+.label{display:inline-block;margin:17px 0 8px;padding:5px 9px;border-radius:6px;font:700 10px 'Space Mono',monospace;text-transform:uppercase;color:var(--blue);background:rgba(94,169,222,.07);border:1px solid rgba(94,169,222,.16)}
+.punch{margin-top:18px;padding:16px 18px;border-left:4px solid var(--orange);background:linear-gradient(90deg,rgba(255,122,0,.12),rgba(94,169,222,.06));font:600 italic 17px/1.46 Fraunces,serif}
+.sources{margin-top:18px;padding:12px;border:1px solid rgba(143,179,217,.13);border-radius:10px;background:rgba(255,255,255,.035);font:400 10.3px/1.72 'Space Mono',monospace;color:#AFC2D2}
+.sources strong{color:#fff}.sources a{text-underline-offset:2px}
+.deep-btn{margin-top:18px;border:0;border-radius:9px;padding:11px 15px;background:linear-gradient(135deg,var(--orange),var(--orange2));color:#fff;font:700 10.5px 'Space Mono',monospace;cursor:pointer}
+.chain{display:flex;flex-direction:column;align-items:center;gap:5px;margin:20px 0}
+.chain-step{width:100%;padding:9px 12px;border-radius:10px;background:rgba(94,169,222,.08);border:1px solid rgba(94,169,222,.16);text-align:center;font:700 16px Fraunces,serif}.chain-arrow{color:var(--orange);font-weight:800}
+.end-cta{margin-top:24px;padding:20px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(145deg,rgba(12,43,72,.96),rgba(7,27,48,.98));text-align:center}
+.end-cta h3{font-size:24px}.end-cta p{color:#D3E0EC;line-height:1.55}.end-cta-actions{display:flex;justify-content:center;gap:9px;flex-wrap:wrap}.end-cta a{padding:10px 13px;border-radius:9px;text-decoration:none;font:700 10px 'Space Mono',monospace}.end-cta .feedback-link{background:linear-gradient(135deg,var(--orange),var(--orange2));color:white}.end-cta .home-link{border:1px solid rgba(143,179,217,.28);color:var(--ice)}
+/* DEEP ANALYSIS */
+.deep-analysis{position:fixed;inset:0;z-index:100;background:#eef3f7;color:#243B53;overflow-y:auto;display:none}
+.deep-analysis.open{display:block}.analysis-top{position:sticky;top:0;z-index:5;background:rgba(6,23,42,.98);padding:12px 18px;border-bottom:1px solid var(--line)}
+.analysis-top-inner{max-width:1040px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}.analysis-brand{color:#fff;font:700 11px 'Space Mono',monospace}.analysis-close{background:transparent;color:#fff;border:1px solid #49677f;border-radius:9px;padding:8px 11px;font:700 10px 'Space Mono',monospace;cursor:pointer}
+.analysis-hero{background:radial-gradient(circle at 80% 25%,rgba(43,120,183,.32),transparent 30%),linear-gradient(135deg,#06172a,#0d3152);color:white;padding:58px 24px 52px}
+.analysis-wrap{max-width:1040px;margin:auto}.analysis-hero .overline{color:var(--orange2);font:700 11px 'Space Mono',monospace}.analysis-hero h1{font-size:clamp(38px,5vw,64px);line-height:1.03;margin:10px 0 16px}.analysis-hero p{max-width:820px;color:#d6e3ee;font-size:18px;line-height:1.65}
+.analysis-body{max-width:1040px;margin:auto;padding:38px 24px 70px}.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.analysis-card{background:white;border:1px solid #dce7ef;border-radius:18px;padding:26px;box-shadow:0 18px 45px -34px rgba(6,23,42,.45)}
+.analysis-card.wide{grid-column:1/-1}.analysis-card .num{color:var(--orange);font:700 11px 'Space Mono',monospace}.analysis-card h2{font-size:28px;color:#0B2945;margin:8px 0 12px}.analysis-card h3{font:700 12px 'Space Mono',monospace;color:#2A608D;margin:18px 0 7px;text-transform:uppercase}.analysis-card p,.analysis-card li{font-size:15.4px;line-height:1.72;color:#33495D}.analysis-card ul{padding-left:20px}
+.signal{margin-top:16px;padding:13px 15px;border-left:4px solid var(--orange);background:#FFF4E8;border-radius:0 10px 10px 0;color:#243B53}.uncertainty{margin-top:12px;padding:13px 15px;background:#EDF5FB;border-radius:10px;color:#294B68}.analysis-sources{margin-top:16px;padding-top:13px;border-top:1px solid #e2eaf0;font-size:12px;line-height:1.7;color:#52697D}.analysis-sources a{color:#1E5A8A}.footer-note{margin-top:24px;padding:17px 19px;background:#0B2945;color:#DBE8F3;border-radius:14px;line-height:1.65}
+@media(max-width:760px){.analysis-grid{grid-template-columns:1fr}.analysis-card.wide{grid-column:auto}.card{margin:0 14px;padding:29px 21px}.navbtn{width:38px;height:38px}.wrap{padding:0 22px}}
+@media(max-width:650px){#brand span{display:none}.home-btn .txt,.test-btn .txt{display:none}#topbar{padding-left:11px;padding-right:11px}}
+</style>
+</head>
+<body>
+<div id="topbar">
+  <div class="row">
+    <a id="brand" href="../index.html"><img src="../assets/az-logo-transparent.png" alt="AZ"><span>Πώς κατανοώ τον κόσμο σήμερα</span></a>
+    <div class="site-actions">
+      <a class="home-btn" href="../index.html">⌂ <span class="txt">ΑΡΧΙΚΗ</span></a>
+      <a class="test-btn" href="../feedback/test.html">✓ <span class="txt">ΤΕΣΤ</span></a>
+      <span id="curlabel"><span class="n" id="curnum">01</span>/10 · <span id="curtitle">ΕΞΩΦΥΛΛΟ</span></span>
+    </div>
+  </div><div id="segments"></div>
+</div>
+<button class="navbtn" id="prevBtn" aria-label="Προηγούμενη">‹</button>
+<button class="navbtn" id="nextBtn" aria-label="Επόμενη">›</button>
+<div id="stage"><div id="track">
+
+<section class="slide hero" data-title="Εξώφυλλο">
+  <div class="wrap">
+    <div class="kicker">Ημερήσιο briefing</div>
+    <h1>ΠΩΣ ΚΑΤΑΝΟΩ<br>ΤΟΝ ΚΟΣΜΟ ΣΗΜΕΡΑ</h1>
+    <div class="date">18 · 08 · 2026</div>
+    <p class="hook">Από το Ορμούζ και τον λιγνίτη των Βαλκανίων μέχρι τα δεδομένα της AI και τους δρόμους της Αρκτικής: σήμερα η κοινή λέξη είναι «ανθεκτικότητα».</p>
+    <p class="tag">🌍 Ο κόσμος σήμερα <b>σε 10 απλές κάρτες.</b></p>
+  </div>
+</section>
+
+<section class="slide" data-title="Ορμούζ">
+<div class="card" data-num="02">
+  <div class="eyebrow"><span>Μέση Ανατολή · Ενέργεια</span><span class="num">02</span></div>
+  <h2 class="headline">Ορμούζ: η αγορά αρχίζει να φοβάται ότι η κρίση θα κρατήσει</h2>
+  <div class="body-text">Οι ΗΠΑ δηλώνουν ότι δεν υπάρχουν προγραμματισμένες συνομιλίες με το Ιράν, ενώ η Τεχεράνη επιμένει ότι το Στενό δεν θα επανέλθει σε κανονική λειτουργία χωρίς εκπλήρωση των όρων της. Το Brent κινήθηκε γύρω στα <b>$91/βαρέλι</b>.</div>
+  <div class="label">Γιατί έχει σημασία</div>
+  <div class="body-text">Το πρόβλημα δεν είναι μόνο η σημερινή τιμή. Αν η αγορά θεωρήσει τη διαταραχή μόνιμη, το ακριβότερο πετρέλαιο περνά σε μεταφορές, προϊόντα, πληθωρισμό και επιτόκια.</div>
+  <div class="punch">Ορμούζ → πετρέλαιο → πληθωρισμός → ακριβότερο χρήμα.</div>
+  <div class="sources"><strong>Πηγές:</strong><br>
+    <a href="https://www.reuters.com/world/middle-east/trump-says-no-talks-planned-with-iran-tehran-says-strait-hormuz-still-shut-2026-08-18/" target="_blank">Reuters — 18/08/2026</a><br>
+    <a href="https://www.reuters.com/business/energy/oil-climbs-fading-us-iran-peace-hopes-raise-supply-risks-2026-08-18/" target="_blank">Reuters Energy — 18/08/2026</a><br>
+    <a href="https://apnews.com/article/9c48af23b713709e8e170191fbc78c2a" target="_blank">Associated Press — 18/08/2026</a>
+  </div>
+</div></section>
+
+<section class="slide" data-title="Ουκρανία">
+<div class="card" data-num="03">
+  <div class="eyebrow"><span>Ρωσία · Ουκρανία</span><span class="num">03</span></div>
+  <h2 class="headline">Η κλιμάκωση μεταφέρεται όλο και βαθύτερα πίσω από τα μέτωπα</h2>
+  <div class="body-text">Ρωσικό πλήγμα στην περιοχή Χαρκόβου σκότωσε 10 ανθρώπους. Την ίδια ημέρα η Μόσχα ανέφερε επίθεση με <b>620 drones</b> προς την πρωτεύουσα και τα περίχωρά της — μία από τις μεγαλύτερες τέτοιες επιθέσεις.</div>
+  <div class="label">Το νέο στοιχείο</div>
+  <div class="body-text">Ο πόλεμος γίνεται όλο και περισσότερο πόλεμος μεγάλου βεληνεκούς: ενεργειακές, βιομηχανικές και αστικές υποδομές βρίσκονται συχνότερα εντός της ακτίνας των επιθέσεων.</div>
+  <div class="punch">Δεν βλέπουμε αποκλιμάκωση. Βλέπουμε διεύρυνση της γεωγραφίας του πολέμου.</div>
+  <div class="sources"><strong>Πηγές:</strong><br>
+    <a href="https://www.reuters.com/world/europe/russian-missile-attack-kills-10-ukraines-kharkiv-region-officials-say-2026-08-18/" target="_blank">Reuters — Χάρκοβο, 18/08/2026</a><br>
+    <a href="https://www.reuters.com/world/russia-downs-180-drones-moscow-region-overnight-mayor-says-2026-08-18/" target="_blank">Reuters — Μόσχα, 18/08/2026</a><br>
+    <a href="https://apnews.com/article/5f1f84bfb064942d7b7fe9be1bd4693c" target="_blank">Associated Press — 18/08/2026</a>
+  </div>
+</div></section>
+
+<section class="slide" data-title="Ελλάδα">
+<div class="card" data-num="04">
+  <div class="eyebrow"><span>Ελλάδα · Βαλκάνια · Ενέργεια</span><span class="num">04</span></div>
+  <h2 class="headline">Η Ελλάδα ανάμεσα στο ακριβό πετρέλαιο και στο τέλος του λιγνίτη</h2>
+  <div class="body-text">Η Βόρεια Μακεδονία προχωρά σε τριετή συμφωνία με την KEK του Κοσόβου για περίπου <b>3 εκατ. τόνους λιγνίτη</b>. Ταυτόχρονα η κρίση στο Ορμούζ ανεβάζει το κόστος εισαγόμενης ενέργειας.</div>
+  <div class="label">Η ελληνική διάσταση</div>
+  <div class="body-text">Η Δυτική Μακεδονία χάνει σταδιακά μια μικρή αλλά υπαρκτή αγορά λιγνίτη. Η στρατηγική ευκαιρία όμως δεν είναι να ανταγωνιστεί το Κόσοβο στον άνθρακα: είναι να μετατραπεί σε κόμβο <b>ΑΠΕ + αποθήκευσης + διασυνδέσεων</b> προς τα Βαλκάνια.</div>
+  <div class="punch">Η Ελλάδα μπορεί να χάνει μια αγορά λιγνίτη — αλλά η μεγαλύτερη μάχη είναι ποιος θα τροφοδοτεί τα Βαλκάνια μετά τον άνθρακα.</div>
+  <button class="deep-btn" data-open-analysis>ΒΑΘΥΤΕΡΗ ΑΝΑΛΥΣΗ →</button>
+  <div class="sources"><strong>Πηγές:</strong><br>
+    <a href="https://balkangreenenergynews.com/north-macedonia-to-import-coal-for-power-plants-from-kosovo/" target="_blank">Balkan Green Energy News — 18/08/2026</a><br>
+    <a href="https://news.metal.com/en/newscontent/104065728-north-macedonias-esm-signs-three-year-deal-for-3-mt-of-kosovo-coal-with-annual-deliveries-limited-to-around-08-mt" target="_blank">Shanghai Metals Market — 18/08/2026</a><br>
+    <a href="https://www.energy-community.org/news/Energy-Community-News/2026/7/1.html" target="_blank">Energy Community — 01/07/2026</a><br>
+    <a href="https://ypen.gov.gr/gia-proti-fora-dynatotita-gia-fotovoltaika-sto-balkoni-kai-aftonomes-bataries-se-noikokyria-kai-epicheiriseis/" target="_blank">ΥΠΕΝ — 2026, αποθήκευση</a>
+  </div>
+</div></section>
+
+<section class="slide" data-title="AI & Κίνα">
+<div class="card" data-num="05">
+  <div class="eyebrow"><span>Κίνα · Τεχνητή νοημοσύνη</span><span class="num">05</span></div>
+  <h2 class="headline">Στην AI, το επόμενο πλεονέκτημα μπορεί να μην είναι μόνο τα chips — αλλά τα δεδομένα</h2>
+  <div class="body-text">Αμερικανικό συμβουλευτικό όργανο του Κογκρέσου προειδοποιεί ότι η Κίνα αντιμετωπίζει τα δεδομένα ως στρατηγικό παραγωγικό πόρο και συγκεντρώνει βιομηχανικά και πραγματικού κόσμου δεδομένα κρίσιμα για robotics και embodied AI.</div>
+  <div class="label">Τι αλλάζει</div>
+  <div class="body-text">Η AI αντιπαράθεση ΗΠΑ–Κίνας περνά από το «ποιος έχει ισχυρότερα chips;» στο «ποιος έχει τα δεδομένα, τα μοντέλα και το οικοσύστημα που χρησιμοποιείται στην πραγματική οικονομία;»</div>
+  <div class="punch">Τα δεδομένα γίνονται υποδομή — όπως η ενέργεια και τα δίκτυα.</div>
+  <div class="sources"><strong>Πηγές:</strong><br>
+    <a href="https://www.reuters.com/world/china/us-advisory-body-says-chinas-data-dominance-gives-it-ai-advantage-2026-08-18/" target="_blank">Reuters — 18/08/2026</a><br>
+    <a href="https://www.uscc.gov/" target="_blank">U.S.–China Economic and Security Review Commission</a><br>
+    <a href="https://www.reuters.com/world/china/us-tell-partners-they-must-pick-sides-ai-race-with-china-2026-08-14/" target="_blank">Reuters — AI rivalry, 14/08/2026</a>
+  </div>
+</div></section>
+
+<section class="slide" data-title="Κλίμα">
+<div class="card" data-num="06">
+  <div class="eyebrow"><span>Ευρώπη · Κλίμα · Οικονομία</span><span class="num">06</span></div>
+  <h2 class="headline">Η κλιματική αλλαγή περνά από το περιβάλλον στους κρατικούς προϋπολογισμούς</h2>
+  <div class="body-text">Οι ακραίες καιρικές συνθήκες προκάλεσαν στην Ευρώπη περίπου <b>€822 δισ. ζημιές</b> από το 1980 έως το 2024. Μόνο περίπου το ένα τέταρτο ήταν ασφαλισμένο.</div>
+  <div class="label">Γιατί έχει σημασία</div>
+  <div class="body-text">Όσο οι ζημιές γίνονται συχνότερες, οι κυβερνήσεις καλούνται να καλύπτουν υποδομές, αποζημιώσεις και προσαρμογή — την ίδια ώρα που χρηματοδοτούν άμυνα, υγεία και γήρανση πληθυσμού.</div>
+  <div class="punch">Κλιματική ζημιά → δημόσια δαπάνη → νέα πίεση σε φόρους και χρέος.</div>
+  <div class="sources"><strong>Πηγές:</strong><br>
+    <a href="https://www.reuters.com/sustainability/cop/climate-damage-next-hit-europes-public-finances-2026-08-18/" target="_blank">Reuters — 18/08/2026</a><br>
+    <a href="https://www.eea.europa.eu/en/analysis/indicators/economic-losses-from-climate-related" target="_blank">European Environment Agency — climate losses</a><br>
+    <a href="https://climate-adapt.eea.europa.eu/" target="_blank">Climate-ADAPT / EEA</a>
+  </div>
+</div></section>
+
+<section class="slide" data-title="El Niño">
+<div class="card" data-num="07">
+  <div class="eyebrow"><span>Κλίμα · Τρόφιμα</span><span class="num">07</span></div>
+  <h2 class="headline">Ισχυρό El Niño: ο κίνδυνος περνά από τον καιρό στις τιμές τροφίμων</h2>
+  <div class="body-text">Η Κίνα προβλέπει ότι το ενισχυόμενο El Niño μπορεί να εξελιχθεί σε εξαιρετικά ισχυρό επεισόδιο. Διεθνείς προβλέψεις δείχνουν υψηλό κίνδυνο για έντονες μεταβολές βροχοπτώσεων και θερμοκρασιών.</div>
+  <div class="label">Τι παρακολουθούμε</div>
+  <div class="body-text">Κακάο, καφές και άλλες τροπικές καλλιέργειες είναι ευάλωτες. Εάν οι αποδόσεις υποχωρήσουν, το κλιματικό σοκ μετατρέπεται σε πληθωρισμό τροφίμων.</div>
+  <div class="punch">Δεν είναι βεβαιότητα. Είναι ισχυρός κλιματικός κίνδυνος που ήδη επηρεάζει τις αγορές.</div>
+  <div class="sources"><strong>Πηγές:</strong><br>
+    <a href="https://www.reuters.com/business/environment/china-forecasts-strongest-el-nino-event-sea-temperatures-rise-2026-08-18/" target="_blank">Reuters — 18/08/2026</a><br>
+    <a href="https://www.reuters.com/business/environment/why-super-el-nio-leaves-tropical-commodities-acutely-exposed-2026-08-18/" target="_blank">Reuters Explainer — 18/08/2026</a><br>
+    <a href="https://www.reuters.com/business/environment/un-food-agencies-seek-202-million-shield-88-million-people-el-nio-2026-06-18/" target="_blank">FAO/WFP via Reuters — 18/06/2026</a>
+  </div>
+</div></section>
+
+<section class="slide" data-title="Αρκτική">
+<div class="card" data-num="08">
+  <div class="eyebrow"><span>Αρκτική · Εμπόριο · Γεωπολιτική</span><span class="num">08</span></div>
+  <h2 class="headline">Η κλιματική αλλαγή ανοίγει έναν νέο δρόμο — και μια νέα γεωπολιτική μάχη</h2>
+  <div class="body-text">Κινεζική ναυτιλιακή ξεκινά τακτικό container service μέσω της Βόρειας Θαλάσσιας Οδού, με διαδρομές Κίνας–Ευρώπης πολύ μικρότερες από τις παραδοσιακές.</div>
+  <div class="label">Η σύνδεση με το Ορμούζ</div>
+  <div class="body-text">Όσο τα παραδοσιακά chokepoints γίνονται πιο αβέβαια, οι εναλλακτικές διαδρομές αποκτούν αξία. Αλλά η Αρκτική εξαρτάται από ρωσική πρόσβαση, παγοθραυστικά, ασφάλιση και δύσκολες επιχειρήσεις διάσωσης.</div>
+  <div class="punch">Το λιώσιμο των πάγων δημιουργεί εμπορική ευκαιρία ακριβώς επειδή δημιουργεί κλιματική κρίση.</div>
+  <div class="sources"><strong>Πηγές:</strong><br>
+    <a href="https://www.theguardian.com/world/2026/aug/17/strait-hormuz-alternative-china-ships-north-sea-route-arctic-ice-silk-road" target="_blank">The Guardian — 17/08/2026</a><br>
+    <a href="https://www.ft.com/content/4456f475-f2c8-4cb7-8312-0c47c5f781b8" target="_blank">Financial Times — Αύγουστος 2026</a><br>
+    <a href="https://www.canada.ca/en/public-services-procurement/news/2026/05/national-coordinators-build-on-successes-of-the-icebreaker-collaboration-effort.html" target="_blank">Canada — ICE Pact, 07/05/2026</a>
+  </div>
+</div></section>
+
+<section class="slide" data-title="Ευρώπη">
+<div class="card" data-num="09">
+  <div class="eyebrow"><span>Ισλανδία · Ευρωπαϊκή Ένωση</span><span class="num">09</span></div>
+  <h2 class="headline">Η Ισλανδία ξανακοιτά προς την ΕΕ — και η Αρκτική είναι μέρος της εξίσωσης</h2>
+  <div class="body-text">Στις 29 Αυγούστου οι Ισλανδοί ψηφίζουν αν θα ξαναρχίσουν οι ενταξιακές διαπραγματεύσεις με την ΕΕ. Η ψήφος δεν αφορά ακόμη την ίδια την ένταξη.</div>
+  <div class="label">Γιατί τώρα</div>
+  <div class="body-text">Κόστος ζωής, εμπορική ασφάλεια και ο αυξανόμενος στρατηγικός ανταγωνισμός στην Αρκτική επαναφέρουν μια συζήτηση που είχε παγώσει για χρόνια.</div>
+  <div class="punch">Η διεύρυνση της ΕΕ δεν αφορά μόνο τα Βαλκάνια. Αφορά πλέον και τον Βόρειο Ατλαντικό.</div>
+  <div class="sources"><strong>Πηγές:</strong><br>
+    <a href="https://www.reuters.com/world/europe/eu-sees-iceland-vote-potential-boost-enlargement-optics-2026-08-18/" target="_blank">Reuters — 18/08/2026</a><br>
+    <a href="https://www.reuters.com/world/europe/icelands-parliament-votes-hold-referendum-eu-accession-talks-august-2026-05-28/" target="_blank">Reuters — κοινοβουλευτική απόφαση, 28/05/2026</a><br>
+    <a href="https://www.reuters.com/world/europe/icelands-finance-minister-says-eu-membership-is-vital-arctic-rivalry-trade-wars-2026-06-16/" target="_blank">Reuters — Αρκτική & ΕΕ, 16/06/2026</a>
+  </div>
+</div></section>
+
+<section class="slide" data-title="Το νήμα">
+<div class="card" data-num="10">
+  <div class="eyebrow"><span>World in Context</span><span class="num">10</span></div>
+  <h2 class="headline">Το νήμα της ημέρας: ποιος αντέχει όταν οι παλιές διαδρομές γίνονται αβέβαιες;</h2>
+  <div class="chain">
+    <div class="chain-step">Ορμούζ → ακριβότερη και πιο αβέβαιη ενέργεια</div><div class="chain-arrow">↓</div>
+    <div class="chain-step">Ελλάδα & Βαλκάνια → ΑΠΕ, αποθήκευση, δίκτυα</div><div class="chain-arrow">↓</div>
+    <div class="chain-step">AI → δεδομένα και chips ως στρατηγική υποδομή</div><div class="chain-arrow">↓</div>
+    <div class="chain-step">Κλίμα → οικονομικό κόστος αλλά και νέες Αρκτικές οδοί</div>
+  </div>
+  <div class="punch">Η ισχύς σήμερα δεν είναι μόνο «τι παράγεις». Είναι αν μπορείς να εξασφαλίζεις, να αποθηκεύεις και να μεταφέρεις ενέργεια, δεδομένα και αγαθά όταν το σύστημα πιέζεται.</div>
+  <button class="deep-btn" data-open-analysis>ΔΕΣ ΤΗ ΒΑΘΥΤΕΡΗ ΑΝΑΛΥΣΗ →</button>
+  <div class="end-cta">
+    <h3>Βοήθησέ μας να το βελτιώσουμε</h3>
+    <p>Το σύντομο feedback/test βρίσκεται εδώ, στην τελευταία κάρτα του briefing.</p>
+    <div class="end-cta-actions">
+      <a class="feedback-link" href="../feedback/test.html">FEEDBACK / TEST →</a>
+      <a class="home-link" href="../index.html">ΑΡΧΙΚΗ</a>
+    </div>
+  </div>
+</div></section>
+
+</div></div>
+
+<div class="deep-analysis" id="deepAnalysis">
+  <div class="analysis-top"><div class="analysis-top-inner">
+    <div class="analysis-brand">WORLD IN CONTEXT · 2ο ΕΠΙΠΕΔΟ</div>
+    <button class="analysis-close" id="analysisClose">✕ ΚΛΕΙΣΙΜΟ</button>
+  </div></div>
+  <div class="analysis-hero"><div class="analysis-wrap">
+    <div class="overline">18 · 08 · 2026 · DEEP ANALYSIS</div>
+    <h1>Ενέργεια, Βαλκάνια και ανθεκτικότητα</h1>
+    <p>Πώς συνδέονται η κρίση στο Ορμούζ, η συμφωνία λιγνίτη Κοσόβου–Βόρειας Μακεδονίας, η απολιγνιτοποίηση της Δυτικής Μακεδονίας, η αποθήκευση ενέργειας και η νέα γεωπολιτική των διασυνδέσεων.</p>
+  </div></div>
+  <div class="analysis-body">
+    <div class="analysis-grid">
+      <article class="analysis-card wide">
+        <div class="num">01 · ΤΟ ΚΕΝΤΡΙΚΟ ΠΑΡΑΔΟΞΟ</div>
+        <h2>Η Ευρώπη φεύγει από τον άνθρακα — αλλά τα Βαλκάνια δεν μπορούν να τον κλείσουν με έναν διακόπτη</h2>
+        <p>Η Βόρεια Μακεδονία αναπτύσσει ΑΠΕ και προχωρά προς ενσωμάτωση στην ευρωπαϊκή αγορά ηλεκτρικής ενέργειας. Παρ’ όλα αυτά, οι λιγνιτικές μονάδες Bitola και Oslomej εξακολουθούν να είναι σημαντικές για την επάρκεια του συστήματος. Γι’ αυτό η ESM προχωρά σε τριετή συμφωνία με την KEK του Κοσόβου για περίπου 3 εκατ. τόνους λιγνίτη.</p>
+        <p>Αυτό δεν αποδεικνύει «αποτυχία των ΑΠΕ». Δείχνει το κενό μεταξύ εγκατάστασης μεταβλητών ΑΠΕ και δημιουργίας ενός συστήματος που μπορεί να παρέχει ισχύ όταν δεν φυσά ή δεν έχει ήλιο.</p>
+        <div class="signal"><strong>Κρίσιμο:</strong> ΑΠΕ χωρίς επαρκή αποθήκευση, δίκτυα, διασυνδέσεις και εφεδρείες δεν ισοδυναμούν αυτομάτως με ενεργειακή ασφάλεια.</div>
+        <div class="analysis-sources">Πηγές:
+          <a href="https://balkangreenenergynews.com/north-macedonia-to-import-coal-for-power-plants-from-kosovo/" target="_blank">BGEN, 18/08/2026</a> ·
+          <a href="https://news.metal.com/en/newscontent/104065728-north-macedonias-esm-signs-three-year-deal-for-3-mt-of-kosovo-coal-with-annual-deliveries-limited-to-around-08-mt" target="_blank">SMM, 18/08/2026</a> ·
+          <a href="https://www.energy-community.org/news/Energy-Community-News/2026/7/1.html" target="_blank">Energy Community, 01/07/2026</a>
+        </div>
+      </article>
+
+      <article class="analysis-card">
+        <div class="num">02 · ΕΛΛΑΔΑ</div>
+        <h2>Η Δυτική Μακεδονία πρέπει να αλλάξει προϊόν, όχι μόνο καύσιμο</h2>
+        <p>Η απολιγνιτοποίηση αφαιρεί μια ολόκληρη αλυσίδα οικονομικής δραστηριότητας: ορυχεία, μεταφορές, εργολαβίες και τεχνική απασχόληση. Η νέα συμφωνία της Βόρειας Μακεδονίας με το Κόσοβο μειώνει περαιτέρω τη λογική μιας «δεύτερης ζωής» των ελληνικών λιγνιτικών εξαγωγών.</p>
+        <p>Η πραγματική ευκαιρία είναι η περιοχή να παραμείνει ενεργειακό κέντρο με άλλο προϊόν: καθαρή ηλεκτρική ενέργεια, αποθήκευση, ευελιξία δικτύου και ενεργειακές υπηρεσίες.</p>
+        <div class="uncertainty"><strong>Προσοχή:</strong> αυτό είναι στρατηγικό σενάριο, όχι εγγυημένο αποτέλεσμα. Απαιτεί επενδύσεις που δημιουργούν τοπική προστιθέμενη αξία και όχι μόνο εγκατάσταση φωτοβολταϊκών.</div>
+      </article>
+
+      <article class="analysis-card">
+        <div class="num">03 · ΟΡΜΟΥΖ</div>
+        <h2>Το ακριβό πετρέλαιο κάνει την ενεργειακή αυτονομία πιο πολύτιμη</h2>
+        <p>Με Brent περίπου στα $91, το Ορμούζ δείχνει ξανά πόσο γρήγορα μια γεωπολιτική κρίση περνά στην οικονομία. Για μια χώρα όπως η Ελλάδα, το κόστος εμφανίζεται στις μεταφορές, στα καύσιμα, στα εισαγόμενα προϊόντα και τελικά στον πληθωρισμό.</p>
+        <p>Αυτό αυξάνει την αξία της εγχώριας ηλεκτροπαραγωγής από ΑΠΕ — αλλά μόνο αν το σύστημα μπορεί να αποθηκεύσει και να μεταφέρει την ενέργεια όταν χρειάζεται.</p>
+        <div class="analysis-sources"><a href="https://www.reuters.com/business/energy/oil-climbs-fading-us-iran-peace-hopes-raise-supply-risks-2026-08-18/" target="_blank">Reuters Energy, 18/08/2026</a> · <a href="https://apnews.com/article/9c48af23b713709e8e170191fbc78c2a" target="_blank">AP, 18/08/2026</a></div>
+      </article>
+
+      <article class="analysis-card wide">
+        <div class="num">04 · ΑΠΟΘΗΚΕΥΣΗ & ΒΑΛΚΑΝΙΑ</div>
+        <h2>Ο ανταγωνισμός αλλάζει: από «ποιος παράγει» σε «ποιος μπορεί να εξισορροπεί το σύστημα»</h2>
+        <p>Η Βουλγαρία έχει ήδη επενδύσει σε μεγάλης κλίμακας αποθήκευση μέσω προγραμμάτων που ξεκίνησαν πριν από το 2026. Αυτό είναι <b>background και όχι σημερινή είδηση</b>. Το ουσιαστικό όμως είναι ότι η περιοχή χτίζει διαφορετικά ενεργειακά πλεονεκτήματα: Βουλγαρία με πυρηνικά, ΑΠΕ και μπαταρίες· Ρουμανία με πυρηνικά, φυσικό αέριο και storage· Αλβανία με υδροηλεκτρικά και δυνατότητα αντλησιοταμίευσης· Ελλάδα με αυξανόμενες ΑΠΕ, LNG, δίκτυα και νέα δυνατότητα αυτόνομων μπαταριών.</p>
+        <p>Η Βόρεια Μακεδονία βρίσκεται ήδη στη διαδικασία εναρμόνισης για market coupling με την ΕΕ. Όταν οι αγορές συνδεθούν περισσότερο, αξία δεν θα έχει μόνο η φθηνή παραγωγή αλλά και η δυνατότητα να δίνεις ισχύ όταν η γειτονική αγορά τη χρειάζεται.</p>
+        <div class="signal"><strong>Γεωπολιτική συνέπεια:</strong> οι ηλεκτρικές διασυνδέσεις δημιουργούν αλληλεξάρτηση. Ο ενεργειακός κόμβος που παρέχει ευελιξία αποκτά οικονομική και πολιτική βαρύτητα.</div>
+        <div class="analysis-sources">
+          <a href="https://www.energy-community.org/news/Energy-Community-News/2026/7/1.html" target="_blank">Energy Community — North Macedonia market coupling</a> ·
+          <a href="https://www.energy-community.org/topics/electricity/market/implementation.html" target="_blank">Energy Community — διασυνοριακές αγορές</a> ·
+          <a href="https://ypen.gov.gr/gia-proti-fora-dynatotita-gia-fotovoltaika-sto-balkoni-kai-aftonomes-bataries-se-noikokyria-kai-epicheiriseis/" target="_blank">ΥΠΕΝ — αποθήκευση, 2026</a>
+        </div>
+      </article>
+
+      <article class="analysis-card">
+        <div class="num">05 · ΚΛΙΜΑ</div>
+        <h2>Η ίδια μετάβαση έχει και κόστος και γεωπολιτικό κέρδος</h2>
+        <p>Η κλιματική αλλαγή αυξάνει το δημοσιονομικό κόστος στην Ευρώπη μέσω πυρκαγιών, πλημμυρών και υποδομών. Ταυτόχρονα, το λιώσιμο των πάγων αυξάνει εποχικά τη δυνατότητα να χρησιμοποιηθούν Αρκτικές εμπορικές διαδρομές.</p>
+        <p>Δεν υπάρχει εδώ «όφελος από την κλιματική αλλαγή» με καθαρούς όρους. Υπάρχει μια γεωπολιτική ανακατανομή ευκαιριών και κινδύνων.</p>
+        <div class="analysis-sources"><a href="https://www.reuters.com/sustainability/cop/climate-damage-next-hit-europes-public-finances-2026-08-18/" target="_blank">Reuters Climate, 18/08/2026</a></div>
+      </article>
+
+      <article class="analysis-card">
+        <div class="num">06 · ΤΙ ΣΗΜΑΙΝΕΙ ΓΙΑ ΤΗΝ ΕΛΛΑΔΑ</div>
+        <h2>Το στοίχημα είναι περιφερειακό, όχι μόνο εθνικό</h2>
+        <ul>
+          <li>να μειώνει την έκθεση σε εισαγόμενα ορυκτά καύσιμα,</li>
+          <li>να μη χάνει παραγωγή ΑΠΕ επειδή λείπει storage,</li>
+          <li>να ενισχύει διασυνδέσεις με Βαλκάνια,</li>
+          <li>να δημιουργεί βιομηχανική και τεχνική δραστηριότητα στη Δυτική Μακεδονία,</li>
+          <li>να μπορεί να εξάγει ηλεκτρική ενέργεια όταν αυτή έχει τη μεγαλύτερη αξία.</li>
+        </ul>
+        <div class="uncertainty"><strong>Τυφλό σημείο:</strong> περισσότερα MW ΑΠΕ δεν σημαίνουν από μόνα τους ισχυρότερο ενεργειακό σύστημα. Η ευελιξία του συστήματος είναι εξίσου κρίσιμη.</div>
+      </article>
+
+      <article class="analysis-card wide">
+        <div class="num">07 · Η ΑΛΥΣΙΔΑ</div>
+        <h2>Το «γαϊτανάκι» σε μία εικόνα</h2>
+        <div class="chain">
+          <div class="chain-step">Ένταση στο Ορμούζ → ακριβότερο πετρέλαιο</div><div class="chain-arrow">↓</div>
+          <div class="chain-step">Μεγαλύτερη αξία εγχώριας και καθαρής ηλεκτροπαραγωγής</div><div class="chain-arrow">↓</div>
+          <div class="chain-step">Περισσότερες ΑΠΕ → μεγαλύτερη ανάγκη για storage και δίκτυα</div><div class="chain-arrow">↓</div>
+          <div class="chain-step">Βαλκάνια συνδέουν αγορές και διαφοροποιούν προμήθειες</div><div class="chain-arrow">↓</div>
+          <div class="chain-step">Βόρεια Μακεδονία κρατά λιγνίτη ως γέφυρα και στρέφεται στο Κόσοβο</div><div class="chain-arrow">↓</div>
+          <div class="chain-step">Η Ελλάδα πρέπει να μετατρέψει τη Δυτική Μακεδονία από λιγνιτικό σε ευέλικτο ενεργειακό κόμβο</div>
+        </div>
+        <div class="footer-note"><strong>Συμπέρασμα:</strong> Η Ελλάδα δεν έχει λόγο να «κερδίσει» τον ανταγωνισμό του λιγνίτη. Έχει λόγο να κερδίσει τον ανταγωνισμό της καθαρής, αποθηκεύσιμης και διασυνδεδεμένης ενέργειας. Αυτό θα καθορίσει μεγαλύτερο μέρος της ενεργειακής της επιρροής στα Βαλκάνια την επόμενη δεκαετία.</div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<script>
+const slides=[...document.querySelectorAll('.slide')],track=document.getElementById('track'),
+prev=document.getElementById('prevBtn'),next=document.getElementById('nextBtn'),
+segments=document.getElementById('segments'),num=document.getElementById('curnum'),title=document.getElementById('curtitle');
+let i=0;
+slides.forEach((s,n)=>{const b=document.createElement('button');b.setAttribute('aria-label','Κάρτα '+(n+1));b.onclick=()=>go(n);segments.appendChild(b)});
+function go(n){i=Math.max(0,Math.min(slides.length-1,n));track.style.transform=`translateX(-${i*10}%)`;num.textContent=String(i+1).padStart(2,'0');title.textContent=slides[i].dataset.title.toUpperCase();[...segments.children].forEach((b,k)=>{b.className=k===i?'current':k<i?'done':''});prev.classList.toggle('disabled',i===0);next.classList.toggle('disabled',i===slides.length-1)}
+prev.onclick=()=>go(i-1);next.onclick=()=>go(i+1);
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')go(i+1);if(e.key==='ArrowLeft')go(i-1)});
+let x0=null;document.addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true});document.addEventListener('touchend',e=>{if(x0===null)return;let dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>55)go(i+(dx<0?1:-1));x0=null},{passive:true});
+const analysis=document.getElementById('deepAnalysis');document.querySelectorAll('[data-open-analysis]').forEach(b=>b.onclick=()=>{analysis.classList.add('open');document.body.style.overflow='hidden'});document.getElementById('analysisClose').onclick=()=>{analysis.classList.remove('open');document.body.style.overflow='hidden'};
+go(0);
+</script>
+</body>
+</html>
