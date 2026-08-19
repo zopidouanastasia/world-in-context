@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Πώς κατανοώ τον κόσμο σήμερα — 19.08.2026</title>
+<meta name="description" content="World in Context — ημερήσιο briefing 19 Αυγούστου 2026: Ορμούζ, Ουκρανία, Ελλάδα και Βαλκάνια, AI, κλίμα, Αρκτική και Ευρώπη.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#06172A;--navy2:#0A2946;--navy3:#103A61;--blue:#5EA9DE;
+  --orange:#FF7A00;--orange2:#FF9A32;--white:#F7FBFF;--ice:#D9E7F3;
+  --muted:#9DB3C7;--line:rgba(143,179,217,.18);
+}
+*{box-sizing:border-box}html,body{height:100%;margin:0}
+body{font-family:Inter,system-ui,sans-serif;background:var(--navy);color:var(--white);overflow:hidden}
+h1,h2,h3{font-family:Fraunces,serif;margin:0}
+a{color:#8CCAF5}
+#stage{position:fixed;inset:0;overflow:hidden;background:linear-gradient(180deg,var(--navy),#081E34)}
+#track{display:flex;width:1000%;height:100%;transition:transform .5s cubic-bezier(.65,0,.35,1)}
+.slide{position:relative;width:10%;height:100%;flex:0 0 10%;overflow-y:auto;padding:88px 0 54px;
+ background:radial-gradient(circle at 88% 12%,rgba(46,122,180,.14),transparent 28%),linear-gradient(145deg,#07182B,#0B2945 58%,#07182B)}
+.slide:after{content:"";position:absolute;inset:0;pointer-events:none;background:
+ linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),
+ linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);
+ background-size:54px 54px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.35),transparent 78%)}
+.slide>*{position:relative;z-index:2}
+.wrap{max-width:660px;margin:auto;padding:0 28px}
+#topbar{position:fixed;z-index:30;top:0;left:0;right:0;padding:12px 18px 9px;background:rgba(6,23,42,.95);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px}
+#brand{display:flex;align-items:center;gap:9px;text-decoration:none;color:#fff;font:700 11px 'Space Mono',monospace;letter-spacing:.05em;text-transform:uppercase;min-width:0}
+#brand img{width:42px;height:30px;object-fit:contain}
+.site-actions{display:flex;align-items:center;gap:8px}
+.home-btn,.test-btn{font:700 10px 'Space Mono',monospace;text-decoration:none;padding:6px 9px;border-radius:8px;white-space:nowrap}
+.home-btn{color:var(--ice);border:1px solid rgba(143,179,217,.25);background:rgba(255,255,255,.045)}
+.test-btn{color:#fff;background:linear-gradient(135deg,var(--orange),var(--orange2))}
+#curlabel{font:700 10px 'Space Mono',monospace;color:var(--ice);white-space:nowrap}
+#curlabel .n{color:var(--orange)}
+#segments{display:flex;gap:4px}
+#segments button{flex:1;height:4px;border:0;border-radius:3px;background:rgba(143,179,217,.17);padding:0;cursor:pointer}
+#segments button.done,#segments button.current{background:linear-gradient(90deg,var(--orange),var(--orange2))}
+.navbtn{position:fixed;z-index:35;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:1px solid rgba(143,179,217,.2);background:rgba(7,24,43,.86);color:#fff;font-size:28px;cursor:pointer}
+.navbtn.disabled{opacity:0;pointer-events:none}#prevBtn{left:10px}#nextBtn{right:10px}
+.hero h1{font-size:clamp(42px,8vw,62px);line-height:1.01;margin:24px 0 18px;text-shadow:0 8px 28px rgba(0,0,0,.24)}
+.kicker,.eyebrow{font:700 11px 'Space Mono',monospace;letter-spacing:.07em;text-transform:uppercase}
+.kicker{color:var(--orange2)}.date{font:700 14px 'Space Mono',monospace;color:var(--blue);margin:18px 0 24px}
+.hook{font:600 italic clamp(20px,4vw,27px) Fraunces,serif;line-height:1.4;color:#DDE9F4;margin:20px 0 26px}
+.tag{color:var(--muted);font-size:16px}.tag b{color:#fff}
+.card{position:relative;overflow:hidden;max-width:650px;margin:auto;padding:34px 29px;border-radius:22px;
+ background:linear-gradient(160deg,rgba(18,51,82,.97),rgba(8,30,52,.98));border:1px solid rgba(143,179,217,.19);
+ box-shadow:0 28px 70px -36px rgba(0,0,0,.8),inset 0 1px 0 rgba(255,255,255,.035)}
+.card:before{content:attr(data-num);position:absolute;top:-.08em;right:10px;font:900 150px/1 Fraunces,serif;color:var(--blue);opacity:.055}
+.card>*{position:relative;z-index:2}
+.eyebrow{display:flex;justify-content:space-between;color:var(--muted);margin-bottom:17px}.eyebrow .num{color:var(--orange)}
+.headline{font-size:clamp(26px,5.3vw,35px);line-height:1.08;margin-bottom:18px}
+.body-text{font-size:16.2px;line-height:1.64;color:#D3E0EC}
+.label{display:inline-block;margin:17px 0 8px;padding:5px 9px;border-radius:6px;font:700 10px 'Space Mono',monospace;text-transform:uppercase;color:var(--blue);background:rgba(94,169,222,.07);border:1px solid rgba(94,169,222,.16)}
+.punch{margin-top:18px;padding:16px 18px;border-left:4px solid var(--orange);background:linear-gradient(90deg,rgba(255,122,0,.12),rgba(94,169,222,.06));font:600 italic 17px/1.46 Fraunces,serif}
+.sources{margin-top:18px;padding:12px;border:1px solid rgba(143,179,217,.13);border-radius:10px;background:rgba(255,255,255,.035);font:400 10.3px/1.72 'Space Mono',monospace;color:#AFC2D2}
+.sources strong{color:#fff}.sources a{text-underline-offset:2px}
+.deep-btn{margin-top:18px;border:0;border-radius:9px;padding:11px 15px;background:linear-gradient(135deg,var(--orange),var(--orange2));color:#fff;font:700 10.5px 'Space Mono',monospace;cursor:pointer}
+.chain{display:flex;flex-direction:column;align-items:center;gap:5px;margin:20px 0}
+.chain-step{width:100%;padding:9px 12px;border-radius:10px;background:rgba(94,169,222,.08);border:1px solid rgba(94,169,222,.16);text-align:center;font:700 16px Fraunces,serif}.chain-arrow{color:var(--orange);font-weight:800}
+.end-cta{margin-top:24px;padding:20px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(145deg,rgba(12,43,72,.96),rgba(7,27,48,.98));text-align:center}
+.end-cta h3{font-size:24px}.end-cta p{color:#D3E0EC;line-height:1.55}.end-cta-actions{display:flex;justify-content:center;gap:9px;flex-wrap:wrap}.end-cta a{padding:10px 13px;border-radius:9px;text-decoration:none;font:700 10px 'Space Mono',monospace}.end-cta .feedback-link{background:linear-gradient(135deg,var(--orange),var(--orange2));color:white}.end-cta .home-link{border:1px solid rgba(143,179,217,.28);color:var(--ice)}
+/* DEEP ANALYSIS */
+.deep-analysis{position:fixed;inset:0;z-index:100;background:#eef3f7;color:#243B53;overflow-y:auto;display:none}
+.deep-analysis.open{display:block}.analysis-top{position:sticky;top:0;z-index:5;background:rgba(6,23,42,.98);padding:12px 18px;border-bottom:1px solid var(--line)}
+.analysis-top-inner{max-width:1040px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}.analysis-brand{color:#fff;font:700 11px 'Space Mono',monospace}.analysis-close{background:transparent;color:#fff;border:1px solid #49677f;border-radius:9px;padding:8px 11px;font:700 10px 'Space Mono',monospace;cursor:pointer}
+.analysis-hero{background:radial-gradient(circle at 80% 25%,rgba(43,120,183,.32),transparent 30%),linear-gradient(135deg,#06172a,#0d3152);color:white;padding:58px 24px 52px}
+.analysis-wrap{max-width:1040px;margin:auto}.analysis-hero .overline{color:var(--orange2);font:700 11px 'Space Mono',monospace}.analysis-hero h1{font-size:clamp(38px,5vw,64px);line-height:1.03;margin:10px 0 16px}.analysis-hero p{max-width:820px;color:#d6e3ee;font-size:18px;line-height:1.65}
+.analysis-body{max-width:1040px;margin:auto;padding:38px 24px 70px}.analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.analysis-card{background:white;border:1px solid #dce7ef;border-radius:18px;padding:26px;box-shadow:0 18px 45px -34px rgba(6,23,42,.45)}
+.analysis-card.wide{grid-column:1/-1}.analysis-card .num{color:var(--orange);font:700 11px 'Space Mono',monospace}.analysis-card h2{font-size:28px;color:#0B2945;margin:8px 0 12px}.analysis-card h3{font:700 12px 'Space Mono',monospace;color:#2A608D;margin:18px 0 7px;text-transform:uppercase}.analysis-card p,.analysis-card li{font-size:15.4px;line-height:1.72;color:#33495D}.analysis-card ul{padding-left:20px}
+.signal{margin-top:16px;padding:13px 15px;border-left:4px solid var(--orange);background:#FFF4E8;border-radius:0 10px 10px 0;color:#243B53}.uncertainty{margin-top:12px;padding:13px 15px;background:#EDF5FB;border-radius:10px;color:#294B68}.analysis-sources{margin-top:16px;padding-top:13px;border-top:1px solid #e2eaf0;font-size:12px;line-height:1.7;color:#52697D}.analysis-sources a{color:#1E5A8A}.footer-note{margin-top:24px;padding:17px 19px;background:#0B2945;color:#DBE8F3;border-radius:14px;line-height:1.65}
+@media(max-width:760px){.analysis-grid{grid-template-columns:1fr}.analysis-card.wide{grid-column:auto}.card{margin:0 14px;padding:29px 21px}.navbtn{width:38px;height:38px}.wrap{padding:0 22px}}
+@media(max-width:650px){#brand span{display:none}.home-btn .txt,.test-btn .txt{display:none}#topbar{padding-left:11px;padding-right:11px}}
+</style>
+</head>
+<body>
+<div id="topbar">
+  <div class="row">
+    <a id="brand" href="../index.html"><img src="../assets/az-logo-transparent.png" alt="AZ"><span>Πώς κατανοώ τον κόσμο σήμερα</span></a>
+    <div class="site-actions">
+      <a class="home-btn" href="../index.html">⌂ <span class="txt">ΑΡΧΙΚΗ</span></a>
+      <a class="test-btn" href="../feedback/test.html">✓ <span class="txt">ΤΕΣΤ</span></a>
+      <span id="curlabel"><span class="n" id="curnum">01</span>/10 · <span id="curtitle">ΕΞΩΦΥΛΛΟ</span></span>
+    </div>
+  </div><div id="segments"></div>
+</div>
+<button class="navbtn" id="prevBtn" aria-label="Προηγούμενη">‹</button>
+<button class="navbtn" id="nextBtn" aria-label="Επόμενη">›</button>
+<div id="stage"><div id="track">
+<section class="slide hero" data-title="Εξώφυλλο">
+<div class="wrap"><div class="kicker">Ημερήσιο briefing</div>
+<h1>ΠΩΣ ΚΑΤΑΝΟΩ<br>ΤΟΝ ΚΟΣΜΟ ΣΗΜΕΡΑ</h1>
+<div class="date">19 · 08 · 2026</div>
+<p class="hook">Ορμούζ, Ουκρανία, Ελλάδα, AI και Μεσόγειος: σήμερα η κοινή λέξη είναι «ανθεκτικότητα» — και το κόστος της.</p>
+<p class="tag">🌍 Ο κόσμος σήμερα <b>σε 10 απλές κάρτες.</b></p></div></section>
+<section class="slide" data-title="Μέση Ανατολή">
+<div class="card" data-num="02">
+<div class="eyebrow"><span>Μέση Ανατολή · Ενέργεια</span><span class="num">02</span></div>
+<h2 class="headline">Το Ορμούζ μπορεί να είναι «ανοιχτό» — αλλά τα πλοία δεν κινούνται κανονικά</h2>
+<div class="body-text">Μόλις <b>6 εμπορικά πλοία</b> πέρασαν την Τρίτη, έναντι μέσου όρου 11 τις προηγούμενες δέκα ημέρες. Οι ΗΠΑ επιμένουν ότι το Στενό λειτουργεί· το Ιράν λέει ότι παραμένει κλειστό.</div>
+<div class="label">Γιατί έχει σημασία</div>
+<div class="body-text">Η αγορά δεν χρειάζεται επίσημο «κλείσιμο» για να αντιδράσει. Αν πλοιοκτήτες και ασφαλιστές θεωρούν το πέρασμα επικίνδυνο, μειώνεται η κίνηση και αυξάνεται το κόστος.</div>
+<div class="punch"><b>Άλλο «ανοιχτό» στα λόγια — άλλο ασφαλές για να περάσει ένα δεξαμενόπλοιο.</b></div>
+<button class="deep-btn" data-open-analysis>ΒΑΘΥΤΕΡΗ ΑΝΑΛΥΣΗ →</button>
+<div class="sources"><strong>Πηγές:</strong><br><a href="https://www.reuters.com/world/middle-east/hormuz-traffic-slows-uncertainty-over-waterway-persists-2026-08-19/" target="_blank" rel="noopener">Reuters — ναυσιπλοΐα, 19/08/2026</a><br><a href="https://apnews.com/article/883b7ed5481b94f354dc23cc795e21aa" target="_blank" rel="noopener">AP — πτώση διελεύσεων, 18/08/2026</a><br><a href="https://www.reuters.com/business/energy/oil-edges-up-uncertainty-over-exports-through-hormuz-2026-08-19/" target="_blank" rel="noopener">Reuters — πετρέλαιο, 19/08/2026</a></div>
+</div></section>
+<section class="slide" data-title="ΗΑΕ">
+<div class="card" data-num="03">
+<div class="eyebrow"><span>ΗΑΕ · Ιράν · Κόλπος</span><span class="num">03</span></div>
+<h2 class="headline">Η κρίση περνά από τα πλοία στις οικονομικές σχέσεις</h2>
+<div class="body-text">Τα Ηνωμένα Αραβικά Εμιράτα ανακοίνωσαν αναστολή εμπορίου και χρηματοπιστωτικών συναλλαγών με το Ιράν μετά από νέα πυραυλική ένταση. Τα ΗΑΕ λειτουργούσαν επί χρόνια ως σημαντικός εμπορικός και επανεξαγωγικός κόμβος για το Ιράν.</div>
+<div class="label">Γιατί έχει σημασία</div>
+<div class="body-text">Όσο η σύγκρουση αγγίζει χρηματοδότηση, εμπόριο και περιφερειακούς κόμβους, το κόστος παύει να αφορά μόνο το πετρέλαιο.</div>
+<div class="punch"><b>Μια ναυτιλιακή κρίση μπορεί να εξελιχθεί σε οικονομικό μπλοκάρισμα ολόκληρης περιοχής.</b></div>
+
+<div class="sources"><strong>Πηγές:</strong><br><a href="https://apnews.com/article/47c95fe382c49289ab0419310b6d8057" target="_blank" rel="noopener">Associated Press — ΗΑΕ/Ιράν, 19/08/2026</a><br><a href="https://www.reuters.com/business/energy/oil-edges-up-uncertainty-over-exports-through-hormuz-2026-08-19/" target="_blank" rel="noopener">Reuters — πετρέλαιο και συναλλαγές, 19/08/2026</a><br><a href="https://www.reuters.com/world/middle-east/conflict-autopilot-2026-08-19/" target="_blank" rel="noopener">Reuters analysis — Gulf fallout, 19/08/2026</a></div>
+</div></section>
+<section class="slide" data-title="Ουκρανία">
+<div class="card" data-num="04">
+<div class="eyebrow"><span>Ουκρανία · Πολιτική</span><span class="num">04</span></div>
+<h2 class="headline">Πόλεμος στο μέτωπο — και πίεση στο πολιτικό σύστημα</h2>
+<div class="body-text">Η ουκρανική Βουλή ενέκρινε τον Yevhenii Khmara ως νέο υπουργό Άμυνας με 312 ψήφους. Την ίδια ώρα, ο αποπεμφθείς Mykhailo Fedorov ζητά μηχανισμό για εκλογές εν καιρώ πολέμου, ενώ έρευνα κατά της διαφθοράς αγγίζει υψηλόβαθμα στελέχη της προεδρίας.</div>
+<div class="label">Γιατί έχει σημασία</div>
+<div class="body-text">Η Ουκρανία πρέπει να διαχειριστεί ταυτόχρονα στρατιωτική πίεση, θεσμική αξιοπιστία, διαφθορά και το ερώτημα της δημοκρατικής νομιμοποίησης μετά από χρόνια πολέμου.</div>
+<div class="punch"><b>Η αντοχή μιας χώρας στον πόλεμο δεν κρίνεται μόνο στο μέτωπο, αλλά και στους θεσμούς της.</b></div>
+
+<div class="sources"><strong>Πηγές:</strong><br><a href="https://www.reuters.com/world/europe/ukraines-parliament-approves-yevhenii-khmara-new-defence-minister-2026-08-19/" target="_blank" rel="noopener">Reuters — νέος υπουργός Άμυνας, 19/08/2026</a><br><a href="https://www.reuters.com/world/europe/ukraine-anti-graft-agencies-investigate-group-involving-presidential-officials-2026-08-19/" target="_blank" rel="noopener">Reuters — πολιτική κρίση/διαφθορά, 19/08/2026</a><br><a href="https://apnews.com/article/8c808244dcf51217027ebc97dba01761" target="_blank" rel="noopener">Associated Press — πολιτικές εξελίξεις, 19/08/2026</a></div>
+</div></section>
+<section class="slide" data-title="Ρωσία">
+<div class="card" data-num="05">
+<div class="eyebrow"><span>Ρωσία · Ουκρανία · Logistics</span><span class="num">05</span></div>
+<h2 class="headline">Τα logistics γίνονται στόχος πολέμου</h2>
+<div class="body-text">Η Ρωσία ανακοίνωσε κρατικό πρόγραμμα αποκατάστασης εμπορικών αποθηκών που έχουν πληγεί από ουκρανικές επιθέσεις. Από τις 18 Ιουλίου, τουλάχιστον δύο δεκάδες αποθήκες της Wildberries έχουν δεχθεί πλήγματα.</div>
+<div class="label">Γιατί έχει σημασία</div>
+<div class="body-text">Αποθήκες, μεταφορές και εφοδιαστικές αλυσίδες είναι κρίσιμη υποδομή μιας οικονομίας. Η στρατηγική στόχευση logistics αυξάνει το κόστος του πολέμου χωρίς να περιορίζεται σε κλασικούς στρατιωτικούς στόχους.</div>
+<div class="punch"><b>Ο σύγχρονος πόλεμος χτυπά όχι μόνο όπλα — αλλά και τη δυνατότητα να μετακινούνται αγαθά.</b></div>
+
+<div class="sources"><strong>Πηγές:</strong><br><a href="https://www.reuters.com/world/russias-putin-orders-government-help-rebuild-warehouses-destroyed-ukrainian-2026-08-19/" target="_blank" rel="noopener">Reuters — αποκατάσταση αποθηκών, 19/08/2026</a><br><a href="https://www.reuters.com/world/ukrainian-drones-strike-moscow-region-killing-one-2026-08-16/" target="_blank" rel="noopener">Reuters — επιθέσεις, 16/08/2026</a><br><a href="https://www.reuters.com/commentary/breakingviews/bombing-russian-amazon-puts-putin-bind-2026-08-11/" target="_blank" rel="noopener">Reuters Breakingviews — οικονομικό κόστος, 11/08/2026</a></div>
+</div></section>
+<section class="slide" data-title="Ελλάδα">
+<div class="card" data-num="06">
+<div class="eyebrow"><span>Ελλάδα · Οικονομία · Ενέργεια</span><span class="num">06</span></div>
+<h2 class="headline">Η Ελλάδα δανείζεται καλύτερα — αλλά το ενεργειακό σοκ παραμένει εξωτερικός κίνδυνος</h2>
+<div class="body-text">Για σήμερα ήταν προγραμματισμένη δημοπρασία εντόκων γραμματίων 26 εβδομάδων από τον ΟΔΔΗΧ. Η προηγούμενη αντίστοιχη έκδοση τον Ιούλιο είχε απόδοση 2,32%. Παράλληλα, το Brent κινήθηκε πάνω από <b>$92/βαρέλι</b> λόγω της κρίσης στον Κόλπο.</div>
+<div class="label">Γιατί έχει σημασία</div>
+<div class="body-text">Η βελτίωση της δημοσιονομικής εικόνας δεν προστατεύει την Ελλάδα από εισαγόμενο ενεργειακό πληθωρισμό. Ακριβότερο πετρέλαιο σημαίνει πίεση σε μεταφορές, επιχειρήσεις και νοικοκυριά.</div>
+<div class="punch"><b>Η Ελλάδα μπορεί να βελτιώνει το χρέος της και ταυτόχρονα να εισάγει ένα νέο κύμα ακρίβειας.</b></div>
+<button class="deep-btn" data-open-analysis>ΒΑΘΥΤΕΡΗ ΑΝΑΛΥΣΗ →</button>
+<div class="sources"><strong>Πηγές:</strong><br><a href="https://www.pdma.gr/en/investor-relations/issuance-calendar" target="_blank" rel="noopener">ΟΔΔΗΧ — ημερολόγιο εκδόσεων 2026</a><br><a href="https://minfin.gov.gr/en/fiscal-policy/release-calendar/" target="_blank" rel="noopener">Υπουργείο Εθνικής Οικονομίας — release calendar</a><br><a href="https://www.reuters.com/markets/europe/european-shares-muted-mining-gains-offset-middle-east-jitters-2026-08-19/" target="_blank" rel="noopener">Reuters — Ευρώπη, πετρέλαιο και πληθωρισμός, 19/08/2026</a></div>
+</div></section>
+<section class="slide" data-title="AI">
+<div class="card" data-num="07">
+<div class="eyebrow"><span>AI · ΗΠΑ · Κίνα</span><span class="num">07</span></div>
+<h2 class="headline">Η AI αρχίζει να αποκτά γεωπολιτικά «στρατόπεδα»</h2>
+<div class="body-text">Η Κίνα αντέδρασε σε πληροφορίες ότι οι ΗΠΑ προετοιμάζονται να ζητήσουν από χώρες να επιλέξουν ανάμεσα σε αμερικανικό και κινεζικό πλαίσιο AI. Το Πεκίνο απαντά με τη θέση της «ψηφιακής κυριαρχίας» και της ελεύθερης επιλογής τεχνολογικού εταίρου.</div>
+<div class="label">Γιατί έχει σημασία</div>
+<div class="body-text">Ο ανταγωνισμός δεν αφορά πλέον μόνο chips ή καλύτερα μοντέλα. Αφορά standards, cloud, δεδομένα, κυβερνοασφάλεια και το ποιο οικοσύστημα θα χρησιμοποιούν κράτη και επιχειρήσεις.</div>
+<div class="punch"><b>Η επόμενη τεχνολογική επιλογή μιας χώρας μπορεί να γίνει και γεωπολιτική επιλογή.</b></div>
+
+<div class="sources"><strong>Πηγές:</strong><br><a href="https://www.reuters.com/world/china/china-urges-respect-digital-sovereignty-ai-race-2026-08-19/" target="_blank" rel="noopener">Reuters — digital sovereignty, 19/08/2026</a><br><a href="https://www.fmprc.gov.cn/eng/wjb/zzjg_663340/jks_665232/kjlc_665236/qtwt_665250/202607/t20260722_11989699.html" target="_blank" rel="noopener">ΥΠΕΞ Κίνας — Position Paper, 22/07/2026</a><br><a href="https://www.fmprc.gov.cn/eng/wjb/zzjg_663340/jks_665232/jkxw_665234/202607/t20260723_11990417.html" target="_blank" rel="noopener">ΥΠΕΞ Κίνας — επίσημη θέση, 23/07/2026</a></div>
+</div></section>
+<section class="slide" data-title="Κίνα">
+<div class="card" data-num="08">
+<div class="eyebrow"><span>Κίνα · Νότια Κορέα</span><span class="num">08</span></div>
+<h2 class="headline">Η Σεούλ δείχνει γιατί πολλές χώρες δεν θέλουν να διαλέξουν μόνο μία πλευρά</h2>
+<div class="body-text">Ο Wang Yi βρίσκεται στη Σεούλ και Κίνα–Νότια Κορέα συζητούν εμπόριο, επενδύσεις, σταθερότητα εφοδιαστικών αλυσίδων και πιθανή σύνοδο κορυφής τον Νοέμβριο. Ταυτόχρονα η Νότια Κορέα παραμένει βασικός σύμμαχος ασφαλείας των ΗΠΑ.</div>
+<div class="label">Γιατί έχει σημασία</div>
+<div class="body-text">Οι τεχνολογικές και εμπορικές αλυσίδες είναι τόσο αλληλένδετες ώστε ένας καθαρός διαχωρισμός ΗΠΑ–Κίνας είναι εξαιρετικά δύσκολος για χώρες όπως η Νότια Κορέα.</div>
+<div class="punch"><b>Οι μεγάλες δυνάμεις ζητούν στρατόπεδα· οι ενδιάμεσες οικονομίες ζητούν περιθώριο ελιγμών.</b></div>
+
+<div class="sources"><strong>Πηγές:</strong><br><a href="https://www.reuters.com/world/china/china-considering-summit-with-seoul-november-south-korean-foreign-ministry-says-2026-08-19/" target="_blank" rel="noopener">Reuters — σύνοδος και supply chains, 19/08/2026</a><br><a href="https://www.reuters.com/world/china/chinas-wang-yi-south-korea-talks-amid-trump-push-revive-north-korea-diplomacy-2026-08-19/" target="_blank" rel="noopener">Reuters — Wang Yi στη Σεούλ, 19/08/2026</a><br><a href="https://www.reuters.com/world/china/chinas-foreign-minister-wang-yi-visit-south-korea-august-19-20-2026-08-18/" target="_blank" rel="noopener">Reuters — προαναγγελία επίσκεψης, 18/08/2026</a></div>
+</div></section>
+<section class="slide" data-title="Μεσόγειος">
+<div class="card" data-num="09">
+<div class="eyebrow"><span>Μεσόγειος · Κλίμα</span><span class="num">09</span></div>
+<h2 class="headline">27°C μέση θερμοκρασία τον Ιούλιο: η Μεσόγειος μπαίνει σε νέα θερμική πραγματικότητα</h2>
+<div class="body-text">Η μέση θερμοκρασία της Μεσογείου τον Ιούλιο έφτασε περίπου τους <b>27°C</b>, την υψηλότερη που έχει καταγραφεί για Ιούλιο. Ανάλυση του World Weather Attribution εκτιμά ότι η ανθρωπογενής κλιματική αλλαγή έχει προσθέσει περίπου 2°C στη σημερινή θερμότητα της Μεσογείου.</div>
+<div class="label">Γιατί έχει σημασία</div>
+<div class="body-text">Θερμότερη θάλασσα σημαίνει πίεση σε οικοσυστήματα και αλιεία, μεγαλύτερη υγρασία και θερμότερες νύχτες στις ακτές, ενώ μπορεί να ενισχύει την ένταση ορισμένων καταιγίδων.</div>
+<div class="punch"><b>Για την Ελλάδα, η κλιματική αλλαγή δεν είναι μακρινή πρόβλεψη — βρίσκεται ήδη στη θάλασσα γύρω μας.</b></div>
+
+<div class="sources"><strong>Πηγές:</strong><br><a href="https://www.reuters.com/sustainability/cop/climate-change-is-driving-record-heat-europes-seas-scientists-say-2026-08-18/" target="_blank" rel="noopener">Reuters — ευρωπαϊκές θάλασσες, 19/08/2026</a><br><a href="https://data.marine.copernicus.eu/product/SST_MED_SST_L4_NRT_OBSERVATIONS_010_004/description" target="_blank" rel="noopener">Copernicus Marine — Mediterranean SST</a><br><a href="https://climate.copernicus.eu/surface-air-temperature-june-2026" target="_blank" rel="noopener">Copernicus Climate — SST context, 2026</a></div>
+</div></section>
+<section class="slide" data-title="Το νήμα">
+<div class="card" data-num="10">
+<div class="eyebrow"><span>World in Context</span><span class="num">10</span></div>
+<h2 class="headline">Το νήμα της ημέρας: η ανθεκτικότητα κοστίζει</h2>
+<div class="chain">
+<div class="chain-step">Ορμούζ → εναλλακτικές διαδρομές και ακριβότερη ασφάλιση</div><div class="chain-arrow">↓</div>
+<div class="chain-step">Ουκρανία → logistics και θεσμοί υπό πίεση</div><div class="chain-arrow">↓</div>
+<div class="chain-step">AI → παράλληλα τεχνολογικά οικοσυστήματα</div><div class="chain-arrow">↓</div>
+<div class="chain-step">Κλίμα → περισσότερες επενδύσεις σε προσαρμογή</div>
+</div>
+<div class="punch">Για δεκαετίες η οικονομία βελτιστοποιούσε για το χαμηλότερο κόστος. Τώρα πρέπει να πληρώνει και για <b>εφεδρείες, ασφάλεια, αποθήκευση, εναλλακτικές διαδρομές και τεχνολογική αυτονομία.</b></div>
+<button class="deep-btn" data-open-analysis>ΔΕΣ ΤΗ ΒΑΘΥΤΕΡΗ ΑΝΑΛΥΣΗ →</button>
+<div class="end-cta"><h3>Βοήθησέ μας να το βελτιώσουμε</h3>
+<p>Το σύντομο feedback/test βρίσκεται εδώ, στην τελευταία κάρτα.</p>
+<div class="end-cta-actions"><a class="feedback-link" href="../feedback/test.html">FEEDBACK / TEST →</a><a class="home-link" href="../index.html">ΑΡΧΙΚΗ</a></div>
+</div></div></section>
+</div></div>
+
+<div class="deep-analysis" id="deepAnalysis">
+<div class="analysis-top"><div class="analysis-top-inner"><div class="analysis-brand">WORLD IN CONTEXT · 2ο ΕΠΙΠΕΔΟ</div><button class="analysis-close" id="analysisClose">✕ ΚΛΕΙΣΙΜΟ</button></div></div>
+<div class="analysis-hero"><div class="analysis-wrap"><div class="overline">19 · 08 · 2026 · DEEP ANALYSIS</div><h1>Η ανθεκτικότητα έχει κόστος</h1><p>Από το Ορμούζ και τα logistics του πολέμου μέχρι την AI και την ελληνική οικονομία: γιατί κράτη και επιχειρήσεις πληρώνουν όλο και περισσότερο για εναλλακτικές, εφεδρείες και ασφάλεια.</p></div></div>
+<div class="analysis-body"><div class="analysis-grid">
+<article class="analysis-card wide"><div class="num">01 · ΟΡΜΟΥΖ</div><h2>Ένα chokepoint μπορεί να λειτουργεί «νομικά» και να είναι οικονομικά σχεδόν κλειστό</h2><p>Η χαμηλή κίνηση πλοίων δείχνει ότι η πραγματική λειτουργία μιας θαλάσσιας οδού εξαρτάται από την αντίληψη κινδύνου. Ασφαλιστές, πλοιοκτήτες και traders δεν περιμένουν επίσημη απαγόρευση για να αλλάξουν συμπεριφορά.</p><div class="signal"><strong>Σημασία για την Ελλάδα:</strong> ναυτιλία, καύσιμα, τουρισμός και μεταφορές είναι ιδιαίτερα ευαίσθητοι σε παρατεταμένο ενεργειακό και ασφαλιστικό premium.</div></article>
+<article class="analysis-card"><div class="num">02 · ΕΛΛΑΔΑ</div><h2>Δημοσιονομική βελτίωση ≠ ενεργειακή ανοσία</h2><p>Η Ελλάδα έχει βελτιώσει την πρόσβασή της στις αγορές και συνεχίζει την κανονική εκδοτική δραστηριότητα του ΟΔΔΗΧ. Όμως το πετρέλαιο είναι εξωτερική τιμή. Ένα νέο ενεργειακό σοκ μπορεί να μεταφερθεί σε μεταφορές, παραγωγή και τελικές τιμές χωρίς να αναιρεί τη θετική εικόνα του χρέους.</p><div class="uncertainty"><strong>Διάκριση:</strong> σήμερα χρησιμοποιούμε μόνο το επιβεβαιωμένο πρόγραμμα δημοπρασίας και όχι αποτέλεσμα που δεν είχε εμφανιστεί ακόμη στην επίσημη βάση κατά τον έλεγχο.</div></article>
+<article class="analysis-card"><div class="num">03 · LOGISTICS</div><h2>Οι εφοδιαστικές αλυσίδες γίνονται στρατηγική υποδομή</h2><p>Οι επιθέσεις σε ρωσικές εμπορικές αποθήκες δείχνουν γιατί logistics, data centers, λιμάνια και ενεργειακά δίκτυα θεωρούνται πλέον μέρος της εθνικής ασφάλειας. Το ίδιο μοτίβο εμφανίζεται στο Ορμούζ: η μεταφορά είναι εξίσου κρίσιμη με την ίδια την παραγωγή.</p></article>
+<article class="analysis-card wide"><div class="num">04 · AI</div><h2>Αν δημιουργηθούν δύο AI οικοσυστήματα, η ανθεκτικότητα θα έχει τεχνολογικό κόστος</h2><p>Διπλές υποδομές, διαφορετικά standards, περιορισμοί σε chips, cloud και software μπορούν να μειώσουν την αποδοτικότητα που έδινε μια ενιαία παγκόσμια τεχνολογική αγορά. Για κράτη όπως η Νότια Κορέα — και σε μικρότερο βαθμό ευρωπαϊκές χώρες — το δίλημμα θα είναι πώς διατηρούν πρόσβαση χωρίς υπερβολική εξάρτηση από μία πλευρά.</p><div class="signal"><strong>Το νέο ερώτημα:</strong> όχι μόνο «ποιο AI είναι καλύτερο;», αλλά «ποιο οικοσύστημα μπορώ να χρησιμοποιώ χωρίς να δημιουργώ στρατηγική εξάρτηση;»</div></article>
+<article class="analysis-card"><div class="num">05 · ΚΛΙΜΑ</div><h2>Η προσαρμογή είναι άλλη μία μορφή «ασφάλισης»</h2><p>Θερμότερες θάλασσες σημαίνουν περισσότερη πίεση σε οικοσυστήματα, τουριστικές περιοχές και υποδομές. Η προσαρμογή — νερό, ψύξη, αντιπλημμυρικά, προστασία ακτών — απαιτεί κεφάλαιο σήμερα για να μειώσει μεγαλύτερο κόστος αύριο.</p></article>
+<article class="analysis-card"><div class="num">06 · ΣΥΜΠΕΡΑΣΜΑ</div><h2>Από το «just in time» στο «just in case»</h2><p>Η παγκοσμιοποίηση είχε χτιστεί γύρω από αποδοτικότητα και χαμηλά αποθέματα. Η νέα περίοδος προσθέτει εφεδρείες, αποθήκευση, περισσότερους προμηθευτές, παράλληλες διαδρομές και μεγαλύτερες αμυντικές/κλιματικές επενδύσεις.</p><div class="footer-note"><strong>World in Context:</strong> Η ανθεκτικότητα δεν είναι δωρεάν. Το ερώτημα για κάθε χώρα είναι ποιο επιπλέον κόστος αξίζει να πληρώσει — και για ποια εξάρτηση.</div></article>
+</div></div></div>
+
+<script>
+const slides=[...document.querySelectorAll('.slide')],track=document.getElementById('track'),
+prev=document.getElementById('prevBtn'),next=document.getElementById('nextBtn'),
+segments=document.getElementById('segments'),num=document.getElementById('curnum'),title=document.getElementById('curtitle');
+let i=0;
+slides.forEach((s,n)=>{const b=document.createElement('button');b.setAttribute('aria-label','Κάρτα '+(n+1));b.onclick=()=>go(n);segments.appendChild(b)});
+function go(n){i=Math.max(0,Math.min(slides.length-1,n));track.style.transform=`translateX(-${i*10}%)`;num.textContent=String(i+1).padStart(2,'0');title.textContent=slides[i].dataset.title.toUpperCase();[...segments.children].forEach((b,k)=>{b.className=k===i?'current':k<i?'done':''});prev.classList.toggle('disabled',i===0);next.classList.toggle('disabled',i===slides.length-1)}
+prev.onclick=()=>go(i-1);next.onclick=()=>go(i+1);
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')go(i+1);if(e.key==='ArrowLeft')go(i-1)});
+let x0=null;document.addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true});document.addEventListener('touchend',e=>{if(x0===null)return;let dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>55)go(i+(dx<0?1:-1));x0=null},{passive:true});
+const analysis=document.getElementById('deepAnalysis');document.querySelectorAll('[data-open-analysis]').forEach(b=>b.onclick=()=>{analysis.classList.add('open');document.body.style.overflow='hidden'});document.getElementById('analysisClose').onclick=()=>{analysis.classList.remove('open');document.body.style.overflow='hidden'};
+go(0);
+</script>
+</body>
+</html>
