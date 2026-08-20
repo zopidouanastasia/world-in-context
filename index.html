@@ -3,29 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="description" content="Πώς κατανοώ τον κόσμο σήμερα — ένα ημερήσιο briefing που εξηγεί όχι μόνο τι έγινε, αλλά γιατί έχει σημασία και πώς συνδέεται με την καθημερινότητά μας.">
-<title>Πώς κατανοώ τον κόσμο σήμερα</title>
+<meta name="description" content="World in Context — ημερήσιο briefing που εξηγεί τι έγινε, γιατί έχει σημασία και πώς συνδέεται με την καθημερινότητά μας.">
+<title>World in Context — Πώς κατανοώ τον κόσμο σήμερα</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
-<link rel="icon" type="image/png" href="https://zopidouanastasia.github.io/world-in-context/assets/favicon.png">
-<link rel="apple-touch-icon" href="https://zopidouanastasia.github.io/world-in-context/assets/favicon.png">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
 <link rel="canonical" href="https://zopidouanastasia.github.io/world-in-context/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="el_GR">
 <meta property="og:site_name" content="World in Context">
-<meta property="og:title" content="Πώς κατανοώ τον κόσμο σήμερα | World in Context">
-<meta property="og:description" content="Λιγότερος θόρυβος. Περισσότερη κατανόηση. Ένα καθημερινό briefing που συνδέει τις σημαντικές εξελίξεις και εξηγεί γιατί έχουν σημασία.">
+<meta property="og:title" content="World in Context — Πώς κατανοώ τον κόσμο σήμερα">
+<meta property="og:description" content="Λιγότερος θόρυβος. Περισσότερη κατανόηση.">
 <meta property="og:url" content="https://zopidouanastasia.github.io/world-in-context/">
 <meta property="og:image" content="https://zopidouanastasia.github.io/world-in-context/assets/social-preview.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Πώς κατανοώ τον κόσμο σήμερα | World in Context">
-<meta name="twitter:description" content="Λιγότερος θόρυβος. Περισσότερη κατανόηση.">
-<meta name="twitter:image" content="https://zopidouanastasia.github.io/world-in-context/assets/social-preview.png">
 
 <style>
 :root{
@@ -37,15 +32,12 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;overflow-x:hidden}
 body{
-  margin:0;overflow-x:hidden;background:
-  radial-gradient(circle at 15% 10%,rgba(44,93,143,.10),transparent 30%),
-  linear-gradient(180deg,#f4f0e6 0%,#f1ecdf 100%);
+  margin:0;overflow-x:hidden;
+  background:radial-gradient(circle at 15% 10%,rgba(44,93,143,.10),transparent 30%),linear-gradient(180deg,#f4f0e6 0%,#f1ecdf 100%);
   color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.6;
   -webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%;
 }
-a{color:inherit}
-.wrap{width:min(1120px,calc(100% - 36px));margin:auto}
-.mono{font-family:'Space Mono',monospace}
+a{color:inherit}.wrap{width:min(1120px,calc(100% - 36px));margin:auto}
 h1,h2,h3{font-family:Fraunces,serif;margin:0;letter-spacing:-.02em}
 
 header{
@@ -54,173 +46,108 @@ header{
   box-shadow:0 10px 28px rgba(3,13,25,.18)
 }
 .nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.brand{
-  display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;
-  font:700 12px 'Space Mono',monospace;letter-spacing:.07em;text-transform:uppercase
-}
-.brand img{width:68px;height:44px;object-fit:contain;filter:drop-shadow(0 2px 8px rgba(255,255,255,.15))}
-.navlinks{display:flex;gap:22px;align-items:center}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;font:700 12px 'Space Mono',monospace;letter-spacing:.07em;text-transform:uppercase}
+.brand img{width:68px;height:44px;object-fit:contain}
+.navlinks{display:flex;gap:20px;align-items:center}
 .navlinks a{font-size:13px;color:#dce7f2;text-decoration:none;font-weight:700}
 .navlinks a:hover{color:var(--orange-soft)}
-.cta-small{
-  background:linear-gradient(135deg,var(--orange),#ff9b32);color:#fff!important;
-  padding:9px 13px;border-radius:999px;box-shadow:0 8px 20px rgba(255,122,0,.25)
-}
+.cta-small{background:linear-gradient(135deg,var(--orange),#ff9b32);color:#fff!important;padding:9px 13px;border-radius:999px}
 
 .hero{
   position:relative;overflow:hidden;color:#fff;min-height:650px;padding:86px 0 64px;
   background:
     linear-gradient(90deg,rgba(6,23,42,1) 0%,rgba(6,23,42,.98) 35%,rgba(6,23,42,.78) 53%,rgba(6,23,42,.16) 72%,rgba(6,23,42,.04) 100%),
-    url("hero-earth-clean.jpg") right center / auto 100% no-repeat,
-    #06172a;
+    url("hero-earth-clean.jpg") right center / auto 100% no-repeat,#06172a;
 }
 .hero-grid{display:grid;grid-template-columns:minmax(0,1.03fr) minmax(340px,.97fr);gap:34px;align-items:center}
 .hero-grid>div:first-child{position:relative;z-index:3;max-width:650px}
-.kicker{
-  font:700 12px 'Space Mono',monospace;letter-spacing:.11em;text-transform:uppercase;
-  color:#c8d6e6;margin-bottom:17px
-}
+.kicker{font:700 12px 'Space Mono',monospace;letter-spacing:.11em;text-transform:uppercase;color:#c8d6e6;margin-bottom:17px}
 h1{font-size:clamp(44px,7.5vw,78px);line-height:.98;max-width:760px}
-.hero-lead{
-  font:600 clamp(20px,2.6vw,28px)/1.35 Fraunces,serif;color:#e7eef6;
-  max-width:750px;margin:25px 0 16px
-}
+.hero-lead{font:600 clamp(20px,2.6vw,28px)/1.35 Fraunces,serif;color:#e7eef6;max-width:750px;margin:25px 0 16px}
 .hero-sub{font-size:16px;color:#c8d6e6;max-width:690px;margin:0}
 .actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:30px}
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;
-  font-weight:800;border-radius:12px;padding:14px 18px;border:1.5px solid var(--ink);font-size:14px
-}
-.hero .btn.primary{border-color:var(--orange);background:linear-gradient(135deg,var(--orange),#ff9a2d);color:#fff;box-shadow:0 10px 26px rgba(255,122,0,.24)}
-.hero .btn.secondary{border-color:rgba(220,233,247,.7);color:#eef6ff;background:rgba(255,255,255,.04)}
+.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;font-weight:800;border-radius:12px;padding:14px 18px;border:1.5px solid var(--ink);font-size:14px}
+.btn.primary{background:linear-gradient(135deg,var(--orange),#ff9a2d);color:#fff;border-color:var(--orange)}
+.btn.secondary{border-color:rgba(220,233,247,.7);color:#eef6ff;background:rgba(255,255,255,.04)}
 
 .today-card{
-  position:relative;z-index:4;margin-top:260px;padding:28px;border-radius:26px;
-  color:var(--ink);background:rgba(255,255,255,.96);backdrop-filter:blur(8px);
+  position:relative;z-index:4;margin-top:250px;padding:28px;border-radius:26px;color:var(--ink);
+  background:rgba(255,255,255,.96);backdrop-filter:blur(8px);
   border:1px solid rgba(143,179,217,.38);box-shadow:0 32px 70px -28px rgba(0,0,0,.55)
 }
-.date-line{
-  font:700 12px 'Space Mono',monospace;color:var(--orange);
-  letter-spacing:.06em;text-transform:uppercase
-}
+.date-line{font:700 12px 'Space Mono',monospace;color:var(--orange);letter-spacing:.06em;text-transform:uppercase}
 .today-card h2{font-size:31px;line-height:1.05;margin:12px 0 15px}
 .today-card p{color:var(--ink)}
 .topic-list{display:flex;flex-wrap:wrap;gap:7px;margin:18px 0 4px}
-.pill{
-  font-size:12px;font-weight:700;padding:6px 9px;border-radius:8px;
-  background:#eef5fb;color:#244666;border:1px solid #cfe0ee
-}
-.today-card .read{
-  display:block;margin-top:22px;padding-top:18px;border-top:1px solid var(--beige-line);
-  font:700 12px 'Space Mono',monospace;color:var(--orange);text-decoration:none
-}
+.pill{font-size:12px;font-weight:700;padding:6px 9px;border-radius:8px;background:#eef5fb;color:#244666;border:1px solid #cfe0ee}
+.today-card .read{display:block;margin-top:22px;padding-top:18px;border-top:1px solid var(--beige-line);font:700 12px 'Space Mono',monospace;color:var(--orange);text-decoration:none}
 
 section{padding:72px 0}
-.section-head{max-width:760px;margin-bottom:32px}
-.eyebrow{
-  font:700 11px 'Space Mono',monospace;letter-spacing:.09em;color:var(--orange);
-  text-transform:uppercase;margin-bottom:10px
-}
+.section-head{max-width:780px;margin-bottom:32px}
+.eyebrow{font:700 11px 'Space Mono',monospace;letter-spacing:.09em;color:var(--orange);text-transform:uppercase;margin-bottom:10px}
 .section-head h2{font-size:clamp(34px,5vw,50px);line-height:1.05;color:#0a2744}
 .section-head p{color:var(--ink-soft);font-size:17px;margin:14px 0 0}
 
 .archive-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px}
-.calendar,.archive-list,.info-card{
-  background:#fff;border:1px solid rgba(44,93,143,.12);box-shadow:0 18px 45px -28px rgba(7,24,44,.35)
-}
+.calendar,.archive-list,.info-card{background:#fff;border:1px solid rgba(44,93,143,.12);box-shadow:0 18px 45px -28px rgba(7,24,44,.35)}
 .calendar{border-radius:22px;padding:24px}
 .cal-top{display:flex;justify-content:space-between;align-items:end;margin-bottom:20px}
 .cal-top h3{font-size:26px}.cal-top span{font-size:11px;color:var(--muted);font-family:'Space Mono',monospace}
 .week,.days{display:grid;grid-template-columns:repeat(7,1fr);gap:7px}
-.week div{text-align:center;font:700 10px 'Space Mono',monospace;color:var(--muted);padding-bottom:3px}
-.day{
-  aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;border-radius:10px;
-  font-size:13px;text-decoration:none;color:var(--ink-soft)
-}
+.week div{text-align:center;font:700 10px 'Space Mono',monospace;color:var(--muted)}
+.day{aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;border-radius:10px;font-size:13px;text-decoration:none;color:var(--ink-soft)}
 .day.muted{opacity:.25}.day.has{background:var(--beige);font-weight:800;box-shadow:inset 0 0 0 1px rgba(44,93,143,.15)}
 .day.today{background:linear-gradient(135deg,#0c3a61,#17669d);color:#fff;font-weight:800}
 
 .archive-list{border-radius:22px;padding:10px 24px}
-.archive-item{
-  display:grid;grid-template-columns:110px 1fr auto;gap:18px;align-items:center;
-  padding:20px 0;border-bottom:1px solid var(--beige-line);text-decoration:none
-}
+.archive-item{display:grid;grid-template-columns:110px 1fr auto;gap:18px;align-items:center;padding:20px 0;border-bottom:1px solid var(--beige-line);text-decoration:none}
 .archive-item:last-child{border-bottom:none}
-.archive-item:hover{background:#f7fbff;margin:0 -12px;padding-left:12px;padding-right:12px;border-radius:12px}
 .archive-date{font:700 11px 'Space Mono',monospace;color:var(--blue)}
 .archive-title{font:700 20px Fraunces,serif}.archive-meta{font-size:12px;color:var(--muted);margin-top:4px}
 .archive-arrow{font-size:22px;color:var(--orange)}
 
 #feedback{background:linear-gradient(180deg,#f1ecdf,#eaf2f8)}
-#feedback .btn.primary{
-  background:linear-gradient(135deg,#0a3152,#155f93);color:#fff;border:none;
-  box-shadow:0 10px 24px rgba(15,64,103,.18)
-}
-
-.dark-section{
-  background:radial-gradient(circle at 80% 20%,rgba(44,93,143,.30),transparent 30%),linear-gradient(135deg,#06172a,#0d2c4a);
-  color:#fff
-}
-.dark-section .section-head h2,.dark-section .section-head p,.dark-section h2{color:#fff}
-.dark-section .eyebrow{color:#ff8a16}
+.dark-section{background:radial-gradient(circle at 80% 20%,rgba(44,93,143,.30),transparent 30%),linear-gradient(135deg,#06172a,#0d2c4a);color:#fff}
+.dark-section .section-head h2,.dark-section .section-head p{color:#fff}
 .values{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .value{border:1px solid rgba(143,179,217,.20);border-radius:18px;padding:24px;background:rgba(255,255,255,.035)}
 .value .num{font:700 11px 'Space Mono',monospace;color:var(--orange-soft)}
 .value h3{font-size:24px;margin:8px 0 10px}.value p{color:#DCE3EE;margin:0;font-size:15px}
-.signature{
-  margin-top:34px;color:#fff;background:linear-gradient(90deg,rgba(255,122,0,.10),transparent);
-  padding:22px 24px;border-radius:16px;border-left:4px solid var(--orange);
-  font:800 clamp(25px,4vw,36px) Fraunces,serif
-}
+.signature{margin-top:34px;color:#fff;background:linear-gradient(90deg,rgba(255,122,0,.10),transparent);padding:22px 24px;border-radius:16px;border-left:4px solid var(--orange);font:800 clamp(25px,4vw,36px) Fraunces,serif}
 
 .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 .info-card{border-radius:22px;padding:28px}
 .info-card h3{font-size:28px;margin-bottom:12px}.info-card p{color:var(--ink-soft);margin:0 0 13px}
 .method{border-left:4px solid var(--blue);background:rgba(255,255,255,.48);border-radius:0 16px 16px 0;padding:22px 24px;margin-top:28px}
-
 #contact{padding:64px 0;background:linear-gradient(180deg,#eef4f8,#f7f3ea)}
 .contact-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:22px;align-items:stretch}
+.socials{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.socials a{display:inline-flex;padding:10px 12px;border:1px solid #ccd9e4;border-radius:10px;text-decoration:none;background:#fff;font-weight:700}
 
 footer{padding:44px 0;background:#06172a;color:#9fb5ca;font-size:13px}
 .footer-grid{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 .footer-title{font:700 13px 'Space Mono',monospace;color:#fff}.small-note{max-width:720px;margin-top:14px;font-size:12px}
 
-#backToTop{
-  position:fixed;right:18px;bottom:18px;z-index:90;width:48px;height:48px;border-radius:50%;
-  border:1px solid rgba(143,179,217,.28);background:rgba(6,23,42,.92);color:#fff;
-  display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;cursor:pointer;
-  box-shadow:0 12px 30px rgba(6,23,42,.28);backdrop-filter:blur(8px);
-  opacity:0;transform:translateY(12px);pointer-events:none;transition:.2s
-}
+#backToTop{position:fixed;right:18px;bottom:18px;z-index:90;width:48px;height:48px;border-radius:50%;border:1px solid rgba(143,179,217,.28);background:rgba(6,23,42,.92);color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;cursor:pointer;opacity:0;transform:translateY(12px);pointer-events:none;transition:.2s}
 #backToTop.show{opacity:1;transform:translateY(0);pointer-events:auto}
 
 @media(max-width:980px){
   .hero{background:linear-gradient(90deg,rgba(6,23,42,1) 0%,rgba(6,23,42,.96) 48%,rgba(6,23,42,.50) 72%,rgba(6,23,42,.18) 100%),url("hero-earth-clean.jpg") 72% center / auto 100% no-repeat,#06172a}
   .hero-grid{grid-template-columns:1fr}.today-card{margin-top:36px;max-width:620px}
 }
-@media(max-width:900px){.archive-grid{grid-template-columns:1fr}}
-@media(max-width:800px){.values,.info-grid{grid-template-columns:1fr}}
-@media(max-width:760px){
+@media(max-width:900px){
+  .archive-grid,.values,.info-grid,.contact-grid{grid-template-columns:1fr}
   .navlinks a:not(.cta-small){display:none}
-  .wrap{width:min(100% - 24px,1120px)}
-  .nav{min-height:60px;gap:10px}.brand{font-size:10px;max-width:62%;line-height:1.15}
-  .brand img{width:48px;height:32px}.cta-small{padding:9px 11px;font-size:11px}
-  .hero{padding:52px 0 44px;min-height:auto}.hero-grid{grid-template-columns:1fr;gap:22px}
-  h1{font-size:clamp(40px,13vw,60px);line-height:.98}.hero-lead{font-size:20px;line-height:1.35;margin:18px 0 12px}
-  .hero-sub{font-size:15px;line-height:1.6}.actions{gap:10px;margin-top:22px}.btn{min-height:48px;padding:13px 15px;font-size:13px}
-  .today-card{margin-top:20px;padding:22px;border-radius:20px}.today-card h2{font-size:27px}
-  section{padding:50px 0}.archive-grid{grid-template-columns:1fr;gap:18px}
-  .calendar,.archive-list,.info-card{padding:20px;border-radius:18px}
-  .archive-item{grid-template-columns:1fr auto;gap:10px}.archive-date{grid-column:1/-1}.archive-title{font-size:18px}
-  .values,.info-grid,.contact-grid{grid-template-columns:1fr;gap:14px}.value,.info-card{padding:20px}
 }
 @media(max-width:640px){
   .hero{background:linear-gradient(180deg,rgba(6,23,42,.34) 0%,rgba(6,23,42,.76) 34%,rgba(6,23,42,1) 62%),url("hero-earth-clean.jpg") 68% top / auto 48% no-repeat,#06172a;padding-top:245px}
   .hero-grid{display:block}.today-card{margin-top:28px}
+  .brand span{display:none}.brand img{width:52px;height:34px}
+  .archive-item{grid-template-columns:1fr auto}.archive-date{grid-column:1/-1}
 }
 @media(max-width:430px){
   .hero{padding-top:230px;background:linear-gradient(180deg,rgba(6,23,42,.22) 0%,rgba(6,23,42,.78) 31%,rgba(6,23,42,1) 56%),url("hero-earth-clean.jpg") 68% top / auto 44% no-repeat,#06172a}
-  .actions{display:grid;grid-template-columns:1fr}.btn{width:100%}.week,.days{gap:4px}.day{font-size:12px;border-radius:8px}
+  .actions{display:grid;grid-template-columns:1fr}.btn{width:100%}.week,.days{gap:4px}.day{font-size:12px}
 }
 </style>
 </head>
@@ -238,7 +165,7 @@ footer{padding:44px 0;background:#06172a;color:#9fb5ca;font-size:13px}
       <a href="#purpose">Σκοπός</a>
       <a href="#about">Πίσω από το project</a>
       <a href="#contact">Επικοινωνία</a>
-      <a class="cta-small" href="briefings/2026-08-19.html">Σημερινό briefing →</a>
+      <a class="cta-small" href="briefings/2026-08-20.html">Σημερινό briefing →</a>
     </nav>
   </div>
 </header>
@@ -250,29 +177,28 @@ footer{padding:44px 0;background:#06172a;color:#9fb5ca;font-size:13px}
       <div class="kicker">Ημερήσιο briefing · 10 απλές κάρτες</div>
       <h1>Πώς κατανοώ<br>τον κόσμο σήμερα</h1>
       <p class="hero-lead">Οι σημαντικότερες εξελίξεις της ημέρας — όχι μόνο ως ειδήσεις, αλλά ως συνδέσεις.</p>
-      <p class="hero-sub">Τι έγινε; Γιατί έχει σημασία; Πώς συνδέεται με την οικονομία, την τεχνολογία, την ενέργεια και την καθημερινή μας ζωή; Και κυρίως: τι ξέρουμε, τι παρακολουθούμε και τι απλώς εκτιμούμε;</p>
+      <p class="hero-sub">Τι έγινε; Γιατί έχει σημασία; Πώς συνδέεται με την οικονομία, την τεχνολογία, την ενέργεια και την καθημερινή μας ζωή; Και κυρίως: τι ξέρουμε, τι αναλύουμε και τι απλώς εκτιμούμε;</p>
       <div class="actions">
-        <a class="btn primary" href="briefings/2026-08-19.html">Δες το σημερινό briefing →</a>
+        <a class="btn primary" href="briefings/2026-08-20.html">Δες το σημερινό briefing →</a>
         <a class="btn secondary" href="#archive">Άνοιξε το αρχείο</a>
       </div>
     </div>
 
     <aside class="today-card">
-      <div class="date-line">Τετάρτη · 19 Αυγούστου 2026</div>
+      <div class="date-line">Πέμπτη · 20 Αυγούστου 2026</div>
       <h2>Ο κόσμος σήμερα σε 10 κάρτες</h2>
-      <p>Από το Ορμούζ και την Ουκρανία μέχρι την Ελλάδα, την AI, την Ασία και τη θερμή Μεσόγειο.</p>
+      <p>Πετρέλαιο, Ουκρανία, αμερικανικό χρέος, κινεζικά ακίνητα, AI agents και η ενεργειακή μετάβαση στα Βαλκάνια.</p>
       <div class="topic-list">
-        <span class="pill">Ορμούζ</span>
-        <span class="pill">Ουκρανία</span>
-        <span class="pill">Ελλάδα</span>
-        <span class="pill">Κίνα</span>
-        <span class="pill">AI</span>
         <span class="pill">Ενέργεια</span>
+        <span class="pill">Ουκρανία</span>
+        <span class="pill">ΗΠΑ</span>
+        <span class="pill">Κίνα</span>
+        <span class="pill">AI & Cyber</span>
         <span class="pill">Κλίμα</span>
-        <span class="pill">Μεσόγειος</span>
+        <span class="pill">Ελλάδα & Βαλκάνια</span>
       </div>
-      <div style="margin-top:16px;font-family:'Space Mono',monospace;font-size:10px;color:#6b7f91;">Τελευταία ενημέρωση: 19/08/2026</div>
-      <a class="read" href="briefings/2026-08-19.html">ΑΝΟΙΓΜΑ ΤΗΣ ΣΗΜΕΡΙΝΗΣ ΕΚΔΟΣΗΣ →</a>
+      <div style="margin-top:16px;font-family:'Space Mono',monospace;font-size:10px;color:#6b7f91;">Τελευταία ενημέρωση: 20/08/2026</div>
+      <a class="read" href="briefings/2026-08-20.html">ΑΝΟΙΓΜΑ ΤΗΣ ΣΗΜΕΡΙΝΗΣ ΕΚΔΟΣΗΣ →</a>
     </aside>
   </div>
 </section>
@@ -287,71 +213,50 @@ footer{padding:44px 0;background:#06172a;color:#9fb5ca;font-size:13px}
 
     <div class="archive-grid">
       <div class="calendar">
-        <div class="cal-top">
-          <h3>Αύγουστος 2026</h3>
-          <span>● διαθέσιμο briefing</span>
-        </div>
-        <div class="week">
-          <div>ΔΕ</div><div>ΤΡ</div><div>ΤΕ</div><div>ΠΕ</div><div>ΠΑ</div><div>ΣΑ</div><div>ΚΥ</div>
-        </div>
+        <div class="cal-top"><h3>Αύγουστος 2026</h3><span>● διαθέσιμο briefing</span></div>
+        <div class="week"><div>ΔΕ</div><div>ΤΡ</div><div>ΤΕ</div><div>ΠΕ</div><div>ΠΑ</div><div>ΣΑ</div><div>ΚΥ</div></div>
         <div class="days">
-          <span class="day muted">27</span><span class="day muted">28</span><span class="day muted">29</span><span class="day muted">30</span><span class="day muted">31</span>
-          <span class="day">1</span><span class="day">2</span>
+          <span class="day muted">27</span><span class="day muted">28</span><span class="day muted">29</span><span class="day muted">30</span><span class="day muted">31</span><span class="day">1</span><span class="day">2</span>
           <span class="day">3</span><span class="day">4</span><span class="day">5</span><span class="day">6</span><span class="day">7</span><span class="day">8</span><span class="day">9</span>
           <span class="day">10</span><span class="day">11</span><span class="day">12</span><span class="day">13</span><span class="day">14</span><span class="day">15</span>
-          <a class="day has" href="briefings/2026-08-16.html" title="Briefing 16 Αυγούστου">16</a>
-          <a class="day has" href="briefings/2026-08-17.html" title="Briefing 17 Αυγούστου">17</a>
-          <a class="day has" href="briefings/2026-08-18.html" title="Briefing 18 Αυγούστου">18</a>
-          <a class="day today has" href="briefings/2026-08-19.html" title="Briefing 19 Αυγούστου">19</a><span class="day">20</span><span class="day">21</span><span class="day">22</span><span class="day">23</span>
-          <span class="day">24</span><span class="day">25</span><span class="day">26</span><span class="day">27</span><span class="day">28</span><span class="day">29</span><span class="day">30</span>
-          <span class="day">31</span>
+          <a class="day has" href="briefings/2026-08-16.html">16</a>
+          <a class="day has" href="briefings/2026-08-17.html">17</a>
+          <a class="day has" href="briefings/2026-08-18.html">18</a>
+          <a class="day has" href="briefings/2026-08-19.html">19</a>
+          <a class="day today has" href="briefings/2026-08-20.html">20</a>
+          <span class="day">21</span><span class="day">22</span><span class="day">23</span>
+          <span class="day">24</span><span class="day">25</span><span class="day">26</span><span class="day">27</span><span class="day">28</span><span class="day">29</span><span class="day">30</span><span class="day">31</span>
         </div>
       </div>
 
       <div class="archive-list">
+        <a class="archive-item" href="briefings/2026-08-20.html">
+          <div class="archive-date">20 · 08 · 2026</div>
+          <div>
+            <div class="archive-title">Πετρέλαιο, Ουκρανία, ΗΠΑ, Κίνα, AI και Βαλκάνια</div>
+            <div class="archive-meta">10 κάρτες · Ημερήσιο briefing · Cross-checked</div>
+          </div><div class="archive-arrow">→</div>
+        </a>
         <a class="archive-item" href="briefings/2026-08-19.html">
           <div class="archive-date">19 · 08 · 2026</div>
-          <div>
-            <div class="archive-title">Ορμούζ, Ουκρανία, AI, Ελλάδα και θερμή Μεσόγειος</div>
-            <div class="archive-meta">10 κάρτες · Ημερήσιο briefing · Deep Analysis</div>
-          </div>
+          <div><div class="archive-title">Ορμούζ, Ουκρανία, AI, Ελλάδα και θερμή Μεσόγειος</div><div class="archive-meta">10 κάρτες · Ημερήσιο briefing · Deep Analysis</div></div>
           <div class="archive-arrow">→</div>
         </a>
         <a class="archive-item" href="briefings/2026-08-18.html">
           <div class="archive-date">18 · 08 · 2026</div>
-          <div>
-            <div class="archive-title">Ορμούζ, Ελλάδα & Βαλκάνια, AI, κλίμα και Αρκτική</div>
-            <div class="archive-meta">10 κάρτες · Ημερήσιο briefing · Deep Analysis</div>
-          </div>
+          <div><div class="archive-title">Ορμούζ, Ελλάδα & Βαλκάνια, AI, κλίμα και Αρκτική</div><div class="archive-meta">10 κάρτες · Ημερήσιο briefing · Deep Analysis</div></div>
           <div class="archive-arrow">→</div>
         </a>
-
         <a class="archive-item" href="briefings/2026-08-17.html">
           <div class="archive-date">17 · 08 · 2026</div>
-          <div>
-            <div class="archive-title">Ορμούζ, Κίνα, AI, πυρκαγιές και ελληνικό χρέος</div>
-            <div class="archive-meta">10 κάρτες · Ημερήσιο briefing · Deep Analysis</div>
-          </div>
+          <div><div class="archive-title">Ορμούζ, Κίνα, AI, πυρκαγιές και ελληνικό χρέος</div><div class="archive-meta">10 κάρτες · Ημερήσιο briefing · Deep Analysis</div></div>
           <div class="archive-arrow">→</div>
         </a>
-
         <a class="archive-item" href="briefings/2026-08-16.html">
           <div class="archive-date">16 · 08 · 2026</div>
-          <div>
-            <div class="archive-title">Ουκρανία, Ορμούζ, chips, AI και κλίμα</div>
-            <div class="archive-meta">10 κάρτες · Ημερήσιο briefing</div>
-          </div>
+          <div><div class="archive-title">Ουκρανία, Ορμούζ, chips, AI και κλίμα</div><div class="archive-meta">10 κάρτες · Ημερήσιο briefing</div></div>
           <div class="archive-arrow">→</div>
         </a>
-
-        <div class="archive-item" style="opacity:.48">
-          <div class="archive-date">ΕΠΟΜΕΝΕΣ ΗΜΕΡΕΣ</div>
-          <div>
-            <div class="archive-title">Το αρχείο θα μεγαλώνει καθημερινά.</div>
-            <div class="archive-meta">Κάθε νέα έκδοση θα εμφανίζεται εδώ και στο ημερολόγιο.</div>
-          </div>
-          <div class="archive-arrow">+</div>
-        </div>
       </div>
     </div>
   </div>
@@ -373,29 +278,14 @@ footer{padding:44px 0;background:#06172a;color:#9fb5ca;font-size:13px}
     <div class="section-head">
       <div class="eyebrow">Γιατί υπάρχει αυτή η σελίδα</div>
       <h2>Λιγότερος θόρυβος.<br>Περισσότερη κατανόηση.</h2>
-      <p>Η ενημέρωση συχνά μάς δίνει πολλά γεγονότα αλλά λίγο χρόνο για να καταλάβουμε πώς συνδέονται. Ο στόχος αυτού του project είναι να μετατρέπει την καθημερινή επικαιρότητα σε μια σύντομη, καθαρή και ελέγξιμη εικόνα.</p>
+      <p>Η ενημέρωση συχνά μάς δίνει πολλά γεγονότα αλλά λίγο χρόνο για να καταλάβουμε πώς συνδέονται. Ο στόχος του World in Context είναι να μετατρέπει την καθημερινή επικαιρότητα σε μια σύντομη, καθαρή και ελέγξιμη εικόνα.</p>
     </div>
-
     <div class="values">
-      <div class="value">
-        <div class="num">01</div>
-        <h3>Κατανόηση</h3>
-        <p>Δεν αρκεί να ξέρουμε τι συνέβη. Εξηγούμε γιατί έχει σημασία και ποια αλυσίδα συνεπειών μπορεί να δημιουργεί.</p>
-      </div>
-      <div class="value">
-        <div class="num">02</div>
-        <h3>Σύνδεση</h3>
-        <p>Γεωπολιτική, οικονομία, ενέργεια, τεχνολογία, περιβάλλον και καθημερινή ζωή δεν εξελίσσονται σε ξεχωριστούς κόσμους.</p>
-      </div>
-      <div class="value">
-        <div class="num">03</div>
-        <h3>Διαφάνεια</h3>
-        <p>Ξεχωρίζουμε όσο γίνεται καθαρότερα τα επιβεβαιωμένα γεγονότα από την ανάλυση, την αβεβαιότητα και την εκτίμηση.</p>
-      </div>
+      <div class="value"><div class="num">01</div><h3>Κατανόηση</h3><p>Δεν αρκεί να ξέρουμε τι συνέβη. Εξηγούμε γιατί έχει σημασία και ποια αλυσίδα συνεπειών μπορεί να δημιουργεί.</p></div>
+      <div class="value"><div class="num">02</div><h3>Σύνδεση</h3><p>Γεωπολιτική, οικονομία, ενέργεια, τεχνολογία, περιβάλλον και καθημερινή ζωή δεν εξελίσσονται σε ξεχωριστούς κόσμους.</p></div>
+      <div class="value"><div class="num">03</div><h3>Διαφάνεια</h3><p>Ξεχωρίζουμε όσο γίνεται καθαρότερα τα επιβεβαιωμένα γεγονότα, την ανάλυση και τις εκτιμήσεις.</p></div>
     </div>
-
-    <div class="signature">ΓΕΓΟΝΟΣ → CONTEXT → ΣΥΝΔΕΣΗ → ΓΙΑΤΙ ΕΧΕΙ ΣΗΜΑΣΙΑ → ΠΗΓΕΣ</div>
-    <p style="color:#DCE3EE;margin:10px 0 0;font-size:15px;">Κάθε briefing ακολουθεί την ίδια λογική, ώστε ο αναγνώστης να καταλαβαίνει όχι μόνο τι έγινε αλλά και πώς συνδέεται.</p>
+    <div class="signature">Τι έγινε → Γιατί έχει σημασία → Πώς μπορεί να μας επηρεάσει</div>
   </div>
 </section>
 
@@ -403,93 +293,62 @@ footer{padding:44px 0;background:#06172a;color:#9fb5ca;font-size:13px}
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Πίσω από το project</div>
-      <h2>Τι είναι — και τι δεν είναι.</h2>
+      <h2>Ένα προσωπικό project ενημέρωσης και κατανόησης.</h2>
+      <p>Το World in Context σχεδιάζεται για το γενικό κοινό, χωρίς να προϋποθέτει γνώσεις οικονομίας, γεωπολιτικής ή τεχνολογίας.</p>
     </div>
-
     <div class="info-grid">
-      <article class="info-card">
-        <h3>Τι είναι το project</h3>
-        <p><strong>«Πώς κατανοώ τον κόσμο σήμερα»</strong> είναι ένα ανεξάρτητο προσωπικό editorial και research project με στόχο να κάνει σύνθετες εξελίξεις πιο κατανοητές χωρίς να τις απλοποιεί μέχρι να χάνουν το νόημά τους.</p>
-        <p>Δεν φιλοδοξεί να αντικαταστήσει τη δημοσιογραφία ή τις πρωτογενείς πηγές. Λειτουργεί ως ένας σύντομος οδηγός κατανόησης: από το γεγονός, στη σύνδεση και από τη σύνδεση στη σημασία του.</p>
-      </article>
-
-      <article class="info-card">
-        <h3>Σε ποιον απευθύνεται</h3>
-        <p>Σε ανθρώπους που θέλουν να παρακολουθούν τον κόσμο αλλά δεν έχουν χρόνο να διαβάζουν δεκάδες άρθρα κάθε μέρα.</p>
-        <p>Και σε όσους βλέπουν μια διεθνή είδηση και αναρωτιούνται: <em>«Ωραία — αλλά τι σημαίνει πραγματικά και γιατί με αφορά;»</em></p>
-      </article>
-
-      <article class="info-card">
-        <h3>Πώς δουλεύουμε</h3>
-        <p>Επιλέγω λίγες εξελίξεις που έχουν ουσιαστική σημασία, αναζητώ αξιόπιστες πηγές και διασταυρώνω τα βασικά στοιχεία σε τουλάχιστον τρεις διαφορετικές πηγές όπου αυτό είναι εφικτό.</p>
-        <p>Όπου υπάρχει αβεβαιότητα, τη δηλώνω. Όπου υπάρχει εκτίμηση, δεν την παρουσιάζω ως γεγονός.</p>
-        <p><strong>Χρήση τεχνητής νοημοσύνης:</strong> χρησιμοποιώ εργαλεία τεχνητής νοημοσύνης για υποβοήθηση της έρευνας, οργάνωση, σύγκριση πληροφοριών και παρουσίαση. Η AI δεν αποτελεί πηγή.</p>
-      </article>
-
-      <article class="info-card">
-        <h3>Οι πηγές μας</h3>
-        <p>Οι εκδόσεις βασίζονται σε δημόσια διαθέσιμες, αξιόπιστες πηγές — ειδησεογραφικά πρακτορεία, θεσμούς, οργανισμούς, επίσημα δεδομένα και άλλες τεκμηριωμένες δημοσιεύσεις.</p>
-        <p>Στόχος είναι κάθε briefing να επιτρέπει στον αναγνώστη να ελέγξει από πού προέρχονται τα βασικά στοιχεία και να διαβάσει περισσότερο αν το επιθυμεί.</p>
-      </article>
+      <div class="info-card">
+        <h3>Πώς δουλεύει</h3>
+        <p>Η θεματολογία επιλέγεται καθημερινά με βάση τη σημασία της εξέλιξης — όχι επειδή πρέπει να γεμίσει μια προκαθορισμένη κατηγορία.</p>
+        <p>Οι δύσκολοι όροι εξηγούνται σε απλή γλώσσα και κάθε θέμα συνδέεται, όπου είναι χρήσιμο, με την Ελλάδα και την καθημερινή οικονομία.</p>
+      </div>
+      <div class="info-card">
+        <h3>Πηγές & AI</h3>
+        <p>Το project δημιουργείται με τη βοήθεια εργαλείων AI για έρευνα, οργάνωση, σύνθεση και σχεδιασμό.</p>
+        <p>Η διασταύρωση προτιμά μία πρωτογενή πηγή, μία πραγματικά ανεξάρτητη αξιόπιστη πηγή και μία συμπληρωματική όπου χρειάζεται.</p>
+      </div>
     </div>
-
-    <div class="method">
-      <b>Μια σημαντική σημείωση:</b> Το project βρίσκεται σε εξέλιξη. Η μορφή, οι θεματικές και ο τρόπος παρουσίασης βελτιώνονται καθώς δοκιμάζω τι βοηθά πραγματικά τον αναγνώστη να κατανοεί — όχι απλώς να καταναλώνει — περισσότερη πληροφορία.
-    </div>
+    <div class="method"><b>Μεθοδολογία:</b> Δεν μετράμε ως διαφορετικές πηγές πολλαπλές αναδημοσιεύσεις του ίδιου αρχικού ρεπορτάζ. Η ποιότητα και η ανεξαρτησία της πηγής είναι σημαντικότερη από τον αριθμό των links.</div>
   </div>
 </section>
 
 <section id="contact">
-  <div class="wrap">
-    <div class="section-head">
+  <div class="wrap contact-grid">
+    <div class="info-card">
       <div class="eyebrow">Επικοινωνία</div>
-      <h2>Μίλα μαζί μου.</h2>
-      <p>Για σχόλια, προτάσεις, συνεργασίες ή παρατηρήσεις σχετικά με το project.</p>
+      <h3>Σχόλια, διορθώσεις και προτάσεις</h3>
+      <p>Αν εντοπίσεις λάθος, έχεις πρόταση για πηγή ή θέλεις να σχολιάσεις το format, μπορείς να επικοινωνήσεις.</p>
+      <div class="socials">
+        <a href="mailto:zopidou.anastasia@gmail.com">Email</a>
+        <a href="https://www.facebook.com/worldincontextgr" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.linkedin.com/in/zopidou/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
     </div>
-
-    <div class="contact-grid">
-      <div class="info-card" style="margin:0;">
-        <div style="font-family:'Space Mono',monospace;font-size:11px;font-weight:700;color:#ff7a00;letter-spacing:.07em;text-transform:uppercase;margin-bottom:8px;">Δημιουργία & επιμέλεια</div>
-        <h3 style="margin-bottom:8px;">Αναστασία Ζωπίδου</h3>
-        <p style="margin-bottom:16px;">Δημιουργός του «Πώς κατανοώ τον κόσμο σήμερα» — ενός ανεξάρτητου project ενημέρωσης, σύνδεσης και κατανόησης της επικαιρότητας.</p>
-        <a href="mailto:zopidou.anastasia@gmail.com" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:800;color:#0b3558;">✉ zopidou.anastasia@gmail.com</a>
-      </div>
-
-      <div class="info-card" style="margin:0;display:flex;flex-direction:column;justify-content:center;">
-        <div style="font-family:'Space Mono',monospace;font-size:11px;font-weight:700;color:#2C5D8F;letter-spacing:.06em;text-transform:uppercase;margin-bottom:14px;">Βρες το project</div>
-        <div style="display:flex;flex-wrap:wrap;gap:10px;">
-          <a href="https://www.facebook.com/worldincontextgr" target="_blank" rel="noopener" class="btn" style="min-width:150px;">Facebook →</a>
-          <a href="https://www.linkedin.com/in/zopidou/" target="_blank" rel="noopener" class="btn" style="min-width:150px;">LinkedIn →</a>
-        </div>
-      </div>
+    <div class="info-card">
+      <div class="eyebrow">World in Context</div>
+      <h3>Ενημέρωση χωρίς να χρειάζεται να είσαι ειδικός.</h3>
+      <p>Το project βρίσκεται σε συνεχή δοκιμή και βελτίωση, ώστε να παραμένει απλό χωρίς να γίνεται απλοϊκό.</p>
+      <a class="btn primary" href="feedback/test.html">Δώσε feedback →</a>
     </div>
   </div>
 </section>
 </main>
 
 <footer>
-  <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-title">Πώς κατανοώ τον κόσμο σήμερα</div>
-        <div>Ημερήσιο briefing · Ελλάδα & κόσμος</div>
-      </div>
-      <div class="mono" style="color:#ff9c3a;">ΓΕΓΟΝΟΣ → ΑΝΑΛΥΣΗ → ΕΚΤΙΜΗΣΗ</div>
+  <div class="wrap footer-grid">
+    <div>
+      <div class="footer-title">WORLD IN CONTEXT</div>
+      <div class="small-note">Πώς κατανοώ τον κόσμο σήμερα · Ημερήσιο briefing με πηγές, συνδέσεις και σαφή διάκριση γεγονότος, ανάλυσης και εκτίμησης.</div>
     </div>
-    <div style="margin-top:10px;font-size:12px;"><a href="privacy.html">Πολιτική Απορρήτου</a></div>
-    <div class="small-note">Οι πληροφορίες παρέχονται για ενημερωτικούς και εκπαιδευτικούς σκοπούς. Οι αναλύσεις και εκτιμήσεις δεν αποτελούν βεβαιότητες ούτε οικονομικές, επενδυτικές ή άλλες επαγγελματικές συμβουλές.</div>
+    <div>© 2026</div>
   </div>
 </footer>
 
-<button id="backToTop" type="button" aria-label="Επιστροφή στην κορυφή" title="Πάνω">↑</button>
+<button id="backToTop" aria-label="Επιστροφή στην κορυφή">↑</button>
 <script>
-(function(){
-  const btn=document.getElementById('backToTop');
-  const toggle=()=>btn.classList.toggle('show',window.scrollY>500);
-  window.addEventListener('scroll',toggle,{passive:true});
-  btn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
-  toggle();
-})();
+const back=document.getElementById('backToTop');
+window.addEventListener('scroll',()=>back.classList.toggle('show',window.scrollY>500));
+back.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 </script>
 </body>
 </html>
