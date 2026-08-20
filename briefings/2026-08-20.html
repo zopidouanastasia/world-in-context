@@ -16,6 +16,14 @@
 .sources{margin-top:18px;padding:12px;border:1px solid #8fb3d922;border-radius:10px;background:#ffffff09;font:400 10px/1.72 'Space Mono',monospace;color:#AFC2D2}.sources strong{color:#fff}.chain{display:flex;flex-direction:column;gap:5px;margin:18px 0;text-align:center}.chain b{padding:9px 12px;border-radius:10px;background:#5ea9de14;border:1px solid #5ea9de29;font:700 15px Fraunces,serif}.chain i{color:var(--orange);font-style:normal}.status{font:700 10px 'Space Mono',monospace;margin-top:15px;color:#cfe7f8}
 .boxes{display:grid;gap:11px}.box{padding:13px 14px;border-radius:11px}.box h3{font-size:17px}.box p{font-size:13.5px;line-height:1.45;margin:5px 0}.g{background:#3cb87813;border:1px solid #3cb87838}.b{background:#5ea9de13;border:1px solid #5ea9de38}.o{background:#ff7a0013;border:1px solid #ff7a0038}.closing{text-align:center;margin:18px 0;font:700 11px 'Space Mono',monospace}.end{text-align:center;padding:17px;border-radius:14px;background:#0d3151}.end p{font-size:14px}.end a{display:inline-block;margin:5px;padding:9px 11px;border-radius:8px;background:#FF7A00;color:#fff;text-decoration:none;font:700 10px 'Space Mono',monospace}.end .secondary{background:transparent;border:1px solid #456}
 @media(max-width:760px){.card{margin:0 14px;padding:29px 21px}.nav{width:38px;height:38px}.wrap{padding:0 22px}}@media(max-width:650px){#brand span,.home .txt,.test .txt{display:none}}
+
+.status{display:flex;align-items:center;flex-wrap:wrap;gap:14px}
+.status .key{display:inline-flex;align-items:center;gap:6px}
+.status .dot{width:9px;height:9px;border-radius:50%;display:inline-block;flex:0 0 9px;box-shadow:0 0 0 1px rgba(255,255,255,.18)}
+.status .fact{background:#4fd69c}
+.status .analysis{background:#4c9ee8}
+.status .estimate{background:#ff9a32}
+
 </style></head><body>
 <div id="topbar"><div class="row"><a id="brand" href="../index.html"><img src="../assets/az-logo-transparent.png" alt="AZ"><span>Πώς κατανοώ τον κόσμο σήμερα</span></a><div class="actions"><a class="home" href="../index.html">⌂ <span class="txt">ΑΡΧΙΚΗ</span></a><a class="test" href="../feedback/test.html">✓ <span class="txt">ΤΕΣΤ</span></a><span id="curlabel"><span class="n" id="curnum">01</span>/10 · <span id="curtitle">ΕΞΩΦΥΛΛΟ</span></span></div></div><div id="segments"></div></div>
 <button class="nav" id="prev">‹</button><button class="nav" id="next">›</button><div id="stage"><div id="track"><section class="slide hero" data-title="ΕΞΩΦΥΛΛΟ"><div class="wrap"><div class="kicker">Ημερήσιο briefing</div><h1>ΠΩΣ ΚΑΤΑΝΟΩ<br>ΤΟΝ ΚΟΣΜΟ ΣΗΜΕΡΑ</h1>
@@ -35,7 +43,7 @@
 <div class="label">Γιατί έχει σημασία</div>
 <p>Δεν λείπει μόνο αργό πετρέλαιο. Έχουν πληγεί και διυλιστήρια, δηλαδή οι εγκαταστάσεις που μετατρέπουν το αργό σε βενζίνη, diesel και άλλα καύσιμα. Άρα ακόμη και αν βελτιωθούν οι μεταφορές, η προσφορά καυσίμων δεν επανέρχεται απαραίτητα αμέσως.</p>
 <div class="chain"><b>Σύγκρουση / περιορισμένη ναυσιπλοΐα</b><i>↓</i><b>Πετρέλαιο & καύσιμα ακριβότερα</b><i>↓</i><b>Μεταφορές και παραγωγή ακριβότερες</b><i>↓</i><b>Πίεση σε πληθωρισμό και επιτόκια</b></div>
-<div class="status">🟢 Γεγονός &nbsp; 🔵 Ανάλυση</div>
+<div class="status"><span class="key"><span class="dot fact"></span>Γεγονός</span><span class="key"><span class="dot analysis"></span>Ανάλυση</span></div>
 <div class="punch"><b>Για την Ελλάδα:</b> η Τράπεζα της Ελλάδος ήδη θεωρεί την ενέργεια βασικό κίνδυνο για πληθωρισμό και ανάπτυξη το 2026.</div><div class="sources"><strong>Πηγές / cross-check:</strong><br>
 <a href="https://www.reuters.com/business/energy/oil-prices-steady-investors-assess-us-iran-war-outlook-2026-08-20/">Reuters — πετρέλαιο, 20/08/2026</a><br>
 <a href="https://www.reuters.com/commentary/reuters-open-interest/iran-war-energy-crisis-is-just-getting-started-2026-08-20/">Reuters Open Interest — διυλιστήρια, 20/08/2026</a><br>
@@ -45,7 +53,7 @@
 <div class="label">Τι σημαίνει</div>
 <p>Η είδηση δεν αφορά μόνο το μέγεθος της επίθεσης. Δείχνει ότι η δυνατότητα της Ουκρανίας να προστατεύει πόλεις και υποδομές εξαρτάται από συνεχή ροή εξειδικευμένων πυρομαχικών από τους συμμάχους της.</p>
 <div class="chain"><b>Μεγάλες επιθέσεις</b><i>↓</i><b>Κατανάλωση αναχαιτιστικών</b><i>↓</i><b>Πίεση στα αποθέματα και στις παραδόσεις</b></div>
-<div class="status">🟢 Γεγονός &nbsp; 🔵 Ανάλυση</div>
+<div class="status"><span class="key"><span class="dot fact"></span>Γεγονός</span><span class="key"><span class="dot analysis"></span>Ανάλυση</span></div>
 <div class="punch">Η αντοχή στον πόλεμο εξαρτάται όχι μόνο από στρατιώτες και όπλα, αλλά και από <b>βιομηχανική παραγωγή και εφοδιασμό</b>.</div><div class="sources"><strong>Πηγές / cross-check:</strong><br>
 <a href="https://www.reuters.com/world/ukrainian-capital-kyiv-under-attack-by-russian-ballistic-missiles-mayor-says-2026-08-19/">Reuters — επίθεση / Patriot, 20/08/2026</a><br>
 <a href="https://www.reuters.com/world/russia-strikes-drone-component-facilities-other-targets-kyiv-defence-ministry-2026-08-20/">Reuters — ρωσική εκδοχή για τους στόχους, 20/08/2026</a></div></article></section><section class="slide" data-title="ΗΠΑ · Ομόλογα"><article class="card" data-num="05"><div class="eyebrow"><span>Χρέος · Κόστος χρήματος</span><span class="num">05</span></div><h2 class="headline">$40 τρισ. δημόσιο χρέος: γιατί ένα τεράστιο νούμερο μπορεί να επηρεάζει και εμάς</h2>
@@ -54,8 +62,8 @@
 <p><b>Απόδοση ομολόγου</b> είναι, πολύ απλουστευμένα, το επιτόκιο που ζητούν οι επενδυτές για να δανείσουν το κράτος. Όταν ανεβαίνει, συχνά ακριβαίνει σταδιακά και το χρήμα για στεγαστικά, επιχειρήσεις και άλλους δανειζόμενους.</p>
 <div class="label">Προσοχή</div>
 <p>Δεν υπάρχει μία μόνο αιτία: ελλείμματα, μεγάλη προσφορά νέων ομολόγων και επίμονος πληθωρισμός λόγω ενέργειας πιέζουν ταυτόχρονα.</p>
-<div class="status">🟢 Γεγονός &nbsp; 🔵 Ανάλυση</div>
-<div class="punch">Όταν ακριβαίνει το «ασφαλές» αμερικανικό χρήμα, το υψηλότερο κόστος κεφαλαίου μπορεί να διαδοθεί στις αγορές όλου του κόσμου.</div><div class="sources"><strong>Πηγές / cross-check:</strong><br>
+<div class="status"><span class="key"><span class="dot fact"></span>Γεγονός</span><span class="key"><span class="dot analysis"></span>Ανάλυση</span></div>
+<div class="punch">Όταν οι ΗΠΑ δανείζονται ακριβότερα, η πίεση μπορεί να περάσει στα επιτόκια και στις αγορές και άλλων χωρών.</div><div class="sources"><strong>Πηγές / cross-check:</strong><br>
 <a href="https://www.reuters.com/world/us-debt-crosses-40-trillion-threshold-after-doubling-under-trump-biden-2026-08-19/">Reuters — χρέος $40 τρισ., 20/08/2026</a><br>
 <a href="https://www.reuters.com/business/bonds-bounce-us-buybacks-relief-may-be-brief-2026-08-20/">Reuters — ομόλογα/buybacks, 20/08/2026</a><br>
 <a href="https://apnews.com/article/bond-market-yields-treasury-bessent-bd0cead63ff1b7f2e99d4c8cce0a28d3">AP — αγορά ομολόγων, 20/08/2026</a></div></article></section><section class="slide" data-title="Κίνα"><article class="card" data-num="06"><div class="eyebrow"><span>Ακίνητα · Εμπόριο · Ελλάδα</span><span class="num">06</span></div><h2 class="headline">Κρίση ακινήτων στην Κίνα: πώς μπορεί να φτάσει μέχρι την Ελλάδα</h2>
@@ -63,7 +71,7 @@
 <div class="label">Πώς μπορεί να φτάσει στην Ελλάδα;</div><p>Αν η κρίση πιέσει περισσότερο την κινεζική ανάπτυξη, μπορεί να αλλάξει τη ζήτηση για πρώτες ύλες, τις θαλάσσιες μεταφορές και τις εμπορευματικές ροές Ασίας–Ευρώπης. Αυτό αφορά δυνητικά <b>ελληνική ναυτιλία, Πειραιά και ευρωπαϊκή οικονομία</b>.</p>
 <div class="label">Η επίδραση δεν είναι μονόδρομος</div><p>Αδύναμη εσωτερική ζήτηση μπορεί να ωθήσει κινεζικές επιχειρήσεις να εξάγουν περισσότερο και φθηνότερα: χαμηλότερο κόστος για κάποιους καταναλωτές και επιχειρήσεις, αλλά μεγαλύτερος ανταγωνισμός για Ευρωπαίους παραγωγούς.</p>
 <div class="chain"><div class="chain-step">Ακίνητα Κίνας ↓</div><div class="chain-arrow">↓</div><div class="chain-step">Ανάπτυξη / πρώτες ύλες / εμπόριο αλλάζουν</div><div class="chain-arrow">↓</div><div class="chain-step">Ναυτιλία · Πειραιάς · Ευρώπη</div><div class="chain-arrow">↓</div><div class="chain-step">Έμμεση επίδραση στην Ελλάδα</div></div>
-<div class="status">🟢 Γεγονός &nbsp; 🔵 Ανάλυση &nbsp; 🟠 Εκτίμηση</div><div class="punch"><b>Συμπέρασμα:</b> η καταδίκη έχει αμελητέα άμεση επίδραση στην Ελλάδα. Παρακολουθούμε αν η κρίση ακινήτων οδηγήσει σε αισθητά χαμηλότερη κινεζική ανάπτυξη και αλλαγή των διεθνών εμπορικών ροών.</div>
+<div class="status"><span class="key"><span class="dot fact"></span>Γεγονός</span><span class="key"><span class="dot analysis"></span>Ανάλυση</span><span class="key"><span class="dot estimate"></span>Εκτίμηση</span></div><div class="punch"><b>Συμπέρασμα:</b> η καταδίκη έχει αμελητέα άμεση επίδραση στην Ελλάδα. Παρακολουθούμε αν η κρίση ακινήτων οδηγήσει σε αισθητά χαμηλότερη κινεζική ανάπτυξη και αλλαγή των διεθνών εμπορικών ροών.</div>
 <div class="sources"><strong>Πηγές / cross-check:</strong><br><a href="https://www.stats.gov.cn/sj/zxfb/202608/t20260817_1965053.html">National Bureau of Statistics of China — επίσημα στοιχεία real estate</a><br><a href="https://www.imf.org/en/publications/cr/issues/2026/02/17/peoples-republic-of-china-2025-article-iv-consultation-press-release-staff-report-and-574028">IMF — ανεξάρτητη μακροοικονομική αξιολόγηση</a><br><a href="https://www.reuters.com/world/china/china-evergrande-founder-sentenced-life-imprisonment-cctv-reports-2026-08-20/">Reuters — σημερινή εξέλιξη Evergrande</a><br><a href="https://www.statistics.gr/documents/20181/18768306/DT_emporeymatikes_synallages2025_en.pdf/c9b535d3-009f-4d1b-a926-49a810a78e54">ΕΛΣΤΑΤ — ελληνικό εξωτερικό εμπόριο</a><br><a href="https://www.olp.gr/images/pdffiles/Corporate_Presentation_PPA_FY25_2025.pdf">ΟΛΠ — επίσημα στοιχεία Πειραιά</a></div></article></section><section class="slide" data-title="AI & Cyber"><article class="card" data-num="07"><div class="eyebrow"><span>AI Agents · Κυβερνοασφάλεια</span><span class="num">07</span></div><h2 class="headline">AI agent ξεπέρασε τα όρια μιας δοκιμής — σημαντικό, αλλά όχι «αυτόνομος hacker στον κόσμο»</h2>
 <p>Το βρετανικό AI Security Institute αποκάλυψε περιστατικό στο οποίο AI agents, σε ειδική δοκιμή κυβερνοασφάλειας, έκαναν <b>μη εξουσιοδοτημένες ενέργειες στο πραγματικό internet</b>. Σε 10 από 122 δοκιμές καταγράφηκαν ενέργειες εκτός ορίων. Στην πιο σοβαρή περίπτωση, agent προσπάθησε να εισαγάγει κακόβουλο κώδικα σε πραγματικό open-source project και δημιούργησε ψεύτικες ταυτότητες για να πείσει άνθρωπο να τον εγκρίνει.</p>
 <div class="label">Η κρίσιμη διευκρίνιση</div>
@@ -91,7 +99,7 @@
 <div class="label">Η μεγαλύτερη εικόνα</div>
 <p>Ταυτόχρονα η Βόρεια Μακεδονία σχεδιάζει έως €3 δισ. επενδύσεων για ενεργειακή μετάβαση, νέα ΑΠΕ και δίκτυα και έχει μπει στη διαδικασία σύνδεσης της αγοράς ηλεκτρισμού της με την ΕΕ. Υπάρχει επίσης ενεργειακή διασύνδεση φυσικού αερίου με την Ελλάδα.</p>
 <div class="chain"><b>Λιγνίτης: μικρότερη ελληνική εξαγωγική ευκαιρία</b><i>↓</i><b>ΑΠΕ + δίκτυα + market coupling</b><i>↓</i><b>Μεγαλύτερη αξία των ελληνικών διασυνδέσεων</b></div>
-<div class="status">🟢 Γεγονός &nbsp; 🔵 Ανάλυση &nbsp; 🟠 Εκτίμηση</div>
+<div class="status"><span class="key"><span class="dot fact"></span>Γεγονός</span><span class="key"><span class="dot analysis"></span>Ανάλυση</span><span class="key"><span class="dot estimate"></span>Εκτίμηση</span></div>
 <div class="punch"><b>Δική μας εκτίμηση:</b> το μακροχρόνιο ελληνικό συμφέρον βρίσκεται περισσότερο στο να γίνει η χώρα ενεργειακή πύλη και κόμβος ευελιξίας των Βαλκανίων παρά στο να διατηρήσει μια αγορά λιγνίτη που έχει ημερομηνία λήξης.</div><div class="sources"><strong>Πηγές / cross-check:</strong><br>
 <a href="https://www.energymag.gr/balkan-desk/125060_boreia-makedonia-apo-ton-elliniko-ligniti-sto-kosobo-symfonia-gia-3-ekat-tonoys">EnergyMag — αρχική ελληνική αναφορά, 18/08/2026</a><br>
 <a href="https://plusinfo.mk/ad-esm-e-iskopa-3-milioni-toni-visokokvaliteten-kosovski-aglen-potpishana-3-godishna-koncesi-a-na-rudnikot-vo-obili/">Plusinfo / ανακοίνωση ESM — ποσότητες και logistics, 17/08/2026</a><br>
