@@ -1,0 +1,98 @@
+{
+  "schema_version": "2.0",
+  "briefing_target_cards": 10,
+  "human_approval_required": true,
+  "publication_without_approval": false,
+  "selection_principles": [
+    "Material importance",
+    "Meaningful Information Delta",
+    "Reliable verification",
+    "Explanatory value",
+    "Relevance to a Greek and European reader",
+    "Avoidance of repetition",
+    "System-level context where useful"
+  ],
+  "continuity_statuses": [
+    "NEW",
+    "MAJOR_UPDATE",
+    "MINOR_UPDATE",
+    "CONTINUING",
+    "BACKGROUND",
+    "DUPLICATE",
+    "CLOSED"
+  ],
+  "confidence_states": [
+    "CONFIRMED",
+    "PROBABLE",
+    "UNCERTAIN",
+    "CONFLICTED",
+    "REJECTED"
+  ],
+  "candidate_decisions": [
+    "KEEP",
+    "BORDERLINE",
+    "REPLACE",
+    "DROP",
+    "MORE_RESEARCH"
+  ],
+  "human_commands": [
+    "APPROVE",
+    "DROP",
+    "REPLACE",
+    "MORE_RESEARCH",
+    "SHORTER",
+    "MORE_CONTEXT"
+  ],
+  "scores": {
+    "Importance": [
+      0,
+      5
+    ],
+    "Impact": [
+      0,
+      5
+    ],
+    "Novelty": [
+      0,
+      5
+    ],
+    "Reliability": [
+      0,
+      5
+    ],
+    "ContextValue": [
+      0,
+      5
+    ],
+    "GreekEuropeanRelevance": [
+      0,
+      5
+    ]
+  },
+  "scoring_rule": "Scores are decision support only and must not mechanically determine selection.",
+  "card_structure": [
+    "what_happened",
+    "why_it_matters",
+    "what_to_keep",
+    "context_if_needed",
+    "sources"
+  ],
+  "fact_analysis_estimate_rule": "FACT, ANALYSIS and ESTIMATE must be explicitly separable in the drafting logic.",
+  "source_rule": {
+    "preferred_pattern": [
+      "one primary or official source",
+      "one genuinely independent reliable source",
+      "one supplementary source where useful"
+    ],
+    "wire_duplication_rule": "Syndicated copies of the same wire report are not independent confirmations."
+  },
+  "qa_requirements": {
+    "fact": true,
+    "source_links": true,
+    "editorial": true,
+    "mobile_visual": true,
+    "final_card_feedback_cta": true
+  },
+  "rejection_logging_required": true,
+  "archive_check_before_selection": true
+}
