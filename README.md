@@ -1,12 +1,23 @@
-# World in Context — Operating Files
+# World in Context
 
-Αυτό το package είναι έτοιμο να προστεθεί στο υπάρχον GitHub repository.
+**Λιγότερος θόρυβος. Περισσότερη κατανόηση.**
 
-- `/agent/` — MASTER, Agent, source/editorial support
-- `/data/` — archive / continuity
-- `README-WORKFLOW.md` — ο απλός χάρτης για να θυμάσαι πώς λειτουργούν όλα
+Το World in Context είναι ένα ανεξάρτητο ενημερωτικό project που
+οργανώνει και εξηγεί σημαντικές διεθνείς, οικονομικές, γεωπολιτικές και
+τεχνολογικές εξελίξεις με έμφαση στο context και στις μεταξύ τους
+συνδέσεις.
 
-Canonical source of truth:
-`agent/WORLD-IN-CONTEXT-MASTER.md`
+Το repository αυτό περιέχει τη δημόσια έκδοση του World in Context:
 
-Το `data/stories.json` είναι προσωρινά κενό και θα αρχικοποιηθεί από τα προηγούμενα briefings.
+-   την ιστοσελίδα,
+-   τα δημοσιευμένα daily briefings,
+-   τις δημόσιες αναλύσεις,
+-   τα απαραίτητα αρχεία και assets για τη λειτουργία του site.
+
+## Website
+
+https://zopidouanastasia.github.io/world-in-context/
+
+------------------------------------------------------------------------
+
+© 2026 World in Context
