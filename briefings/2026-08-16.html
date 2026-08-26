@@ -296,7 +296,7 @@
 }
 .analysis-wrap{max-width:1040px;margin:auto;}
 .analysis-hero .overline{color:#ff8a16;font:700 11px 'Space Mono',monospace;letter-spacing:.08em;}
-.analysis-hero h1{font:700 clamp(38px,5vw,66px) Georgia,serif;margin:12px 0 16px;max-width:850px;}
+.analysis-hero h1{font:700 clamp(38px,5vw,66px) Fraunces,serif;margin:12px 0 16px;max-width:850px;}
 .analysis-hero p{max-width:760px;color:#d6e3ee;font-size:18px;line-height:1.65;}
 .analysis-body{max-width:1040px;margin:auto;padding:42px 24px 70px;}
 .analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;}
@@ -306,7 +306,7 @@
 }
 .analysis-card.wide{grid-column:1/-1;}
 .analysis-card .num{color:#ff7a00;font:700 11px 'Space Mono',monospace;}
-.analysis-card h2{font:700 27px Georgia,serif;color:#0b2945;margin:8px 0 13px;}
+.analysis-card h2{font:700 27px Fraunces,serif;color:#0b2945;margin:8px 0 13px;}
 .analysis-card h3{font:700 13px 'Space Mono',monospace;color:#2a608d;margin:18px 0 7px;text-transform:uppercase;}
 .analysis-card p,.analysis-card li{font-size:15.5px;line-height:1.7;color:#33495d;}
 .analysis-card ul{padding-left:20px;}
@@ -759,13 +759,21 @@ button,a{touch-action:manipulation;}
 </script>
 <!-- COOKIEBOT + GOOGLE ANALYTICS 4 END -->
 
+<style>
+/* Briefing top navigation readability */
+#topbar{padding:14px 20px 11px!important}
+#brand{font-size:15px!important}
+#curlabel{font-size:13px!important}
+.home,.test,.home-btn,.test-btn{font-family:Inter,system-ui,sans-serif!important;font-size:14px!important;font-weight:700!important;padding:9px 13px!important;min-height:42px;display:inline-flex;align-items:center;box-sizing:border-box}
+@media(max-width:650px){#topbar{padding:10px 11px 8px!important}#brand{font-size:12px!important}#curlabel{font-size:12px!important}.home,.test,.home-btn,.test-btn{font-size:14px!important;min-width:44px!important;min-height:44px!important;padding:8px!important;justify-content:center}}
+</style>
 </head>
 <body>
 
 <div id="topbar">
   <div class="row">
     <a id="brand" href="../index.html" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:8px;"><img class="brief-logo-img" src="https://zopidouanastasia.github.io/world-in-context/assets/az-logo-transparent.png" alt="AZ"><span>Πώς κατανοώ τον κόσμο σήμερα</span></a>
-    <div class="site-actions"><a class="home-btn" href="../index.html">⌂ <span class="txt">ΑΡΧΙΚΗ</span></a><a class="test-btn" href="../feedback/test.html">✓ <span class="txt">ΤΕΣΤ</span></a><span id="curlabel"><span class="n" id="curnum">01</span>/10 · <span id="curtitle">ΕΞΩΦΥΛΛΟ</span></span></div>
+    <div class="site-actions"><a class="home-btn" href="../index.html">⌂ <span class="txt">ΑΡΧΙΚΗ</span></a><a class="home-btn" href="../relationships.html">↔ <span class="txt">ΧΑΡΤΗΣ</span></a><a class="home-btn" href="../glossary.html">Aa <span class="txt">ΛΕΞΙΛΟΓΙΟ</span></a><a class="test-btn" href="../feedback/test.html">✓ <span class="txt">ΤΕΣΤ</span></a><span id="curlabel"><span class="n" id="curnum">01</span>/10 · <span id="curtitle">ΕΞΩΦΥΛΛΟ</span></span></div>
   </div>
   <div id="segments"></div>
 </div>
