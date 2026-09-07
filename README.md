@@ -16,7 +16,7 @@
 
 ## Website
 
-https://zopidouanastasia.github.io/world-in-context/
+https://worldincontext.gr
 
 ------------------------------------------------------------------------
 
