@@ -271,7 +271,7 @@ header.intro .note{
 </head>
 <body>
 
-<div class="wrap"><div class="sitebar"><a href="../index.html">← Αρχική</a><a href="../briefings/2026-08-16.html">Briefing 16/08 →</a></div>
+<div class="wrap"><div class="sitebar"><a href="../index.html">← Αρχική</a><a id="backToBriefing" href="../index.html">← Πίσω στην έκδοση</a></div>
 
   <div id="progress">
     <div class="bar"><div class="fill" id="progFill"></div></div>
@@ -559,9 +559,20 @@ header.intro .note{
     btn.disabled = true;
     btn.textContent = 'ΑΠΟΣΤΟΛΗ…';
 
+    // Η ημερομηνία της έκδοσης έρχεται από τη διεύθυνση: test.html?b=2026-08-30
+    const WIC_BRIEFING_DATE = (function(){
+      try{
+        var p = new URLSearchParams(location.search).get('b');
+        if (p && /^\d{4}-\d{2}-\d{2}$/.test(p)) return p;
+        var r = document.referrer || '';
+        var m = r.match(/briefings\/(\d{4}-\d{2}-\d{2})\.html/);
+        if (m) return m[1];
+      }catch(e){}
+      return 'direct';
+    })();
     const payload = {
       submittedAt: serverTimestamp(),
-      briefingDate: "2026-08-16",
+      briefingDate: WIC_BRIEFING_DATE,
       answers: {
         q1: answers.q1,
         q2: answers.q2,
@@ -598,5 +609,17 @@ header.intro .note{
   updateProgress();
 </script>
 
-</body>
+<script>
+(function(){
+  var a=document.getElementById('backToBriefing'); if(!a) return;
+  var d=null;
+  try{
+    var p=new URLSearchParams(location.search).get('b');
+    if(p && /^\d{4}-\d{2}-\d{2}$/.test(p)) d=p;
+    else { var m=(document.referrer||'').match(/briefings\/(\d{4}-\d{2}-\d{2})\.html/); if(m) d=m[1]; }
+  }catch(e){}
+  if(d){ a.href='../briefings/'+d+'.html';
+         a.textContent='← Πίσω στην έκδοση '+d.slice(8,10)+'/'+d.slice(5,7); }
+})();
+</script></body>
 </html>
