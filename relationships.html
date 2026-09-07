@@ -31,7 +31,30 @@ footer{padding:34px 24px;background:#04111f;color:#9fb5ca;font-size:12px}.foot{m
 <meta name="twitter:description" content="Οι σημαντικές εξελίξεις της ημέρας, οι συνδέσεις τους και γιατί έχουν σημασία.">
 <meta name="twitter:image" content="https://worldincontext.gr/assets/social-preview.png">
 <!-- LAUNCH META END -->
-<!-- CONSENT + GA4 START -->
+
+
+<style id="wic-unified-menu-style">
+header.wic-header{position:sticky;top:0;z-index:1000;background:rgba(7,24,44,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(143,179,217,.22);box-shadow:0 10px 28px rgba(3,13,25,.18)}
+.wic-nav{width:min(1120px,calc(100% - 36px));margin:auto;min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.wic-brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;font:700 12px 'Space Mono',monospace;letter-spacing:.07em;text-transform:uppercase;white-space:nowrap}
+.wic-brand img{width:68px;height:44px;object-fit:contain}
+.wic-navlinks{display:flex;gap:18px;align-items:center}
+.wic-navlinks a{font-family:Inter,system-ui,sans-serif;font-size:15px;color:#dce7f2;text-decoration:none;font-weight:700;white-space:nowrap}
+.wic-navlinks a:hover{color:#ff9c3a}
+.wic-navlinks .wic-cta{background:linear-gradient(135deg,#ff7a00,#ff9b32);color:#fff!important;padding:9px 13px;border-radius:999px}
+@media(max-width:900px){
+  .wic-nav{flex-wrap:wrap;gap:0;padding:7px 0}
+  .wic-navlinks{order:3;width:100%;gap:18px;overflow-x:auto;padding:7px 0 9px;scrollbar-width:none}
+  .wic-navlinks::-webkit-scrollbar{display:none}
+  .wic-navlinks a{font-size:14px}
+}
+@media(max-width:640px){
+  .wic-brand span{display:none}
+  .wic-brand img{width:52px;height:34px}
+}
+</style>
+
+<!-- WIC CUSTOM CONSENT + GA4 (BASIC CONSENT MODE V2) START -->
 <style>
 .wic-cc{position:fixed;left:0;right:0;bottom:0;z-index:99999;background:#fff;border-top:2px solid #07182c;box-shadow:0 -6px 24px rgba(7,24,44,.18);font-family:Inter,system-ui,sans-serif;padding:18px 20px;display:none}
 .wic-cc.is-open{display:block}
@@ -40,7 +63,7 @@ footer{padding:34px 24px;background:#04111f;color:#9fb5ca;font-size:12px}.foot{m
 .wic-cc__txt b{display:block;font-family:Fraunces,serif;font-size:16px;color:#07182c;margin-bottom:4px}
 .wic-cc__txt a{color:#2C5D8F;text-decoration:underline}
 .wic-cc__btns{display:flex;gap:10px;flex:0 0 auto;flex-wrap:wrap}
-.wic-cc__b{font-family:Inter,system-ui,sans-serif;font-size:14px;font-weight:600;padding:11px 22px;border-radius:6px;cursor:pointer;border:2px solid #07182c;background:#fff;color:#07182c;transition:.15s}
+.wic-cc__b{font-family:Inter,system-ui,sans-serif;font-size:14px;font-weight:700;padding:11px 18px;border-radius:7px;cursor:pointer;border:2px solid #07182c;background:#fff;color:#07182c;transition:.15s}
 .wic-cc__b:hover{background:#F1ECDF}
 .wic-cc__b--yes{background:#ff7a00;border-color:#ff7a00;color:#fff}
 .wic-cc__b--yes:hover{background:#ff9c3a;border-color:#ff9c3a}
@@ -49,57 +72,125 @@ footer{padding:34px 24px;background:#04111f;color:#9fb5ca;font-size:12px}.foot{m
 </style>
 <script>
 (function(){
-  var GA="G-V1D1FFJNVY", KEY="wic-consent", el=null;
-  function get(){try{return localStorage.getItem(KEY)}catch(e){return null}}
-  function set(v){try{localStorage.setItem(KEY,v)}catch(e){}}
-  function loadGA(){
-    if(window.__wicGA)return; window.__wicGA=1;
-    var s=document.createElement("script");
-    s.async=1; s.src="https://www.googletagmanager.com/gtag/js?id="+GA;
-    document.head.appendChild(s);
+  var GA_ID="G-V1D1FFJNVY";
+  var KEY="wic-consent-v2";
+  var banner=null;
+
+  function readChoice(){
+    try{return localStorage.getItem(KEY)}catch(e){return null}
+  }
+  function saveChoice(v){
+    try{localStorage.setItem(KEY,v)}catch(e){}
+  }
+
+  function ensureDataLayer(){
     window.dataLayer=window.dataLayer||[];
-    function gtag(){dataLayer.push(arguments)}
-    window.gtag=gtag; gtag("js",new Date());
-    gtag("config",GA,{anonymize_ip:true});
+    window.gtag=window.gtag||function(){window.dataLayer.push(arguments);};
   }
-  function close(){ if(el) el.classList.remove("is-open"); }
-  function decide(v){ set(v); close(); if(v==="yes") loadGA(); }
-  function build(){
-    if(el) return;
-    el=document.createElement("div");
-    el.className="wic-cc"; el.setAttribute("role","dialog");
-    el.setAttribute("aria-live","polite");
-    el.setAttribute("aria-label","Συγκατάθεση για cookies");
-    el.innerHTML='<div class="wic-cc__in"><div class="wic-cc__txt"><b>Cookies</b>'
-      +'Χρησιμοποιούμε ένα εργαλείο στατιστικών (Google Analytics) για να καταλαβαίνουμε ποια θέματα διαβάζονται. '
-      +'Δεν πουλάμε δεδομένα και δεν κάνουμε διαφημιστική στόχευση. '
-      +'<a href="/privacy.html">Πολιτική απορρήτου</a></div>'
-      +'<div class="wic-cc__btns">'
-      +'<button type="button" class="wic-cc__b" data-v="no">Απόρριψη</button>'
-      +'<button type="button" class="wic-cc__b wic-cc__b--yes" data-v="yes">Αποδοχή</button>'
-      +'</div></div>';
-    document.body.appendChild(el);
-    el.addEventListener("click",function(e){
-      var b=e.target.closest("[data-v]"); if(b) decide(b.getAttribute("data-v"));
+
+  function loadAnalytics(){
+    if(window.__wicGA4Loaded) return;
+    window.__wicGA4Loaded=true;
+    ensureDataLayer();
+
+    /* Basic Consent Mode v2: GA loads only after explicit acceptance. */
+    gtag("consent","default",{
+      analytics_storage:"granted",
+      ad_storage:"denied",
+      ad_user_data:"denied",
+      ad_personalization:"denied"
+    });
+
+    var s=document.createElement("script");
+    s.async=true;
+    s.src="https://www.googletagmanager.com/gtag/js?id="+encodeURIComponent(GA_ID);
+    document.head.appendChild(s);
+
+    gtag("js",new Date());
+    gtag("config",GA_ID,{
+      anonymize_ip:true,
+      allow_google_signals:false,
+      allow_ad_personalization_signals:false
     });
   }
-  function open(){ build(); el.classList.add("is-open"); }
-  window.wicCookies=open;
+
+  function buildBanner(){
+    if(banner) return;
+    banner=document.createElement("div");
+    banner.className="wic-cc";
+    banner.setAttribute("role","dialog");
+    banner.setAttribute("aria-live","polite");
+    banner.setAttribute("aria-label","Ρυθμίσεις cookies");
+    banner.innerHTML=
+      '<div class="wic-cc__in">'+
+        '<div class="wic-cc__txt">'+
+          '<b>Cookies & στατιστικά</b>'+
+          'Χρησιμοποιούμε Google Analytics μόνο αν το επιλέξεις, για να βλέπουμε συγκεντρωτικά ποια θέματα διαβάζονται. '+
+          'Δεν χρησιμοποιούμε διαφημιστική στόχευση ή Meta Pixel. '+
+          '<a href="/privacy.html">Πολιτική απορρήτου</a>'+
+        '</div>'+
+        '<div class="wic-cc__btns">'+
+          '<button type="button" class="wic-cc__b" data-consent="deny">Απόρριψη</button>'+
+          '<button type="button" class="wic-cc__b wic-cc__b--yes" data-consent="accept">Αποδοχή στατιστικών</button>'+
+        '</div>'+
+      '</div>';
+    document.body.appendChild(banner);
+
+    banner.addEventListener("click",function(e){
+      var btn=e.target.closest("[data-consent]");
+      if(!btn) return;
+      var choice=btn.getAttribute("data-consent");
+      saveChoice(choice);
+      banner.classList.remove("is-open");
+      if(choice==="accept") loadAnalytics();
+    });
+  }
+
+  function openSettings(){
+    buildBanner();
+    banner.classList.add("is-open");
+  }
+  window.wicCookies=openSettings;
+
   function init(){
-    var c=get();
-    if(c==="yes"){ loadGA(); }
-    else if(c!=="no"){ open(); }
-    document.querySelectorAll('a[href="#cookies"]').forEach(function(a){
-      a.addEventListener("click",function(e){e.preventDefault();open()});
+    var choice=readChoice();
+    if(choice==="accept") loadAnalytics();
+    else if(choice!=="deny") openSettings();
+
+    document.querySelectorAll('a[href="#cookies"],[data-open-cookie-settings]').forEach(function(a){
+      a.addEventListener("click",function(e){
+        e.preventDefault();
+        openSettings();
+      });
     });
   }
+
   if(document.readyState==="loading") document.addEventListener("DOMContentLoaded",init);
   else init();
 })();
 </script>
-<!-- CONSENT + GA4 END -->
+<!-- WIC CUSTOM CONSENT + GA4 (BASIC CONSENT MODE V2) END -->
 </head><body>
-<header class="top"><div class="topin"><a class="brand" href="index.html">WORLD IN CONTEXT · Ο ΧΑΡΤΗΣ ΤΩΝ ΣΧΕΣΕΩΝ</a><nav class="navlinks"><a href="briefings/2026-08-25.html">BRIEFING 25/08</a><a href="glossary.html">ΛΕΞΙΛΟΓΙΟ</a></nav></div></header>
+
+<header class="wic-header">
+  <div class="wic-nav">
+    <a class="wic-brand" href="/index.html">
+      <img src="/assets/az-logo-transparent.png" alt="AZ">
+      <span>World in Context</span>
+    </a>
+    <nav class="wic-navlinks" aria-label="Κύριο μενού">
+      <a href="/index.html">Αρχική</a>
+      <a href="/index.html#archive">Αρχείο</a>
+      <a href="/relationships.html">Χάρτης Σχέσεων</a>
+      <a href="/glossary.html">Λεξιλόγιο</a>
+      <a href="/methodology.html">Μεθοδολογία</a>
+      <a href="/index.html#poia-eimai">Ποια είμαι</a>
+      <a href="/index.html#contact">Επικοινωνία</a>
+      <a class="wic-cta" href="/briefings/2026-08-30.html">Η εβδομάδα →</a>
+    </nav>
+  </div>
+</header>
+
 <section class="hero"><div class="wrap"><div class="kicker">Country-to-country relationships only</div><h1>Ο ΧΑΡΤΗΣ<br>ΤΩΝ ΣΧΕΣΕΩΝ</h1><p class="lead">Οι σχέσεις μεταξύ χωρών που χρειάζονται για να καταλάβουμε τις σημερινές ειδήσεις.</p><p class="meta">Τελευταία ενημέρωση: 24/08/2026 · Οι χαρακτηρισμοί είναι editorial assessments, όχι αντικειμενικά scores.</p></div></section>
 <main class="relgrid">
 <article class="rel"><div class="status">ADD · ΥΨΗΛΗ ΠΡΟΤΕΡΑΙΟΤΗΤΑ</div><h2>Κίνα ↔ Ταϊβάν</h2><p><b>Κατάσταση:</b> έντονα ανταγωνιστική / υψηλή στρατηγική ένταση.</p><p>Το Πεκίνο θεωρεί την Ταϊβάν μέρος της Κίνας και δεν αποκλείει χρήση βίας για «επανένωση». Η Ταϊβάν λειτουργεί ως αυτοδιοικούμενη δημοκρατία και βρίσκεται στο κέντρο της παγκόσμιας βιομηχανίας προηγμένων chips.</p><p><b>Τι άλλαξε σήμερα:</b> η δίωξη εννέα ατόμων για παράνομη μεταφορά προηγμένων AI servers προς την Κίνα δείχνει πώς η γεωπολιτική αντιπαράθεση περνά στις τεχνολογικές αλυσίδες εφοδιασμού.</p><div class="sources"><a href="https://www.reuters.com/world/asia-pacific/taiwan-indicts-9-over-alleged-illegal-export-ai-servers-china-2026-08-24/">Reuters</a></div></article>
