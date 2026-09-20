@@ -1,325 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="el">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="description" content="World in Context — εβδομαδιαία ανασκόπηση διεθνών εξελίξεων με context, πηγές και βαθύτερη ανάλυση. Τρέχουσα έκδοση: 7–13 Σεπτεμβρίου 2026.">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="World in Context — εβδομαδιαία ανασκόπηση διεθνών εξελίξεων με context, πηγές και βαθύτερη ανάλυση. Τρέχουσα έκδοση: 14–20 Σεπτεμβρίου 2026.">
 <title>World in Context — Πώς κατανοώ τον κόσμο</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" href="assets/favicon.png"><link rel="apple-touch-icon" href="assets/favicon.png">
-<link rel="canonical" href="https://worldincontext.gr/">
-<meta property="og:type" content="website"><meta property="og:locale" content="el_GR"><meta property="og:site_name" content="World in Context">
-<meta property="og:title" content="World in Context — Πώς κατανοώ τον κόσμο"><meta property="og:description" content="Λιγότερος θόρυβος. Περισσότερη κατανόηση.">
-<meta property="og:url" content="https://worldincontext.gr/"><meta property="og:image" content="https://worldincontext.gr/assets/social-preview.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700;900&family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/favicon.png"><link rel="canonical" href="https://worldincontext.gr/">
+<meta property="og:type" content="website"><meta property="og:locale" content="el_GR"><meta property="og:site_name" content="World in Context"><meta property="og:title" content="World in Context — Πώς κατανοώ τον κόσμο"><meta property="og:description" content="Λιγότερος θόρυβος. Περισσότερη κατανόηση."><meta property="og:url" content="https://worldincontext.gr/"><meta property="og:image" content="https://worldincontext.gr/assets/social-preview.png">
 <style>
-:root{--ink:#1B2A4A;--ink-soft:#3E4E6E;--paper:#fff;--page-bg:#F1ECDF;--beige:#ECE3CE;--beige-line:#DCD2B8;--blue:#2C5D8F;--blue-light:#8FB3D9;--orange:#ff7a00;--orange-soft:#ff9c3a;--muted:#746A57;--navy:#07182c;--shadow:0 18px 40px -22px rgba(30,30,20,.24)}
-*{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden}body{margin:0;overflow-x:hidden;background:radial-gradient(circle at 15% 10%,rgba(44,93,143,.10),transparent 30%),linear-gradient(180deg,#f4f0e6 0%,#f1ecdf 100%);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}a{color:inherit}.wrap{width:min(1120px,calc(100% - 36px));margin:auto}h1,h2,h3{font-family:Fraunces,serif;margin:0;letter-spacing:-.02em}
-header{position:sticky;top:0;z-index:20;background:rgba(7,24,44,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(143,179,217,.22);box-shadow:0 10px 28px rgba(3,13,25,.18)}.nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;font:700 12px 'Space Mono',monospace;letter-spacing:.07em;text-transform:uppercase}.brand img{width:68px;height:44px;object-fit:contain}.navlinks{display:flex;gap:20px;align-items:center}.navlinks a{font-size:13px;color:#dce7f2;text-decoration:none;font-weight:700}.navlinks a:hover{color:var(--orange-soft)}.cta-small{background:linear-gradient(135deg,var(--orange),#ff9b32);color:#fff!important;padding:9px 13px;border-radius:999px}
-.hero{position:relative;overflow:hidden;color:#fff;min-height:650px;padding:86px 0 64px;background:linear-gradient(90deg,rgba(6,23,42,1) 0%,rgba(6,23,42,.98) 35%,rgba(6,23,42,.78) 53%,rgba(6,23,42,.16) 72%,rgba(6,23,42,.04) 100%),url("hero-earth-clean.jpg") right center / auto 100% no-repeat,#06172a}.hero-grid{display:grid;grid-template-columns:minmax(0,1.03fr) minmax(340px,.97fr);gap:34px;align-items:center}.hero-grid>div:first-child{position:relative;z-index:3;max-width:650px}.kicker{font:700 12px 'Space Mono',monospace;letter-spacing:.11em;text-transform:uppercase;color:#c8d6e6;margin-bottom:17px}h1{font-size:clamp(44px,7.5vw,78px);line-height:.98;max-width:760px}.hero-lead{font:600 clamp(20px,2.6vw,28px)/1.35 Fraunces,serif;color:#e7eef6;max-width:750px;margin:25px 0 16px}.hero-sub{font-size:16px;color:#c8d6e6;max-width:690px;margin:0}.actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;font-weight:800;border-radius:12px;padding:14px 18px;border:1.5px solid var(--ink);font-size:14px}.btn.primary{background:linear-gradient(135deg,var(--orange),#ff9a2d);color:#fff;border-color:var(--orange)}.btn.secondary{border-color:rgba(220,233,247,.7);color:#eef6ff;background:rgba(255,255,255,.04)}
-.today-card{position:relative;z-index:4;margin-top:250px;padding:28px;border-radius:26px;color:var(--ink);background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border:1px solid rgba(143,179,217,.38);box-shadow:0 32px 70px -28px rgba(0,0,0,.55)}.date-line{font:700 12px 'Space Mono',monospace;color:var(--orange);letter-spacing:.06em;text-transform:uppercase}.today-card h2{font-size:31px;line-height:1.05;margin:12px 0 15px}.topic-list{display:flex;flex-wrap:wrap;gap:7px;margin:18px 0 4px}.pill{font-size:12px;font-weight:700;padding:6px 9px;border-radius:8px;background:#eef5fb;color:#244666;border:1px solid #cfe0ee}.today-card .read{display:block;margin-top:22px;padding-top:18px;border-top:1px solid var(--beige-line);font:700 12px 'Space Mono',monospace;color:var(--orange);text-decoration:none}
-section{padding:72px 0}.section-head{max-width:780px;margin-bottom:32px}.eyebrow{font:700 11px 'Space Mono',monospace;letter-spacing:.09em;color:var(--orange);text-transform:uppercase;margin-bottom:10px}.section-head h2{font-size:clamp(34px,5vw,50px);line-height:1.05;color:#0a2744}.section-head p{color:var(--ink-soft);font-size:17px;margin:14px 0 0}.archive-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:stretch}.calendar,.archive-list,.info-card{background:#fff;border:1px solid rgba(44,93,143,.12);box-shadow:0 18px 45px -28px rgba(7,24,44,.35)}.calendar{border-radius:22px;padding:24px}.cal-top{display:flex;justify-content:space-between;align-items:end;margin-bottom:20px}.cal-top h3{font-size:26px}.cal-top span{font-size:11px;color:var(--muted);font-family:'Space Mono',monospace}.week,.days{display:grid;grid-template-columns:repeat(7,1fr);gap:7px}.week div{text-align:center;font:700 10px 'Space Mono',monospace;color:var(--muted)}.day{aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;border-radius:10px;font-size:13px;text-decoration:none;color:var(--ink-soft)}.day.muted{opacity:.25}.day.has{background:var(--beige);font-weight:800;box-shadow:inset 0 0 0 1px rgba(44,93,143,.15)}.day.today{background:linear-gradient(135deg,#0c3a61,#17669d);color:#fff;font-weight:800}.archive-list{border-radius:22px;padding:8px 18px;box-sizing:border-box;overflow:visible}.archive-item{display:grid;grid-template-columns:110px 1fr auto;gap:18px;align-items:center;padding:16px 0;border-bottom:1px solid var(--beige-line);text-decoration:none}.archive-item:last-child{border-bottom:none}.archive-date{font:700 11px 'Space Mono',monospace;color:var(--blue)}.archive-title{font:700 20px Fraunces,serif}.archive-meta{font-size:12px;color:var(--muted);margin-top:4px}.archive-arrow{font-size:22px;color:var(--orange)}
-.quicklinks{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}.quick{display:block;text-decoration:none;background:#fff;border:1px solid rgba(44,93,143,.12);border-radius:18px;padding:22px;box-shadow:0 18px 45px -28px rgba(7,24,44,.35)}.quick h3{font-size:24px;color:#0a2744;margin-bottom:6px}.quick p{margin:0;color:var(--ink-soft)}
-#feedback{background:linear-gradient(180deg,#f1ecdf,#eaf2f8)}.dark-section{background:radial-gradient(circle at 80% 20%,rgba(44,93,143,.30),transparent 30%),linear-gradient(135deg,#06172a,#0d2c4a);color:#fff}.dark-section .section-head h2,.dark-section .section-head p{color:#fff}.values{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.value{border:1px solid rgba(143,179,217,.20);border-radius:18px;padding:24px;background:rgba(255,255,255,.035)}.value .num{font:700 11px 'Space Mono',monospace;color:var(--orange-soft)}.value h3{font-size:24px;margin:8px 0 10px}.value p{color:#DCE3EE;margin:0;font-size:15px}.signature{margin-top:34px;color:#fff;background:linear-gradient(90deg,rgba(255,122,0,.10),transparent);padding:22px 24px;border-radius:16px;border-left:4px solid var(--orange);font:800 clamp(25px,4vw,36px) Fraunces,serif}.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.info-card{border-radius:22px;padding:28px}.info-card h3{font-size:28px;margin-bottom:12px}.info-card p{color:var(--ink-soft);margin:0 0 13px}.method{border-left:4px solid var(--blue);background:rgba(255,255,255,.48);border-radius:0 16px 16px 0;padding:22px 24px;margin-top:28px}#contact{padding:64px 0;background:linear-gradient(180deg,#eef4f8,#f7f3ea)}.contact-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:22px;align-items:stretch}.socials{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.socials a{display:inline-flex;padding:10px 12px;border:1px solid #ccd9e4;border-radius:10px;text-decoration:none;background:#fff;font-weight:700}footer{padding:44px 0;background:#06172a;color:#9fb5ca;font-size:13px}.footer-grid{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}.footer-title{font:700 13px 'Space Mono',monospace;color:#fff}.small-note{max-width:720px;margin-top:14px;font-size:12px}#backToTop{position:fixed;right:18px;bottom:18px;z-index:90;width:48px;height:48px;border-radius:50%;border:1px solid rgba(143,179,217,.28);background:rgba(6,23,42,.92);color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;cursor:pointer;opacity:0;transform:translateY(12px);pointer-events:none;transition:.2s}#backToTop.show{opacity:1;transform:translateY(0);pointer-events:auto}
-@media(max-width:980px){.hero{background:linear-gradient(90deg,rgba(6,23,42,1) 0%,rgba(6,23,42,.96) 48%,rgba(6,23,42,.50) 72%,rgba(6,23,42,.18) 100%),url("hero-earth-clean.jpg") 72% center / auto 100% no-repeat,#06172a}.hero-grid{grid-template-columns:1fr}.today-card{margin-top:36px;max-width:620px}}@media(max-width:900px){.archive-grid,.values,.info-grid,.contact-grid,.quicklinks{grid-template-columns:1fr}.archive-list{height:auto;max-height:none;overflow:visible}.navlinks a:not(.cta-small){display:none}}@media(max-width:640px){.hero{background:linear-gradient(180deg,rgba(6,23,42,.34) 0%,rgba(6,23,42,.76) 34%,rgba(6,23,42,1) 62%),url("hero-earth-clean.jpg") 68% top / auto 48% no-repeat,#06172a;padding-top:245px}.hero-grid{display:block}.today-card{margin-top:28px}.brand span{display:none}.brand img{width:52px;height:34px}.archive-item{grid-template-columns:1fr auto}.archive-date{grid-column:1/-1}}
-/* Typography balance pass */
-.navlinks{gap:18px}.navlinks a{font-family:Inter,system-ui,sans-serif;font-size:15px;white-space:nowrap}
-h1{font-size:clamp(42px,5.5vw,64px);line-height:1}
-.today-card h2{font-size:28px;line-height:1.1}
-.section-head h2{font-size:clamp(30px,3.5vw,42px);line-height:1.08}
-@media(max-width:900px){.nav{flex-wrap:wrap;gap:0;padding:7px 0}.navlinks{order:3;width:100%;gap:18px;overflow-x:auto;padding:7px 0 9px;scrollbar-width:none}.navlinks::-webkit-scrollbar{display:none}.navlinks a,.navlinks a:not(.cta-small){display:block;font-size:14px}.cta-small{padding:7px 11px}}
-@media(max-width:640px){.today-card h2{font-size:27px}}
+:root{--ink:#1B2A4A;--soft:#3E4E6E;--bg:#F1ECDF;--paper:#fff;--line:#DCD2B8;--blue:#2C5D8F;--orange:#ff7a00;--navy:#07182c;--muted:#746A57}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#f4f0e6,#f1ecdf);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.6}a{color:inherit}.wrap{width:min(1120px,calc(100% - 36px));margin:auto}h1,h2,h3{font-family:Fraunces,serif;margin:0}
+header{position:sticky;top:0;z-index:20;background:rgba(7,24,44,.96);border-bottom:1px solid rgba(143,179,217,.22)}.nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font:700 12px 'Space Mono',monospace;letter-spacing:.07em;text-transform:uppercase}.brand img{width:64px;height:42px;object-fit:contain}.navlinks{display:flex;gap:18px}.navlinks a{color:#dce7f2;text-decoration:none;font-weight:700;font-size:14px}.navlinks .cta{background:var(--orange);padding:8px 12px;border-radius:999px;color:#fff}
+.hero{padding:82px 0 66px;color:#fff;background:linear-gradient(90deg,rgba(6,23,42,1) 0%,rgba(6,23,42,.95) 48%,rgba(6,23,42,.28) 100%),url("hero-earth-clean.jpg") right center/auto 100% no-repeat,#06172a}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center}.kicker{font:700 12px 'Space Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#ff9c3a}.hero h1{font-size:clamp(44px,6vw,68px);line-height:1}.lead{font:600 clamp(20px,2.4vw,28px)/1.35 Fraunces,serif;color:#e8f0f7;margin:22px 0 12px}.sub{color:#c7d7e5}.today{margin-top:160px;background:rgba(255,255,255,.96);color:var(--ink);border-radius:24px;padding:26px;box-shadow:0 28px 60px -30px #000}.today .date{font:700 11px 'Space Mono',monospace;color:var(--orange)}.today h2{font-size:30px;line-height:1.06;margin:10px 0 12px}.pills{display:flex;flex-wrap:wrap;gap:7px}.pill{padding:6px 9px;border-radius:8px;background:#eef5fb;color:#244666;font-size:12px;font-weight:700}.read{display:block;margin-top:18px;padding-top:15px;border-top:1px solid var(--line);color:var(--orange);text-decoration:none;font:700 12px 'Space Mono',monospace}
+section{padding:68px 0}.section-head{max-width:760px;margin-bottom:28px}.eyebrow{font:700 11px 'Space Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--orange)}.section-head h2{font-size:clamp(32px,4vw,46px);line-height:1.06;margin-top:8px}.section-head p{color:var(--soft)}
+.archive{display:grid;grid-template-columns:1fr 1fr;gap:22px}.item{display:block;background:#fff;border:1px solid #d7e3eb;border-radius:20px;padding:24px;text-decoration:none;box-shadow:0 18px 45px -30px rgba(7,24,44,.35)}.item .date{font:700 11px 'Space Mono',monospace;color:var(--blue)}.item h3{font-size:25px;line-height:1.1;margin:8px 0 9px}.item p{margin:0;color:var(--soft);font-size:14px}.item.current{border-color:#ffb26b;box-shadow:0 18px 45px -28px rgba(255,122,0,.32)}
+.dark{background:linear-gradient(135deg,#06172a,#0d2c4a);color:#fff}.dark h2{color:#fff}.values{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.value{padding:22px;border:1px solid rgba(143,179,217,.20);border-radius:17px;background:rgba(255,255,255,.035)}.value .n{font:700 11px 'Space Mono',monospace;color:#ff9c3a}.value h3{font-size:23px;margin:7px 0}.value p{margin:0;color:#dce7f2;font-size:14px}
+footer{padding:42px 0;background:#06172a;color:#9fb5ca;font-size:12px}.footer-title{color:#fff;font:700 12px 'Space Mono',monospace}
+@media(max-width:900px){.hero-grid,.archive,.values{grid-template-columns:1fr}.today{margin-top:28px}.navlinks a:not(.cta){display:none}}@media(max-width:640px){.hero{padding-top:58px;background:linear-gradient(180deg,rgba(6,23,42,.82),rgba(6,23,42,1)),#06172a}.brand span{display:none}}
+
+.feature-chart{padding:54px 0 18px;background:#f7f3ea}
+.feature-chart .box{background:#fff;border:1px solid #d9e5ee;border-radius:22px;padding:24px;box-shadow:0 18px 45px -28px rgba(7,24,44,.28)}
+.feature-chart .num{font:700 10px 'Space Mono',monospace;letter-spacing:.07em;color:#ff7a00;text-transform:uppercase}
+.feature-chart h2{font-size:clamp(30px,4vw,44px);line-height:1.08;color:#0B2945;margin:8px 0 8px}
+.feature-chart .intro{color:#607589;max-width:760px;margin:0 0 18px}
+.feature-chart .legend{display:flex;gap:18px;flex-wrap:wrap;margin:8px 0 14px;font-size:13px;color:#607589}
+.feature-chart .legend .gas{color:#2C5D8F;font-weight:800}.feature-chart .legend .brent{color:#ff7a00;font-weight:800}
+.feature-chart .chart-wrap{overflow-x:auto}
+.feature-chart svg{width:100%;min-width:720px;height:auto;display:block}
+.feature-chart .note{font-size:12.5px;line-height:1.55;color:#607589;margin:14px 0 0}
+.feature-chart .readmore{display:inline-block;margin-top:16px;padding:10px 13px;border-radius:9px;background:linear-gradient(135deg,#FF7A00,#FF9A32);color:#fff;text-decoration:none;font:700 10px 'Space Mono',monospace}
+@media(max-width:720px){.feature-chart{padding-top:38px}.feature-chart .box{padding:18px}.feature-chart .chart-wrap{margin:0 -4px}}
+
 </style>
-
-<style>
-.author-intro{display:flex;align-items:center;gap:14px;margin:0 0 18px}
-.author-photo{width:56px;height:56px;border-radius:50%;flex:0 0 56px;background:#07182c;border:2px solid #ff7a00;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.author-photo span{font-family:'Space Mono',monospace;font-size:17px;font-weight:700;color:#ff7a00;letter-spacing:1px}
-.author-photo img{width:100%;height:100%;object-fit:cover;display:block}
-.author-name{font-family:Inter,system-ui,sans-serif;font-weight:800;font-size:15.5px;color:#fff;line-height:1.35;text-shadow:0 1px 3px rgba(0,0,0,.45)}
-.author-name span{display:block;font-weight:500;font-size:12.5px;color:#C7D4E2;letter-spacing:.2px;text-shadow:0 1px 3px rgba(0,0,0,.4)}
-.archive-note{margin:26px 0 14px;padding:13px 16px;border-left:3px solid #DCD2B8;background:#F1ECDF;border-radius:0 8px 8px 0;font-family:Inter,system-ui,sans-serif;font-size:13.5px;line-height:1.6;color:#3E4E6E}
-.archive-note b{color:#07182c}
-</style>
-<style>
-.me-section{background:#fff;border-top:1px solid var(--beige-line,#DCD2B8);border-bottom:1px solid var(--beige-line,#DCD2B8)}
-.me-grid{display:grid;grid-template-columns:260px 1fr;gap:48px;align-items:start}
-.me-photo-wrap{position:sticky;top:96px}
-.me-photo,.me-photo-fallback{width:230px;height:280px;border-radius:14px;object-fit:cover;display:block;border:3px solid #07182c;box-shadow:0 14px 30px rgba(7,24,44,.18)}
-.me-photo-fallback{display:none;background:#07182c;align-items:center;justify-content:center}
-.me-photo-fallback span{font-family:'Space Mono',monospace;font-size:56px;font-weight:700;color:#ff7a00;letter-spacing:2px}
-.me-caption{margin-top:16px;font-family:Inter,system-ui,sans-serif;font-weight:800;font-size:15px;color:#07182c;line-height:1.4}
-.me-caption span{display:block;font-weight:500;font-size:12.5px;color:#746A57;font-family:'Space Mono',monospace;letter-spacing:.05em;margin-top:2px}
-.me-text h2{font-family:Fraunces,serif;font-size:clamp(28px,3.4vw,40px);line-height:1.15;color:#07182c;margin:6px 0 16px}
-.me-lead{font-family:Fraunces,serif;font-size:19px;line-height:1.5;color:#1B2A4A;margin:0 0 18px;font-weight:600}
-.me-text p{font-family:Inter,system-ui,sans-serif;font-size:15.5px;line-height:1.72;color:#3E4E6E;margin:0 0 14px}
-.me-text p b{color:#07182c}
-.me-promises{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:26px 0 22px}
-.me-promise{background:#F1ECDF;border-left:3px solid #ff7a00;border-radius:0 8px 8px 0;padding:13px 15px;font-family:Inter,system-ui,sans-serif;font-size:13.8px;line-height:1.6;color:#3E4E6E}
-.me-promise b{display:block;color:#07182c;margin-bottom:3px;font-size:14px}
-.me-callout{margin:22px 0;padding:20px 24px;background:#07182c;border-radius:12px;border:none;font-family:Fraunces,serif;font-size:17px;line-height:1.6;color:#fff;font-weight:500}
-.me-sign{margin:24px 0 22px;font-family:Fraunces,serif;font-size:21px;font-weight:700;color:#ff7a00;letter-spacing:-.01em;border-top:2px solid #DCD2B8;padding-top:20px}
-.me-links{display:flex;gap:22px;flex-wrap:wrap}
-.me-links a{font-family:Inter,system-ui,sans-serif;font-weight:700;font-size:14px;color:#2C5D8F;text-decoration:none;border-bottom:2px solid rgba(44,93,143,.25);padding-bottom:2px}
-.me-links a:hover{border-color:#ff7a00;color:#07182c}
-@media(max-width:820px){.me-grid{grid-template-columns:1fr;gap:28px}.me-photo-wrap{position:static}.me-photo,.me-photo-fallback{width:180px;height:220px}.me-promises{grid-template-columns:1fr}}
-</style>
-
-<style id="wic-unified-menu-style">
-header.wic-header{position:sticky;top:0;z-index:1000;background:rgba(7,24,44,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(143,179,217,.22);box-shadow:0 10px 28px rgba(3,13,25,.18)}
-.wic-nav{width:min(1120px,calc(100% - 36px));margin:auto;min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:22px}
-.wic-brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;font:700 12px 'Space Mono',monospace;letter-spacing:.07em;text-transform:uppercase;white-space:nowrap}
-.wic-brand img{width:68px;height:44px;object-fit:contain}
-.wic-navlinks{display:flex;gap:18px;align-items:center}
-.wic-navlinks a{font-family:Inter,system-ui,sans-serif;font-size:15px;color:#dce7f2;text-decoration:none;font-weight:700;white-space:nowrap}
-.wic-navlinks a:hover{color:#ff9c3a}
-.wic-navlinks .wic-cta{background:linear-gradient(135deg,#ff7a00,#ff9b32);color:#fff!important;padding:9px 13px;border-radius:999px}
-@media(max-width:900px){
-  .wic-nav{flex-wrap:wrap;gap:0;padding:7px 0}
-  .wic-navlinks{order:3;width:100%;gap:18px;overflow-x:auto;padding:7px 0 9px;scrollbar-width:none}
-  .wic-navlinks::-webkit-scrollbar{display:none}
-  .wic-navlinks a{font-size:14px}
-}
-@media(max-width:640px){
-  .wic-brand span{display:none}
-  .wic-brand img{width:52px;height:34px}
-}
-</style>
-
-<!-- WIC CUSTOM CONSENT + GA4 (BASIC CONSENT MODE V2) START -->
-<style>
-.wic-cc{position:fixed;left:0;right:0;bottom:0;z-index:99999;background:#fff;border-top:2px solid #07182c;box-shadow:0 -6px 24px rgba(7,24,44,.18);font-family:Inter,system-ui,sans-serif;padding:18px 20px;display:none}
-.wic-cc.is-open{display:block}
-.wic-cc__in{max-width:900px;margin:0 auto;display:flex;gap:20px;align-items:center;flex-wrap:wrap}
-.wic-cc__txt{flex:1 1 380px;min-width:260px;color:#1B2A4A;font-size:14px;line-height:1.55}
-.wic-cc__txt b{display:block;font-family:Fraunces,serif;font-size:16px;color:#07182c;margin-bottom:4px}
-.wic-cc__txt a{color:#2C5D8F;text-decoration:underline}
-.wic-cc__btns{display:flex;gap:10px;flex:0 0 auto;flex-wrap:wrap}
-.wic-cc__b{font-family:Inter,system-ui,sans-serif;font-size:14px;font-weight:700;padding:11px 18px;border-radius:7px;cursor:pointer;border:2px solid #07182c;background:#fff;color:#07182c;transition:.15s}
-.wic-cc__b:hover{background:#F1ECDF}
-.wic-cc__b--yes{background:#ff7a00;border-color:#ff7a00;color:#fff}
-.wic-cc__b--yes:hover{background:#ff9c3a;border-color:#ff9c3a}
-.wic-cc__b:focus-visible{outline:3px solid #2C5D8F;outline-offset:2px}
-@media(max-width:640px){.wic-cc{padding:16px}.wic-cc__in{gap:14px}.wic-cc__btns{width:100%}.wic-cc__b{flex:1 1 auto}}
-</style>
-<script>
-(function(){
-  var GA_ID="G-V1D1FFJNVY";
-  var KEY="wic-consent-v2";
-  var banner=null;
-
-  function readChoice(){
-    try{return localStorage.getItem(KEY)}catch(e){return null}
-  }
-  function saveChoice(v){
-    try{localStorage.setItem(KEY,v)}catch(e){}
-  }
-
-  function ensureDataLayer(){
-    window.dataLayer=window.dataLayer||[];
-    window.gtag=window.gtag||function(){window.dataLayer.push(arguments);};
-  }
-
-  function loadAnalytics(){
-    if(window.__wicGA4Loaded) return;
-    window.__wicGA4Loaded=true;
-    ensureDataLayer();
-
-    /* Basic Consent Mode v2: GA loads only after explicit acceptance. */
-    gtag("consent","default",{
-      analytics_storage:"granted",
-      ad_storage:"denied",
-      ad_user_data:"denied",
-      ad_personalization:"denied"
-    });
-
-    var s=document.createElement("script");
-    s.async=true;
-    s.src="https://www.googletagmanager.com/gtag/js?id="+encodeURIComponent(GA_ID);
-    document.head.appendChild(s);
-
-    gtag("js",new Date());
-    gtag("config",GA_ID,{
-      anonymize_ip:true,
-      allow_google_signals:false,
-      allow_ad_personalization_signals:false
-    });
-  }
-
-  function buildBanner(){
-    if(banner) return;
-    banner=document.createElement("div");
-    banner.className="wic-cc";
-    banner.setAttribute("role","dialog");
-    banner.setAttribute("aria-live","polite");
-    banner.setAttribute("aria-label","Ρυθμίσεις cookies");
-    banner.innerHTML=
-      '<div class="wic-cc__in">'+
-        '<div class="wic-cc__txt">'+
-          '<b>Cookies & στατιστικά</b>'+
-          'Χρησιμοποιούμε Google Analytics μόνο αν το επιλέξεις, για να βλέπουμε συγκεντρωτικά ποια θέματα διαβάζονται. '+
-          'Δεν χρησιμοποιούμε διαφημιστική στόχευση ή Meta Pixel. '+
-          '<a href="/privacy.html">Πολιτική απορρήτου</a>'+
-        '</div>'+
-        '<div class="wic-cc__btns">'+
-          '<button type="button" class="wic-cc__b" data-consent="deny">Απόρριψη</button>'+
-          '<button type="button" class="wic-cc__b wic-cc__b--yes" data-consent="accept">Αποδοχή στατιστικών</button>'+
-        '</div>'+
-      '</div>';
-    document.body.appendChild(banner);
-
-    banner.addEventListener("click",function(e){
-      var btn=e.target.closest("[data-consent]");
-      if(!btn) return;
-      var choice=btn.getAttribute("data-consent");
-      saveChoice(choice);
-      banner.classList.remove("is-open");
-      if(choice==="accept") loadAnalytics();
-    });
-  }
-
-  function openSettings(){
-    buildBanner();
-    banner.classList.add("is-open");
-  }
-  window.wicCookies=openSettings;
-
-  function init(){
-    var choice=readChoice();
-    if(choice==="accept") loadAnalytics();
-    else if(choice!=="deny") openSettings();
-
-    document.querySelectorAll('a[href="#cookies"],[data-open-cookie-settings]').forEach(function(a){
-      a.addEventListener("click",function(e){
-        e.preventDefault();
-        openSettings();
-      });
-    });
-  }
-
-  if(document.readyState==="loading") document.addEventListener("DOMContentLoaded",init);
-  else init();
-})();
-</script>
-<!-- WIC CUSTOM CONSENT + GA4 (BASIC CONSENT MODE V2) END -->
 </head>
 <body>
+<header><div class="wrap nav">
+<a class="brand" href="index.html"><img src="assets/az-logo-transparent.png" alt="World in Context"><span>World in Context</span></a>
+<nav class="navlinks"><a href="#archive">Αρχείο</a><a href="methodology.html">Μεθοδολογία</a><a href="relationships.html">Σχέσεις</a><a class="cta" href="feedback/test.html">Τεστ</a></nav>
+</div></header>
 
-<header class="wic-header">
-  <div class="wic-nav">
-    <a class="wic-brand" href="/index.html">
-      <img src="/assets/az-logo-transparent.png" alt="AZ">
-      <span>World in Context</span>
-    </a>
-    <nav class="wic-navlinks" aria-label="Κύριο μενού">
-      <a href="/index.html">Αρχική</a>
-      <a href="/index.html#archive">Αρχείο</a>
-      <a href="/relationships.html">Χάρτης Σχέσεων</a>
-      <a href="/glossary.html">Λεξιλόγιο</a>
-      <a href="/methodology.html">Μεθοδολογία</a>
-      <a href="/index.html#poia-eimai">Ποια είμαι</a>
-      <a href="/index.html#contact">Επικοινωνία</a>
-      <a class="wic-cta" href="/briefings/2026-09-13.html">Η εβδομάδα →</a>
-    </nav>
-  </div>
-</header>
-
-<main>
-<section class="hero"><div class="wrap hero-grid"><div><div class="kicker">Εβδομαδιαία ανάλυση · κάθε Κυριακή</div>
-<div class="author-intro">
-<div class="author-photo"><img src="assets/anastasia.jpg" alt="Αναστασία Ζωπίδου" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span style="display:none">ΑΖ</span></div>
-<div class="author-name">World in Context<span>από την Αναστασία Ζωπίδου</span></div>
-</div>
-<h1>Πώς κατανοώ<br>τον κόσμο</h1>
-<p class="hero-lead">Κάθε εβδομάδα επιλέγω τις εξελίξεις που θεωρώ ότι αξίζει να κρατήσουμε.</p>
-<p class="hero-sub">Προσπαθώ να δω πέρα από την είδηση: τι προηγήθηκε, πώς συνδέεται με άλλα γεγονότα, ποιες διαφορετικές αναγνώσεις υπάρχουν και τι μπορεί να ακολουθήσει.</p>
-<div class="actions"><a class="btn primary" href="/briefings/2026-09-13.html">Δες την εβδομάδα →</a><a class="btn secondary" href="methodology.html">Πώς δουλεύω</a></div></div>
-<aside class="today-card">
-  <div class="date-line">Εβδομάδα 7–13 Σεπτεμβρίου 2026</div>
-  <h2>Τα αδύναμα σημεία του κόσμου</h2>
-  <p>Η εβδομάδα έδειξε πόσο εύκολα ένα στενό, ένας αγωγός, ένα νοσοκομείο ή μια αλυσίδα πρώτων υλών μπορεί να γίνει παγκόσμιο πρόβλημα. Ενέργεια και θαλάσσιες οδοί, Ebola μέσα σε σύγκρουση, πόλεμος υποδομών στην Ουκρανία, κρίσιμα ορυκτά, επιτόκια, BRICS και ο αέρας που αναπνέουμε.</p>
-  <div class="topic-list">
-    <span class="pill">Ενέργεια</span>
-    <span class="pill">Ebola</span>
-    <span class="pill">Ουκρανία</span>
-    <span class="pill">Κρίσιμα ορυκτά</span>
-    <span class="pill">BRICS</span>
-    <span class="pill">Κλίμα</span>
-  </div>
-  <div style="margin-top:16px;font-family:'Space Mono',monospace;font-size:10px;color:#6b7f91;">Δημοσιεύτηκε: Κυριακή 13/09/2026</div>
-  <a class="read" href="/briefings/2026-09-13.html">ΑΝΟΙΓΜΑ ΤΗΣ ΕΒΔΟΜΑΔΑΣ →</a>
-</aside></div></section>
-
-<section id="poia-eimai" class="me-section"><div class="wrap me-grid">
-<div class="me-photo-wrap">
-<img class="me-photo" src="assets/anastasia.jpg" alt="Αναστασία Ζωπίδου" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-<div class="me-photo-fallback"><span>ΑΖ</span></div>
-<div class="me-caption">Αναστασία Ζωπίδου<span>Θεσσαλονίκη</span></div>
-</div>
-<div class="me-text">
-<div class="eyebrow">Ποια είμαι</div>
-<h2>Πίσω από το World in Context</h2>
-<p class="me-lead">Είμαι η Αναστασία Ζωπίδου και το World in Context ξεκίνησε από μια πολύ προσωπική ανάγκη: να καταλαβαίνω καλύτερα τι συμβαίνει γύρω μας.</p>
-<p>Πάντα μου άρεσε να ψάχνω και να μαθαίνω. Να ξεκινώ από μια είδηση ή μια απορία, να ανακαλύπτω κάτι που δεν γνώριζα και μετά κάτι ακόμη που συνδέεται με αυτό. Με ενδιαφέρει ιδιαίτερα αυτή η στιγμή που διαφορετικές πληροφορίες αρχίζουν να δένουν μεταξύ τους και η εικόνα γίνεται λίγο πιο καθαρή.</p>
-<p>Γι&rsquo; αυτό δεν με ενδιαφέρει απλώς να διαβάζω περισσότερες ειδήσεις. Θέλω να καταλαβαίνω τι έχει πραγματικά σημασία, γιατί συμβαίνει, τι υπάρχει πίσω από μια εξέλιξη και πώς μπορεί κάτι που συμβαίνει σήμερα στην ενέργεια, για παράδειγμα, να συνδέεται αύριο με την οικονομία, τη γεωπολιτική, την τεχνολογία ή την καθημερινότητά μας.</p>
-<p>Αυτή είναι και η λογική του World in Context. Κάθε εβδομάδα παρακολουθώ τις εξελίξεις, επιλέγω τα θέματα που θεωρώ σημαντικά και αρχίζω την έρευνα. Διαβάζω, διασταυρώνω πηγές, αναζητώ διαφορετικές απόψεις και προσπαθώ να ενώσω τα κομμάτια. Η έρευνα, η μάθηση και αυτή η μικρή αίσθηση ανακάλυψης όταν βρίσκω μια σύνδεση που δεν είχα δει στην αρχή είναι ίσως το κομμάτι που απολαμβάνω περισσότερο.</p>
-<p>Χρησιμοποιώ και εργαλεία τεχνητής νοημοσύνης, κυρίως για να μπορώ να ερευνώ, να οργανώνω και να επεξεργάζομαι πολύ μεγαλύτερο όγκο πληροφοριών. Οι επιλογές όμως είναι δικές μου: τι αξίζει να ψάξω περισσότερο, ποιες ερωτήσεις θα θέσω, ποιες πηγές θα χρησιμοποιήσω και τελικά τι θα δημοσιευτεί.</p>
-<blockquote class="me-callout">Δεν είμαι δημοσιογράφος ούτε ειδικός σε όλα αυτά τα πεδία &mdash; και δεν θέλω να παρουσιάζομαι ως κάτι που δεν είμαι. Είμαι ένας άνθρωπος με μεγάλη περιέργεια και αγάπη για τη γνώση, που διαβάζει, ψάχνει, συγκρίνει και προσπαθεί να καταλάβει λίγο καλύτερα τον κόσμο.</blockquote>
-<p>Το World in Context είναι ο τρόπος μου να μοιράζομαι αυτή τη διαδρομή: όχι μόνο τι συνέβη, αλλά πώς συνδέονται τα γεγονότα και τι μας βοηθούν να καταλάβουμε για τη μεγαλύτερη εικόνα.</p>
-<div class="me-sign">Λιγότερος θόρυβος. Περισσότερη κατανόηση.</div>
-<div class="me-links"><a href="https://www.linkedin.com/in/zopidou/" target="_blank" rel="noopener">LinkedIn &rarr;</a><a href="methodology.html">Πώς δουλεύω &rarr;</a><a href="mailto:zopidou.anastasia@gmail.com">Γράψε μου &rarr;</a></div>
-</div></div></section>
-
-<section id="archive"><div class="wrap"><div class="section-head"><div class="eyebrow">Αρχείο εκδόσεων</div><h2>Κάθε Κυριακή, η εικόνα μιας εβδομάδας.</h2><p>Οι εβδομαδιαίες εκδόσεις. Πιο κάτω θα βρεις και το αρχείο της ημερήσιας περιόδου του Αυγούστου 2026.</p></div>
-<div class="archive-list">
-<a class="archive-item" href="/briefings/2026-09-13.html">
-  <div class="archive-date">07–13 · 09 · 2026</div>
-  <div>
-    <div class="archive-title">Τα αδύναμα σημεία του κόσμου</div>
-    <div class="archive-meta">Εβδομαδιαία έκδοση · 7 θέματα · 3 Level 2 αναλύσεις</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-<a class="archive-item" href="/briefings/2026-09-06.html">
-  <div class="archive-date">31 · 08 – 06 · 09 · 2026</div>
-  <div>
-    <div class="archive-title">Η εβδομάδα που οι μακρινές κρίσεις έφτασαν πιο κοντά</div>
-    <div class="archive-meta">Εβδομαδιαία έκδοση · 7 θέματα · 3 Level 2 αναλύσεις</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-<a class="archive-item" href="/briefings/2026-08-30.html">
-  <div class="archive-date">24–30 · 08 · 2026</div>
-  <div>
-    <div class="archive-title">Η εβδομάδα που ο πόλεμος έγινε οικονομικός</div>
-    <div class="archive-meta">Εβδομαδιαία έκδοση · 3 συνδέσεις · 3 εξελίξεις · Level 2</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-</div>
-<div class="archive-note"><b>Αρχείο ημερήσιας περιόδου.</b> Από 16 έως 26 Αυγούστου 2026 το World in Context δημοσιευόταν καθημερινά. Από 30 Αυγούστου η έκδοση είναι εβδομαδιαία, με έμφαση στις συνδέσεις μεταξύ των γεγονότων αντί για την κάλυψη της ημέρας.</div>
-<div class="archive-list">
-<a class="archive-item" href="briefings/2026-08-26.html"><div class="archive-date">26 · 08 · 2026</div><div><div class="archive-title">Ο κόσμος αλλάζει διαδρομές</div><div class="archive-meta">10 κάρτες · Ημερήσια έκδοση · Level 2 · Relationship Map</div></div><div class="archive-arrow">→</div></a>
-<a class="archive-item" href="briefings/2026-08-25.html"><div class="archive-date">25 · 08 · 2026</div><div><div class="archive-title">Από τις δηλώσεις στην πραγματική αλλαγή</div><div class="archive-meta">10 κάρτες · Ημερήσια έκδοση · Level 2</div></div><div class="archive-arrow">→</div></a>
-<a class="archive-item" href="briefings/2026-08-24.html"><div class="archive-date">24 · 08 · 2026</div><div><div class="archive-title">Η ισχύς περνά από την οικονομία και την τεχνολογία</div><div class="archive-meta">10 κάρτες · Ημερήσια έκδοση · Level 2 · Relationship Map</div></div><div class="archive-arrow">→</div></a>
-<a class="archive-item" href="briefings/2026-08-23.html"><div class="archive-date">23 · 08 · 2026</div><div><div class="archive-title">Η εβδομάδα σε σύνθεση — και όσα αλλάζουν σήμερα</div><div class="archive-meta">Sunday Weekly Synthesis · Εβδομαδιαία ανασκόπηση</div></div><div class="archive-arrow">→</div></a>
-<a class="archive-item" href="briefings/2026-08-22.html"><div class="archive-date">22 · 08 · 2026</div><div><div class="archive-title">Εμπόριο, θαλάσσιες αρτηρίες, robotics, ενέργεια και Ελλάδα</div><div class="archive-meta">10 κάρτες · Ημερήσια έκδοση · Deep Analysis</div></div><div class="archive-arrow">→</div></a>
-<a class="archive-item" href="briefings/2026-08-21.html"><div class="archive-date">21 · 08 · 2026</div><div><div class="archive-title">Ευρώπη, AI, Neptun Deep, El Niño, Σελήνη και Ελλάδα</div><div class="archive-meta">10 κάρτες · Ημερήσια έκδοση · Deep Analysis</div></div><div class="archive-arrow">→</div></a>
-<a class="archive-item" href="briefings/2026-08-20.html"><div class="archive-date">20 · 08 · 2026</div><div><div class="archive-title">Πετρέλαιο, Ουκρανία, ΗΠΑ, Κίνα, AI και Βαλκάνια</div><div class="archive-meta">10 κάρτες · Ημερήσια έκδοση · Cross-checked</div></div><div class="archive-arrow">→</div></a>
-<a class="archive-item" href="briefings/2026-08-19.html"><div class="archive-date">19 · 08 · 2026</div><div><div class="archive-title">Ορμούζ, Ουκρανία, AI, Ελλάδα και θερμή Μεσόγειος</div><div class="archive-meta">10 κάρτες · Ημερήσια έκδοση · Deep Analysis</div></div><div class="archive-arrow">→</div></a>
-<a class="archive-item" href="briefings/2026-08-18.html"><div class="archive-date">18 · 08 · 2026</div><div><div class="archive-title">Ορμούζ, Ελλάδα & Βαλκάνια, AI, κλίμα και Αρκτική</div><div class="archive-meta">10 κάρτες · Ημερήσια έκδοση · Deep Analysis</div></div><div class="archive-arrow">→</div></a>
-<a class="archive-item" href="briefings/2026-08-17.html"><div class="archive-date">17 · 08 · 2026</div><div><div class="archive-title">Ορμούζ, Κίνα, AI, πυρκαγιές και ελληνικό χρέος</div><div class="archive-meta">10 κάρτες · Ημερήσια έκδοση · Deep Analysis</div></div><div class="archive-arrow">→</div></a>
-<a class="archive-item" href="briefings/2026-08-16.html"><div class="archive-date">16 · 08 · 2026</div><div><div class="archive-title">Ουκρανία, Ορμούζ, chips, AI και κλίμα</div><div class="archive-meta">10 κάρτες · Ημερήσια έκδοση</div></div><div class="archive-arrow">→</div></a>
-</div></div>
-<div class="quicklinks"><a class="quick" href="relationships.html"><h3>Ο Χάρτης των Σχέσεων →</h3><p>Δες πώς συνδέονται οι χώρες πίσω από τις σημερινές ειδήσεις. Μόνο σχέσεις μεταξύ χωρών.</p></a><a class="quick" href="glossary.html"><h3>Λεξιλόγιο Εννοιών →</h3><p>LNG, attribution, backchannel, SDF, GSI, age assurance και οι σημερινοί όροι σε απλή γλώσσα.</p></a></div>
+<section class="hero"><div class="wrap hero-grid">
+<div><div class="kicker">ΛΙΓΟΤΕΡΟΣ ΘΟΡΥΒΟΣ. ΠΕΡΙΣΣΟΤΕΡΗ ΚΑΤΑΝΟΗΣΗ.</div><h1>Πώς κατανοώ τον κόσμο σήμερα</h1><p class="lead">Όχι άλλη μία λίστα ειδήσεων. Ένα εβδομαδιαίο briefing που συνδέει όσα έγιναν και εξηγεί γιατί έχουν σημασία.</p><p class="sub">Πηγές, context και βαθύτερη ανάλυση εκεί όπου χρειάζεται.</p></div>
+<article class="today"><div class="date">14–20 ΣΕΠΤΕΜΒΡΙΟΥ 2026</div><h2>Η γεωπολιτική ξαναμπαίνει στην τσέπη</h2><div class="pills"><span class="pill">Ενέργεια</span><span class="pill">Καύσιμα</span><span class="pill">Επιτόκια</span><span class="pill">AI</span><span class="pill">Γερμανία</span><span class="pill">Ουκρανία</span></div><a class="read" href="briefings/2026-09-20.html">Διάβασε το briefing →</a></article>
 </div></section>
 
-<section id="feedback"><div class="wrap"><div class="section-head"><div class="eyebrow">Δοκιμή του format</div><h2>Βοήθησέ με να το κάνω πιο κατανοητό.</h2><p>Διάβασες την εβδομαδιαία έκδοση; Το σύντομο τεστ χρειάζεται περίπου 2–3 λεπτά και βοηθά να δω τι λειτουργεί και τι πρέπει να βελτιωθεί.</p></div><a class="btn primary" href="/feedback/test.html?b=2026-09-13">Κάνε το σύντομο τεστ →</a></div></section>
-<section class="dark-section" id="purpose"><div class="wrap"><div class="section-head"><div class="eyebrow">Γιατί υπάρχει αυτή η σελίδα</div><h2>Λιγότερος θόρυβος.<br>Περισσότερη κατανόηση.</h2><p>Η καθημερινή ροή ειδήσεων σου δίνει πολλά γεγονότα, αλλά όχι τον χρόνο και το πλαίσιο για να δεις πώς συνδέονται. Το World in Context οργανώνει τις σημαντικότερες εξελίξεις σε μια σύντομη, καθαρή και ελέγξιμη εικόνα, με έμφαση στο πλαίσιο, στις συνδέσεις και στις πηγές.</p></div><div class="values"><div class="value"><div class="num">01</div><h3>Κατανόηση</h3><p>Δεν αρκεί να γνωρίζεις τι συνέβη. Κάθε θέμα εξηγεί γιατί έχει σημασία, τι το προκάλεσε και ποιες συνέπειες μπορεί να ακολουθήσουν.</p></div><div class="value"><div class="num">02</div><h3>Σύνδεση</h3><p>Γεωπολιτική, οικονομία, ενέργεια, τεχνολογία, περιβάλλον και καθημερινή ζωή συνδέονται. Το briefing προσπαθεί να κάνει αυτές τις σχέσεις ορατές.</p></div><div class="value"><div class="num">03</div><h3>Διαφάνεια</h3><p>Μπορείς να ελέγξεις τις βασικές πηγές και να διακρίνεις όσο γίνεται καθαρότερα τι είναι επιβεβαιωμένο γεγονός, τι αποτελεί ανάλυση και τι παραμένει εκτίμηση ή αβεβαιότητα.</p></div></div><div class="signature">Τι έγινε → Γιατί έχει σημασία → Πώς μπορεί να σε επηρεάσει</div></div></section>
-<section id="about"><div class="wrap"><div class="section-head"><div class="eyebrow">Πίσω από το project</div><h2>Ένα προσωπικό project — το γράφω μόνη μου.</h2><p>Το World in Context απευθύνεται σε εσένα που θέλεις να καταλαβαίνεις τις σημαντικές εξελίξεις χωρίς να χρειάζεται να είσαι ειδικός στην οικονομία, τη γεωπολιτική ή την τεχνολογία.</p></div><div class="info-grid"><div class="info-card"><h3>Πώς επιλέγονται τα θέματα</h3><p>Η θεματολογία επιλέγεται στο τέλος κάθε εβδομάδας με βάση τη σημασία, την αντοχή στον χρόνο, τις πιθανές συνέπειες και τις συνδέσεις μιας εξέλιξης — όχι για να συμπληρωθεί μια προκαθορισμένη κατηγορία.</p><p>Ένα θέμα που ήδη παρακολουθείται συμπτύσσεται όταν δεν υπάρχει ουσιαστική νέα εξέλιξη, ώστε να μένει χώρος για ό,τι πραγματικά αλλάζει την εικόνα της εβδομάδας.</p></div><div class="info-card"><h3>Πηγές & AI</h3><p>Εργαλεία AI χρησιμοποιούνται για έρευνα, οργάνωση, σύνθεση και σχεδιασμό. Το AI δεν αποτελεί πηγή τεκμηρίωσης.</p><p>Όπου είναι εφικτό, η διασταύρωση βασίζεται σε μία πρωτογενή πηγή, μία πραγματικά ανεξάρτητη αξιόπιστη πηγή και μία συμπληρωματική πηγή όταν χρειάζεται.</p></div></div><div class="method"><b>Μεθοδολογία:</b> Πολλαπλές αναδημοσιεύσεις της ίδιας αρχικής πληροφορίας δεν θεωρούνται ανεξάρτητες επιβεβαιώσεις. Προτεραιότητα έχουν η ποιότητα, η ανεξαρτησία και η εγγύτητα της πηγής στο αρχικό γεγονός.<br><br><a href="methodology.html" style="font-weight:800;color:#2C5D8F;text-decoration:none;">Δες αναλυτικά τη μεθοδολογία →</a></div></div></section>
-<section id="contact"><div class="wrap contact-grid"><div class="info-card"><div class="eyebrow">Επικοινωνία</div><h3>Σχόλια, διορθώσεις και προτάσεις</h3><p>Αν εντοπίσεις πραγματολογικό λάθος, έχεις πρόταση για πηγή ή θέλεις να σχολιάσεις το format, μπορείς να επικοινωνήσεις.</p><div class="socials"><a href="mailto:zopidou.anastasia@gmail.com">Email</a><a href="https://www.facebook.com/worldincontextgr" target="_blank" rel="noopener">Facebook</a><a href="https://www.linkedin.com/in/zopidou/" target="_blank" rel="noopener">LinkedIn</a></div></div><div class="info-card"><div class="eyebrow">World in Context</div><h3>Ενημέρωση χωρίς να χρειάζεται να είσαι ειδικός.</h3><p>Το project βρίσκεται σε συνεχή δοκιμή και βελτίωση, ώστε να παραμένει απλό χωρίς να γίνεται απλοϊκό.</p><a class="btn primary" href="/briefings/2026-09-13.html">Δώσε feedback →</a></div></div></section>
-</main>
-<footer><div class="wrap footer-grid"><div><div class="footer-title">WORLD IN CONTEXT</div><div class="small-note">Πώς κατανοώ τον κόσμο · Εβδομαδιαία έκδοση κάθε Κυριακή, από την Αναστασία Ζωπίδου, με ελέγξιμες πηγές, συνδέσεις και σαφή διάκριση γεγονότος, ανάλυσης, εκτίμησης και αβεβαιότητας.</div></div><div>© 2026</div></div></footer>
-<button id="backToTop" aria-label="Επιστροφή στην κορυφή">↑</button><script>const back=document.getElementById('backToTop');window.addEventListener('scroll',()=>back.classList.toggle('show',window.scrollY>500));back.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));</script>
+<section class="feature-chart">
+  <div class="wrap">
+    <div class="box">
+      <div class="num">ΔΙΑΓΡΑΜΜΑ ΤΗΣ ΕΒΔΟΜΑΔΑΣ</div>
+      <h2>Βενζίνη στην Ελλάδα και Brent: κινούνται μαζί, αλλά όχι το ίδιο</h2>
+      <p class="intro">Η διεθνής τιμή του αργού πετρελαίου και η τιμή στην ελληνική αντλία συνδέονται, αλλά η μεταφορά δεν είναι άμεση ούτε αναλογική.</p>
+      <div class="legend"><span class="gas">● Βενζίνη 95 — €/λίτρο</span><span class="brent">● Brent — $/βαρέλι</span></div>
+      <div class="chart-wrap">
+<svg viewBox="0 0 900 390" role="img" aria-label="Μέση τιμή αμόλυβδης 95 στην Ελλάδα και Brent, 14 έως 19 Σεπτεμβρίου 2026">
+  <line x1="66" y1="314.0" x2="834" y2="314.0" stroke="#dbe6ee"/><text x="56" y="318.0" text-anchor="end" font-size="12" fill="#2C5D8F">2.14€</text><line x1="66" y1="230.9" x2="834" y2="230.9" stroke="#dbe6ee"/><text x="56" y="234.9" text-anchor="end" font-size="12" fill="#2C5D8F">2.16€</text><line x1="66" y1="147.8" x2="834" y2="147.8" stroke="#dbe6ee"/><text x="56" y="151.8" text-anchor="end" font-size="12" fill="#2C5D8F">2.18€</text><line x1="66" y1="64.8" x2="834" y2="64.8" stroke="#dbe6ee"/><text x="56" y="68.8" text-anchor="end" font-size="12" fill="#2C5D8F">2.20€</text><text x="844" y="318.0" font-size="12" fill="#ff7a00">$100</text><text x="844" y="240.9" font-size="12" fill="#ff7a00">$110</text><text x="844" y="163.7" font-size="12" fill="#ff7a00">$120</text><text x="844" y="86.6" font-size="12" fill="#ff7a00">$130</text>
+  <line x1="66" y1="314" x2="834" y2="314" stroke="#cfdde7"/>
+  <path d="M66.0,243.4 L219.6,201.8 L373.2,181.1 L526.8,118.8 L680.4,98.0 L834.0,89.7" fill="none" stroke="#2C5D8F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M66.0,150.1 L219.6,76.4 L373.2,99.2 L526.8,150.6 L680.4,276.4" fill="none" stroke="#ff7a00" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="66.0" cy="243.4" r="5" fill="#2C5D8F"/><circle cx="219.6" cy="201.8" r="5" fill="#2C5D8F"/><circle cx="373.2" cy="181.1" r="5" fill="#2C5D8F"/><circle cx="526.8" cy="118.8" r="5" fill="#2C5D8F"/><circle cx="680.4" cy="98.0" r="5" fill="#2C5D8F"/><circle cx="834.0" cy="89.7" r="5" fill="#2C5D8F"/>
+  <circle cx="66.0" cy="150.1" r="5" fill="#ff7a00"/><circle cx="219.6" cy="76.4" r="5" fill="#ff7a00"/><circle cx="373.2" cy="99.2" r="5" fill="#ff7a00"/><circle cx="526.8" cy="150.6" r="5" fill="#ff7a00"/><circle cx="680.4" cy="276.4" r="5" fill="#ff7a00"/>
+  <text x="66.0" y="339" text-anchor="middle" font-size="12" fill="#607589">14/9</text><text x="219.6" y="339" text-anchor="middle" font-size="12" fill="#607589">15/9</text><text x="373.2" y="339" text-anchor="middle" font-size="12" fill="#607589">16/9</text><text x="526.8" y="339" text-anchor="middle" font-size="12" fill="#607589">17/9</text><text x="680.4" y="339" text-anchor="middle" font-size="12" fill="#607589">18/9</text><text x="834.0" y="339" text-anchor="middle" font-size="12" fill="#607589">19/9</text>
+  <text x="66" y="20" font-size="12" fill="#2C5D8F" font-weight="700">€/λίτρο</text>
+  <text x="834" y="20" text-anchor="end" font-size="12" fill="#ff7a00" font-weight="700">$/βαρέλι</text>
+  <text x="834.0" y="77.7" text-anchor="middle" font-size="12" fill="#2C5D8F" font-weight="700">2,194€</text>
+  <text x="680.4" y="264.4" text-anchor="middle" font-size="12" fill="#ff7a00" font-weight="700">$104,87</text>
+</svg>
+</div>
+      <p class="note">Οι δύο σειρές χρησιμοποιούν διαφορετικούς άξονες. Η βενζίνη επηρεάζεται από το Brent, αλλά και από φόρους, διύλιση, μεταφορικά, εμπορικά περιθώρια, ισοτιμία ευρώ–δολαρίου και χρονική υστέρηση. Πηγή βενζίνης: Παρατηρητήριο Τιμών Υγρών Καυσίμων. Brent: διεθνή δημοσιευμένα στοιχεία για την ίδια εβδομάδα.</p>
+      <a class="readmore" href="briefings/2026-09-20.html">Δες το θέμα μέσα στο briefing →</a>
+    </div>
+  </div>
+</section>
+
+<section id="archive"><div class="wrap"><div class="section-head"><div class="eyebrow">ΑΡΧΕΙΟ</div><h2>Οι τελευταίες εβδομάδες</h2><p>Κάθε briefing κρατά τις πηγές του και τη βαθύτερη ανάλυση, ώστε να μπορείς να επιστρέψεις στο context αργότερα.</p></div>
+<div class="archive">
+<a class="item current" href="briefings/2026-09-20.html"><div class="date">14–20 ΣΕΠΤΕΜΒΡΙΟΥ</div><h3>Η γεωπολιτική ξαναμπαίνει στην τσέπη</h3><p>Ενέργεια, καύσιμα, επιτόκια, AI, Γερμανία, Ουκρανία και νέες συμμαχίες.</p></a>
+<a class="item" href="briefings/2026-09-13.html"><div class="date">7–13 ΣΕΠΤΕΜΒΡΙΟΥ</div><h3>Τα αδύναμα σημεία του κόσμου</h3><p>Ενεργειακά choke points, Κονγκό, Ουκρανία, κρίσιμα ορυκτά, επιτόκια και BRICS.</p></a>
+<a class="item" href="briefings/2026-09-06.html"><div class="date">31 ΑΥΓΟΥΣΤΟΥ–6 ΣΕΠΤΕΜΒΡΙΟΥ</div><h3>Η προηγούμενη εβδομάδα σε context</h3><p>Το briefing και οι πηγές της εβδομάδας.</p></a>
+</div></div></section>
+
+<section class="dark"><div class="wrap"><div class="section-head"><div class="eyebrow">ΠΩΣ ΔΟΥΛΕΥΕΙ</div><h2>Τρεις αρχές</h2></div><div class="values">
+<div class="value"><div class="n">01</div><h3>Διασταύρωση</h3><p>Πρωτογενείς πηγές όπου υπάρχουν και δεύτερος ανεξάρτητος έλεγχος στα βασικά γεγονότα.</p></div>
+<div class="value"><div class="n">02</div><h3>Context</h3><p>Δεν αρκεί τι έγινε. Εξηγούμε τι αλλάζει, ποιους επηρεάζει και τι παραμένει αβέβαιο.</p></div>
+<div class="value"><div class="n">03</div><h3>Διαφάνεια</h3><p>Οι πηγές μένουν ορατές. Οι απόψεις αναλυτών ξεχωρίζουν από τα γεγονότα.</p></div>
+</div></div></section>
+
+<footer><div class="wrap"><div class="footer-title">WORLD IN CONTEXT</div><p>Λιγότερος θόρυβος. Περισσότερη κατανόηση.</p></div></footer>
 </body></html>
