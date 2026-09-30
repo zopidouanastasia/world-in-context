@@ -82,14 +82,14 @@ header.wic-header{position:sticky;top:0;z-index:1000;background:rgba(7,24,44,.96
 .wic-navlinks a:hover{color:#ff9c3a}
 .wic-navlinks .wic-cta{background:linear-gradient(135deg,#ff7a00,#ff9b32);color:#fff!important;padding:9px 13px;border-radius:999px}
 @media(max-width:900px){
-  .wic-nav{flex-wrap:wrap;gap:0;padding:7px 0}
-  .wic-navlinks{order:3;width:100%;gap:18px;overflow-x:auto;padding:7px 0 9px;scrollbar-width:none}
-  .wic-navlinks::-webkit-scrollbar{display:none}
-  .wic-navlinks a{font-size:14px}
+.wic-nav{flex-wrap:wrap;gap:0;padding:7px 0}
+.wic-navlinks{order:3;width:100%;gap:18px;overflow-x:auto;padding:7px 0 9px;scrollbar-width:none}
+.wic-navlinks::-webkit-scrollbar{display:none}
+.wic-navlinks a{font-size:14px}
 }
 @media(max-width:640px){
-  .wic-brand span{display:none}
-  .wic-brand img{width:52px;height:34px}
+.wic-brand span{display:none}
+.wic-brand img{width:52px;height:34px}
 }
 </style>
 
@@ -239,7 +239,7 @@ header.wic-header{position:sticky;top:0;z-index:1000;background:rgba(7,24,44,.96
 </div>
 <h1>Πώς κατανοώ<br>τον κόσμο</h1>
 <p class="hero-lead">Μία εβδομάδα εξελίξεων, με έμφαση σε ό,τι πραγματικά άλλαξε.</p>
-<p class="hero-sub">Το briefing καλύπτει το κενό 23–30 Σεπτεμβρίου χωρίς να ανακυκλώνει τις προηγούμενες αναλύσεις. Κρατά μόνο τις εξελίξεις που αλλάζουν ουσιαστικά την εικόνα.</p>
+<p class="hero-sub">Το briefing καλύπτει το κενό 23–30 Σεπτεμβρίου . Κρατά μόνο τις εξελίξεις που αλλάζουν ουσιαστικά την εικόνα.</p>
 <div class="actions"><a class="btn primary" href="/briefings/2026-09-30.html">Δες το briefing →</a><a class="btn secondary" href="methodology.html">Πώς δουλεύω</a></div></div>
 <aside class="today-card">
   <div class="date-line">Briefing · 23–30 Σεπτεμβρίου 2026</div>
@@ -258,10 +258,15 @@ header.wic-header{position:sticky;top:0;z-index:1000;background:rgba(7,24,44,.96
 </aside></div></section>
 
 <section class="market-section" id="fuel-watch"><div class="wrap"><article class="market-card">
-  <div class="market-top"><div><div class="eyebrow">ΕΝΕΡΓΕΙΑ · ΕΛΛΑΔΑ</div><h2>Από το Brent στην ελληνική αντλία</h2><p>Η διεθνής τιμή του πετρελαίου κινείται απότομα, ενώ η λιανική βενζίνη ακολουθεί πιο αργά. Το διάγραμμα παραμένει στην αρχική και ανανεώνεται μαζί με τα γεγονότα που αλλάζουν την εικόνα.</p></div><div class="market-badges"><span class="market-badge">● Βενζίνη 95 · €/λίτρο</span><span class="market-badge brent">● Brent · $/βαρέλι</span></div></div>
-  <div class="market-chart"><div id="longFuelChart" aria-label="Διάγραμμα βενζίνης 95, Brent και γεγονότων από 1 Ιουνίου έως 30 Σεπτεμβρίου 2026"></div></div>
+  <div class="market-top"><div><div class="eyebrow">ΕΝΕΡΓΕΙΑ · ΕΛΛΑΔΑ</div><h2>Από το Brent στην ελληνική αντλία</h2><p>Η διεθνής τιμή του πετρελαίου κινείται απότομα, ενώ η λιανική βενζίνη ακολουθεί πιο αργά. Οι δύο σειρές ενημερώνονται με διαφορετικό ρυθμό.</p></div><div class="market-badges"><span class="market-badge">● Βενζίνη 95 · €/λίτρο</span><span class="market-badge brent">● Brent · $/βαρέλι</span></div></div>
+<div style="display:flex;flex-wrap:wrap;gap:9px 18px;margin:0 0 18px;padding:12px 14px;border:1px solid #d7e3ec;border-radius:12px;background:#f7fafc;font-size:13px;color:#40566b">
+<strong style="color:#0a2744">Τελευταία διαθέσιμα στοιχεία:</strong>
+<span>⛽ Αμόλυβδη 95, Ελλάδα: <strong>29/09/2026</strong></span>
+<span>🛢 Brent spot, EIA: <strong>28/09/2026</strong></span>
+</div>
+  <div class="market-chart"><div id="longFuelChart" aria-label="Διάγραμμα βενζίνης 95 έως 29 Σεπτεμβρίου και Brent έως 28 Σεπτεμβρίου 2026"></div></div>
   <div class="market-events"><div class="market-event"><b>1 · 15/6 · Συμφωνία ΗΠΑ–Ιράν</b>Η προοπτική επαναλειτουργίας του Ορμούζ πίεσε απότομα το πετρέλαιο, χωρίς άμεση αντίστοιχη κίνηση στην αντλία.</div><div class="market-event"><b>2 · Τέλη Ιουνίου · Χαμηλό περιόδου</b>Το Brent έκλεισε τον μήνα κοντά στα 72,92 δολάρια και η ελληνική αμόλυβδη στα 1,922 €/λίτρο.</div><div class="market-event"><b>3 · Ιούλιος · Νέα κλιμάκωση</b>Οι επιθέσεις σε πλοία επανέφεραν το ρίσκο. Το Brent έκλεισε τον Ιούλιο στα 90,12 δολάρια.</div><div class="market-event"><b>4 · 4/9 · Πίεση στις ροές</b>Νέα επεισόδια στο Ορμούζ οδήγησαν το Brent στα 96,28 δολάρια.</div><div class="market-event"><b>5 · 9/9 · Πάνω από τα 100$</b>Η ένταση στη Μέση Ανατολή ανέβασε το Brent στα 101,21 δολάρια.</div><div class="market-event"><b>6 · 14/9 · Πλήγμα σε υποδομές</b>Οι επιθέσεις στη σαουδαραβική ενεργειακή υποδομή έφεραν το Brent στα 105,68 δολάρια.</div><div class="market-event"><b>7 · 21–22/9 · Προσωρινή αποκλιμάκωση</b>Η ελπίδα διπλωματίας και η επανεκκίνηση αγωγού έριξαν προσωρινά το Brent κάτω από τα 100 δολάρια.</div><div class="market-event"><b>8 · 23–25/9 · Νέα μεταβλητότητα</b>Οι ελπίδες για διάλογο ΗΠΑ–Ιράν πίεσαν ξανά το Brent, χωρίς να λύνουν το πρόβλημα του Ορμούζ.</div><div class="market-event"><b>9 · 29/9 · ΕΕ: επάρκεια, αλλά ακριβό diesel</b>Η Ευρωπαϊκή Επιτροπή αναφέρει σταθερή προσφορά πετρελαίου, αλλά συνεχιζόμενη πίεση στις τιμές των καυσίμων.</div><div class="market-event"><b>10 · 30/9 · Ελλάδα: μεγαλύτερη επιδότηση diesel</b>Η επιδότηση αυξάνεται στα 15 λεπτά/λίτρο για το πρώτο δεκαπενθήμερο του Οκτωβρίου.</div></div>
-  <p class="market-note">Περίοδος: 1/6–30/9/2026. Η μπλε σειρά δείχνει τον επίσημο πανελλαδικό μέσο όρο της αμόλυβδης 95. Η πορτοκαλί σειρά χρησιμοποιεί επιλεγμένα, επαληθευμένα σημεία αναφοράς του Brent και όχι τιμή για κάθε ημερομηνία της μπλε σειράς. Οι δύο άξονες δείχνουν την κατεύθυνση και τη χρονική υστέρηση — όχι αυτόματη ή μοναδική αιτιότητα. Πηγές: <a href="https://www.fuelprices.gr/price_stats_ng.view?prodclass=1&amp;time=1" target="_blank" rel="noopener">Παρατηρητήριο Τιμών Υγρών Καυσίμων</a> και Reuters/δεδομένα Brent futures. Η τελευταία επίσημη πανελλαδική τιμή αμόλυβδης που ήταν διαθέσιμη κατά την ενημέρωση είναι της 29/9: 2,207 €/λίτρο. Τα γεγονότα σημειώνονται για χρονικό context· η χρονική σύμπτωση δεν αποδεικνύει από μόνη της αιτιότητα.</p>
+  <p class="market-note"><strong>Περίοδος απεικόνισης: 1/6–29/9/2026.</strong> Η μπλε σειρά δείχνει τον πανελλαδικό μέσο όρο της αμόλυβδης 95 και φτάνει έως <strong>29/9</strong>. Η πορτοκαλί σειρά δείχνει επιλεγμένες ημερήσιες τιμές Brent spot της U.S. EIA και φτάνει έως <strong>28/9</strong>. Δεν προστίθεται εκτίμηση για ημέρες για τις οποίες δεν έχει δημοσιευτεί ακόμη τιμή. Οι δύο άξονες βοηθούν να συγκρίνουμε την κατεύθυνση και τη χρονική υστέρηση· δεν αποδεικνύουν από μόνοι τους αιτιότητα. Πηγές: <a href="https://www.fuelprices.gr/price_stats_ng.view?prodclass=1&amp;time=1" target="_blank" rel="noopener">Παρατηρητήριο Τιμών Υγρών Καυσίμων</a> · <a href="https://www.eia.gov/dnav/pet/hist/rbrted.htm" target="_blank" rel="noopener">U.S. EIA — Europe Brent Spot Price FOB</a>.</p>
 </article></div></section>
 
 <section id="poia-eimai" class="me-section"><div class="wrap me-grid">
@@ -355,18 +360,18 @@ header.wic-header{position:sticky;top:0;z-index:1000;background:rgba(7,24,44,.96
 (function(){
  const el=document.getElementById('longFuelChart');if(!el)return;
  const fuel=[['2026-06-01',2.064],['2026-06-08',2.012],['2026-06-15',1.993],['2026-06-22',1.932],['2026-06-29',1.922],['2026-07-06',1.950],['2026-07-13',1.979],['2026-07-20',1.977],['2026-07-27',2.017],['2026-08-03',2.020],['2026-08-10',1.980],['2026-08-17',1.998],['2026-08-24',2.028],['2026-08-31',2.045],['2026-09-06',2.087],['2026-09-13',2.147],['2026-09-20',2.194],['2026-09-23',2.198],['2026-09-29',2.207]];
- const brent=[['2026-06-11',90.38],['2026-06-16',78.96],['2026-06-30',72.92],['2026-07-07',74.16],['2026-07-24',96.78],['2026-07-31',90.12],['2026-08-04',79.36],['2026-08-28',89.31],['2026-09-04',96.28],['2026-09-09',101.21],['2026-09-14',105.68],['2026-09-17',104.82],['2026-09-21',100.34],['2026-09-22',99.25],['2026-09-23',103.08],['2026-09-24',104.46],['2026-09-25',104.32],['2026-09-28',105.28],['2026-09-29',102.59],['2026-09-30',103.71]];
+ const brent=[['2026-06-11',90.38],['2026-06-16',78.96],['2026-06-30',72.92],['2026-07-07',74.16],['2026-07-24',96.78],['2026-07-31',90.12],['2026-08-04',79.36],['2026-08-28',89.31],['2026-09-04',96.28],['2026-09-09',101.21],['2026-09-14',105.68],['2026-09-17',104.82],['2026-09-21',100.34],['2026-09-22',99.25],['2026-09-23',103.08],['2026-09-24',104.46],['2026-09-25',104.32],['2026-09-28',105.28]];
  const events=[['2026-06-15','1'],['2026-06-30','2'],['2026-07-31','3'],['2026-09-04','4'],['2026-09-09','5'],['2026-09-14','6'],['2026-09-22','7'],['2026-09-24','8']];
- const W=960,H=410,L=67,R=67,T=50,B=74,start=Date.parse('2026-06-01T00:00:00Z'),end=Date.parse('2026-09-24T00:00:00Z');
+ const W=960,H=410,L=67,R=67,T=50,B=74,start=Date.parse('2026-06-01T00:00:00Z'),end=Date.parse('2026-09-29T00:00:00Z');
  const x=d=>L+(Date.parse(d+'T00:00:00Z')-start)/(end-start)*(W-L-R), yf=v=>T+(2.22-v)/(2.22-1.90)*(H-T-B), yb=v=>T+(110-v)/(110-70)*(H-T-B);
  const path=(a,y)=>a.map((d,i)=>(i?'L':'M')+x(d[0]).toFixed(1)+','+y(d[1]).toFixed(1)).join(' ');
- let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Εξέλιξη βενζίνης 95 και επιλεγμένων τιμών Brent από Ιούνιο έως Σεπτέμβριο 2026"><rect width="${W}" height="${H}" rx="18" fill="#f8fbfd"/>`;
+ let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Εξέλιξη αμόλυβδης 95 έως 29 Σεπτεμβρίου και Brent έως 28 Σεπτεμβρίου 2026"><rect width="${W}" height="${H}" rx="18" fill="#f8fbfd"/>`;
  [1.90,1.98,2.06,2.14,2.22].forEach(v=>{const y=yf(v);s+=`<line x1="${L}" y1="${y}" x2="${W-R}" y2="${y}" stroke="#dce7ef"/><text x="${L-10}" y="${y+4}" text-anchor="end" font-size="11" fill="#0d5d8f">${v.toFixed(2).replace('.',',')}€</text>`});
  [70,80,90,100,110].forEach(v=>{const y=yb(v);s+=`<text x="${W-R+10}" y="${y+4}" font-size="11" fill="#b95400">${v}$</text>`});
  events.forEach(e=>{const xx=x(e[0]);s+=`<line x1="${xx}" y1="${T}" x2="${xx}" y2="${H-B}" stroke="#ff7a00" stroke-dasharray="4 5" opacity=".42"/><circle cx="${xx}" cy="30" r="12" fill="#ff7a00"/><text x="${xx}" y="34" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">${e[1]}</text>`});
  s+=`<path d="${path(fuel,yf)}" fill="none" stroke="#0d5d8f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="${path(brent,yb)}" fill="none" stroke="#ff7a00" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>`;
  fuel.forEach(d=>s+=`<circle cx="${x(d[0])}" cy="${yf(d[1])}" r="3.7" fill="#0d5d8f"/>`);brent.forEach(d=>s+=`<circle cx="${x(d[0])}" cy="${yb(d[1])}" r="3.5" fill="#ff7a00"/>`);
- [['2026-06-01','1/6'],['2026-06-29','29/6'],['2026-07-27','27/7'],['2026-08-24','24/8'],['2026-09-06','6/9'],['2026-09-14','14/9'],['2026-09-24','24/9']].forEach(d=>s+=`<text x="${x(d[0])}" y="${H-38}" text-anchor="middle" font-size="11" fill="#607589">${d[1]}</text>`);
- s+=`<text x="${L}" y="${H-12}" font-size="11" fill="#607589">Μπλε: αμόλυβδη 95 · Πορτοκαλί: επιλεγμένα σημεία Brent</text><text x="${L+6}" y="${yf(2.064)-10}" font-size="11" font-weight="700" fill="#0d5d8f">2,064€</text><text x="${x('2026-09-29')-4}" y="${yf(2.207)-10}" text-anchor="end" font-size="11" font-weight="700" fill="#0d5d8f">2,207€</text><text x="${x('2026-09-30')-5}" y="${yb(103.71)-10}" text-anchor="end" font-size="11" font-weight="700" fill="#b95400">103,71$</text></svg>`;el.innerHTML=s;
+ [['2026-06-01','1/6'],['2026-06-29','29/6'],['2026-07-27','27/7'],['2026-08-24','24/8'],['2026-09-06','6/9'],['2026-09-14','14/9'],['2026-09-24','24/9'],['2026-09-28','28/9'],['2026-09-29','29/9']].forEach(d=>s+=`<text x="${x(d[0])}" y="${H-38}" text-anchor="middle" font-size="11" fill="#607589">${d[1]}</text>`);
+ s+=`<text x="${L}" y="${H-12}" font-size="11" fill="#607589">Μπλε: αμόλυβδη 95 · Πορτοκαλί: επιλεγμένα σημεία Brent</text><text x="${L+6}" y="${yf(2.064)-10}" font-size="11" font-weight="700" fill="#0d5d8f">2,064€</text><text x="${x('2026-09-29')-4}" y="${yf(2.207)-10}" text-anchor="end" font-size="11" font-weight="700" fill="#0d5d8f">2,207€</text><text x="${x('2026-09-28')-4}" y="${yb(105.28)-10}" text-anchor="end" font-size="11" font-weight="700" fill="#b95400">105,28$</text></svg>`;el.innerHTML=s;
 })();</script>
 </body></html>
