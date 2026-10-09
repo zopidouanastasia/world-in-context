@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="el"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="Αναλυτική τεκμηρίωση για τις γυναικοκτονίες στην Ελλάδα, τα δεδομένα, τους παράγοντες κινδύνου και το μοντέλο οκτώ σταδίων της Jane Monckton Smith." name="description"/><title>Πριν από μια γυναικοκτονία — Level 2 | World in Context</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&amp;family=Inter:wght@400;500;600;700;800&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/><style>
 :root{--navy:#06172a;--blue:#2C5D8F;--orange:#ff7a00;--paper:#f6f2e8;--ink:#1B2A4A;--muted:#627489;--line:#d8e2e9;--soft:#eef4f8}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.72;-webkit-font-smoothing:antialiased}h1,h2,h3{font-family:Fraunces,serif;letter-spacing:-.02em}a{color:#2C5D8F}
@@ -19,6 +20,17 @@
 .article a{overflow-wrap:anywhere}.article h1+ p{font-size:20px;color:#64798d}
 .level2-chip{display:inline-flex;border:1px solid #c9ddeb;color:#2c5d8f;background:#edf5fb;border-radius:999px;padding:6px 12px;font-size:12px;font-weight:700;margin-bottom:22px}
 .article-footer-link{display:inline-flex;background:#07182c;color:white!important;padding:12px 17px;text-decoration:none;border-radius:10px;margin-top:22px;font-weight:700}
+
+/* Responsive editorial data comparison */
+.victim-viz{margin:28px 0 30px;padding:25px 28px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 12px 30px -26px rgba(7,24,44,.35)}
+.victim-viz-row + .victim-viz-row{margin-top:25px;padding-top:22px;border-top:1px solid #e5edf2}
+.victim-viz-top{display:flex;justify-content:space-between;align-items:baseline;gap:15px;margin-bottom:11px}
+.victim-viz-name{font-size:15px;font-weight:700;line-height:1.4;color:#18334e}
+.victim-viz-percent{font:800 30px Inter,sans-serif;color:#19538b;white-space:nowrap}
+.victim-viz-track{height:16px;background:#e7edf3;border-radius:100px;overflow:hidden}
+.victim-viz-fill{height:100%;background:linear-gradient(90deg,#7caadc,#2C5D8F);border-radius:100px}
+.victim-viz-count{margin-top:9px;color:#5f7386;font-size:13px;font-weight:600}
+@media(max-width:640px){.victim-viz{padding:18px 16px}.victim-viz-name{font-size:14px}.victim-viz-percent{font-size:25px}}
 </style></head><body><header class="wic-header"><div class="wic-nav"><a class="wic-brand" href="/index.html"><img alt="AZ" src="/assets/az-logo-transparent.png"/><span>World in Context</span></a><nav aria-label="Κύριο μενού" class="wic-navlinks"><a href="/index.html">Αρχική</a><a href="/index.html#archive">Αρχείο</a><a href="/index.html#articles">Άρθρα</a><a href="/relationships.html">Χάρτης Σχέσεων</a><a href="/glossary.html">Λεξιλόγιο</a><a href="/methodology.html">Μεθοδολογία</a><a href="/index.html#poia-eimai">Ποια είμαι</a><a href="/index.html#contact">Επικοινωνία</a><a class="wic-cta" href="/briefings/2026-10-08.html">Briefing →</a></nav></div></header><section class="hero" style="padding:48px 20px"><div class="wrap"><div class="kicker">WORLD IN CONTEXT · LEVEL 2</div><div class="lead" style="margin-top:14px">Η αναλυτική τεκμηρίωση πίσω από το άρθρο</div><div class="meta">Οκτώβριος 2026 · Ελλάδα · Κοινωνία</div></div></section><main class="article"><div class="level2-chip">LEVEL 2 · ΠΗΓΕΣ &amp; ΑΝΑΛΥΣΗ</div><h1>Πριν από μια γυναικοκτονία: τι δείχνουν τα στοιχεία και τι δεν μπορούμε ακόμη να γνωρίζουμε</h1>
 <p><em>Η αναλυτική τεκμηρίωση πίσω από το άρθρο: πώς καταγράφονται οι γυναικοκτονίες, τι μας λένε οι έρευνες για τον κίνδυνο και ποια ερωτήματα παραμένουν ανοιχτά.</em></p>
 <p>Στο βασικό άρθρο ξεκινήσαμε από μια απλή απορία: τι ξέρουμε πραγματικά για τις γυναικοκτονίες στην Ελλάδα;</p>
@@ -33,48 +45,7 @@
 <p><strong>Πηγές:</strong> <a href="https://eige.europa.eu/gender-based-violence/countries/greece">EIGE – Στοιχεία για την Ελλάδα</a> · <a href="https://eige.europa.eu/publications-resources/publications/femicide-classification-system">EIGE – Σύστημα ταξινόμησης γυναικοκτονιών</a> · <a href="https://femicide.gr/sigkentrotika-dedomena/">Ελληνικό Τμήμα Ευρωπαϊκού Παρατηρητηρίου</a>.</p>
 <h2>2. Τι δείχνουν οι καταγραφές από το 2019 έως το 2025;</h2>
 <p>Στα συγκεντρωτικά στοιχεία του Ελληνικού Τμήματος του Ευρωπαϊκού Παρατηρητηρίου καταγράφονται συνολικά <strong>150 γυναικοκτονίες</strong> για την περίοδο 2019–2025.</p>
-<table>
-<thead>
-<tr>
-<th>Έτος</th>
-<th style="text-align:right">Γυναικοκτονίες</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>2019</td>
-<td style="text-align:right">17</td>
-</tr>
-<tr>
-<td>2020</td>
-<td style="text-align:right">19</td>
-</tr>
-<tr>
-<td>2021</td>
-<td style="text-align:right">31</td>
-</tr>
-<tr>
-<td>2022</td>
-<td style="text-align:right">27</td>
-</tr>
-<tr>
-<td>2023</td>
-<td style="text-align:right">15</td>
-</tr>
-<tr>
-<td>2024</td>
-<td style="text-align:right">20</td>
-</tr>
-<tr>
-<td>2025</td>
-<td style="text-align:right">21</td>
-</tr>
-<tr>
-<td><strong>Σύνολο</strong></td>
-<td style="text-align:right"><strong>150</strong></td>
-</tr>
-</tbody>
-</table>
+
 <p>Το πρώτο που παρατηρούμε είναι η διαφορά ανάμεσα στις χρονιές. Το 2021 καταγράφονται 31 περιστατικά, ενώ το 2023 είναι 15. Ακολουθούν 20 το 2024 και 21 το 2025.</p>
 <p>Αν κοιτούσαμε μόνο δύο χρονιές, θα μπορούσαμε εύκολα να φτάσουμε σε διαφορετικά συμπεράσματα. Συγκρίνοντας το 2019 με το 2021 θα βλέπαμε μεγάλη αύξηση· συγκρίνοντας το 2021 με το 2023, μεγάλη μείωση. Η πλήρης εικόνα είναι πιο σύνθετη.</p>
 <p>Τα επτά χρόνια δεν παρουσιάζουν συνεχή ανοδική πορεία. Παρουσιάζουν διακυμάνσεις. Όταν τα ετήσια περιστατικά είναι λίγες δεκάδες, ακόμη και σχετικά μικρές μεταβολές επηρεάζουν έντονα τα ποσοστά. Για πιο ασφαλή συμπεράσματα θα ήταν χρήσιμη μεγαλύτερη χρονική σειρά, σταθερή μεθοδολογία και δείκτες προσαρμοσμένοι στον πληθυσμό.</p>
@@ -84,36 +55,7 @@
 <h2>3. Γιατί έχει τόση σημασία η σχέση θύματος και δράστη;</h2>
 <p>Ένα από τα πιο ενδιαφέροντα ευρήματα προκύπτει όταν ξεχωρίσουμε τις ανθρωποκτονίες ανάλογα με τη σχέση ανάμεσα στον δράστη και το θύμα.</p>
 <p>Σύμφωνα με τα στοιχεία της Ελληνικής Αστυνομίας που παρουσιάζει ο EIGE, το 2022 καταγράφηκαν:</p>
-<table>
-<thead>
-<tr>
-<th>Κατηγορία</th>
-<th style="text-align:right">Γυναίκες</th>
-<th style="text-align:right">Σύνολο θυμάτων</th>
-<th style="text-align:right">Ποσοστό γυναικών</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Ανθρωποκτονίες συνολικά</td>
-<td style="text-align:right">45</td>
-<td style="text-align:right">117</td>
-<td style="text-align:right">38%</td>
-</tr>
-<tr>
-<td>Ανθρωποκτονίες από πρόσωπο του οικογενειακού ή οικιακού περιβάλλοντος</td>
-<td style="text-align:right">24</td>
-<td style="text-align:right">36</td>
-<td style="text-align:right">67%</td>
-</tr>
-<tr>
-<td>Ανθρωποκτονίες από νυν ή πρώην σύντροφο</td>
-<td style="text-align:right">13</td>
-<td style="text-align:right">14</td>
-<td style="text-align:right">93%</td>
-</tr>
-</tbody>
-</table>
+<div aria-label="Ποσοστό γυναικών μεταξύ των θυμάτων ανθρωποκτονίας στην Ελλάδα, 2022" class="victim-viz" role="group"><div class="victim-viz-row"><div class="victim-viz-top"><span class="victim-viz-name">Ανθρωποκτονίες συνολικά</span><strong class="victim-viz-percent">38%</strong></div><div aria-label="Ανθρωποκτονίες συνολικά: 38 τοις εκατό γυναίκες, 45 από 117 θύματα" class="victim-viz-track" role="img"><div class="victim-viz-fill" style="width:38%"></div></div><div class="victim-viz-count">45 από 117 θύματα ήταν γυναίκες</div></div><div class="victim-viz-row"><div class="victim-viz-top"><span class="victim-viz-name">Από οικογενειακό ή οικιακό περιβάλλον</span><strong class="victim-viz-percent">67%</strong></div><div aria-label="Από οικογενειακό ή οικιακό περιβάλλον: 67 τοις εκατό γυναίκες, 24 από 36 θύματα" class="victim-viz-track" role="img"><div class="victim-viz-fill" style="width:67%"></div></div><div class="victim-viz-count">24 από 36 θύματα ήταν γυναίκες</div></div><div class="victim-viz-row"><div class="victim-viz-top"><span class="victim-viz-name">Από νυν ή πρώην σύντροφο</span><strong class="victim-viz-percent">93%</strong></div><div aria-label="Από νυν ή πρώην σύντροφο: 93 τοις εκατό γυναίκες, 13 από 14 θύματα" class="victim-viz-track" role="img"><div class="victim-viz-fill" style="width:93%"></div></div><div class="victim-viz-count">13 από 14 θύματα ήταν γυναίκες</div></div></div>
 <p>Από το σύνολο των ανθρώπων που δολοφονήθηκαν εκείνη τη χρονιά, λιγότεροι από τέσσερις στους δέκα ήταν γυναίκες. Όταν εξετάζουμε ανθρωποκτονίες από πρόσωπο του οικογενειακού ή οικιακού περιβάλλοντος, οι γυναίκες αποτελούν περίπου δύο στα τρία θύματα. Στις ανθρωποκτονίες από σύντροφο, ήταν 13 από τα 14.</p>
 <p><strong>Δύο σημαντικές διευκρινίσεις:</strong> Οι κατηγορίες αλληλεπικαλύπτονται και δεν πρέπει να αθροίζονται. Επιπλέον, τα ποσοστά δεν μετρούν την προσωπική πιθανότητα να δολοφονηθεί μια γυναίκα από σύντροφο. Περιγράφουν τη σύνθεση των θυμάτων μέσα σε καθεμία από τις κατηγορίες.</p>
 <p>Αυτό που πράγματι δείχνουν είναι ότι η κατανομή των θυμάτων ανά φύλο αλλάζει σημαντικά όταν εξετάζουμε το πλαίσιο της ανθρωποκτονίας.</p>
